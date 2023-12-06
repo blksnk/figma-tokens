@@ -1,0 +1,1 @@
+export type EndpointUrlFn = (fileKey: string) => string;

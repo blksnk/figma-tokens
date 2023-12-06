@@ -1,0 +1,14 @@
+{
+  "name": "@ublo/front-tokens",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "generate": "bun src/scripts/generate.ts"
+  }
+}
