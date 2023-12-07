@@ -146,7 +146,7 @@ export const groupTokensByType = (tokens: Token[]) => {
     Object.fromEntries(
       tokenTypes.map((tokenType: TokenType) => [tokenType, []])
     ) as Record<TokenType, Token[]>
-  )
+  );
 }
 
 export const groupTokens = (tokens: Token[], logger: Logger = Logger()): RootTokenCollection => {
@@ -156,38 +156,37 @@ export const groupTokens = (tokens: Token[], logger: Logger = Logger()): RootTok
     Object.entries(tokensByType).map((group: [TokenType, Token[]]) =>
       [group[0], groupTokensByName(group[1], logger)]
     )
-  )
-  const groupCount = Object.keys(tokensByTypeAndName).length
-  logger.info(`Created ${groupCount} groups from ${tokens.length} groups.`)
+  );
+  const groupCount = Object.keys(tokensByTypeAndName).length;
+  logger.info(`Created ${groupCount} groups from ${tokens.length} groups.`);
   return tokensByTypeAndName;
 }
 
 const isToken = (data: TokenGroup | Token | TokenOrGroupCollection): data is Token => {
-  return data && !!data.type && typeof data.type === "string" && tokenTypes.includes(data.type)
+  return data && !!data.type && typeof data.type === "string" && tokenTypes.includes(data.type);
 }
 
 const isTokenGroup = (data: TokenGroup | Token | TokenOrGroupCollection): data is TokenGroup => {
-  return data && !!data.tokens && typeof data.tokens === "object"
+  return data && !!data.tokens && typeof data.tokens === "object";
 }
 
 const unwrapTokenOrGroup = (tokenOrCollection: TokenGroup | Token | TokenOrGroupCollection): TokenValues | Token => {
   // token group
   if(isTokenGroup(tokenOrCollection)) {
-    return transformObject(tokenOrCollection.tokens, unwrapTokenOrGroup)
+    return transformObject(tokenOrCollection.tokens, unwrapTokenOrGroup);
   }
   // token
   if(isToken(tokenOrCollection)) {
-    return tokenOrCollection
+    return tokenOrCollection;
   }
   // token collection
-  return transformObject(tokenOrCollection, unwrapTokenOrGroup)
+  return transformObject(tokenOrCollection, unwrapTokenOrGroup);
 }
 
 export const unwrapTokenValues = (rootTokenCollection: RootTokenCollection, logger: Logger = Logger()): TokenValues => {
-  logger.info('Extracting token values...')
-
-
-  const rootCollectionValues = transformObject(rootTokenCollection, unwrapTokenOrGroup)
-  logger.info('Done.')
+  logger.info('Extracting token values...');
+  const typeToKey = (type: TokenType) => `${type.toLowerCase()}s`;
+  const rootCollectionValues = transformObject(rootTokenCollection, unwrapTokenOrGroup, typeToKey);
+  logger.info('Done.');
   return rootCollectionValues;
 }
