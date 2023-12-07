@@ -1,7 +1,6 @@
 {
   "name": "@ublo/front-tokens",
   "module": "index.ts",
-  "type": "module",
   "devDependencies": {
     "bun-types": "latest"
   },
@@ -10,5 +9,6 @@
   },
   "scripts": {
     "generate": "bun src/scripts/generate.ts"
-  }
+  },
+  "type": "module"
 }

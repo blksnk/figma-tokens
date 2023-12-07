@@ -10,6 +10,8 @@ import { FigmaTextNode } from "../types/figma/figma.nodes.types";
 import { FigmaFileNodeResponse } from "../types/figma/figma.endpoints.types";
 import { StyleNode } from "../types/global/transformer.types";
 import { styleNodeToToken } from "./token.transfomer";
+import { NonNullable } from "../types/global/global.types";
+import { Token } from "../types/global/export.types";
 
 const getUniqueFileKeys = (styles: FigmaStyleMetadata[]): FigmaFileKey[] => {
   const fileKeys: FigmaFileKey[] = [];
@@ -88,6 +90,5 @@ export const tokenizeStyles = async (figmaApiClient: FigmaApiClient, styles: Fig
   logger.info("Transforming figma styles to tokens...");
   const tokens = styleNodes.map(styleNode => styleNodeToToken(styleNode))
   logger.info("Done")
-  logger.debug(tokens);
-  return tokens;
+  return tokens.filter(token => !!token) as Token[];
 }

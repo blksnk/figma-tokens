@@ -11,6 +11,7 @@ export type LoggerConfig = {
   warningsAsErrors?: boolean;
   throwOnError?: boolean;
   hideDebug?: boolean;
+  hideLogs?: boolean;
   prefixes?: LoggerPrefixes;
   spacing?: number;
 }
@@ -20,6 +21,7 @@ const defaultConfig: DeepNonNullish<LoggerConfig> = {
   warningsAsErrors: false,
   throwOnError: false,
   hideDebug: false,
+  hideLogs: false,
   prefixes: {
     info: "Info:    ",
     error: "Error:   ",
@@ -30,7 +32,7 @@ const defaultConfig: DeepNonNullish<LoggerConfig> = {
   spacing: 0,
 }
 
-type LoggerFn = (message: unknown) => void;
+type LoggerFn = (message: unknown, name?: string) => void;
 
 export type Logger = {
   config: DeepNonNullish<LoggerConfig>,
@@ -57,14 +59,15 @@ export function Logger(initialConfig?: LoggerConfig): Logger {
       logFn(prefix, message);
     }
     const typeInfo = Array.isArray(message) ? `array[${message.length}]` : typeof message;
-    if(severity === "info") {
-      logFn(spacing)
-    } else {
+    if(severity === "debug") {
       logFn(`( ${typeInfo} )`, spacing);
+    } else {
+      logFn(spacing)
     }
   }
 
   const log = (message: unknown, name?: string) => {
+    if(config.hideLogs) return;
     logMessage(message, "log", name)
   }
 

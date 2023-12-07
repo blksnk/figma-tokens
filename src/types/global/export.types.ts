@@ -1,11 +1,12 @@
 import { FigmaColor } from "../figma/figma.properties.types";
 import { FigmaPaintType, FigmaStyleType } from "../figma/figma.enums.types";
+import { Nullable } from "./global.types";
 
-const tokenTypes = [
+export const tokenTypes = [
   "TEXT",
   "COLOR",
   "GRADIENT",
-  "IMAGE_OR_VIDEO",
+  "ASSET",
   "EFFECT",
 ] as const;
 
@@ -22,7 +23,7 @@ export type FigmaStyleTypeToToken<TStyleType extends FigmaStyleType, TPaintType 
     : TPaintType extends "GRADIENT_LINEAR" | "GRADIENT_RADIAL" | "GRADIENT_ANGULAR" | "GRADIENT_DIAMOND"
     ? Token<"GRADIENT">
     : TPaintType extends "IMAGE" | "VIDEO"
-    ? Token<"IMAGE_OR_VIDEO">
+    ? Token<"ASSET">
     : Token
     : Token;
 
@@ -34,12 +35,15 @@ export type Token<TType extends TokenType = TokenType> = {
     style: Partial<CSSStyleDeclaration>;
     rules: string;
   }
+  value?: Nullable<string>;
   tokens?: never;
 }
 
 export type TokenOrTokenGroup<TType extends TokenType = TokenType> = Token<TType> | TokenGroup<TType>;
 
 export type TokenOrGroupCollection<TType extends TokenType = TokenType> = Record<string, TokenOrTokenGroup<TType>>;
+
+export type RootTokenCollection = Record<string, TokenOrGroupCollection>;
 
 export type TokenGroup<TType extends TokenType = TokenType, TName extends string = string> = {
   name: TName;
@@ -55,3 +59,5 @@ export type TokenExports = {
   textStyles: TokenOrGroupCollection<"TEXT">;
   allTokens: TokenOrGroupCollection;
 }
+
+export type TokenValues = Record<string, Nullable<TokenValues | Token>>;

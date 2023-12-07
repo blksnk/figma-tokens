@@ -19,11 +19,11 @@ export const figmaEffectToCssProps = (effect: FigmaEffect, nodeType: FigmaNodeTy
         filter: blurStr,
       }
     default:
-      const inset = effect.type === "INNER_SHADOW" ? "inset" : "";
+      const inset = effect.type === "INNER_SHADOW" ? "inset " : "";
       const offset = `${pxToRem(effect.offset.x)} ${pxToRem(effect.offset.y)}`;
       const spread = pxToRem(effect.spread ?? 0);
       const color = figmaColorToCssRgba(effect.color);
-      const shadowStr = `${inset} ${offset} ${radius} ${spread} ${color}`;
+      const shadowStr = `${inset}${offset} ${radius} ${spread} ${color}`;
       return {
         [nodeType === "TEXT" ? "textShadow" : "boxShadow"]: shadowStr,
       }

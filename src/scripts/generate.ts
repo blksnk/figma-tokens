@@ -13,6 +13,10 @@ import {
   FigmaTeamId
 } from "../types/figma/figma.properties.types";
 import { tokenizeStyles } from "../transformers/style.transformer";
+import {
+  groupTokens,
+  unwrapTokenValues
+} from "../transformers/token.transfomer";
 
 const logger = Logger({
   spacing: 1,
@@ -22,28 +26,32 @@ const logger = Logger({
 const { info, debug, warn, error, log, } = logger;
 
 const fetchAndFormatTeamStyles = async (figmaApiClient: FigmaApiClient, teamId: FigmaTeamId, fileKeyFilters?: FigmaFileKey[]) => {
-  debug("Fetching team styles...")
+  debug("Fetching team styles...");
   const teamStylesResponse = await figmaApiClient.getTeamStyles(teamId, {
     page_size: 10000,
   });
   const teamStyles = teamStylesResponse?.meta.styles;
   if (!teamStyles ?? teamStyles.length === 0) {
-    logger.warn("No styles found for team")
-    return;
+    warn("No styles found for team");
+    return [];
   }
   // restrict to design system & client types
   debug("Extracting Ublo team styles...");
   const filteredStyles = fileKeyFilters && fileKeyFilters.length > 0
     ? teamStyles.filter(teamStyle => fileKeyFilters.includes(teamStyle.file_key))
     : teamStyles;
-  log(filteredStyles)
-  info("Fetched team styles")
-  const tokens = await tokenizeStyles(figmaApiClient, filteredStyles, logger);
+  log(filteredStyles);
+  info("Fetched team styles");
+  return await tokenizeStyles(figmaApiClient, filteredStyles, logger);
 }
 
 const updateTeamStyles = async (figmaApiClient: FigmaApiClient, teamId: FigmaTeamId, fileKeyFilters?: FigmaFileKey[]) => {
-  info("Staring team styles update...")
-  await fetchAndFormatTeamStyles(figmaApiClient, teamId, fileKeyFilters);
+  info("Staring team styles update...");
+  const teamStyleTokens = await fetchAndFormatTeamStyles(figmaApiClient, teamId, fileKeyFilters);
+  const rootTokenCollection = groupTokens(teamStyleTokens, logger)
+  debug(rootTokenCollection, "root token collection")
+  const tokenValues = unwrapTokenValues(rootTokenCollection)
+  debug(tokenValues)
 }
 
 /**
