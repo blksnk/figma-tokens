@@ -226,3 +226,14 @@ export function camelCase(input: string | readonly string[], options?: Options) 
 
   return postProcess(input, toUpperCase);
 }
+
+export const sanitize = (str: string): string =>
+  str
+    .replaceAll("é", "e")
+    .replaceAll("è", "e")
+    .replaceAll("ê", "e")
+    .replaceAll("É", "E")
+    .replaceAll("È", "E")
+    .replaceAll("Ê", "E")
+    .replaceAll("à", "a")
+    .replaceAll("ç", "c")

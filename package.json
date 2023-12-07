@@ -1,6 +1,13 @@
 {
   "name": "@ublo/front-tokens",
   "module": "index.ts",
+  "version": "0.0.1",
+  "main": "lib/index.ts",
+  "author": "Jean-Nicolas Veigel <art.jnveigel@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "bun-types": "latest"
   },

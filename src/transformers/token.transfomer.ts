@@ -9,7 +9,7 @@ import { Nullable, Optional } from "../types/global/global.types";
 import { stringifyCssRules, styleNodeToCssRules } from "./css.transformer";
 import { Logger } from "../utils/log.utils";
 import { transformObject } from "../utils/transform.utils";
-import { camelCase } from "../utils/string.utils";
+import { camelCase, sanitize } from "../utils/string.utils";
 
 const tokenType = <TStyleType extends FigmaStyleType>({ type, styleProperties }: StyleNode<TStyleType>): Nullable<TokenType> => {
   if(type === "TEXT" || type === "EFFECT") return type;
@@ -171,16 +171,17 @@ const isTokenGroup = (data: TokenGroup | Token | TokenOrGroupCollection): data i
 }
 
 const unwrapTokenOrGroup = (tokenOrCollection: TokenGroup | Token | TokenOrGroupCollection): TokenValues | Token => {
+  const saneCamel = (str: string) => camelCase(sanitize(str));
   // token group
   if(isTokenGroup(tokenOrCollection)) {
-    return transformObject(tokenOrCollection.tokens, unwrapTokenOrGroup, camelCase);
+    return transformObject(tokenOrCollection.tokens, unwrapTokenOrGroup, saneCamel);
   }
   // token
   if(isToken(tokenOrCollection)) {
     return tokenOrCollection;
   }
   // token collection
-  return transformObject(tokenOrCollection, unwrapTokenOrGroup, camelCase);
+  return transformObject(tokenOrCollection, unwrapTokenOrGroup, saneCamel);
 }
 
 export const unwrapTokenValues = (rootTokenCollection: RootTokenCollection, logger: Logger = Logger()): TokenValues => {
