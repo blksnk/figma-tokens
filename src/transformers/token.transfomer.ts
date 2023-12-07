@@ -9,6 +9,7 @@ import { Nullable, Optional } from "../types/global/global.types";
 import { stringifyCssRules, styleNodeToCssRules } from "./css.transformer";
 import { Logger } from "../utils/log.utils";
 import { transformObject } from "../utils/transform.utils";
+import { camelCase } from "../utils/string.utils";
 
 const tokenType = <TStyleType extends FigmaStyleType>({ type, styleProperties }: StyleNode<TStyleType>): Nullable<TokenType> => {
   if(type === "TEXT" || type === "EFFECT") return type;
@@ -116,7 +117,7 @@ export const groupTokensByName = (tokens: Token[], logger = Logger()): TokenOrGr
         [part]: level === 0
           ? tokenPath.token
           : {
-            name: part,
+            name: camelCase(part),
             type: tokenPath.token.type,
             tokens: acc
           },
@@ -132,7 +133,6 @@ export const groupTokensByName = (tokens: Token[], logger = Logger()): TokenOrGr
   // group all tokens paths
   groups = Object.assign({}, ...tokenPaths.map((tokenPath) => nestToken(tokenPath)))
   logger.log(groups, "GROUPS")
-
 
   return groups;
 }
@@ -173,14 +173,14 @@ const isTokenGroup = (data: TokenGroup | Token | TokenOrGroupCollection): data i
 const unwrapTokenOrGroup = (tokenOrCollection: TokenGroup | Token | TokenOrGroupCollection): TokenValues | Token => {
   // token group
   if(isTokenGroup(tokenOrCollection)) {
-    return transformObject(tokenOrCollection.tokens, unwrapTokenOrGroup);
+    return transformObject(tokenOrCollection.tokens, unwrapTokenOrGroup, camelCase);
   }
   // token
   if(isToken(tokenOrCollection)) {
     return tokenOrCollection;
   }
   // token collection
-  return transformObject(tokenOrCollection, unwrapTokenOrGroup);
+  return transformObject(tokenOrCollection, unwrapTokenOrGroup, camelCase);
 }
 
 export const unwrapTokenValues = (rootTokenCollection: RootTokenCollection, logger: Logger = Logger()): TokenValues => {

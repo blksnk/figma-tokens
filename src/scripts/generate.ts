@@ -17,6 +17,8 @@ import {
   groupTokens,
   unwrapTokenValues
 } from "../transformers/token.transfomer";
+import { Token } from "../types/global/export.types";
+import { generateExportedTS } from "../transformers/export.transformer";
 
 const logger = Logger({
   spacing: 1,
@@ -25,7 +27,7 @@ const logger = Logger({
 })
 const { info, debug, warn, error, log, } = logger;
 
-const fetchAndFormatTeamStyles = async (figmaApiClient: FigmaApiClient, teamId: FigmaTeamId, fileKeyFilters?: FigmaFileKey[]) => {
+const fetchAndFormatTeamStyles = async (figmaApiClient: FigmaApiClient, teamId: FigmaTeamId, fileKeyFilters?: FigmaFileKey[]): Promise<Token[]> => {
   debug("Fetching team styles...");
   const teamStylesResponse = await figmaApiClient.getTeamStyles(teamId, {
     page_size: 10000,
@@ -52,6 +54,7 @@ const updateTeamStyles = async (figmaApiClient: FigmaApiClient, teamId: FigmaTea
   debug(rootTokenCollection, "root token collection")
   const tokenValues = unwrapTokenValues(rootTokenCollection)
   debug(tokenValues)
+  await generateExportedTS(rootTokenCollection, tokenValues, teamStyleTokens);
 }
 
 /**
