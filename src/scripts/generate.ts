@@ -1,13 +1,11 @@
-import { validateConfig } from "../utils/config.utils";
+import { extractConfigFileKeys, validateConfig } from "../utils/config.utils";
 import {
   FIGMA_TEAM_ID,
   FIGMA_TOKEN,
-  FILE_URL_CLIENT_THEMES,
-  FILE_URL_DESIGN_SYSTEM
+  FIGMA_FILE_URLS
 } from "../api/config";
 import { Logger } from "../utils/log.utils";
 import { FigmaApiClient } from "../api/client";
-import { extractFileKeyFromUrl } from "../utils/figma.utils";
 import {
   FigmaFileKey,
   FigmaTeamId
@@ -25,9 +23,13 @@ const logger = Logger({
   throwOnError: true,
   mode: "simple"
 })
-const { info, debug, warn, error, log, } = logger;
+const { info, debug, warn, log, } = logger;
 
-const fetchAndFormatTeamStyles = async (figmaApiClient: FigmaApiClient, teamId: FigmaTeamId, fileKeyFilters?: FigmaFileKey[]): Promise<Token[]> => {
+const fetchAndFormatTeamStyles = async (
+  figmaApiClient: FigmaApiClient,
+  teamId: FigmaTeamId,
+  fileKeyFilters?: FigmaFileKey[]
+): Promise<Token[]> => {
   debug("Fetching team styles...");
   const teamStylesResponse = await figmaApiClient.getTeamStyles(teamId, {
     page_size: 10000,
@@ -47,7 +49,11 @@ const fetchAndFormatTeamStyles = async (figmaApiClient: FigmaApiClient, teamId: 
   return await tokenizeStyles(figmaApiClient, filteredStyles, logger);
 }
 
-const updateTeamStyles = async (figmaApiClient: FigmaApiClient, teamId: FigmaTeamId, fileKeyFilters?: FigmaFileKey[]) => {
+const updateTeamStyles = async (
+  figmaApiClient: FigmaApiClient,
+  teamId: FigmaTeamId,
+  fileKeyFilters?: FigmaFileKey[]
+) => {
   info("Staring team styles update...");
   const teamStyleTokens = await fetchAndFormatTeamStyles(figmaApiClient, teamId, fileKeyFilters);
   const rootTokenCollection = groupTokens(teamStyleTokens, logger)
@@ -64,21 +70,17 @@ const main = async () => {
   debug("Validating config...");
   const config = validateConfig({
     FIGMA_TOKEN,
-    FILE_URL_DESIGN_SYSTEM,
-    FILE_URL_CLIENT_THEMES,
+    FIGMA_FILE_URLS,
     FIGMA_TEAM_ID,
   }, logger)
   info("Config validated");
   debug("Initializing Figma API client...")
   const figmaApiClient = new FigmaApiClient(config.FIGMA_TOKEN);
   info("Figma API client initialized");
-  await updateTeamStyles(figmaApiClient, config.FIGMA_TEAM_ID, [
-    extractFileKeyFromUrl(config.FILE_URL_DESIGN_SYSTEM),
-    extractFileKeyFromUrl(config.FILE_URL_CLIENT_THEMES),
-  ])
-  // debug("Fetching design system file...");
-  // const designSystemFile = await figmaApiClient.getFile(extractFileKeyFromUrl(config.FILE_URL_DESIGN_SYSTEM));
-  // log(designSystemFile);
+  await updateTeamStyles(
+    figmaApiClient, config.FIGMA_TEAM_ID,
+    extractConfigFileKeys(config.FIGMA_FILE_URLS, logger)
+  )
 }
 
 main();

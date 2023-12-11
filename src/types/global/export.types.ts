@@ -1,4 +1,3 @@
-import { FigmaColor } from "../figma/figma.properties.types";
 import { FigmaPaintType, FigmaStyleType } from "../figma/figma.enums.types";
 import { Nullable } from "./global.types";
 
@@ -61,3 +60,14 @@ export type TokenExports = {
 }
 
 export type TokenValues = Record<string, Nullable<TokenValues | Token>>;
+
+export type FileDescription = {
+  /**
+   * Path of the file
+   */
+  path: string;
+  /**
+   * String content of the file
+   */
+  content: string;
+}

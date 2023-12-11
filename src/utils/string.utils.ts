@@ -85,45 +85,6 @@ export type Options = {
   readonly locale?: false | string | readonly string[];
 };
 
-/**
- Convert a dash/dot/underscore/space separated string to camelCase or PascalCase: `foo-bar` → `fooBar`.
-
- Correctly handles Unicode strings.
-
- @param input - The string to convert to camel case.
-
- @example
- ```
- import camelCase from 'camelcase';
-
- camelCase('foo-bar');
- //=> 'fooBar'
-
- camelCase('foo_bar');
- //=> 'fooBar'
-
- camelCase('Foo-Bar');
- //=> 'fooBar'
-
- camelCase('розовый_пушистый_единорог');
- //=> 'розовыйПушистыйЕдинорог'
-
- camelCase('foo bar');
- //=> 'fooBar'
-
- console.log(process.argv[3]);
- //=> '--foo-bar'
- camelCase(process.argv[3]);
- //=> 'fooBar'
-
- camelCase(['foo', 'bar']);
- //=> 'fooBar'
-
- camelCase(['__foo__', '--bar']);
- //=> 'fooBar'
- ```
- */
-
 const preserveCamelCase = (string, toLowerCase, toUpperCase, preserveConsecutiveUppercase) => {
   let isLastCharLower = false;
   let isLastCharUpper = false;
@@ -170,6 +131,45 @@ const postProcess = (input, toUpperCase) => {
     .replaceAll(SEPARATORS_AND_IDENTIFIER, (_, identifier) => toUpperCase(identifier));
 };
 
+/**
+ Convert a dash/dot/underscore/space separated string to camelCase or PascalCase: `foo-bar` → `fooBar`.
+
+ Correctly handles Unicode strings.
+
+ @param {string} input - The string to convert to camel case.
+ @param {Options} options - {@link Options}
+
+ @example
+ ```
+ import camelCase from 'camelcase';
+
+ camelCase('foo-bar');
+ //=> 'fooBar'
+
+ camelCase('foo_bar');
+ //=> 'fooBar'
+
+ camelCase('Foo-Bar');
+ //=> 'fooBar'
+
+ camelCase('розовый_пушистый_единорог');
+ //=> 'розовыйПушистыйЕдинорог'
+
+ camelCase('foo bar');
+ //=> 'fooBar'
+
+ console.log(process.argv[3]);
+ //=> '--foo-bar'
+ camelCase(process.argv[3]);
+ //=> 'fooBar'
+
+ camelCase(['foo', 'bar']);
+ //=> 'fooBar'
+
+ camelCase(['__foo__', '--bar']);
+ //=> 'fooBar'
+ ```
+ */
 export function camelCase(input: string | readonly string[], options?: Options) {
   if (!(typeof input === 'string' || Array.isArray(input))) {
     throw new TypeError('Expected the input to be `string | string[]`');
@@ -237,3 +237,6 @@ export const sanitize = (str: string): string =>
     .replaceAll("Ê", "E")
     .replaceAll("à", "a")
     .replaceAll("ç", "c")
+
+
+export const saneCamel = (str: string) => camelCase(sanitize(str));

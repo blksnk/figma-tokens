@@ -5,13 +5,18 @@ import {
   TokenType, tokenTypes, TokenValues
 } from "../types/global/export.types";
 import { FigmaStyleType } from "../types/figma/figma.enums.types";
-import { Nullable, Optional } from "../types/global/global.types";
+import { Nullable } from "../types/global/global.types";
 import { stringifyCssRules, styleNodeToCssRules } from "./css.transformer";
 import { Logger } from "../utils/log.utils";
 import { transformObject } from "../utils/transform.utils";
-import { camelCase, sanitize } from "../utils/string.utils";
+import { camelCase, saneCamel, sanitize } from "../utils/string.utils";
 
-const tokenType = <TStyleType extends FigmaStyleType>({ type, styleProperties }: StyleNode<TStyleType>): Nullable<TokenType> => {
+const tokenType = <TStyleType extends FigmaStyleType>(
+  {
+    type,
+    styleProperties
+  }: StyleNode<TStyleType>
+): Nullable<TokenType> => {
   if(type === "TEXT" || type === "EFFECT") return type;
   if(type === "FILL") {
     const paintType = (styleProperties as StyleNode<"FILL">["styleProperties"]).type
@@ -32,20 +37,30 @@ const tokenType = <TStyleType extends FigmaStyleType>({ type, styleProperties }:
   }
 }
 
-const tokenValue = (tokenType: TokenType, tokenStyle: Partial<CSSStyleDeclaration>): Nullable<string> => {
+const tokenValue = (
+  tokenType: TokenType,
+  tokenStyle: Partial<CSSStyleDeclaration>
+): Nullable<string> => {
   switch(tokenType) {
     case "COLOR":
     case "GRADIENT":
     case "ASSET":
       return tokenStyle.background ?? null;
     case "EFFECT":
-      return tokenStyle.boxShadow ?? tokenStyle.textShadow ?? tokenStyle.filter ?? tokenStyle.backdropFilter ?? null;
+      return tokenStyle.boxShadow
+        ?? tokenStyle.textShadow
+        ?? tokenStyle.filter
+        ?? tokenStyle.backdropFilter
+        ?? null;
     case "TEXT": return tokenStyle.fontSize ?? null;
   }
   return null
 }
 
-export const styleNodeToToken = <TStyleType extends FigmaStyleType>(styleNode: StyleNode<TStyleType>, logger: Logger = Logger()): Nullable<FigmaStyleTypeToToken<Token, typeof styleNode.nodeType>> => {
+export const styleNodeToToken = <TStyleType extends FigmaStyleType>(
+  styleNode: StyleNode<TStyleType>,
+  logger: Logger = Logger()
+): Nullable<FigmaStyleTypeToToken<Token, typeof styleNode.nodeType>> => {
   const type = tokenType(styleNode)
   if (!type) {
     logger.warn(`Style node with key ${styleNode.styleKey} type ${styleNode.type} is not supported. Skipping.`)
@@ -59,22 +74,34 @@ export const styleNodeToToken = <TStyleType extends FigmaStyleType>(styleNode: S
 
   const value = tokenCssRules ? tokenValue(type, tokenCssRules) : null;
 
+  const name = sanitize(styleNode.name)
+    .split("/")
+    .map(part => camelCase(part))
+    .join("/");
+
   return {
-    name: styleNode.name,
+    name,
     type,
     value,
     css: tokenCss,
   }
 }
 
-export const groupTokensByName = (tokens: Token[], logger = Logger()): TokenOrGroupCollection => {
+export const groupTokensByName = (
+  tokens: Token[],
+  logger = Logger()
+): TokenOrGroupCollection => {
   const splitTokenName = (token: Token) => token.name.split("/");
   let groups: TokenOrGroupCollection = {};
   // sort tokens by nesting
   const sortedTokens = tokens.sort((a, b) => {
     const aPathLength = splitTokenName(a).length;
-    const bPathLength = splitTokenName(a).length;
-    return aPathLength === bPathLength ? 0 : aPathLength > bPathLength ? -1 : 1;
+    const bPathLength = splitTokenName(b).length;
+    return aPathLength === bPathLength
+      ? 0
+      : aPathLength > bPathLength
+        ? -1
+        : 1;
   })
 
   const tokenPaths = sortedTokens.map((token) => ({
@@ -85,10 +112,14 @@ export const groupTokensByName = (tokens: Token[], logger = Logger()): TokenOrGr
     },
   }))
   // abort early if no nesting
-  const maxTokenPathLength = tokenPaths.reduce((acc: number, { path }) => Math.max(path.length, acc), 0)
+  const maxTokenPathLength = tokenPaths.reduce(
+    (acc: number, { path }) =>Math.max(path.length, acc),
+    0)
   if (maxTokenPathLength === 0) return groups;
   if (maxTokenPathLength === 1) {
-    return Object.fromEntries(sortedTokens.map((token): [string, Token] => [ token.name, token ]))
+    return Object.fromEntries(
+      sortedTokens.map((token): [string, Token] => [ token.name, token ])
+    )
   }
 
   let slices: TokenOrGroupCollection = {};
@@ -149,7 +180,10 @@ export const groupTokensByType = (tokens: Token[]) => {
   );
 }
 
-export const groupTokens = (tokens: Token[], logger: Logger = Logger()): RootTokenCollection => {
+export const groupTokens = (
+  tokens: Token[],
+  logger: Logger = Logger()
+): RootTokenCollection => {
   logger.info(`Grouping ${tokens.length} tokens by name and type...`);
   const tokensByType = groupTokensByType(tokens);
   const tokensByTypeAndName = Object.fromEntries<TokenOrGroupCollection>(
@@ -162,32 +196,49 @@ export const groupTokens = (tokens: Token[], logger: Logger = Logger()): RootTok
   return tokensByTypeAndName;
 }
 
-const isToken = (data: TokenGroup | Token | TokenOrGroupCollection): data is Token => {
+const isToken = (
+  data: TokenGroup | Token | TokenOrGroupCollection
+): data is Token => {
   return data && !!data.type && typeof data.type === "string" && tokenTypes.includes(data.type);
 }
 
-const isTokenGroup = (data: TokenGroup | Token | TokenOrGroupCollection): data is TokenGroup => {
+const isTokenGroup = (
+  data: TokenGroup | Token | TokenOrGroupCollection
+): data is TokenGroup => {
   return data && !!data.tokens && typeof data.tokens === "object";
 }
 
-const unwrapTokenOrGroup = (tokenOrCollection: TokenGroup | Token | TokenOrGroupCollection): TokenValues | Token => {
-  const saneCamel = (str: string) => camelCase(sanitize(str));
+const unwrapTokenOrGroup = (
+  tokenOrCollection: TokenGroup | Token | TokenOrGroupCollection
+): TokenValues | Token => {
   // token group
   if(isTokenGroup(tokenOrCollection)) {
-    return transformObject(tokenOrCollection.tokens, unwrapTokenOrGroup, saneCamel);
+    return transformObject(
+      tokenOrCollection.tokens,
+      unwrapTokenOrGroup,
+      saneCamel);
   }
   // token
   if(isToken(tokenOrCollection)) {
     return tokenOrCollection;
   }
   // token collection
-  return transformObject(tokenOrCollection, unwrapTokenOrGroup, saneCamel);
+  return transformObject(
+    tokenOrCollection,
+    unwrapTokenOrGroup,
+    saneCamel);
 }
 
-export const unwrapTokenValues = (rootTokenCollection: RootTokenCollection, logger: Logger = Logger()): TokenValues => {
+export const unwrapTokenValues = (
+  rootTokenCollection: RootTokenCollection,
+  logger: Logger = Logger()
+): TokenValues => {
   logger.info('Extracting token values...');
   const typeToKey = (type: TokenType) => `${type.toLowerCase()}s`;
-  const rootCollectionValues = transformObject(rootTokenCollection, unwrapTokenOrGroup, typeToKey);
+  const rootCollectionValues = transformObject(
+    rootTokenCollection,
+    unwrapTokenOrGroup,
+    typeToKey);
   logger.info('Done.');
   return rootCollectionValues;
 }

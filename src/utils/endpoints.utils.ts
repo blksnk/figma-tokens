@@ -1,4 +1,3 @@
-import { EndpointUrlFn } from "../types/global/endpoints.types";
 import { FIGMA_TOKEN } from "../api/config";
 import { Logger } from "./log.utils";
 
@@ -29,8 +28,15 @@ const formatHeaders = (token: string) => ({
 export const endpointFactory = <
   TQueryParams extends object = {},
   TResponse
->(URLFn: Function, token: string = FIGMA_TOKEN, logger: Logger = Logger()) =>
-  async (pathParam: Parameters<typeof URLFn>[0], queryParams: TQueryParams): Promise<TResponse | null> => {
+>(
+  URLFn: Function,
+  token: string = FIGMA_TOKEN,
+  logger: Logger = Logger()
+) =>
+  async (
+    pathParam: Parameters<typeof URLFn>[0],
+    queryParams: TQueryParams
+  ): Promise<TResponse | null> => {
   const baseURL = URLFn(pathParam);
   const query = formatQueryParams(queryParams);
   const headers = formatHeaders(token);
@@ -39,8 +45,7 @@ export const endpointFactory = <
     const response = await fetch(URL, {
       headers,
     })
-    const data = await response.json<TResponse>();
-    return data;
+    return await response.json<TResponse>();
   } catch (e) {
     logger.error(`[${URL}]: ${e.message}`)
     return null;
