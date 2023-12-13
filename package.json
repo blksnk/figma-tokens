@@ -1,5 +1,7 @@
 {
-  "name": "@ublo/front-tokens",
+  "name": "@ubloimmo/front-tokens",
+  "private": false,
+  "description": "Figma team styles converted to code-ready css tokens",
   "module": "index.ts",
   "version": "0.0.2",
   "main": "lib/index.ts",
@@ -8,6 +10,11 @@
   "files": [
     "lib"
   ],
+  "homepage": "https://github.com/UbloImmo/front-tokens",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UbloImmo/front-tokens"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
