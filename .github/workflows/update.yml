@@ -91,7 +91,7 @@ jobs:
 
       - name: Revision bump
         id: revision_bump
-        if: steps.token_update.outputs.changes == true
+        if: steps.token_update.outputs.changes == "true"
         run: |
           tmp=$(mktemp);
           version=${{steps.token_update.outputs.version}}
@@ -101,7 +101,7 @@ jobs:
 
       - name: Git commit and push
         id: git_push
-        if: steps.token_update.outputs.changes == true
+        if: steps.token_update.outputs.changes == "true"
         env:
           CI_COMMIT_AUTHOR: CI
           CI_COMMIT_EMAIL: ci@users.noreply.github.com
@@ -116,7 +116,7 @@ jobs:
   publish_package:
     name: "NPM package publish"
     needs: update_tokens
-    if: needs.update_tokens.outputs.changes == true
+    if: needs.update_tokens.outputs.changes == "true"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -132,7 +132,7 @@ jobs:
   create_release:
     name: "Create release"
     needs: update_tokens
-    if: needs.update_tokens.outputs.changes == true
+    if: needs.update_tokens.outputs.changes == "true"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
