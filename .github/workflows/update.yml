@@ -4,6 +4,7 @@ on:
   deployment: null
   schedule:
     - cron: '30 5 * * 6'
+  workflow_dispatch: null
 
 jobs:
   update_tokens:
@@ -58,7 +59,7 @@ jobs:
 
       - name: Revision bump
         id: revision_bump
-        if: steps.token_update.outputs.changes == "true"
+        if: steps.token_update.outputs.changes == true
         run: |
           tmp=$(mktemp);
           jq --arg v "${{steps.token_update.outputs.version}}" '.version = $v' package.json > "$tmp";
@@ -66,7 +67,7 @@ jobs:
 
       - name: Git commit and push
         id: git_push
-        if: steps.token_update.outputs.changes == "true"
+        if: steps.token_update.outputs.changes == true
         env:
           CI_COMMIT_AUTHOR: CI
           CI_COMMIT_EMAIL: ci@users.noreply.github.com
