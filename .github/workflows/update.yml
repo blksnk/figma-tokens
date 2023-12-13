@@ -65,7 +65,7 @@ jobs:
           # evaluate script output
           changes=$(echo $(<./temp/output.json) | jq ".changes")
 
-          if (( $changes == "false" ))
+          if [[ "$changes" == "false" ]]
           then
             # no commit or publish needed
             echo "changes=false" >> $GITHUB_OUTPUT

@@ -30,8 +30,10 @@ const getCurrentVersion = async () => {
 }
 
 const incrementRevision = (currentVersion: string) => {
-  let [major, minor, revision] = currentVersion.split('.').map(parseInt);
+  logger.log(currentVersion)
+  let [major, minor, revision] = currentVersion.split('.').map((num) => parseInt(num));
   revision++
+  logger.debug(revision)
   return [major, minor, revision].map(String).join('.');
 }
 
@@ -67,7 +69,7 @@ const generateCommitMessage = (diffs: ReturnType<typeof diffTokens>, version: st
   const addToChangeLog = (label: string, tokens: Token[]) => {
     if(tokens.length === 0) return;
     titleParts.push(`${label} ${tokens.length}`)
-    const names = tokens.map(({ name }) => name).join(", ");
+    const names = tokens.map(({ name }) => ` - ${name}`).join("\n");
     changelogParts.push(`${label}: ${names}`);
   }
 
