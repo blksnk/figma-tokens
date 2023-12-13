@@ -12,6 +12,19 @@ export const tokens = [
     }
   },
   {
+    "name": "gjcgsci/light",
+    "type": "COLOR",
+    "value": "rgba(240, 234, 235, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(240, 234, 235, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 234, 235, 1);"
+    }
+  },
+  {
     "name": "gjcgsci/dark",
     "type": "COLOR",
     "value": "rgba(107, 57, 63, 1)",
