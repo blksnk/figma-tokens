@@ -124,3 +124,36 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
+  create_release:
+    name: "Create release"
+    needs: update_tokens
+    if: needs.update_tokens.outputs.changes == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install zip
+        uses: montudor/action-zip@v1.0.0
+
+      - name: Bundle lib files
+        id: release_bundle
+        run: |
+          release_file="release-${{ needs.update_tokens.outputs.version }}.zip"
+          echo "release_file=$release_file" >> $GITHUB_OUTPUT
+          zip -qq -r "$release_file" lib
+
+      - name: Create release
+        id: release_create
+        uses: softprops/action-gh-release@v0.1.15
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ needs.update_tokens.outputs.version }}
+          name: Release v${{ needs.update_tokens.outputs.version }}
+          body: |
+            Changes in this release:
+            ${{ needs.update_tokens.outputs.message }}
+          draft: false
+          prerelease: false
+          files: |
+            ${{ steps.release_bundle.outputs.release_file }}
