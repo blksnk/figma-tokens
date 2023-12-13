@@ -34,7 +34,7 @@ export const generateLibIndex = (
   files: FileDescription[],
 ): FileDescription => {
   const content = tsFileData(files.map(({ path }) => {
-    const localPath = path.split("/lib").join("");
+    const localPath = path.split("/lib").join("").split(".ts")[0];
     return `export * from "${localPath}";`
   }));
   return {

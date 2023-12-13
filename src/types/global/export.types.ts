@@ -50,15 +50,6 @@ export type TokenGroup<TType extends TokenType = TokenType, TName extends string
   tokens: TokenOrGroupCollection<TType>;
 }
 
-export type TokenExports = {
-  globalColors: TokenOrGroupCollection<"COLOR">;
-  clientColors: TokenOrGroupCollection<"COLOR">;
-  effects: TokenOrGroupCollection<"EFFECT">;
-  gradients: TokenOrGroupCollection<"GRADIENT">;
-  textStyles: TokenOrGroupCollection<"TEXT">;
-  allTokens: TokenOrGroupCollection;
-}
-
 export type TokenValues = Record<string, Nullable<TokenValues | Token>>;
 
 export type FileDescription = {
