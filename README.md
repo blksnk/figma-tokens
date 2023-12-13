@@ -1,4 +1,4 @@
-# @ublo/front-tokens
+# @ubloimmo/front-tokens
 
 Internal library and private NPM package used to pull figma team styles from API and export them into code-ready css tokens.
 
