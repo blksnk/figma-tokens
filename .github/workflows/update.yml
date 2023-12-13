@@ -28,6 +28,10 @@ jobs:
       - name: Token update
         id: token_update
         run: |
+          # create temp
+          mkdir temp;
+          touch temp/output.json;
+          
           # update figma tokens
           bun run update;
 
@@ -42,8 +46,8 @@ jobs:
           else
             # new changes have been generated
             echo "changes=true" >> $GITHUB_OUTPUT;
-            message=$(echo $(<./temp/output.json) | jq ".message")
-            version=$(echo $(<./temp/output.json) | jq ".version")
+            message=$(echo $(<./temp/output.json) | jq ".message");
+            version=$(echo $(<./temp/output.json) | jq ".version");
             echo "message=$message" >> $GITHUB_OUTPUT;
             echo "version=$version" >> $GITHUB_OUTPUT;
           fi
