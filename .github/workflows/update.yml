@@ -15,12 +15,12 @@ jobs:
         message: ${{steps.token_update.outputs.message}}
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
       - name: Bun & utilities setup
         id: bun_setup
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
         run: |
           bun install
           apt install jq
