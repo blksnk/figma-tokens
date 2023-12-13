@@ -1,56 +1,5 @@
 export const tokens = [
   {
-    "name": "gjcgsci/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "gjcgsci/light",
-    "type": "COLOR",
-    "value": "rgba(240, 234, 235, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(240, 234, 235, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 234, 235, 1);"
-    }
-  },
-  {
-    "name": "gjcgsci/dark",
-    "type": "COLOR",
-    "value": "rgba(107, 57, 63, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(107, 57, 63, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(107, 57, 63, 1);"
-    }
-  },
-  {
-    "name": "gjcgsci/main",
-    "type": "COLOR",
-    "value": "rgba(148, 86, 95, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(148, 86, 95, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(148, 86, 95, 1);"
-    }
-  },
-  {
     "name": "gaia/dark",
     "type": "COLOR",
     "value": "rgba(140, 18, 62, 1)",
