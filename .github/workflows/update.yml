@@ -38,8 +38,7 @@ jobs:
 
       - name: Install dependencies
         id: bun_install
-        run: |
-          bun install
+        run: bun install
 
       - name: Token update
         id: token_update
