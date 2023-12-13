@@ -191,7 +191,7 @@ export const groupTokens = (
     )
   );
   const groupCount = Object.keys(tokensByTypeAndName).length;
-  logger.info(`Created ${groupCount} groups from ${tokens.length} groups.`);
+  logger.info(`Created ${groupCount} groups from ${tokens.length} tokens.`);
   return tokensByTypeAndName;
 }
 
