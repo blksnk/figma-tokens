@@ -10,6 +10,11 @@ export const writeFile = async (path: string, data: string) => {
   await Bun.write(path, data)
 }
 
+export const readFile = async (path: string): Promise<string> => {
+  const file = Bun.file(path)
+  return await file.text();
+};
+
 export const tsConst = (
   constName: string,
   constValue: object

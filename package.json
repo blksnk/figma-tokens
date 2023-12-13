@@ -15,7 +15,8 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "generate": "bun src/scripts/generate.ts"
+    "generate": "bun src/scripts/generate.ts",
+    "update": "bun src/scripts/update.ts"
   },
   "type": "module"
 }

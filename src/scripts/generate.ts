@@ -53,7 +53,7 @@ const updateTeamStyles = async (
   figmaApiClient: FigmaApiClient,
   teamId: FigmaTeamId,
   fileKeyFilters?: FigmaFileKey[]
-) => {
+): Promise<Token[]> => {
   info("Staring team styles update...");
   const teamStyleTokens = await fetchAndFormatTeamStyles(figmaApiClient, teamId, fileKeyFilters);
   const rootTokenCollection = groupTokens(teamStyleTokens, logger)
@@ -61,12 +61,13 @@ const updateTeamStyles = async (
   const tokenValues = unwrapTokenValues(rootTokenCollection)
   debug(tokenValues)
   await generateExportedTS(rootTokenCollection, tokenValues, teamStyleTokens);
+  return teamStyleTokens;
 }
 
 /**
  * Fetches up to date figma files and Updates exported theme values.
  */
-const main = async () => {
+export const generate = async () => {
   debug("Validating config...");
   const config = validateConfig({
     FIGMA_TOKEN,
@@ -77,10 +78,9 @@ const main = async () => {
   debug("Initializing Figma API client...")
   const figmaApiClient = new FigmaApiClient(config.FIGMA_TOKEN);
   info("Figma API client initialized");
-  await updateTeamStyles(
+  const allTokens = await updateTeamStyles(
     figmaApiClient, config.FIGMA_TEAM_ID,
     extractConfigFileKeys(config.FIGMA_FILE_URLS, logger)
   )
+  return allTokens;
 }
-
-main();
