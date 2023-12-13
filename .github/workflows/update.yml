@@ -82,6 +82,8 @@ jobs:
             echo "message=$message" >> $GITHUB_OUTPUT
             echo "version=$version" >> $GITHUB_OUTPUT
           fi
+          
+          echo $GITHUB_OUTPUT
         env:
           FIGMA_TOKEN: ${{secrets.FIGMA_TOKEN}}
           FIGMA_TEAM_ID: ${{secrets.FIGMA_TEAM_ID}}
