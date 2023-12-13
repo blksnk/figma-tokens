@@ -1,9 +1,9 @@
 {
   "name": "@ubloimmo/front-tokens",
-  "private": false,
   "description": "Figma team styles converted to code-ready css tokens",
-  "module": "index.ts",
   "version": "0.0.2",
+  "private": false,
+  "module": "lib/index.ts",
   "main": "lib/index.ts",
   "author": "Jean-Nicolas Veigel <art.jnveigel@gmail.com>",
   "license": "MIT",
