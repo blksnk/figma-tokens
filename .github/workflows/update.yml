@@ -89,7 +89,9 @@ jobs:
         if: steps.token_update.outputs.changes == true
         run: |
           tmp=$(mktemp);
-          jq --arg v "${{steps.token_update.outputs.version}}" '.version = $v' package.json > "$tmp";
+          version=${{steps.token_update.outputs.version}}
+          echo "Bump version: $version"
+          jq --arg v "$version" '.version = $v' package.json > "$tmp";
           mv "$tmp" package.json;
 
       - name: Git commit and push
