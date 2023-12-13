@@ -40,6 +40,18 @@ jobs:
         id: bun_install
         run: bun install
 
+      - name: Setup environment
+        id: env_setup
+        env:
+          FIGMA_TOKEN: ${{secrets.FIGMA_TOKEN}}
+          FIGMA_TEAM_ID: ${{secrets.FIGMA_TEAM_ID}}
+          FIGMA_FILE_URLS: ${{secrets.FIGMA_FILE_URLS}}
+        run: |
+          touch .env
+          echo "FIGMA_TOKEN=${{env.FIGMA_TOKEN}}" >> .env
+          echo "FIGMA_TEAM_ID=${{env.FIGMA_TEAM_ID}}" >> .env
+          echo "FIGMA_FILE_URLS=${{env.FIGMA_FILE_URLS}}" >> .env
+
       - name: Token update
         id: token_update
         run: |
