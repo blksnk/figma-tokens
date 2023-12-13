@@ -1,0 +1,75 @@
+name: Token update
+run-name: Updating figma tokens
+on:
+  deployment: null
+  schedule:
+    - cron: '30 5 * * 6'
+
+jobs:
+  update_tokens:
+    name: "Figma token update"
+    runs-on: ubuntu-latest
+    outputs:
+        changes: ${{steps.token_update.outputs.changes}}
+        version: ${{steps.token_update.outputs.version}}
+        message: ${{steps.token_update.outputs.message}}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bun & utilities setup
+        id: bun_setup
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+        run: |
+          bun install
+          apt install jq
+
+      - name: Token update
+        id: token_update
+        run: |
+          # update figma tokens
+          bun run update;
+
+          # evaluate script output
+          changes=$(echo $(<./temp/output.json) | jq ".changes");
+          GITHUB_OUTPUT;
+
+          if (( $changes == "false" ))
+          then
+            # no commit or publish needed
+            echo "changes=false" >> $GITHUB_OUTPUT;
+          else
+            # new changes have been generated
+            echo "changes=true" >> $GITHUB_OUTPUT;
+            message=$(echo $(<./temp/output.json) | jq ".message")
+            version=$(echo $(<./temp/output.json) | jq ".version")
+            echo "message=$message" >> $GITHUB_OUTPUT;
+            echo "version=$version" >> $GITHUB_OUTPUT;
+          fi
+        env:
+          FIGMA_TOKEN: ${{secrets.FIGMA_TOKEN}}
+          FIGMA_TEAM_ID: ${{secrets.FIGMA_TEAM_ID}}
+          FIGMA_FILE_URLS: ${{secrets.FIGMA_FILE_URLS}}
+
+      - name: Revision bump
+        id: revision_bump
+        if: steps.token_update.outputs.changes == "true"
+        run: |
+          tmp=$(mktemp);
+          jq --arg v "${{steps.token_update.outputs.version}}" '.version = $v' package.json > "$tmp";
+          mv "$tmp" package.json;
+
+      - name: Git commit and push
+        id: git_push
+        if: steps.token_update.outputs.changes == "true"
+        env:
+          CI_COMMIT_AUTHOR: CI
+          CI_COMMIT_EMAIL: ci@users.noreply.github.com
+          CI_COMMIT_MESSAGE: ${{steps.token_update.outputs.message}}
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
+          git add .
+          git commit -m "${{env.CI_COMMIT_MESSAGE}}"
+          git push

@@ -1,4 +1,8 @@
-import { LIB_TOKENS, readFile } from "../utils/export.utils";
+import {
+  LIB_TOKENS,
+  UPDATE_OUTPUT,
+  writeFile
+} from "../utils/export.utils";
 import { Logger } from "../utils/log.utils";
 import { Token } from "../types/global/export.types";
 import { generate } from "./generate";
@@ -25,8 +29,10 @@ const getCurrentVersion = async () => {
   return version;
 }
 
-const getNewVersion = (previousVersion: string) => {
-
+const incrementRevision = (currentVersion: string) => {
+  let [major, minor, revision] = currentVersion.split('.').map(parseInt);
+  revision++
+  return [major, minor, revision].map(String).join('.');
 }
 
 const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
@@ -44,12 +50,39 @@ const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
     return correspondingToken.value !== freshToken.value;
   })
   logger.info(`Updated ${updatedTokens.length} existing tokens.`)
-
+  const changesCount = addedTokens.length + removedTokens.length + updatedTokens.length
   return {
     addedTokens,
     removedTokens,
     updatedTokens,
+    changesCount,
   }
+}
+
+const generateCommitMessage = (diffs: ReturnType<typeof diffTokens>, version: string) => {
+  const prefix = `build(${version}):`;
+  const titleParts: string[] = [];
+  const changelogParts: string[] = [];
+
+  const addToChangeLog = (label: string, tokens: Token[]) => {
+    if(tokens.length === 0) return;
+    titleParts.push(`${label} ${tokens.length}`)
+    const names = tokens.map(({ name }) => name).join(", ");
+    changelogParts.push(`${label}: ${names}`);
+  }
+
+  addToChangeLog("Updated", diffs.updatedTokens)
+  addToChangeLog("Added", diffs.addedTokens)
+  addToChangeLog("Removed", diffs.removedTokens)
+
+  const title = [prefix, titleParts.join(", ")].join(" ");
+  const changelog = changelogParts.join("\n");
+
+  return [title, changelog].join("\n\n");
+}
+
+const writeOutput = async (output: object) => {
+  await writeFile(UPDATE_OUTPUT, JSON.stringify(output))
 }
 
 /**
@@ -62,7 +95,22 @@ export const update = async () => {
   const previousTokens = await fetchPreviousTokens();
   const freshTokens = await generate();
   const diffs = diffTokens(previousTokens, freshTokens)
-  logger.debug(diffs)
+  const currentVersion = await getCurrentVersion()
+
+  if (!diffs.changesCount) return writeOutput({
+    changes: false,
+    version: currentVersion,
+    message: null,
+  })
+
+  const version = incrementRevision(currentVersion);
+  const message = generateCommitMessage(diffs, version);
+
+  return writeOutput({
+    changes: true,
+    version,
+    message,
+  })
 }
 
-update();
+await update();

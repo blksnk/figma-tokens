@@ -23,7 +23,7 @@ const logger = Logger({
   throwOnError: true,
   mode: "simple"
 })
-const { info, debug, warn, log, } = logger;
+const { info, debug, warn } = logger;
 
 const fetchAndFormatTeamStyles = async (
   figmaApiClient: FigmaApiClient,
@@ -44,7 +44,6 @@ const fetchAndFormatTeamStyles = async (
   const filteredStyles = fileKeyFilters && fileKeyFilters.length > 0
     ? teamStyles.filter(teamStyle => fileKeyFilters.includes(teamStyle.file_key))
     : teamStyles;
-  log(filteredStyles);
   info("Fetched team styles");
   return await tokenizeStyles(figmaApiClient, filteredStyles, logger);
 }
@@ -57,9 +56,7 @@ const updateTeamStyles = async (
   info("Staring team styles update...");
   const teamStyleTokens = await fetchAndFormatTeamStyles(figmaApiClient, teamId, fileKeyFilters);
   const rootTokenCollection = groupTokens(teamStyleTokens, logger)
-  debug(rootTokenCollection, "root token collection")
   const tokenValues = unwrapTokenValues(rootTokenCollection)
-  debug(tokenValues)
   await generateExportedTS(rootTokenCollection, tokenValues, teamStyleTokens);
   return teamStyleTokens;
 }

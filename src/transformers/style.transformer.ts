@@ -3,14 +3,12 @@ import { FigmaStyleMetadata } from "../types/figma/figma.teams.types";
 import { Logger } from "../utils/log.utils";
 import {
   FigmaFileKey,
-  FigmaPaint
 } from "../types/figma/figma.properties.types";
 import { FigmaStyleType } from "../types/figma/figma.enums.types";
 import { FigmaTextNode } from "../types/figma/figma.nodes.types";
 import { FigmaFileNodeResponse } from "../types/figma/figma.endpoints.types";
 import { StyleNode } from "../types/global/transformer.types";
 import { styleNodeToToken } from "./token.transfomer";
-import { NonNullable } from "../types/global/global.types";
 import { Token } from "../types/global/export.types";
 
 const getUniqueFileKeys = (styles: FigmaStyleMetadata[]): FigmaFileKey[] => {
@@ -86,7 +84,6 @@ export const getStyleNodes = async (figmaApiClient: FigmaApiClient, styles: Figm
 export const tokenizeStyles = async (figmaApiClient: FigmaApiClient, styles: FigmaStyleMetadata[], logger: Logger = Logger()) => {
   logger.info(`Populating all ${styles.length} filtered styles based on metadata...`)
   const styleNodes = await getStyleNodes(figmaApiClient, styles, logger);
-  logger.debug(styleNodes)
   logger.info("Transforming figma styles to tokens...");
   const tokens = styleNodes.map(styleNode => styleNodeToToken(styleNode))
   logger.info("Done")

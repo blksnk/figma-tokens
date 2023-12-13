@@ -163,7 +163,6 @@ export const groupTokensByName = (
   }
   // group all tokens paths
   groups = Object.assign({}, ...tokenPaths.map((tokenPath) => nestToken(tokenPath)))
-  logger.log(groups, "GROUPS")
 
   return groups;
 }

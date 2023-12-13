@@ -3,8 +3,9 @@ export const LIB_COLLECTION = "./lib/tokens.collection.ts"
 export const LIB_TOKENS = "./lib/tokens.all.ts"
 export const LIB_VALUES = "./lib/tokens.values.ts"
 
-const TS_CONST_TEMPLATE = (constName: string) => `export const ${constName}`
+export const UPDATE_OUTPUT = "./temp/output.json";
 
+const TS_CONST_TEMPLATE = (constName: string) => `export const ${constName}`
 
 export const writeFile = async (path: string, data: string) => {
   await Bun.write(path, data)
