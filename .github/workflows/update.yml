@@ -59,6 +59,9 @@ jobs:
           mkdir temp
           touch temp/output.json
           
+          # create lib dir if it doesn't exist
+          mkdir -p lib
+          
           # update figma tokens
           bun run update
 
