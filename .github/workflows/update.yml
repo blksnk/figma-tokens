@@ -16,41 +16,58 @@ jobs:
         message: ${{steps.token_update.outputs.message}}
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v1
+
+      - name: Setup jq
+        uses: dcarbone/install-jq-action@v2
+
+      - name: Check jq
+        run: |
+          which jq
+          jq --version
+
+      - name: Setup Bun
+        id: bun_setup
+        uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
 
-      - name: Bun & utilities setup
-        id: bun_setup
+      - name: Check bun
+        run: |
+          which bun
+          bun --version
+
+      - name: Install dependencies
+        id: bun_install
         run: |
           bun install
-          apt install jq
 
       - name: Token update
         id: token_update
         run: |
           # create temp
-          mkdir temp;
-          touch temp/output.json;
+          mkdir temp
+          touch temp/output.json
           
           # update figma tokens
-          bun run update;
+          bun run update
 
           # evaluate script output
-          changes=$(echo $(<./temp/output.json) | jq ".changes");
-          GITHUB_OUTPUT;
+          changes=$(echo $(<./temp/output.json) | jq ".changes")
+          GITHUB_OUTPUT
 
           if (( $changes == "false" ))
           then
             # no commit or publish needed
-            echo "changes=false" >> $GITHUB_OUTPUT;
+            echo "changes=false" >> $GITHUB_OUTPUT
           else
             # new changes have been generated
-            echo "changes=true" >> $GITHUB_OUTPUT;
-            message=$(echo $(<./temp/output.json) | jq ".message");
-            version=$(echo $(<./temp/output.json) | jq ".version");
-            echo "message=$message" >> $GITHUB_OUTPUT;
-            echo "version=$version" >> $GITHUB_OUTPUT;
+            # pull message and version from script output
+            message=$(echo $(<./temp/output.json) | jq ".message")
+            version=$(echo $(<./temp/output.json) | jq ".version")
+            # expose output to further steps
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "message=$message" >> $GITHUB_OUTPUT
+            echo "version=$version" >> $GITHUB_OUTPUT
           fi
         env:
           FIGMA_TOKEN: ${{secrets.FIGMA_TOKEN}}
