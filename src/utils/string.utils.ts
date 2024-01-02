@@ -3,6 +3,7 @@ const LOWERCASE = /[\p{Ll}]/u;
 const LEADING_CAPITAL = /^[\p{Lu}](?![\p{Lu}])/gu;
 const IDENTIFIER = /([\p{Alpha}\p{N}_]|$)/u;
 const SEPARATORS = /[_.\- ]+/;
+const NUMBER_IN_PARENTHESIS = /\(([0-9]+)\)/g;
 
 const LEADING_SEPARATORS = new RegExp('^' + SEPARATORS.source);
 const SEPARATORS_AND_IDENTIFIER = new RegExp(SEPARATORS.source + IDENTIFIER.source, 'gu');
@@ -253,6 +254,7 @@ export const sanitize = (str: string): string =>
     .replaceAll("Ê", "E")
     .replaceAll("à", "a")
     .replaceAll("ç", "c")
+    .replaceAll(NUMBER_IN_PARENTHESIS, "")
 
 
 /**
@@ -261,7 +263,7 @@ export const sanitize = (str: string): string =>
  * @param {string} str - The string to be converted to camel case after sanitization.
  * @return {string} The resulting string in camel case format.
  */
-export const saneCamel = (str: string) => camelCase(sanitize(str));
+export const saneCamel = (str: string) => sanitize(camelCase(str));
 
 /**
  * Replaces uppercase letters with hyphens and lowercase letters,

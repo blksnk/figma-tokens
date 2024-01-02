@@ -2335,7 +2335,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/smallItalic (12)",
+    "name": "desktop/smallItalic",
     "type": "TEXT",
     "value": "0.75rem",
     "css": {
@@ -2358,7 +2358,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/extraSmall (10)",
+    "name": "desktop/extraSmall",
     "type": "TEXT",
     "value": "0.625rem",
     "css": {
@@ -2739,7 +2739,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/h1 (36)",
+    "name": "desktop/h1",
     "type": "TEXT",
     "value": "2.25rem",
     "css": {
@@ -2762,7 +2762,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/button (14)",
+    "name": "desktop/button",
     "type": "TEXT",
     "value": "0.875rem",
     "css": {
@@ -2785,7 +2785,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/h2 (24)",
+    "name": "desktop/h2",
     "type": "TEXT",
     "value": "1.5rem",
     "css": {
@@ -2808,7 +2808,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/subtitle (16)",
+    "name": "desktop/subtitle",
     "type": "TEXT",
     "value": "1rem",
     "css": {
@@ -2831,7 +2831,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/pressable (14)",
+    "name": "desktop/pressable",
     "type": "TEXT",
     "value": "0.875rem",
     "css": {
@@ -2854,7 +2854,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/h4 (16)",
+    "name": "desktop/h4",
     "type": "TEXT",
     "value": "1rem",
     "css": {
@@ -2877,7 +2877,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/small (12)",
+    "name": "desktop/small",
     "type": "TEXT",
     "value": "0.75rem",
     "css": {
@@ -2900,7 +2900,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/smallBold (12)",
+    "name": "desktop/smallBold",
     "type": "TEXT",
     "value": "0.75rem",
     "css": {
@@ -2923,7 +2923,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/caption (12)",
+    "name": "desktop/caption",
     "type": "TEXT",
     "value": "0.75rem",
     "css": {
@@ -2946,7 +2946,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/overline (12)",
+    "name": "desktop/overline",
     "type": "TEXT",
     "value": "0.75rem",
     "css": {
@@ -2982,7 +2982,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/body (14)",
+    "name": "desktop/body",
     "type": "TEXT",
     "value": "0.875rem",
     "css": {
@@ -3057,7 +3057,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/displayTitle (42)",
+    "name": "desktop/displayTitle",
     "type": "TEXT",
     "value": "2.625rem",
     "css": {
@@ -3308,7 +3308,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/bodyBold (14)",
+    "name": "desktop/bodyBold",
     "type": "TEXT",
     "value": "0.875rem",
     "css": {
@@ -3530,7 +3530,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/subtitleBold (16)",
+    "name": "desktop/subtitleBold",
     "type": "TEXT",
     "value": "1rem",
     "css": {
@@ -3553,7 +3553,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/stroked (14)",
+    "name": "desktop/stroked",
     "type": "TEXT",
     "value": "0.875rem",
     "css": {
@@ -3612,7 +3612,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/h3 (18)",
+    "name": "desktop/h3",
     "type": "TEXT",
     "value": "1.125rem",
     "css": {
@@ -3635,7 +3635,7 @@ export const tokens = [
     }
   },
   {
-    "name": "desktop/link (14)",
+    "name": "desktop/link",
     "type": "TEXT",
     "value": "0.875rem",
     "css": {

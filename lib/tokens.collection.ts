@@ -314,8 +314,8 @@ export const TEXT = {
     "name": "desktop",
     "type": "TEXT",
     "tokens": {
-      "smallItalic (12)": {
-        "name": "smallItalic (12)",
+      "smallItalic": {
+        "name": "smallItalic",
         "type": "TEXT",
         "value": "0.75rem",
         "css": {
@@ -337,8 +337,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "extraSmall (10)": {
-        "name": "extraSmall (10)",
+      "extraSmall": {
+        "name": "extraSmall",
         "type": "TEXT",
         "value": "0.625rem",
         "css": {
@@ -360,8 +360,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "h1 (36)": {
-        "name": "h1 (36)",
+      "h1": {
+        "name": "h1",
         "type": "TEXT",
         "value": "2.25rem",
         "css": {
@@ -383,8 +383,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 2.25rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.25rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "button (14)": {
-        "name": "button (14)",
+      "button": {
+        "name": "button",
         "type": "TEXT",
         "value": "0.875rem",
         "css": {
@@ -406,8 +406,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "h2 (24)": {
-        "name": "h2 (24)",
+      "h2": {
+        "name": "h2",
         "type": "TEXT",
         "value": "1.5rem",
         "css": {
@@ -429,8 +429,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "subtitle (16)": {
-        "name": "subtitle (16)",
+      "subtitle": {
+        "name": "subtitle",
         "type": "TEXT",
         "value": "1rem",
         "css": {
@@ -452,8 +452,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "pressable (14)": {
-        "name": "pressable (14)",
+      "pressable": {
+        "name": "pressable",
         "type": "TEXT",
         "value": "0.875rem",
         "css": {
@@ -475,8 +475,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 1rem;\nletter-spacing: 0.043750000000000004rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "h4 (16)": {
-        "name": "h4 (16)",
+      "h4": {
+        "name": "h4",
         "type": "TEXT",
         "value": "1rem",
         "css": {
@@ -498,8 +498,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "small (12)": {
-        "name": "small (12)",
+      "small": {
+        "name": "small",
         "type": "TEXT",
         "value": "0.75rem",
         "css": {
@@ -521,8 +521,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "smallBold (12)": {
-        "name": "smallBold (12)",
+      "smallBold": {
+        "name": "smallBold",
         "type": "TEXT",
         "value": "0.75rem",
         "css": {
@@ -544,8 +544,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "caption (12)": {
-        "name": "caption (12)",
+      "caption": {
+        "name": "caption",
         "type": "TEXT",
         "value": "0.75rem",
         "css": {
@@ -567,8 +567,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.875rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "overline (12)": {
-        "name": "overline (12)",
+      "overline": {
+        "name": "overline",
         "type": "TEXT",
         "value": "0.75rem",
         "css": {
@@ -590,8 +590,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 0.875rem;\nletter-spacing: 0.3125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "body (14)": {
-        "name": "body (14)",
+      "body": {
+        "name": "body",
         "type": "TEXT",
         "value": "0.875rem",
         "css": {
@@ -613,8 +613,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "displayTitle (42)": {
-        "name": "displayTitle (42)",
+      "displayTitle": {
+        "name": "displayTitle",
         "type": "TEXT",
         "value": "2.625rem",
         "css": {
@@ -636,8 +636,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 2.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5700000000000003rem%;\nletter-spacing: 0.013125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "bodyBold (14)": {
-        "name": "bodyBold (14)",
+      "bodyBold": {
+        "name": "bodyBold",
         "type": "TEXT",
         "value": "0.875rem",
         "css": {
@@ -659,8 +659,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "subtitleBold (16)": {
-        "name": "subtitleBold (16)",
+      "subtitleBold": {
+        "name": "subtitleBold",
         "type": "TEXT",
         "value": "1rem",
         "css": {
@@ -682,8 +682,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "stroked (14)": {
-        "name": "stroked (14)",
+      "stroked": {
+        "name": "stroked",
         "type": "TEXT",
         "value": "0.875rem",
         "css": {
@@ -705,8 +705,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: strike-through;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "h3 (18)": {
-        "name": "h3 (18)",
+      "h3": {
+        "name": "h3",
         "type": "TEXT",
         "value": "1.125rem",
         "css": {
@@ -728,8 +728,8 @@ export const TEXT = {
           "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.75rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
         }
       },
-      "link (14)": {
-        "name": "link (14)",
+      "link": {
+        "name": "link",
         "type": "TEXT",
         "value": "0.875rem",
         "css": {
