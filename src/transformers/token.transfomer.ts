@@ -11,6 +11,12 @@ import { Logger } from "../utils/log.utils";
 import { transformObject } from "../utils/transform.utils";
 import { camelCase, saneCamel, sanitize } from "../utils/string.utils";
 
+/**
+ * Determines the type of token based on the given style node.
+ *
+ * @param {StyleNode<TStyleType>} styleNode - The style node object containing the type and style properties.
+ * @return {Nullable<TokenType>} The type of token, or null if it cannot be determined.
+ */
 const tokenType = <TStyleType extends FigmaStyleType>(
   {
     type,
@@ -37,6 +43,13 @@ const tokenType = <TStyleType extends FigmaStyleType>(
   }
 }
 
+/**
+ * Returns the value of a given token based on its type and style.
+ *
+ * @param {TokenType} tokenType - The type of the token.
+ * @param {Partial<CSSStyleDeclaration>} tokenStyle - The style of the token.
+ * @return {Nullable<string>} The value of the token, or null if not found.
+ */
 const tokenValue = (
   tokenType: TokenType,
   tokenStyle: Partial<CSSStyleDeclaration>
@@ -57,6 +70,13 @@ const tokenValue = (
   return null
 }
 
+/**
+ * Converts a style node to a token.
+ *
+ * @param {StyleNode<TStyleType>} styleNode - The style node to convert to a token.
+ * @param {Logger} [logger=Logger()] - The logger to use for warning messages. Defaults to a new instance of Logger.
+ * @return {Nullable<FigmaStyleTypeToToken<Token, typeof styleNode.nodeType>>} - The converted token, or null if the style node is not supported.
+ */
 export const styleNodeToToken = <TStyleType extends FigmaStyleType>(
   styleNode: StyleNode<TStyleType>,
   logger: Logger = Logger()
@@ -87,6 +107,26 @@ export const styleNodeToToken = <TStyleType extends FigmaStyleType>(
   }
 }
 
+/**
+ * Groups the given array of tokens by name and returns a collection of tokens and token groups.
+ * The function takes an optional logger object for logging messages.
+ *
+ * The function first sorts the tokens based on their nesting level (depth of the token name).
+ * It then maps each token to a simplified object with the name set to the last segment of the path.
+ *
+ * If there are no tokens with nesting, an empty group is returned.
+ * If there is only one level of nesting, a group is created using the token name as the key and the token as the value.
+ *
+ * For deeper nesting, the function creates a `slices` object to represent the nested structure.
+ * It uses the `findNestedSlice` helper function to find the appropriate nested slice for a given path.
+ *
+ * Finally, the function iterates through the token paths and creates the nested token structure using the `nestToken` helper function.
+ * The resulting group object contains all the tokens and token groups grouped by their paths.
+ *
+ * @param {Token[]} tokens - An array of tokens to be grouped.
+ * @param {Logger} logger - (Optional) A logger object for logging messages.
+ * @return {TokenOrGroupCollection} - A collection of tokens and token groups.
+ */
 export const groupTokensByName = (
   tokens: Token[],
   logger = Logger()
@@ -123,6 +163,13 @@ export const groupTokensByName = (
   }
 
   let slices: TokenOrGroupCollection = {};
+
+  /**
+   * Finds a nested slice in the given slice.
+   *
+   * @param {string[]} slice - The slice to search in.
+   * @return {Nullable<TokenOrGroupCollection>} The nested slice if found, otherwise null.
+   */
   const findNestedSlice = (slice: string[]) => {
     logger.log(`Finding slice "${slice.join(", ")}"`)
     let temp: Nullable<TokenOrGroupCollection> = slices;
@@ -135,6 +182,12 @@ export const groupTokensByName = (
     return temp;
   }
 
+  /**
+   * Generates a nested token based on a given token path.
+   *
+   * @param {{path: string[], token: Token }} tokenPath - The token path containing the path and the token.
+   * @return {TokenOrGroupCollection} The nested token generated from the token path.
+   */
   const nestToken = (tokenPath: {path: string[], token: Token }) => {
     const items = tokenPath.path.reverse();
     const nestedToken = items.reduce((acc, part, level): TokenOrGroupCollection => {
@@ -167,6 +220,12 @@ export const groupTokensByName = (
   return groups;
 }
 
+/**
+ * Groups an array of tokens by their type.
+ *
+ * @param {Token[]} tokens - The array of tokens to be grouped.
+ * @return {Record<TokenType, Token[]>} The grouped tokens, where the keys are the token types and the values are arrays of tokens.
+ */
 export const groupTokensByType = (tokens: Token[]) => {
   return tokens.reduce<Record<TokenType, Token[]>>(
     <TType extends TokenType>(acc: Record<TType, Token<TType>[]>, token: Token<TType>) => {
@@ -179,6 +238,13 @@ export const groupTokensByType = (tokens: Token[]) => {
   );
 }
 
+/**
+ * Groups the given tokens by name and type.
+ *
+ * @param {Token[]} tokens - The array of tokens to be grouped.
+ * @param {Logger} [logger=Logger()] - The logger to use for logging information.
+ * @return {RootTokenCollection} - The grouped tokens.
+ */
 export const groupTokens = (
   tokens: Token[],
   logger: Logger = Logger()
@@ -195,18 +261,39 @@ export const groupTokens = (
   return tokensByTypeAndName;
 }
 
+/**
+ * Predicate that checks if the given data is a Token.
+ *
+ * @param {TokenGroup | Token | TokenOrGroupCollection} data - The data to be checked.
+ * @return {boolean} True if the data is a Token, false otherwise.
+ */
 const isToken = (
   data: TokenGroup | Token | TokenOrGroupCollection
 ): data is Token => {
   return data && !!data.type && typeof data.type === "string" && tokenTypes.includes(data.type);
 }
 
+/**
+ * Predicate that checks if the given data is a TokenGroup.
+ *
+ * @param {TokenGroup | Token | TokenOrGroupCollection} data - The data to be checked.
+ * @returns {boolean} True if the data is a TokenGroup, false otherwise.
+ */
 const isTokenGroup = (
   data: TokenGroup | Token | TokenOrGroupCollection
 ): data is TokenGroup => {
   return data && !!data.tokens && typeof data.tokens === "object";
 }
 
+/**
+ * Unwraps a token or a collection of tokens.
+ * If the input is a token group, it recursively unwraps each token in the group.
+ * If the input is a token, it returns the token itself.
+ * If the input is a collection of tokens, it recursively unwraps each token in the collection.
+ *
+ * @param {TokenGroup | Token | TokenOrGroupCollection} tokenOrCollection - The token or collection of tokens to unwrap.
+ * @return {TokenValues | Token} - The unwrapped token or collection of tokens.
+ */
 const unwrapTokenOrGroup = (
   tokenOrCollection: TokenGroup | Token | TokenOrGroupCollection
 ): TokenValues | Token => {
@@ -228,6 +315,13 @@ const unwrapTokenOrGroup = (
     saneCamel);
 }
 
+/**
+ * Extracts the token values from the root token collection.
+ *
+ * @param {RootTokenCollection} rootTokenCollection - The root token collection to extract values from.
+ * @param {Logger} logger - (Optional) The logger to use for logging progress and information. Defaults to a new Logger instance.
+ * @return {TokenValues} The extracted token values.
+ */
 export const unwrapTokenValues = (
   rootTokenCollection: RootTokenCollection,
   logger: Logger = Logger()

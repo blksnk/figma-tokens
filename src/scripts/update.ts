@@ -24,19 +24,40 @@ const fetchPreviousTokens = async (): Promise<Token[]> => {
   }
 }
 
+/**
+ * Retrieves the current version from the package.json file.
+ *
+ * @return {Promise<string>} The current version.
+ */
 const getCurrentVersion = async () => {
   const { version } = await import("../../package.json");
   return version;
 }
 
+/**
+ * Increments the revision number of a given version.
+ *
+ * @param {string} currentVersion - The current version to increment.
+ * @return {string} The updated version with the incremented revision number.
+ *
+ * @example
+ * incrementRevision("1.2.3") // returns "1.2.4"
+ * incrementRevision("1.9.9") // returns "1.9.10"
+ * incrementRevision("2.0.0") // returns "2.0.1"
+ */
 const incrementRevision = (currentVersion: string) => {
-  logger.log(currentVersion)
   let [major, minor, revision] = currentVersion.split('.').map((num) => parseInt(num));
   revision++
-  logger.debug(revision)
   return [major, minor, revision].map(String).join('.');
 }
 
+/**
+ * Compares two arrays of tokens and returns the differences between them.
+ *
+ * @param {Token[]} previousTokens - The array of previous tokens.
+ * @param {Token[]} freshTokens - The array of fresh tokens.
+ * @return {Object} - An object containing the added tokens, removed tokens, updated tokens, and the total count of changes.
+ */
 const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
   logger.info("Comparing new tokens to old tokens");
   const previousTokenNames = previousTokens.map(({ name }) => name);
@@ -61,11 +82,25 @@ const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
   }
 }
 
+/**
+ * Generates a commit message based on the differences between tokens and the version.
+ *
+ * @param {ReturnType<typeof diffTokens>} diffs - The differences between tokens.
+ * @param {string} version - The version of the commit message.
+ * @return {string} The generated commit message.
+ */
 const generateCommitMessage = (diffs: ReturnType<typeof diffTokens>, version: string) => {
   const prefix = `build(${version}):`;
   const titleParts: string[] = [];
   const changelogParts: string[] = [];
 
+  /**
+   * Adds a label and the number of tokens to the change log.
+   *
+   * @param {string} label - The label to add to the change log.
+   * @param {Token[]} tokens - The tokens to add to the change log.
+   * @return {void} This function does not return a value.
+   */
   const addToChangeLog = (label: string, tokens: Token[]) => {
     if(tokens.length === 0) return;
     titleParts.push(`${label} ${tokens.length}`)
@@ -83,6 +118,12 @@ const generateCommitMessage = (diffs: ReturnType<typeof diffTokens>, version: st
   return [title, changelog].join("\n\n");
 }
 
+/**
+ * Writes the provided output object to a file.
+ *
+ * @param {object} output - The output object to be written.
+ * @return {Promise<void>} - A promise that resolves once the write operation is complete.
+ */
 const writeOutput = async (output: object) => {
   await writeFile(UPDATE_OUTPUT, JSON.stringify(output))
 }

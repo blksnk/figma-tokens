@@ -29,8 +29,14 @@ import {
 } from "../types/figma/figma.properties.types";
 import { Nullable, Optional } from "../types/global/global.types";
 import { Logger, LoggerConfig } from "../utils/log.utils";
-import { FigmaComponentMetadata } from "../types/figma/figma.teams.types";
 
+
+/**
+ * Represents a client for interacting with the Figma API.
+ *
+ * This class provides methods for retrieving files, querying endpoints,
+ * and performing various operations on Figma files.
+ */
 export class FigmaApiClient {
   token: string;
   fileKey: Optional<FigmaFileKey>;
@@ -75,6 +81,13 @@ export class FigmaApiClient {
     this.logger = Logger(loggerConfig);
   }
 
+  /**
+   * Retrieves a file from the Figma API.
+   *
+   * @param {FigmaFileKey} fileKey - The key of the file to retrieve. Defaults to the fileKey associated with the instance.
+   * @param {GetFileEndpointQueryParams} queryParams - Additional query parameters to include in the API request.
+   * @returns {Promise<GetFileEndpointResponse>} A promise that resolves to the retrieved file.
+   */
   async getFile(fileKey: FigmaFileKey = this.fileKey, queryParams?: GetFileEndpointQueryParams) {
     fileKey = validateKey(fileKey)
     // replace fileKey for consecutive endpoint calls
@@ -86,6 +99,13 @@ export class FigmaApiClient {
     return this.lastFile;
   }
 
+  /**
+   * Retrieves the file nodes for a given file key.
+   *
+   * @param {FigmaFileKey} [fileKey=this.fileKey] - The file key to retrieve the nodes from.
+   * @param {GetFileNodesEndpointQueryParams} [queryParams] - Additional query parameters for the endpoint.
+   * @return {Promise<GetFileNodesEndpointResponse>} - A promise that resolves to the file nodes.
+   */
   async getFileNodes(fileKey: FigmaFileKey = this.fileKey, queryParams?: GetFileNodesEndpointQueryParams) {
     fileKey = validateKey(fileKey)
     // replace fileKey for consecutive endpoint calls
@@ -97,6 +117,12 @@ export class FigmaApiClient {
     return this.lastFileNodes;
   }
 
+  /**
+   * Retrieves the components of a file given its file key.
+   *
+   * @param {FigmaFileKey} fileKey - The file key of the file. Defaults to the file key of this instance.
+   * @return {Promise<GetFileComponentsEndpointResponse>} A promise that resolves to the file components.
+   */
   async getFileComponents(fileKey: FigmaFileKey = this.fileKey) {
     fileKey = validateKey(fileKey)
     // replace fileKey for consecutive endpoint calls
@@ -108,6 +134,12 @@ export class FigmaApiClient {
     return this.lastFileComponents;
   }
 
+  /**
+   * Retrieves the component sets for a given Figma file.
+   *
+   * @param {FigmaFileKey} fileKey - The key of the Figma file. Defaults to the fileKey of the instance.
+   * @return {Promise<GetFileComponentSetsEndpointResponse>} A promise that resolves with the component sets of the file.
+   */
   async getFileComponentSets(fileKey: FigmaFileKey = this.fileKey) {
     fileKey = validateKey(fileKey)
     // replace fileKey for consecutive endpoint calls
@@ -119,6 +151,12 @@ export class FigmaApiClient {
     return this.lastFileComponentSets;
   }
 
+  /**
+   * Retrieves the styles for a given Figma file.
+   *
+   * @param {FigmaFileKey} fileKey - The key of the Figma file to retrieve the styles from. Defaults to the fileKey associated with the current instance.
+   * @return {Promise<GetFileStylesEndpointResponse>} A promise that resolves with the styles of the file.
+   */
   async getFileStyles(fileKey: FigmaFileKey = this.fileKey) {
     fileKey = validateKey(fileKey)
     // replace fileKey for consecutive endpoint calls
@@ -130,6 +168,13 @@ export class FigmaApiClient {
     return this.lastFileStyles;
   }
 
+  /**
+   * Retrieves images for a Figma file.
+   *
+   * @param {FigmaFileKey} fileKey - The key of the Figma file. Defaults to the file key associated with the class instance.
+   * @param {Omit<GetImagesEndpointQueryParams, "ids" & {ids: FigmaNodeId | FigmaNodeId[]}>} queryParams - Optional query parameters for the endpoint.
+   * @return {Promise<GetImagesEndpointResponse>} The response containing the images.
+   */
   async getImages(fileKey: FigmaFileKey = this.fileKey, queryParams?: Omit<GetImagesEndpointQueryParams, "ids" & {ids: FigmaNodeId | FigmaNodeId[]}>) {
     fileKey = validateKey(fileKey)
     // replace fileKey for consecutive endpoint calls
@@ -148,6 +193,12 @@ export class FigmaApiClient {
     return this.lastImages;
   }
 
+  /**
+   * Retrieves the image fills for the specified Figma file.
+   *
+   * @param {FigmaFileKey} [fileKey=this.fileKey] - The key of the Figma file.
+   * @return {Promise<GetImageFillsEndpointResponse>} - A promise that resolves with the image fills.
+   */
   async getImageFills(fileKey: FigmaFileKey = this.fileKey) {
     fileKey = validateKey(fileKey)
     // replace fileKey for consecutive endpoint calls
@@ -159,6 +210,13 @@ export class FigmaApiClient {
     return this.lastImageFills;
   }
 
+  /**
+   * Retrieves the components of a team.
+   *
+   * @param {FigmaTeamId} teamId - The ID of the team. Defaults to the team ID of the current instance.
+   * @param {GetTeamComponentsEndpointResponse} queryParams - Optional query parameters for the request.
+   * @return {Promise<GetTeamComponentsEndpointResponse>} A promise that resolves to the response containing the team components.
+   */
   async getTeamComponents(teamId: FigmaTeamId = this.teamId, queryParams?: GetTeamComponentsEndpointResponse) {
     teamId = validateKey(teamId)
     this.teamId = teamId;
@@ -169,6 +227,13 @@ export class FigmaApiClient {
     return this.lastTeamComponents;
   }
 
+  /**
+   * Retrieves the component sets for a specific team.
+   *
+   * @param {FigmaTeamId} teamId - The ID of the team for which to retrieve the component sets. Defaults to the current team ID.
+   * @param {GetTeamComponentSetsEndpointQueryParams} queryParams - Optional query parameters for the API request.
+   * @return {Promise<GetTeamComponentSetsEndpointResponse>} - A promise that resolves to the component sets of the team.
+   */
   async getTeamComponentSets(teamId: FigmaTeamId = this.teamId, queryParams?: GetTeamComponentSetsEndpointQueryParams) {
     teamId = validateKey(teamId)
     this.teamId = teamId;
@@ -179,6 +244,13 @@ export class FigmaApiClient {
     return this.lastTeamComponentSets;
   }
 
+  /**
+   * Retrieves the styles for a team.
+   *
+   * @param {FigmaTeamId} teamId - The ID of the team to retrieve styles for. Defaults to the current team ID.
+   * @param {GetTeamStylesEndpointQueryParams} queryParams - Optional query parameters for the API request.
+   * @return {Promise<GetTeamStylesEndpointResponse>} A promise that resolves with the team styles.
+   */
   async getTeamStyles(teamId: FigmaTeamId = this.teamId, queryParams?: GetTeamStylesEndpointQueryParams) {
     teamId = validateKey(teamId)
     this.teamId = teamId;
@@ -189,6 +261,12 @@ export class FigmaApiClient {
     return this.lastTeamStyles;
   }
 
+  /**
+   * Retrieves the metadata for a specific component.
+   *
+   * @param {FigmaComponentKey} componentKey - The key of the component to retrieve metadata for.
+   * @returns {Promise<GetComponentEndpointResponse>} A promise that resolves with the metadata of the component.
+   */
   async getComponentMetadata(componentKey: FigmaComponentKey) {
     componentKey = validateKey(componentKey);
     this.componentKey = componentKey;
@@ -199,6 +277,12 @@ export class FigmaApiClient {
     return this.lastComponentMetadata;
   }
 
+  /**
+   * Retrieves the metadata for a specific component set based on its key.
+   *
+   * @param {FigmaComponentKey} componentSetKey - The key of the component set.
+   * @return {Promise<any>} The metadata of the component set.
+   */
   async getComponentSetMetadata(componentSetKey: FigmaComponentKey) {
     componentSetKey = validateKey(componentSetKey);
     this.componentSetKey = componentSetKey;
@@ -209,7 +293,13 @@ export class FigmaApiClient {
     return this.lastComponentSetMetadata;
   }
 
-  async getComponentSetMetadata(styleKey: FigmaStyleKey) {
+  /**
+   * Retrieves the metadata for a given style.
+   *
+   * @param {FigmaStyleKey} styleKey - The key of the style to retrieve metadata for.
+   * @return {Promise<StyleMetadata>} A promise that resolves to the metadata of the style.
+   */
+  async getStyleMetadata(styleKey: FigmaStyleKey) {
     styleKey = validateKey(styleKey);
     this.styleKey = styleKey;
     this.lastStyleMetadata = await endpointFactory<

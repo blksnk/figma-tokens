@@ -70,11 +70,7 @@ export type Options = {
    Setting `locale: false` ignores the platform locale and uses the [Unicode Default Case Conversion](https://unicode-org.github.io/icu/userguide/transforms/casemappings.html#simple-single-character-case-mapping) algorithm:
 
    @example
-   ```
-   import camelCase from 'camelcase';
-
-   // On a platform with `tr-TR`.`
-
+   ```typescript
    camelCase('lorem-ipsum');
    //=> 'loremİpsum'
 
@@ -116,12 +112,26 @@ const preserveCamelCase = (string, toLowerCase, toUpperCase, preserveConsecutive
   return string;
 };
 
+/**
+ * Replaces consecutive uppercase letters at the beginning of a string with their lowercase counterparts.
+ *
+ * @param {string} input - The input string.
+ * @param {function} toLowerCase - A function that converts a string to lowercase.
+ * @return {string} - The modified input string with consecutive uppercase letters replaced by their lowercase counterparts.
+ */
 const preserveConsecutiveUppercase = (input, toLowerCase) => {
   LEADING_CAPITAL.lastIndex = 0;
 
   return input.replaceAll(LEADING_CAPITAL, match => toLowerCase(match));
 };
 
+/**
+ * Processes the input by replacing separators and identifiers with specified transformations.
+ *
+ * @param {string} input - The input string to be processed.
+ * @param {function} toUpperCase - The transformation function to be applied to identifiers.
+ * @return {string} - The processed string.
+ */
 const postProcess = (input, toUpperCase) => {
   SEPARATORS_AND_IDENTIFIER.lastIndex = 0;
   NUMBERS_AND_IDENTIFIER.lastIndex = 0;
@@ -227,6 +237,12 @@ export function camelCase(input: string | readonly string[], options?: Options) 
   return postProcess(input, toUpperCase);
 }
 
+/**
+ * Replaces specific characters in a string with their corresponding replacements.
+ *
+ * @param {string} str - The input string to be sanitized.
+ * @return {string} The sanitized string.
+ */
 export const sanitize = (str: string): string =>
   str
     .replaceAll("é", "e")
@@ -239,4 +255,19 @@ export const sanitize = (str: string): string =>
     .replaceAll("ç", "c")
 
 
+/**
+ * Converts a given string to a camel case format after sanitizing it.
+ *
+ * @param {string} str - The string to be converted to camel case after sanitization.
+ * @return {string} The resulting string in camel case format.
+ */
 export const saneCamel = (str: string) => camelCase(sanitize(str));
+
+/**
+ * Replaces uppercase letters with hyphens and lowercase letters,
+ * excluding the first letter if it is uppercase.
+ *
+ * @param {string} str - The input string.
+ * @return {string} The kebabized string.
+ */
+export const kebabize = (str: string) => str.replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase())

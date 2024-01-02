@@ -8,6 +8,13 @@ type OutputConfig<TInputConfig extends InputConfig> = {
   [TKey in keyof TInputConfig]-?: NonOptional<TInputConfig[TKey]>;
 };
 
+/**
+ * Validates the given input configuration and returns an output configuration.
+ *
+ * @param {TInputConfig} config - The input configuration to validate.
+ * @param {Logger} logger - The logger object for logging errors. Default value is a new instance of Logger.
+ * @return {OutputConfig<TInputConfig>} - The output configuration after validation.
+ */
 export const validateConfig = <TInputConfig extends InputConfig>(
   config: TInputConfig,
   logger: Logger = Logger()
@@ -18,6 +25,13 @@ export const validateConfig = <TInputConfig extends InputConfig>(
   logger.error(`Missing config: ${errorMessage}`)
 }
 
+/**
+ * Extracts figma file keys from a given config file url string.
+ *
+ * @param {string} fileUrls - Comma separated list of config file URLs.
+ * @param {Logger} logger - The logger to use for logging messages. Defaults to a new Logger instance.
+ * @return {FigmaFileKey[]} - An array of figma file keys extracted from the config files.
+ */
 export const extractConfigFileKeys = (
   fileUrls: string,
   logger: Logger = Logger()

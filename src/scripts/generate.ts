@@ -25,6 +25,14 @@ const logger = Logger({
 })
 const { info, debug, warn } = logger;
 
+/**
+ * Fetches and formats team styles into tokens.
+ *
+ * @param {FigmaApiClient} figmaApiClient - The Figma API client.
+ * @param {FigmaTeamId} teamId - The ID of the Figma team.
+ * @param {FigmaFileKey[]} [fileKeyFilters] - An optional array of Figma file keys to filter the team styles.
+ * @return {Promise<Token[]>} A promise that resolves to an array of tokens representing the team styles.
+ */
 const fetchAndFormatTeamStyles = async (
   figmaApiClient: FigmaApiClient,
   teamId: FigmaTeamId,
@@ -48,12 +56,20 @@ const fetchAndFormatTeamStyles = async (
   return await tokenizeStyles(figmaApiClient, filteredStyles, logger);
 }
 
-const updateTeamStyles = async (
+/**
+ * Generates and exports tokens from the Figma API.
+ *
+ * @param {FigmaApiClient} figmaApiClient - The Figma API client.
+ * @param {FigmaTeamId} teamId - The ID of the Figma team.
+ * @param {FigmaFileKey[]} fileKeyFilters - Optional array of file keys to filter the tokens.
+ * @return {Promise<Token[]>} A promise that resolves to an array of tokens.
+ */
+const generateAndExportTokens = async (
   figmaApiClient: FigmaApiClient,
   teamId: FigmaTeamId,
   fileKeyFilters?: FigmaFileKey[]
 ): Promise<Token[]> => {
-  info("Staring team styles update...");
+  info("Starting team styles update...");
   const teamStyleTokens = await fetchAndFormatTeamStyles(figmaApiClient, teamId, fileKeyFilters);
   const rootTokenCollection = groupTokens(teamStyleTokens, logger)
   const tokenValues = unwrapTokenValues(rootTokenCollection)
@@ -62,9 +78,10 @@ const updateTeamStyles = async (
 }
 
 /**
- * Fetches up to date figma files and Updates exported theme values.
+ * Async function that initialized the Figma api client, fetches up-to-date Figma files and returns generated tokens.
+ * @returns {Promise<Token[]>} - Array containing all generated tokens according to env config
  */
-export const generate = async () => {
+export const generate = async (): Promise<Token[]> => {
   debug("Validating config...");
   const config = validateConfig({
     FIGMA_TOKEN,
@@ -75,7 +92,7 @@ export const generate = async () => {
   debug("Initializing Figma API client...")
   const figmaApiClient = new FigmaApiClient(config.FIGMA_TOKEN);
   info("Figma API client initialized");
-  const allTokens = await updateTeamStyles(
+  const allTokens = await generateAndExportTokens(
     figmaApiClient, config.FIGMA_TEAM_ID,
     extractConfigFileKeys(config.FIGMA_FILE_URLS, logger)
   )

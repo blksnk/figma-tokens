@@ -5,6 +5,11 @@ import { EndpointUrlFn } from "../types/global/endpoints.types";
 
 const API_URL_ROOT = "https://api.figma.com/v1"
 
+/**
+ * This file contains functions that generate endpoint URLs for various API endpoints.
+ * Each function takes in specific parameters related to the endpoint and returns the corresponding URL.
+ */
+
 // files
 export const getFileEndpointURL: EndpointUrlFn = (fileKey: FigmaFileKey) => `${API_URL_ROOT}/files/${fileKey}`;
 export const getFileNodesEndpointURL: EndpointUrlFn = (fileKey: FigmaFileKey) => `${getFileEndpointURL(fileKey)}/nodes`;

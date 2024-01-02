@@ -1,7 +1,6 @@
 import { FigmaTypeStyle } from "../types/figma/figma.properties.types";
 import {
   FigmaTextAlignHorizontal,
-  FigmaTextAlignVertical,
   FigmaTextCase,
   FigmaTextDecoration
 } from "../types/figma/figma.enums.types";
@@ -29,6 +28,14 @@ const textAlignHorizontalMap: Record<FigmaTextAlignHorizontal, string> = {
   JUSTIFIED: "justify",
 }
 
+/**
+ * Returns the open type flags for the given FigmaTypeStyle text.
+ * If the text has the "SMALL_CAPS" or "SMALL_CAPS_FORCED" text case,
+ * it includes the "SMCP" flag with a value of 1.
+ *
+ * @param {FigmaTypeStyle} text - The FigmaTypeStyle text.
+ * @returns {string} The open type flags for the given text, or "normal" if no flags are present.
+ */
 const openTypeFlags = (text: FigmaTypeStyle) => {
   const flags = text.opentypeFlags ? Object.entries(text.opentypeFlags) : [];
   if (text.textCase === "SMALL_CAPS" || text.textCase === "SMALL_CAPS_FORCED") {
@@ -38,6 +45,16 @@ const openTypeFlags = (text: FigmaTypeStyle) => {
   return flags.map(([flag, value]) => `"${flag}" ${value}`).join(", ");
 }
 
+/**
+ * Transforms a Figma type style object into CSS style properties.
+ *
+ * This function takes a Figma type style object and converts it into a set of CSS style properties.
+ * The resulting CSS properties can then be applied to a DOM element
+ * to visually render the text according to the specified style.
+ *
+ * @param {FigmaTypeStyle} text - The Figma type style object to be transformed. This object contains various properties such as font family, font weight, font size, text alignment, and more.
+ * @return {Partial<CSSStyleDeclaration>} - The CSS style properties generated from the Figma type style object. This is a partial CSSStyleDeclaration object, which means it contains only the properties that are relevant to the text style.
+ */
 export const figmaTextToCssText = (text: FigmaTypeStyle) => {
   const cssProps: Partial<CSSStyleDeclaration> = {
     fontFamily: text.fontFamily,
@@ -57,7 +74,7 @@ export const figmaTextToCssText = (text: FigmaTypeStyle) => {
     letterSpacing: pxToRem(text.letterSpacing),
     textOverflow: text.textTruncation === "ENDING" ? "ellipsis" : "unset",
     textAlign: textAlignHorizontalMap[text.textAlignHorizontal],
-    verticalAlign: text.textAlignHorizontal.toLowerCase(),
+    verticalAlign: text.textAlignVertical.toLowerCase(),
     fontFeatureSettings: openTypeFlags(text),
   }
   return cssProps;

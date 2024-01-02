@@ -10,8 +10,6 @@ import { CssMixBlendMode } from "../types/css/css.enums";
 import { calculateAngle } from "./gradient.transformer";
 import { figmaColorToCssRgba } from "./css.transformer";
 
-
-
 const figmaBlendModeMap: Record<FigmaBlendMode, CssMixBlendMode> = {
   PASS_THROUGH: "normal",
   NORMAL: "normal",
@@ -43,6 +41,15 @@ const cssGradientPropertyMap: Record<Exclude<FigmaGradientPaintType, "GRADIENT_D
 }
 
 // TODO: gradients are currently not fully supported
+
+/**
+ * Converts a Figma gradient to a CSS gradient string.
+ *
+ * @param {FigmaGradientPaintType} type - The type of gradient paint.
+ * @param {FigmaVector[]} gradientHandlePositions - The positions of the gradient handles.
+ * @param {FigmaColorStop[]} gradientStops - The color stops of the gradient.
+ * @return {string} The CSS gradient string.
+ */
 const figmaGradientToCssGradient = (
   type: FigmaGradientPaintType,
   gradientHandlePositions: FigmaVector[],
@@ -61,7 +68,13 @@ const figmaGradientToCssGradient = (
   return `${prop}(${angle}deg, ${stops})`;
 }
 
-export const figmaPaintToCssProps = (paint: FigmaPaint) => {
+/**
+ * Converts a Figma paint object to CSS properties.
+ *
+ * @param {FigmaPaint} paint - The Figma paint object to convert.
+ * @return {Partial<CSSStyleDeclaration>} - The converted CSS properties.
+ */
+export const figmaPaintToCssProps = (paint: FigmaPaint): Partial<CSSStyleDeclaration> => {
   const { type } = paint;
   // transform non type-dependant props
   let globalCssProps: Partial<CSSStyleDeclaration> = {

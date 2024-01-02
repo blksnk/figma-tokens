@@ -11,6 +11,14 @@ import { StyleNode } from "../types/global/transformer.types";
 import { styleNodeToToken } from "./token.transfomer";
 import { Token } from "../types/global/export.types";
 
+/**
+ * Retrieves the unique file keys from an array of Figma style metadata.
+ *
+ * This function iterates through the provided array of Figma style metadata and extracts the unique file keys from each item. It returns an array of Figma file keys containing only the unique values found in the input array.
+ *
+ * @param {FigmaStyleMetadata[]} styles - The array of Figma style metadata.
+ * @return {FigmaFileKey[]} - An array of unique Figma file keys extracted from the input styles.
+ */
 const getUniqueFileKeys = (styles: FigmaStyleMetadata[]): FigmaFileKey[] => {
   const fileKeys: FigmaFileKey[] = [];
   for (let i = 0; i < styles.length; i++) {
@@ -23,6 +31,18 @@ const getUniqueFileKeys = (styles: FigmaStyleMetadata[]): FigmaFileKey[] => {
   return fileKeys;
 }
 
+/**
+ * Retrieves the style properties of a Figma node based on the specified style type.
+ *
+ * This function takes a style type and a Figma node as input and retrieves the style properties associated with that style type.
+ * The supported style types are "FILL", "EFFECT", and "TEXT".
+ * Depending on the style type, the function returns different style properties from the Figma node.
+ *
+ * @template TStyleType - The type of style being retrieved, which must be one of the supported style types ("FILL", "EFFECT", "TEXT").
+ * @param {TStyleType} styleType - The style type for which to retrieve the style properties.
+ * @param {FigmaFileNodeResponse} node - The Figma node from which to retrieve the style properties.
+ * @return {FigmaFill | FigmaEffect | FigmaStyle} - The style properties of the specified style type from the Figma node.
+ */
 const getNodeStyleProperties = <TStyleType extends Exclude<FigmaStyleType, "GRID">>(styleType: TStyleType, node: FigmaFileNodeResponse) => {
   switch(styleType) {
     case "FILL": {
@@ -37,7 +57,11 @@ const getNodeStyleProperties = <TStyleType extends Exclude<FigmaStyleType, "GRID
   }
 }
 
-export const getStyleNodes = async (figmaApiClient: FigmaApiClient, styles: FigmaStyleMetadata[], logger: Logger = Logger()): Promise<StyleNode[]> => {
+export const getStyleNodes = async (
+  figmaApiClient: FigmaApiClient,
+  styles: FigmaStyleMetadata[],
+  logger: Logger = Logger()
+): Promise<StyleNode[]> => {
   // remove GRID styles
   styles = styles.filter(({ style_type }) => style_type !== "GRID")
   // get unique file keys
@@ -80,8 +104,15 @@ export const getStyleNodes = async (figmaApiClient: FigmaApiClient, styles: Figm
 }
 
 
-
-export const tokenizeStyles = async (figmaApiClient: FigmaApiClient, styles: FigmaStyleMetadata[], logger: Logger = Logger()) => {
+/**
+ * Calls {@link getStyleNodes} passing in the figmaApiClient, styles, and logger to get style values from their metadata.
+ * Transform each StyleNode to a token using the styleNodeToToken function. The resulting tokens are returned as an array.
+ * Finally, it filters out any empty tokens and casts the resulting array as Token[].
+ * @param {@link FigmaApiClient} figmaApiClient - Figma api client
+ * @param styles
+ * @param logger
+ */
+export const tokenizeStyles = async (figmaApiClient: FigmaApiClient, styles: FigmaStyleMetadata[], logger: Logger = Logger()): Promise<Token[]> => {
   logger.info(`Populating all ${styles.length} filtered styles based on metadata...`)
   const styleNodes = await getStyleNodes(figmaApiClient, styles, logger);
   logger.info("Transforming figma styles to tokens...");
