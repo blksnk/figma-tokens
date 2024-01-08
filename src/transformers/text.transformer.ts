@@ -67,7 +67,7 @@ export const figmaTextToCssText = (text: FigmaTypeStyle) => {
     lineHeight: text.lineHeightUnit === "PIXELS" && text.lineHeightPx
       ? pxToRem(Math.max(text.lineHeightPx, text.paragraphSpacing ?? 0))
       : text.lineHeightUnit === "FONT_SIZE_%" && text.lineHeightPercentFontSize
-      ? `${pxToRem(text.lineHeightPercentFontSize / 100 * text.fontSize)}%`
+      ? `${pxToRem(text.lineHeightPercentFontSize / 100 * text.fontSize).split("rem")[0]}%`
       : text.lineHeightUnit === "INTRINSIC_%" && text.lineHeightPercent
       ? `${text.lineHeightPercent}%`
       : "auto",
