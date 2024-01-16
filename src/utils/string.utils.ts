@@ -6,6 +6,7 @@ const LEADING_CAPITAL = /^[\p{Lu}](?![\p{Lu}])/gu;
 const IDENTIFIER = /([\p{Alpha}\p{N}_]|$)/u;
 const SEPARATORS = /[_.\- ]+/;
 const NUMBER_IN_PARENTHESIS = /\(([0-9]+)\)/g;
+const KEBAB_CASE_REPLACE = /[A-Z]+(?![a-z])|[A-Z]/g;
 
 const LEADING_SEPARATORS = new RegExp("^" + SEPARATORS.source);
 const SEPARATORS_AND_IDENTIFIER = new RegExp(
@@ -322,6 +323,6 @@ export const saneCamel = (str: string) => sanitize(camelCase(str));
  */
 export const kebabize = (str: string) =>
   str.replace(
-    /[A-Z]+(?![a-z])|[A-Z]/g,
-    ($, ofs) => (ofs ? "-" : "") + $.toLowerCase()
+    KEBAB_CASE_REPLACE,
+    (match, ofs) => (ofs ? "-" : "") + match.toLowerCase()
   );
