@@ -40,7 +40,7 @@ export const stringifyRootCollection = (
  */
 export const stringifyTokenValues = (tokenValues: TokenValues) => {
   const constants = Object.entries(tokenValues).map(([constName, value]) =>
-    tsReadonlyConst(constName, value as object)
+    tsReadonlyConst(constName, value)
   );
   return tsFileData(constants);
 };
@@ -136,7 +136,7 @@ export const writeMultipleFiles = async (
   try {
     await Promise.all(
       fileDescriptions.map(({ path, content }) => {
-        logger.info(`Generating ${path}...`);
+        logger.debug(`Generating ${path}...`);
         return writeFile(path, content);
       })
     );

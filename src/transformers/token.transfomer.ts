@@ -10,13 +10,34 @@ import {
   tokenTypes,
   TokenValues,
 } from "../types/global/export.types";
-import { FigmaStyleType } from "../types/figma/figma.enums.types";
+import {
+  FigmaPaintType,
+  FigmaStyleType,
+} from "../types/figma/figma.enums.types";
 import { Nullable } from "../types/global/global.types";
 import { stringifyCssRules, styleNodeToCssRules } from "./css.transformer";
 import { Logger } from "../utils/log.utils";
 import { transformObject } from "../utils/transform.utils";
 import { camelCase, saneCamel, sanitize } from "../utils/string.utils";
-import { Optional } from "@ubloimmo/front-util";
+import { Optional, isString } from "@ubloimmo/front-util";
+
+const paintTypeToTokenTypeMap: Record<FigmaPaintType, Nullable<TokenType>> = {
+  GRADIENT_ANGULAR: "GRADIENT",
+  GRADIENT_RADIAL: "GRADIENT",
+  GRADIENT_DIAMOND: "GRADIENT",
+  GRADIENT_LINEAR: "GRADIENT",
+  IMAGE: "ASSET",
+  VIDEO: "ASSET",
+  EMOJI: null,
+  SOLID: "COLOR",
+} as const;
+
+const styleTypeToTokenTypeMap: Record<FigmaStyleType, Nullable<TokenType>> = {
+  GRID: null,
+  EFFECT: "EFFECT",
+  TEXT: "TEXT",
+  FILL: "COLOR",
+};
 
 /**
  * Determines the type of token based on the given style node.
@@ -25,31 +46,30 @@ import { Optional } from "@ubloimmo/front-util";
  * @param {StyleNode<TStyleType>} styleNode - The style node object containing the type and style properties.
  * @return {Nullable<TokenType>} The type of token, or null if it cannot be determined.
  */
-const tokenType = <TStyleType extends FigmaStyleType>({
-  type,
-  styleProperties,
-}: StyleNode<TStyleType>): Nullable<TokenType> => {
-  if (type === "TEXT" || type === "EFFECT") return type;
-  if (type === "FILL") {
-    const paintType = (styleProperties as StyleNode<"FILL">["styleProperties"])
-      .type;
-    switch (paintType) {
-      case "GRADIENT_ANGULAR":
-      case "GRADIENT_RADIAL":
-      case "GRADIENT_DIAMOND":
-      case "GRADIENT_LINEAR":
-        return "GRADIENT";
-      case "IMAGE":
-      case "VIDEO":
-        return "ASSET";
-      case "SOLID":
-        return "COLOR";
-      default:
-        return null;
-    }
+const tokenType = <TStyleType extends FigmaStyleType>(
+  styleNode: StyleNode<TStyleType>
+): Nullable<TokenType> => {
+  let tokenType = styleTypeToTokenTypeMap[styleNode.type];
+  // if we have a color token, we refine it based on its style properties
+  if (tokenType === "COLOR") {
+    const paintType = (styleNode as StyleNode<"FILL">).styleProperties.type;
+    tokenType = paintTypeToTokenTypeMap[paintType];
   }
-  return null;
+  return tokenType;
 };
+
+/**
+ * Maps a token style to the style property that holds its main value.
+ * Properties starting with index 1 are fallbacks.
+ */
+const tokenValueFallbackMap: Record<TokenType, (keyof CSSStyleDeclaration)[]> =
+  {
+    COLOR: ["background"],
+    GRADIENT: ["background"],
+    ASSET: ["background"],
+    EFFECT: ["boxShadow", "textShadow", "filter", "backdropFilter"],
+    TEXT: ["fontSize"],
+  };
 
 /**
  * Returns the value of a given token based on its type and style.
@@ -62,21 +82,10 @@ const tokenValue = (
   tokenType: TokenType,
   tokenStyle: Partial<CSSStyleDeclaration>
 ): Nullable<string> => {
-  switch (tokenType) {
-    case "COLOR":
-    case "GRADIENT":
-    case "ASSET":
-      return tokenStyle.background ?? null;
-    case "EFFECT":
-      return (
-        tokenStyle.boxShadow ??
-        tokenStyle.textShadow ??
-        tokenStyle.filter ??
-        tokenStyle.backdropFilter ??
-        null
-      );
-    case "TEXT":
-      return tokenStyle.fontSize ?? null;
+  const properties = tokenValueFallbackMap[tokenType];
+  for (let i = 0; i < properties.length; i++) {
+    const propValue = tokenStyle[properties[i]];
+    if (isString(propValue)) return propValue;
   }
   return null;
 };
@@ -204,7 +213,7 @@ export const groupTokensByName = (
     const items = tokenPath.path.reverse();
     const nestedToken = items.reduce(
       (acc, part, level): TokenOrGroupCollection => {
-        const currentSlicePath = (items as string[]).slice(level + 1).reverse();
+        const currentSlicePath = items.slice(level + 1).reverse();
         const otherSlice =
           currentSlicePath.length === 0
             ? null
@@ -296,12 +305,7 @@ export const groupTokens = (
 const isToken = (
   data: TokenGroup | Token | TokenOrGroupCollection
 ): data is Token => {
-  return (
-    data &&
-    !!data.type &&
-    typeof data.type === "string" &&
-    tokenTypes.includes(data.type)
-  );
+  return data && isString(data?.type) && tokenTypes.includes(data.type);
 };
 
 /**

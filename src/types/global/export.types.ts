@@ -87,7 +87,7 @@ export type TokenGroup<
  * Represents a nested object that contains token values.
  */
 export type TokenValues = {
-  [k: string]: Nullable<Token | TokenValues>;
+  [k: string]: Token | TokenValues;
 };
 
 /**
