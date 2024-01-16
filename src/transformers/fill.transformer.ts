@@ -94,7 +94,7 @@ export const figmaPaintToCssProps = (
     opacity: typeof paint.opacity === "number" ? String(paint.opacity) : "1",
     mixBlendMode: figmaBlendModeMap[paint.blendMode],
   };
-  if (!paint.visible) {
+  if (paint.visible === false) {
     globalCssProps.display = "none";
   }
 

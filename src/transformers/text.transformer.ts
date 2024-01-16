@@ -45,6 +45,27 @@ const openTypeFlags = (text: FigmaTypeStyle) => {
 };
 
 /**
+ * Calculates the line height of a given text style.
+ *
+ * @param {FigmaTypeStyle} text - The text style to calculate the line height for.
+ * @return {string} The calculated line height value.
+ */
+const lineHeight = (text: FigmaTypeStyle): string => {
+  if (text.lineHeightUnit === "PIXELS" && text.lineHeightPx) {
+    return pxToRem(Math.max(text.lineHeightPx, text.paragraphSpacing ?? 0));
+  }
+  if (text.lineHeightUnit === "FONT_SIZE_%" && text.lineHeightPercentFontSize) {
+    return pxToRem(
+      Math.round((text.fontSize / 100) * text.lineHeightPercentFontSize)
+    );
+  }
+  if (text.lineHeightUnit === "INTRINSIC_%" && text.lineHeightPercent) {
+    return `${text.lineHeightPercent}%`;
+  }
+  return "auto";
+};
+
+/**
  * Transforms a Figma type style object into CSS style properties.
  *
  * This function takes a Figma type style object and converts it into a set of CSS style properties.
@@ -65,19 +86,7 @@ export const figmaTextToCssText = (text: FigmaTypeStyle) => {
       ? textDecorationMap[text.textDecoration]
       : "none",
     textTransform: text.textCase ? textCaseMap[text.textCase] : "unset",
-    lineHeight:
-      text.lineHeightUnit === "PIXELS" && text.lineHeightPx
-        ? pxToRem(Math.max(text.lineHeightPx, text.paragraphSpacing ?? 0))
-        : text.lineHeightUnit === "FONT_SIZE_%" &&
-          text.lineHeightPercentFontSize
-        ? `${
-            pxToRem(
-              (text.lineHeightPercentFontSize / 100) * text.fontSize
-            ).split("rem")[0]
-          }%`
-        : text.lineHeightUnit === "INTRINSIC_%" && text.lineHeightPercent
-        ? `${text.lineHeightPercent}%`
-        : "auto",
+    lineHeight: lineHeight(text),
     letterSpacing: pxToRem(text.letterSpacing),
     textOverflow: text.textTruncation === "ENDING" ? "ellipsis" : "unset",
     textAlign: textAlignHorizontalMap[text.textAlignHorizontal],
