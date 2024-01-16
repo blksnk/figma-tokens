@@ -4,13 +4,16 @@ import {
   FileDescription,
   RootTokenCollection,
   Token,
-  TokenValues
+  TokenValues,
 } from "../types/global/export.types";
 import {
   LIB_COLLECTION,
-  LIB_INDEX, LIB_TOKENS, LIB_VALUES,
-  tsFileData, tsReadonlyConst,
-  writeFile
+  LIB_INDEX,
+  LIB_TOKENS,
+  LIB_VALUES,
+  tsFileData,
+  tsReadonlyConst,
+  writeFile,
 } from "../utils/export.utils";
 import { Logger } from "../utils/log.utils";
 
@@ -20,11 +23,14 @@ import { Logger } from "../utils/log.utils";
  * @param {RootTokenCollection} rootCollection - The root collection to stringify.
  * @return {string} The string representation of the root collection.
  */
-export const stringifyRootCollection = (rootCollection: RootTokenCollection) => {
-  const constants = Object.entries(rootCollection)
-    .map(([constName, value]) => tsReadonlyConst(constName, value))
+export const stringifyRootCollection = (
+  rootCollection: RootTokenCollection
+) => {
+  const constants = Object.entries(rootCollection).map(([constName, value]) =>
+    tsReadonlyConst(constName, value)
+  );
   return tsFileData(constants);
-}
+};
 
 /**
  * Generates a string representation of the token values.
@@ -33,10 +39,11 @@ export const stringifyRootCollection = (rootCollection: RootTokenCollection) => 
  * @return {string} The string representation of the token values.
  */
 export const stringifyTokenValues = (tokenValues: TokenValues) => {
-  const constants = Object.entries(tokenValues)
-    .map(([constName, value]) => tsReadonlyConst(constName, value));
+  const constants = Object.entries(tokenValues).map(([constName, value]) =>
+    tsReadonlyConst(constName, value as object)
+  );
   return tsFileData(constants);
-}
+};
 
 /**
  * Convert an array of tokens to a string representation.
@@ -46,7 +53,7 @@ export const stringifyTokenValues = (tokenValues: TokenValues) => {
  */
 export const stringifyTokens = (tokens: Token[]) => {
   return tsReadonlyConst("tokens", tokens);
-}
+};
 
 /**
  * Generates the index file for the library.
@@ -54,18 +61,18 @@ export const stringifyTokens = (tokens: Token[]) => {
  * @param {FileDescription[]} files - The list of file descriptions.
  * @return {FileDescription} - The generated index file description.
  */
-export const generateLibIndex = (
-  files: FileDescription[],
-): FileDescription => {
-  const content = tsFileData(files.map(({ path }) => {
-    const localPath = path.split("/lib").join("").split(".ts")[0];
-    return `export * from "${localPath}";`
-  }));
+export const generateLibIndex = (files: FileDescription[]): FileDescription => {
+  const content = tsFileData(
+    files.map(({ path }) => {
+      const localPath = path.split("/lib").join("").split(".ts")[0];
+      return `export * from "${localPath}";`;
+    })
+  );
   return {
     path: LIB_INDEX,
     content,
   };
-}
+};
 
 /**
  * Generates a FileDescription for the root token collection.
@@ -74,13 +81,13 @@ export const generateLibIndex = (
  * @return {FileDescription} The generated FileDescription.
  */
 export const generateLibRootTokenCollection = (
-  rootCollection: RootTokenCollection,
+  rootCollection: RootTokenCollection
 ): FileDescription => {
   return {
     path: LIB_COLLECTION,
     content: stringifyRootCollection(rootCollection),
   };
-}
+};
 
 /**
  * Generates the file description for the given token values.
@@ -89,13 +96,13 @@ export const generateLibRootTokenCollection = (
  * @return {FileDescription} The generated file description.
  */
 export const generateLibTokenValues = (
-  tokenValues: TokenValues,
+  tokenValues: TokenValues
 ): FileDescription => {
   return {
     path: LIB_VALUES,
     content: stringifyTokenValues(tokenValues),
   };
-}
+};
 
 /**
  * Generates a `FileDescription` object for all tokens.
@@ -103,14 +110,12 @@ export const generateLibTokenValues = (
  * @param {Token[]} allTokens - An array of tokens.
  * @return {FileDescription} The generated `FileDescription` object.
  */
-export const generateLibAllTokens = (
-  allTokens: Token[],
-): FileDescription => {
+export const generateLibAllTokens = (allTokens: Token[]): FileDescription => {
   return {
     path: LIB_TOKENS,
     content: stringifyTokens(allTokens),
   };
-}
+};
 
 /**
  * Writes multiple files based on the provided file descriptions.
@@ -121,23 +126,25 @@ export const generateLibAllTokens = (
  */
 export const writeMultipleFiles = async (
   fileDescriptions: FileDescription[],
-  logger = Logger(),
+  logger = Logger()
 ) => {
-  logger.info(`Generating ${fileDescriptions.length} files: ${
-    fileDescriptions
+  logger.info(
+    `Generating ${fileDescriptions.length} files: ${fileDescriptions
       .map(({ path }) => path)
-      .join(", ")
-  }`)
+      .join(", ")}`
+  );
   try {
-    await Promise.all(fileDescriptions.map(({ path, content}) => {
-      logger.info(`Generating ${path}...`)
-      return writeFile(path, content);
-    }))
-    logger.info(`Generated ${fileDescriptions.length} files.`)
-  } catch(e) {
-    logger.error(e)
+    await Promise.all(
+      fileDescriptions.map(({ path, content }) => {
+        logger.info(`Generating ${path}...`);
+        return writeFile(path, content);
+      })
+    );
+    logger.info(`Generated ${fileDescriptions.length} files.`);
+  } catch (e) {
+    logger.error(e);
   }
-}
+};
 
 /**
  * Generates the exported TypeScript files.
@@ -157,18 +164,15 @@ export const generateExportedTS = async (
   rootCollection: RootTokenCollection,
   tokenValues: TokenValues,
   allTokens: Token[],
-  logger = Logger(),
+  logger = Logger()
 ) => {
-  logger.info("Constructing file data...")
+  logger.info("Constructing file data...");
   let libFiles = [
     generateLibAllTokens(allTokens),
     generateLibRootTokenCollection(rootCollection),
     generateLibTokenValues(tokenValues),
-  ]
-  libFiles = [
-    ...libFiles,
-    generateLibIndex(libFiles),
-  ]
+  ];
+  libFiles = [...libFiles, generateLibIndex(libFiles)];
 
   await writeMultipleFiles(libFiles);
-}
+};

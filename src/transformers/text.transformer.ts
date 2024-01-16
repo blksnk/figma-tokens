@@ -2,16 +2,15 @@ import { FigmaTypeStyle } from "../types/figma/figma.properties.types";
 import {
   FigmaTextAlignHorizontal,
   FigmaTextCase,
-  FigmaTextDecoration
+  FigmaTextDecoration,
 } from "../types/figma/figma.enums.types";
 import { pxToRem } from "./css.transformer";
-
 
 const textDecorationMap: Record<FigmaTextDecoration, string> = {
   STRIKETHROUGH: "strike-through",
   UNDERLINE: "underline",
   NONE: "none",
-}
+};
 
 const textCaseMap: Record<FigmaTextCase, string> = {
   UPPER: "uppercase",
@@ -19,14 +18,14 @@ const textCaseMap: Record<FigmaTextCase, string> = {
   TITLE: "capitalize",
   SMALL_CAPS: "uppercase",
   SMALL_CAPS_FORCED: "uppercase",
-}
+};
 
 const textAlignHorizontalMap: Record<FigmaTextAlignHorizontal, string> = {
   LEFT: "left",
   RIGHT: "right",
   CENTER: "center",
   JUSTIFIED: "justify",
-}
+};
 
 /**
  * Returns the open type flags for the given FigmaTypeStyle text.
@@ -39,11 +38,11 @@ const textAlignHorizontalMap: Record<FigmaTextAlignHorizontal, string> = {
 const openTypeFlags = (text: FigmaTypeStyle) => {
   const flags = text.opentypeFlags ? Object.entries(text.opentypeFlags) : [];
   if (text.textCase === "SMALL_CAPS" || text.textCase === "SMALL_CAPS_FORCED") {
-    flags.push(["SMCP", 1])
+    flags.push(["SMCP", 1]);
   }
   if (flags.length === 0) return "normal";
   return flags.map(([flag, value]) => `"${flag}" ${value}`).join(", ");
-}
+};
 
 /**
  * Transforms a Figma type style object into CSS style properties.
@@ -62,20 +61,28 @@ export const figmaTextToCssText = (text: FigmaTypeStyle) => {
     fontSize: pxToRem(text.fontSize),
     fontStyle: text.italic ? "italic" : "normal",
     textIndent: text.paragraphIndent ? pxToRem(text.paragraphIndent) : "unset",
-    textDecoration: textDecorationMap[text.textDecoration] ?? "none",
-    textTransform: textCaseMap[text.textCase] ?? "unset",
-    lineHeight: text.lineHeightUnit === "PIXELS" && text.lineHeightPx
-      ? pxToRem(Math.max(text.lineHeightPx, text.paragraphSpacing ?? 0))
-      : text.lineHeightUnit === "FONT_SIZE_%" && text.lineHeightPercentFontSize
-      ? `${pxToRem(text.lineHeightPercentFontSize / 100 * text.fontSize).split("rem")[0]}%`
-      : text.lineHeightUnit === "INTRINSIC_%" && text.lineHeightPercent
-      ? `${text.lineHeightPercent}%`
-      : "auto",
+    textDecoration: text.textDecoration
+      ? textDecorationMap[text.textDecoration]
+      : "none",
+    textTransform: text.textCase ? textCaseMap[text.textCase] : "unset",
+    lineHeight:
+      text.lineHeightUnit === "PIXELS" && text.lineHeightPx
+        ? pxToRem(Math.max(text.lineHeightPx, text.paragraphSpacing ?? 0))
+        : text.lineHeightUnit === "FONT_SIZE_%" &&
+          text.lineHeightPercentFontSize
+        ? `${
+            pxToRem(
+              (text.lineHeightPercentFontSize / 100) * text.fontSize
+            ).split("rem")[0]
+          }%`
+        : text.lineHeightUnit === "INTRINSIC_%" && text.lineHeightPercent
+        ? `${text.lineHeightPercent}%`
+        : "auto",
     letterSpacing: pxToRem(text.letterSpacing),
     textOverflow: text.textTruncation === "ENDING" ? "ellipsis" : "unset",
     textAlign: textAlignHorizontalMap[text.textAlignHorizontal],
     verticalAlign: text.textAlignVertical.toLowerCase(),
     fontFeatureSettings: openTypeFlags(text),
-  }
+  };
   return cssProps;
-}
+};

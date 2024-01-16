@@ -1,8 +1,10 @@
 import {
   FigmaEffect,
   FigmaFileKey,
-  FigmaNodeId, FigmaPaint,
-  FigmaStyleKey, FigmaTypeStyle
+  FigmaNodeId,
+  FigmaPaint,
+  FigmaStyleKey,
+  FigmaTypeStyle,
 } from "../figma/figma.properties.types";
 import { FigmaTeamUser } from "../figma/figma.teams.types";
 import { FigmaNodeType, FigmaStyleType } from "../figma/figma.enums.types";
@@ -10,7 +12,7 @@ import { FigmaFileNodeResponse } from "../figma/figma.endpoints.types";
 
 /**
  * Represents a style node in Figma.
- * @template TStyleType - The type of the style (e.g., "FILL", "EFFECT", "TEXT").
+ * @template TStyleType {FigmaStyleType} - The type of the style (e.g., "FILL", "EFFECT", "TEXT").
  * @typedef {Object} StyleNode
  * @property {FigmaStyleKey} styleKey - A unique key that identifies the style.
  * @property {FigmaNodeId} nodeId - The ID of the node associated with the style.
@@ -25,16 +27,16 @@ import { FigmaFileNodeResponse } from "../figma/figma.endpoints.types";
  * @property {FigmaPaint | FigmaEffect | FigmaTypeStyle} styleProperties - The style properties based on the style type.
  */
 export type StyleNode<TStyleType extends FigmaStyleType = FigmaStyleType> = {
-  styleKey: FigmaStyleKey,
-  nodeId: FigmaNodeId
-  fileKey: FigmaFileKey,
-  description: string,
-  thumbnailURL: string,
-  name: string,
-  author: FigmaTeamUser,
-  type: TStyleType,
-  nodeType: FigmaNodeType,
-  node: FigmaFileNodeResponse,
+  styleKey: FigmaStyleKey;
+  nodeId: FigmaNodeId;
+  fileKey: FigmaFileKey;
+  description: string;
+  thumbnailURL: string;
+  name: string;
+  author: FigmaTeamUser;
+  type: TStyleType;
+  nodeType: FigmaNodeType;
+  node: FigmaFileNodeResponse;
   styleProperties: TStyleType extends "FILL"
     ? FigmaPaint
     : TStyleType extends "EFFECT"
@@ -42,4 +44,4 @@ export type StyleNode<TStyleType extends FigmaStyleType = FigmaStyleType> = {
     : TStyleType extends "TEXT"
     ? FigmaTypeStyle
     : never;
-}
+};

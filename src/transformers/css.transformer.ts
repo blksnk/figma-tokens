@@ -21,10 +21,11 @@ export const pxToRem = (px: number) => `${px / 16}rem`;
  * @return {string} The CSS RGBA color value.
  */
 export const figmaColorToCssRgba = ({ r, g, b, a }: FigmaColor) => {
-  const channel = (channel: number) => Math.round(channel * 255)
-  const alpha = (value: number) => parseInt(String(value)) === 1 ? 1 : value.toFixed(4)
+  const channel = (channel: number) => Math.round(channel * 255);
+  const alpha = (value: number) =>
+    parseInt(String(value)) === 1 ? 1 : value.toFixed(4);
   return `rgba(${channel(r)}, ${channel(g)}, ${channel(b)}, ${alpha(a)})`;
-}
+};
 
 /**
  * Converts a set of CSS rules into a string representation.
@@ -33,21 +34,28 @@ export const figmaColorToCssRgba = ({ r, g, b, a }: FigmaColor) => {
  * @return {string} - The string representation of the CSS rules.
  */
 export const stringifyCssRules = (rules: Partial<CSSStyleDeclaration>) => {
-  return Object.entries(rules).map(([prop, value]) => `${kebabize(prop)}: ${value};`).join("\n");
-}
+  return Object.entries(rules)
+    .map(([prop, value]) => `${kebabize(prop)}: ${value};`)
+    .join("\n");
+};
 
 /**
  * Converts a style node to CSS rules.
- *
+ * @template TStyleType {FigmaStyleType} - The type of the style (e.g., "FILL", "EFFECT", "TEXT").
  * @param {StyleNode<TStyleType>} styleNode - The style node to convert.
  * @return {null | string} - The converted CSS rules.
  */
-export const styleNodeToCssRules = <TStyleType extends FigmaStyleType>(styleNode: StyleNode<TStyleType>) => {
+export const styleNodeToCssRules = <TStyleType extends FigmaStyleType>(
+  styleNode: StyleNode<TStyleType>
+) => {
   return styleNode.type === "TEXT"
-    ? figmaTextToCssText(styleNode.styleProperties)
+    ? figmaTextToCssText((styleNode as StyleNode<"TEXT">).styleProperties)
     : styleNode.type === "EFFECT"
-      ? figmaEffectToCssProps(styleNode.styleProperties, styleNode.nodeType)
-      : styleNode.type === "FILL"
-      ? figmaPaintToCssProps(styleNode.styleProperties)
-        : null;
-}
+    ? figmaEffectToCssProps(
+        (styleNode as StyleNode<"EFFECT">).styleProperties,
+        styleNode.nodeType
+      )
+    : styleNode.type === "FILL"
+    ? figmaPaintToCssProps((styleNode as StyleNode<"FILL">).styleProperties)
+    : null;
+};

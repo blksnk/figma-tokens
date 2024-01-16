@@ -1,5 +1,6 @@
-import { FIGMA_TOKEN } from "../api/config";
 import { Logger } from "./log.utils";
+import { EndpointUrlFn } from "../types/global/endpoints.types";
+import { NonOptional, Optional, isUndefined } from "@ubloimmo/front-util";
 
 /**
  * Formats the query parameters into a string.
@@ -9,13 +10,10 @@ import { Logger } from "./log.utils";
  */
 export const formatQueryParams = (queryParams?: object) => {
   if (!queryParams) return "";
-  return `?${
-    Object
-      .entries(queryParams)
-      .map(([ key, value ]) => `${ key }=${ String(value) }`)
-      .join("&")
-  }`
-}
+  return `?${Object.entries(queryParams)
+    .map(([key, value]) => `${key}=${String(value)}`)
+    .join("&")}`;
+};
 
 /**
  * Extracts query parameters from a given URL and returns them as an object.
@@ -25,13 +23,11 @@ export const formatQueryParams = (queryParams?: object) => {
  */
 export const extractQueryParams = (srcURL: string): Record<string, string> => {
   const queryPart = srcURL.split("?")[1];
-  if(!queryPart) return {};
+  if (!queryPart) return {};
   return Object.fromEntries(
-    queryPart
-      .split("&")
-      .map(pairStr => pairStr.split("="))
-  )
-}
+    queryPart.split("&").map((pairStr) => pairStr.split("="))
+  );
+};
 
 /**
  * Generate a formatted set of headers for a Figma API request.
@@ -41,7 +37,7 @@ export const extractQueryParams = (srcURL: string): Record<string, string> => {
  */
 const formatHeaders = (token: string) => ({
   "X-Figma-Token": token,
-})
+});
 
 /**
  * Creates an endpoint factory function that generates API endpoints.
@@ -51,32 +47,30 @@ const formatHeaders = (token: string) => ({
  * @param {Logger} [logger=Logger()] - An optional logger for logging errors.
  * @returns {(pathParam: Parameters<typeof URLFn>[0], queryParams: TQueryParams) => Promise<TResponse | null>} - An endpoint function that takes a path parameter and query parameters, and returns a Promise that resolves to the response or null.
  */
-export const endpointFactory = <
-  TQueryParams extends object = {},
-  TResponse
->(
-  URLFn: Function,
-  token: string = FIGMA_TOKEN,
-  logger: Logger = Logger()
-) =>
+export const endpointFactory =
+  <TQueryParams extends object = {}, TResponse extends object = {}>(
+    URLFn: EndpointUrlFn,
+    token: string,
+    logger: Logger = Logger()
+  ) =>
   async (
     pathParam: Parameters<typeof URLFn>[0],
-    queryParams: TQueryParams
+    queryParams?: TQueryParams
   ): Promise<TResponse | null> => {
-  const baseURL = URLFn(pathParam);
-  const query = formatQueryParams(queryParams);
-  const headers = formatHeaders(token);
-  const URL = [baseURL, query].join("");
-  try {
-    const response = await fetch(URL, {
-      headers,
-    })
-    return await response.json<TResponse>();
-  } catch (e) {
-    logger.error(`[${URL}]: ${e.message}`)
-    return null;
-  }
-}
+    const baseURL = URLFn(pathParam);
+    const query = formatQueryParams(queryParams ?? {});
+    const headers = formatHeaders(token);
+    const URL = [baseURL, query].join("");
+    try {
+      const response = await fetch(URL, {
+        headers,
+      });
+      return (await response.json()) as TResponse;
+    } catch (e: unknown) {
+      logger.error(`[${URL}]: ${(e as Error).message}`);
+      return null;
+    }
+  };
 
 /**
  * Throws an error with the specified message.
@@ -86,16 +80,19 @@ export const endpointFactory = <
  */
 export const throwError = (message: string) => {
   throw new Error(message);
-}
+};
 
 /**
  * Validates the given file key.
- *
+ * @template T {string}
  * @param {T | undefined} maybeFileKey - The file key to be validated.
  * @return {T} - The validated file key.
  * @throws {Error} - If the file key is undefined.
  */
-export const validateKey = <T>(maybeFileKey: T | undefined): T => {
-  if (!maybeFileKey) throwError("Missing file key")
-  return maybeFileKey as T;
-}
+
+export const validateKey = <T extends Optional<string>>(
+  maybeFileKey: T
+): NonOptional<T> => {
+  if (isUndefined(maybeFileKey)) throwError("Missing file key");
+  return maybeFileKey as NonOptional<T>;
+};

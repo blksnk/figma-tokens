@@ -1,8 +1,14 @@
 import { StyleNode } from "../types/global/transformer.types";
 import {
-  FigmaStyleTypeToToken, RootTokenCollection,
-  Token, TokenGroup, TokenOrGroupCollection,
-  TokenType, tokenTypes, TokenValues
+  FigmaStyleTypeToToken,
+  RootTokenCollection,
+  Token,
+  TokenGroup,
+  TokenOrGroupCollection,
+  TokenOrTokenGroup,
+  TokenType,
+  tokenTypes,
+  TokenValues,
 } from "../types/global/export.types";
 import { FigmaStyleType } from "../types/figma/figma.enums.types";
 import { Nullable } from "../types/global/global.types";
@@ -10,22 +16,23 @@ import { stringifyCssRules, styleNodeToCssRules } from "./css.transformer";
 import { Logger } from "../utils/log.utils";
 import { transformObject } from "../utils/transform.utils";
 import { camelCase, saneCamel, sanitize } from "../utils/string.utils";
+import { Optional } from "@ubloimmo/front-util";
 
 /**
  * Determines the type of token based on the given style node.
  *
+ * @template TStyleType {FigmaStyleType}
  * @param {StyleNode<TStyleType>} styleNode - The style node object containing the type and style properties.
  * @return {Nullable<TokenType>} The type of token, or null if it cannot be determined.
  */
-const tokenType = <TStyleType extends FigmaStyleType>(
-  {
-    type,
-    styleProperties
-  }: StyleNode<TStyleType>
-): Nullable<TokenType> => {
-  if(type === "TEXT" || type === "EFFECT") return type;
-  if(type === "FILL") {
-    const paintType = (styleProperties as StyleNode<"FILL">["styleProperties"]).type
+const tokenType = <TStyleType extends FigmaStyleType>({
+  type,
+  styleProperties,
+}: StyleNode<TStyleType>): Nullable<TokenType> => {
+  if (type === "TEXT" || type === "EFFECT") return type;
+  if (type === "FILL") {
+    const paintType = (styleProperties as StyleNode<"FILL">["styleProperties"])
+      .type;
     switch (paintType) {
       case "GRADIENT_ANGULAR":
       case "GRADIENT_RADIAL":
@@ -41,7 +48,8 @@ const tokenType = <TStyleType extends FigmaStyleType>(
         return null;
     }
   }
-}
+  return null;
+};
 
 /**
  * Returns the value of a given token based on its type and style.
@@ -54,21 +62,24 @@ const tokenValue = (
   tokenType: TokenType,
   tokenStyle: Partial<CSSStyleDeclaration>
 ): Nullable<string> => {
-  switch(tokenType) {
+  switch (tokenType) {
     case "COLOR":
     case "GRADIENT":
     case "ASSET":
       return tokenStyle.background ?? null;
     case "EFFECT":
-      return tokenStyle.boxShadow
-        ?? tokenStyle.textShadow
-        ?? tokenStyle.filter
-        ?? tokenStyle.backdropFilter
-        ?? null;
-    case "TEXT": return tokenStyle.fontSize ?? null;
+      return (
+        tokenStyle.boxShadow ??
+        tokenStyle.textShadow ??
+        tokenStyle.filter ??
+        tokenStyle.backdropFilter ??
+        null
+      );
+    case "TEXT":
+      return tokenStyle.fontSize ?? null;
   }
-  return null
-}
+  return null;
+};
 
 /**
  * Converts a style node to a token.
@@ -80,23 +91,27 @@ const tokenValue = (
 export const styleNodeToToken = <TStyleType extends FigmaStyleType>(
   styleNode: StyleNode<TStyleType>,
   logger: Logger = Logger()
-): Nullable<FigmaStyleTypeToToken<Token, typeof styleNode.nodeType>> => {
-  const type = tokenType(styleNode)
+): Nullable<FigmaStyleTypeToToken<TStyleType>> => {
+  const type = tokenType(styleNode);
   if (!type) {
-    logger.warn(`Style node with key ${styleNode.styleKey} type ${styleNode.type} is not supported. Skipping.`)
-    return null
+    logger.warn(
+      `Style node with key ${styleNode.styleKey} type ${styleNode.type} is not supported. Skipping.`
+    );
+    return null;
   }
   const tokenCssRules = styleNodeToCssRules(styleNode);
-  const tokenCss = tokenCssRules ? {
-    style: tokenCssRules,
-    rules: stringifyCssRules(tokenCssRules),
-  } : undefined;
+  const tokenCss = tokenCssRules
+    ? {
+        style: tokenCssRules,
+        rules: stringifyCssRules(tokenCssRules),
+      }
+    : undefined;
 
   const value = tokenCssRules ? tokenValue(type, tokenCssRules) : null;
 
   const name = sanitize(styleNode.name)
     .split("/")
-    .map(part => camelCase(part))
+    .map((part) => camelCase(part))
     .join("/");
 
   return {
@@ -104,8 +119,8 @@ export const styleNodeToToken = <TStyleType extends FigmaStyleType>(
     type,
     value,
     css: tokenCss,
-  }
-}
+  } as Nullable<FigmaStyleTypeToToken<TStyleType>>;
+};
 
 /**
  * Groups the given array of tokens by name and returns a collection of tokens and token groups.
@@ -137,12 +152,8 @@ export const groupTokensByName = (
   const sortedTokens = tokens.sort((a, b) => {
     const aPathLength = splitTokenName(a).length;
     const bPathLength = splitTokenName(b).length;
-    return aPathLength === bPathLength
-      ? 0
-      : aPathLength > bPathLength
-        ? -1
-        : 1;
-  })
+    return aPathLength === bPathLength ? 0 : aPathLength > bPathLength ? -1 : 1;
+  });
 
   const tokenPaths = sortedTokens.map((token) => ({
     path: splitTokenName(token),
@@ -150,16 +161,17 @@ export const groupTokensByName = (
       ...token,
       name: splitTokenName(token).reverse()[0],
     },
-  }))
+  }));
   // abort early if no nesting
   const maxTokenPathLength = tokenPaths.reduce(
-    (acc: number, { path }) =>Math.max(path.length, acc),
-    0)
+    (acc: number, { path }) => Math.max(path.length, acc),
+    0
+  );
   if (maxTokenPathLength === 0) return groups;
   if (maxTokenPathLength === 1) {
     return Object.fromEntries(
-      sortedTokens.map((token): [string, Token] => [ token.name, token ])
-    )
+      sortedTokens.map((token): [string, Token] => [token.name, token])
+    );
   }
 
   let slices: TokenOrGroupCollection = {};
@@ -171,16 +183,16 @@ export const groupTokensByName = (
    * @return {Nullable<TokenOrGroupCollection>} The nested slice if found, otherwise null.
    */
   const findNestedSlice = (slice: string[]) => {
-    logger.log(`Finding slice "${slice.join(", ")}"`)
+    logger.log(`Finding slice "${slice.join(", ")}"`);
     let temp: Nullable<TokenOrGroupCollection> = slices;
     for (let i = 0; i < slice.length; i++) {
       const currentSlicePath = slice[i];
-      const candidate = temp[currentSlicePath]
+      const candidate: Optional<TokenOrTokenGroup> = temp[currentSlicePath];
       temp = candidate?.tokens ?? null;
       if (temp === null) return null;
     }
     return temp;
-  }
+  };
 
   /**
    * Generates a nested token based on a given token path.
@@ -188,37 +200,45 @@ export const groupTokensByName = (
    * @param {{path: string[], token: Token }} tokenPath - The token path containing the path and the token.
    * @return {TokenOrGroupCollection} The nested token generated from the token path.
    */
-  const nestToken = (tokenPath: {path: string[], token: Token }) => {
+  const nestToken = (tokenPath: { path: string[]; token: Token }) => {
     const items = tokenPath.path.reverse();
-    const nestedToken = items.reduce((acc, part, level): TokenOrGroupCollection => {
-      const currentSlicePath = (items as string[]).slice(level + 1).reverse();
-      const otherSlice = currentSlicePath.length === 0
-        ? null
-        : findNestedSlice(currentSlicePath);
+    const nestedToken = items.reduce(
+      (acc, part, level): TokenOrGroupCollection => {
+        const currentSlicePath = (items as string[]).slice(level + 1).reverse();
+        const otherSlice =
+          currentSlicePath.length === 0
+            ? null
+            : findNestedSlice(currentSlicePath);
 
-      return {
-        ...(otherSlice || {}),
-        [part]: level === 0
-          ? tokenPath.token
-          : {
-            name: camelCase(part),
-            type: tokenPath.token.type,
-            tokens: acc
-          },
-      }
-    }, {})
+        return {
+          ...(otherSlice || {}),
+          [part]:
+            level === 0
+              ? tokenPath.token
+              : {
+                  name: camelCase(part),
+                  type: tokenPath.token.type,
+                  tokens: acc,
+                },
+        };
+      },
+      {}
+    );
     // assign to slices
     slices = {
       ...slices,
       ...nestedToken,
-    }
-    return nestedToken
-  }
+    };
+    return nestedToken;
+  };
   // group all tokens paths
-  groups = Object.assign({}, ...tokenPaths.map((tokenPath) => nestToken(tokenPath)))
+  groups = Object.assign(
+    {},
+    ...tokenPaths.map((tokenPath) => nestToken(tokenPath))
+  );
 
   return groups;
-}
+};
 
 /**
  * Groups an array of tokens by their type.
@@ -228,15 +248,18 @@ export const groupTokensByName = (
  */
 export const groupTokensByType = (tokens: Token[]) => {
   return tokens.reduce<Record<TokenType, Token[]>>(
-    <TType extends TokenType>(acc: Record<TType, Token<TType>[]>, token: Token<TType>) => {
-      acc[token.type].push(token)
-      return acc
+    <TType extends TokenType>(
+      acc: Record<TType, Token<TType>[]>,
+      token: Token<TType>
+    ) => {
+      acc[token.type].push(token);
+      return acc;
     },
     Object.fromEntries(
-      tokenTypes.map((tokenType: TokenType) => [tokenType, []])
+      tokenTypes.map((tokenType: TokenType) => [tokenType, [] as Token[]])
     ) as Record<TokenType, Token[]>
   );
-}
+};
 
 /**
  * Groups the given tokens by name and type.
@@ -252,14 +275,17 @@ export const groupTokens = (
   logger.info(`Grouping ${tokens.length} tokens by name and type...`);
   const tokensByType = groupTokensByType(tokens);
   const tokensByTypeAndName = Object.fromEntries<TokenOrGroupCollection>(
-    Object.entries(tokensByType).map((group: [TokenType, Token[]]) =>
-      [group[0], groupTokensByName(group[1], logger)]
+    Object.entries(tokensByType).map(
+      (group): [TokenType, TokenOrGroupCollection] => [
+        group[0] as TokenType,
+        groupTokensByName(group[1], logger),
+      ]
     )
-  );
+  ) as Record<TokenType, TokenOrGroupCollection>;
   const groupCount = Object.keys(tokensByTypeAndName).length;
   logger.info(`Created ${groupCount} groups from ${tokens.length} tokens.`);
   return tokensByTypeAndName;
-}
+};
 
 /**
  * Predicate that checks if the given data is a Token.
@@ -270,8 +296,13 @@ export const groupTokens = (
 const isToken = (
   data: TokenGroup | Token | TokenOrGroupCollection
 ): data is Token => {
-  return data && !!data.type && typeof data.type === "string" && tokenTypes.includes(data.type);
-}
+  return (
+    data &&
+    !!data.type &&
+    typeof data.type === "string" &&
+    tokenTypes.includes(data.type)
+  );
+};
 
 /**
  * Predicate that checks if the given data is a TokenGroup.
@@ -283,7 +314,7 @@ const isTokenGroup = (
   data: TokenGroup | Token | TokenOrGroupCollection
 ): data is TokenGroup => {
   return data && !!data.tokens && typeof data.tokens === "object";
-}
+};
 
 /**
  * Unwraps a token or a collection of tokens.
@@ -298,22 +329,20 @@ const unwrapTokenOrGroup = (
   tokenOrCollection: TokenGroup | Token | TokenOrGroupCollection
 ): TokenValues | Token => {
   // token group
-  if(isTokenGroup(tokenOrCollection)) {
+  if (isTokenGroup(tokenOrCollection)) {
     return transformObject(
       tokenOrCollection.tokens,
       unwrapTokenOrGroup,
-      saneCamel);
+      saneCamel
+    );
   }
   // token
-  if(isToken(tokenOrCollection)) {
+  if (isToken(tokenOrCollection)) {
     return tokenOrCollection;
   }
   // token collection
-  return transformObject(
-    tokenOrCollection,
-    unwrapTokenOrGroup,
-    saneCamel);
-}
+  return transformObject(tokenOrCollection, unwrapTokenOrGroup, saneCamel);
+};
 
 /**
  * Extracts the token values from the root token collection.
@@ -326,12 +355,13 @@ export const unwrapTokenValues = (
   rootTokenCollection: RootTokenCollection,
   logger: Logger = Logger()
 ): TokenValues => {
-  logger.info('Extracting token values...');
-  const typeToKey = (type: TokenType) => `${type.toLowerCase()}s`;
+  logger.info("Extracting token values...");
+  const typeToKey = (type: string) => `${type.toLowerCase()}s`;
   const rootCollectionValues = transformObject(
     rootTokenCollection,
     unwrapTokenOrGroup,
-    typeToKey);
-  logger.info('Done.');
+    typeToKey
+  );
+  logger.info("Done.");
   return rootCollectionValues;
-}
+};

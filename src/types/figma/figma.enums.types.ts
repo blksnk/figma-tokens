@@ -31,11 +31,7 @@ const figmaNodeTypes = [
  */
 export type FigmaNodeType = (typeof figmaNodeTypes)[number];
 
-const figmaExportFormats = [
-  "JPG",
-  "PNG",
-  "SVG",
-] as const;
+const figmaExportFormats = ["JPG", "PNG", "SVG"] as const;
 
 /**
  * Image type, string enum that supports values JPG, PNG, and SVG.
@@ -180,7 +176,8 @@ const figmaVerticalLayoutConstraints = [
  * Vertical constraint as an enum.
  * Refer to {@link figmaVerticalLayoutConstraints}
  */
-export type FigmaVerticalLayoutConstraint = (typeof figmaVerticalLayoutConstraints)[number];
+export type FigmaVerticalLayoutConstraint =
+  (typeof figmaVerticalLayoutConstraints)[number];
 
 const figmaHorizontalLayoutConstraints = [
   /**
@@ -209,7 +206,8 @@ const figmaHorizontalLayoutConstraints = [
  * Horizontal constraint as an enum.
  * Refer to {@link figmaHorizontalLayoutConstraints}
  */
-export type FigmaHorizontalLayoutConstraint = (typeof figmaHorizontalLayoutConstraints)[number];
+export type FigmaHorizontalLayoutConstraint =
+  (typeof figmaHorizontalLayoutConstraints)[number];
 
 const figmaLayoutGridPatterns = [
   /**
@@ -251,7 +249,8 @@ const figmaLayoutGridAlignments = [
  * Positioning of grid as a string enum.
  * Refer to {@link figmaLayoutGridAlignments}
  */
-export type FigmaLayoutGridAlignment = (typeof figmaLayoutGridAlignments)[number];
+export type FigmaLayoutGridAlignment =
+  (typeof figmaLayoutGridAlignments)[number];
 
 const figmaEffectTypes = [
   "INNER_SHADOW",
@@ -266,10 +265,7 @@ const figmaEffectTypes = [
  */
 export type FigmaEffectType = (typeof figmaEffectTypes)[number];
 
-const figmaHyperlinkTypes = [
-  "URL",
-  "NODE",
-] as const;
+const figmaHyperlinkTypes = ["URL", "NODE"] as const;
 
 /**
  * Type of hyperlink.
@@ -294,12 +290,7 @@ const figmaPaintTypes = [
  */
 export type FigmaPaintType = (typeof figmaPaintTypes)[number];
 
-const figmaPaintScaleModes = [
-  "FILL",
-  "FIT",
-  "TILE",
-  "STRETCH",
-] as const;
+const figmaPaintScaleModes = ["FILL", "FIT", "TILE", "STRETCH"] as const;
 
 /**
  * Image scaling mode.
@@ -313,7 +304,7 @@ const figmaTextCases = [
   "TITLE",
   "SMALL_CAPS",
   "SMALL_CAPS_FORCED",
-] as const
+] as const;
 
 /**
  * Text casing applied to the node, default is the original casing
@@ -325,7 +316,7 @@ const figmaTextDecorations = [
   "STRIKETHROUGH",
   "UNDERLINE",
   "NONE", // TODO check if nullish
-] as const
+] as const;
 
 /**
  * Text decoration applied to the node, default is none
@@ -345,10 +336,7 @@ const figmaTextAutoResizes = [
  */
 export type FigmaTextAutoResize = (typeof figmaTextAutoResizes)[number];
 
-const figmaTextTruncations = [
-  "DISABLED",
-  "ENDING",
-] as const;
+const figmaTextTruncations = ["DISABLED", "ENDING"] as const;
 
 /**
  * Whether this text node will truncate with an ellipsis
@@ -368,13 +356,10 @@ const figmaTextAlignHorizontals = [
  * Horizontal text alignment as string enum.
  * Refer to {@link figmaTextAlignHorizontals}
  */
-export type FigmaTextAlignHorizontal = (typeof figmaTextAlignHorizontals)[number];
+export type FigmaTextAlignHorizontal =
+  (typeof figmaTextAlignHorizontals)[number];
 
-const figmaTextAlignVerticals = [
-  "TOP",
-  "CENTER",
-  "BOTTOM",
-] as const;
+const figmaTextAlignVerticals = ["TOP", "CENTER", "BOTTOM"] as const;
 
 /**
  * Vertical text alignment as string enum
@@ -382,11 +367,7 @@ const figmaTextAlignVerticals = [
  */
 export type FigmaTextAlignVertical = (typeof figmaTextAlignVerticals)[number];
 
-const figmaLineHeightUnits = [
-  "PIXELS",
-  "FONT_SIZE_%",
-  "INTRINSIC_%",
-] as const;
+const figmaLineHeightUnits = ["PIXELS", "FONT_SIZE_%", "INTRINSIC_%"] as const;
 
 /**
  * The unit of the line height value specified by the user.
@@ -394,12 +375,7 @@ const figmaLineHeightUnits = [
  */
 export type FigmaLineHeightUnit = (typeof figmaLineHeightUnits)[number];
 
-const figmaStyleTypes = [
-  "FILL",
-  "TEXT",
-  "EFFECT",
-  "GRID",
-] as const;
+const figmaStyleTypes = ["FILL", "TEXT", "EFFECT", "GRID"] as const;
 
 /**
  * The type of style as string enum.
@@ -490,18 +466,15 @@ const figjamConnectorMagnets = [
  * The connector magnet type is a string enum.
  * Refer to {@link figjamConnectorMagnets}
  */
-export type FigjamConnectorMagnet = (typeof figjamConnectorMagnets)[number]
+export type FigjamConnectorMagnet = (typeof figjamConnectorMagnets)[number];
 
-const figjamConnectorLineTypes = [
-  "ELBOWED",
-  "STRAIGHT",
-]
+const figjamConnectorLineTypes = ["ELBOWED", "STRAIGHT"];
 
 /**
  * Connector line type
  * Refer to {@link figjamConnectorLineTypes}
  */
-export type FigjamConnectorLineType = (typeof figjamConnectorLineTypes)[number]
+export type FigjamConnectorLineType = (typeof figjamConnectorLineTypes)[number];
 
 const figmaComponentPropertyTypes = [
   "BOOLEAN",
@@ -514,7 +487,8 @@ const figmaComponentPropertyTypes = [
  * Component property type
  * Refer to {@link figmaComponentPropertyTypes}
  */
-export type FigmaComponentPropertyType = (typeof figmaComponentPropertyTypes)[number];
+export type FigmaComponentPropertyType =
+  (typeof figmaComponentPropertyTypes)[number];
 
 const figmaInstanceSwapPreferredValueTypes = [
   "COMPONENT",
@@ -525,7 +499,8 @@ const figmaInstanceSwapPreferredValueTypes = [
  * Type of instance swap preferred value
  * Refer to {@link figmaInstanceSwapPreferredValueTypes}
  */
-export type FigmaInstanceSwapPreferredValueType = (typeof figmaInstanceSwapPreferredValueTypes)[number];
+export type FigmaInstanceSwapPreferredValueType =
+  (typeof figmaInstanceSwapPreferredValueTypes)[number];
 
 const figmaPrototypeDeviceTypes = [
   "NONE",
@@ -538,24 +513,19 @@ const figmaPrototypeDeviceTypes = [
  * Type of device used to view a prototype
  * Refer to {@link figmaPrototypeDeviceTypes}
  */
-export type FigmaPrototypeDeviceType = (typeof figmaPrototypeDeviceTypes)[number];
+export type FigmaPrototypeDeviceType =
+  (typeof figmaPrototypeDeviceTypes)[number];
 
-const figmaPrototypeDeviceRotations = [
-  "NONE",
-  "CCW_90",
-] as const;
+const figmaPrototypeDeviceRotations = ["NONE", "CCW_90"] as const;
 
 /**
  * Rotation of device used to view a prototype
  * Refer to {@link figmaPrototypeDeviceRotations}
  */
-export type FigmaPrototypeDeviceRotation = (typeof figmaPrototypeDeviceRotations)[number];
+export type FigmaPrototypeDeviceRotation =
+  (typeof figmaPrototypeDeviceRotations)[number];
 
-const figmaStrokeAligns = [
-  "INSIDE",
-  "OUTSIDE",
-  "CENTER",
-] as const;
+const figmaStrokeAligns = ["INSIDE", "OUTSIDE", "CENTER"] as const;
 
 /**
  * Position of stroke relative to vector outline, as a string enum
@@ -579,11 +549,7 @@ const figmaLayoutAligns = [
  */
 export type FigmaLayoutAlign = (typeof figmaLayoutAligns)[number];
 
-const figmaLayoutModes = [
-  "NONE",
-  "HORIZONTAL",
-  "VERTICAL",
-] as const;
+const figmaLayoutModes = ["NONE", "HORIZONTAL", "VERTICAL"] as const;
 
 /**
  * Whether this layer uses auto-layout to position its children.
@@ -591,11 +557,7 @@ const figmaLayoutModes = [
  */
 export type FigmaLayoutMode = (typeof figmaLayoutModes)[number];
 
-const figmaLayoutSizings = [
-  "FIXED",
-  "HUG",
-  "FILL",
-] as const;
+const figmaLayoutSizings = ["FIXED", "HUG", "FILL"] as const;
 
 /**
  * The horizontal & vertical sizing setting on this auto-layout frame or frame child.
@@ -603,10 +565,7 @@ const figmaLayoutSizings = [
  */
 export type FigmaLayoutSizing = (typeof figmaLayoutSizings)[number];
 
-const figmaLayoutWraps = [
-  "NO_WRAP",
-  "WRAP",
-] as const;
+const figmaLayoutWraps = ["NO_WRAP", "WRAP"] as const;
 
 /**
  * Whether this auto-layout frame has wrapping enabled.
@@ -614,10 +573,7 @@ const figmaLayoutWraps = [
  */
 export type FigmaLayoutWrap = (typeof figmaLayoutWraps)[number];
 
-const figmaAxisSizingModes = [
-  "FIXED",
-  "AUTO",
-] as const;
+const figmaAxisSizingModes = ["FIXED", "AUTO"] as const;
 
 /**
  * Whether the primary / counter axis has a fixed length (determined by the user)
@@ -638,7 +594,8 @@ const figmaPrimaryAxisAlignItemsOptions = [
  * in the primary axis direction.
  * Refer to {@link figmaPrimaryAxisAlignItemsOptions}
  */
-export type FigmaPrimaryAxisAlignItems = (typeof figmaPrimaryAxisAlignItemsOptions)[number];
+export type FigmaPrimaryAxisAlignItems =
+  (typeof figmaPrimaryAxisAlignItemsOptions)[number];
 
 const figmaCounterAxisAlignItemsOptions = [
   "MIN",
@@ -652,23 +609,19 @@ const figmaCounterAxisAlignItemsOptions = [
  * in the counter axis direction.
  * Refer to {@link figmaCounterAxisAlignItemsOptions}
  */
-export type FigmaCounterAxisAlignItems = (typeof figmaCounterAxisAlignItemsOptions)[number];
+export type FigmaCounterAxisAlignItems =
+  (typeof figmaCounterAxisAlignItemsOptions)[number];
 
-const figmaCounterAxisAlignContentOptions = [
-  "AUTO",
-  "SPACE_BETWEEN",
-] as const;
+const figmaCounterAxisAlignContentOptions = ["AUTO", "SPACE_BETWEEN"] as const;
 
 /**
  * Determines how the auto-layout frame’s wrapped tracks should be aligned in the counter axis direction.
  * Refer to {@link figmaCounterAxisAlignContentOptions}
  */
-export type FigmaCounterAxisAlignContent = (typeof figmaCounterAxisAlignContentOptions)[number];
+export type FigmaCounterAxisAlignContent =
+  (typeof figmaCounterAxisAlignContentOptions)[number];
 
-const figmaLayoutPositioning = [
-  "AUTO",
-  "ABSOLUTE",
-] as const;
+const figmaLayoutPositioning = ["AUTO", "ABSOLUTE"] as const;
 
 /**
  * Determines whether a layer's size and position should be determined
@@ -692,25 +645,22 @@ const figmaOverflowDirections = [
  */
 export type FigmaOverflowDirection = (typeof figmaOverflowDirections)[number];
 
-const figmaVectorPathWindingRules = [
-  "NONZERO",
-  "EVENODD",
-  "NONE"
-] as const;
+const figmaVectorPathWindingRules = ["NONZERO", "EVENODD", "NONE"] as const;
 
 /**
  * Winding rules ( work off a concept called the winding number,
  * which tells you for a given point how many times the path winds around that point.
  * Refer to {@link figmaVectorPathWindingRules}
  */
-export type FigmaVectorPathWindingRule = (typeof figmaVectorPathWindingRules)[number];
+export type FigmaVectorPathWindingRule =
+  (typeof figmaVectorPathWindingRules)[number];
 
 const figmaStrokeCaps = [
   "ROUND",
   "SQUARE",
   "LINE_ARROW",
   "TRIANGLE_ARROW",
-  "NONE"
+  "NONE",
 ] as const;
 
 /**
@@ -725,20 +675,17 @@ const figjamConnectorStrokeCaps = [
   "DIAMOND_FILLED",
   "CIRCLE_FILLED",
   "TRIANGLE_FILLED",
-  "NONE"
+  "NONE",
 ] as const;
 
 /**
  * An enum describing the end cap of the start or end of the connector.
  * Refer to {@link figjamConnectorStrokeCaps}
  */
-export type FigjamConnectorStrokeCap = (typeof figjamConnectorStrokeCaps)[number];
+export type FigjamConnectorStrokeCap =
+  (typeof figjamConnectorStrokeCaps)[number];
 
-const figmaStrokeJoins = [
-  "MITER",
-  "BEVEL",
-  "ROUND",
-] as const;
+const figmaStrokeJoins = ["MITER", "BEVEL", "ROUND"] as const;
 
 /**
  * An enum describing how corners in vector paths are rendered.
@@ -762,7 +709,7 @@ export type FigmaBooleanOperation = (typeof figmaBooleanOperations)[number];
 const figmaLineTypes = [
   /**
    * Text is an ordered list (numbered)
-    */
+   */
   "ORDERED",
   /**
    * Text is an unordered list (bulleted)
