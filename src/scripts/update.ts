@@ -74,7 +74,7 @@ const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
       (prevToken) => prevToken.name === freshToken.name
     );
     if (!correspondingToken) return false;
-    return correspondingToken.value !== freshToken.value;
+    return JSON.stringify(correspondingToken) !== JSON.stringify(freshToken);
   });
   logger.info(`Updated ${updatedTokens.length} existing tokens.`);
   const changesCount =
