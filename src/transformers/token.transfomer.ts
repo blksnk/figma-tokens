@@ -183,7 +183,7 @@ export const groupTokensByName = (
    * @return {Nullable<TokenOrGroupCollection>} The nested slice if found, otherwise null.
    */
   const findNestedSlice = (slice: string[]) => {
-    logger.log(`Finding slice "${slice.join(", ")}"`);
+    logger.debug(`Finding slice "${slice.join(", ")}"`);
     let temp: Nullable<TokenOrGroupCollection> = slices;
     for (let i = 0; i < slice.length; i++) {
       const currentSlicePath = slice[i];
