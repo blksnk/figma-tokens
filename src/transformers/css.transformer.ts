@@ -5,6 +5,7 @@ import { figmaEffectToCssProps } from "./effect.transfomer";
 import { FigmaStyleType } from "../types/figma/figma.enums.types";
 import { figmaPaintToCssProps } from "./fill.transformer";
 import { kebabize } from "../utils/string.utils";
+import { Nullable } from "@ubloimmo/front-util";
 
 /**
  * Converts pixels to rems.
@@ -40,22 +41,36 @@ export const stringifyCssRules = (rules: Partial<CSSStyleDeclaration>) => {
 };
 
 /**
+ * Check if the given styleNode is of a specific style type.
+ *
+ * @param {StyleNode} styleNode - The style node to check.
+ * @param {FigmaStyleType} typePredicate - The type of style to check against.
+ * @return {boolean} Returns true if the styleNode is of the specified type, otherwise false.
+ */
+const isSpecificStyleNode = <TStyleType extends FigmaStyleType>(
+  styleNode: StyleNode,
+  typePredicate: TStyleType
+): styleNode is StyleNode<TStyleType> => {
+  return styleNode.type === typePredicate;
+};
+
+/**
  * Converts a style node to CSS rules.
  * @template TStyleType {FigmaStyleType} - The type of the style (e.g., "FILL", "EFFECT", "TEXT").
  * @param {StyleNode<TStyleType>} styleNode - The style node to convert.
- * @return {null | string} - The converted CSS rules.
+ * @return {Nullable<Partial<CSSStyleDeclaration>>} - The converted CSS style declaration or null.
  */
 export const styleNodeToCssRules = <TStyleType extends FigmaStyleType>(
   styleNode: StyleNode<TStyleType>
-) => {
-  return styleNode.type === "TEXT"
-    ? figmaTextToCssText((styleNode as StyleNode<"TEXT">).styleProperties)
-    : styleNode.type === "EFFECT"
-    ? figmaEffectToCssProps(
-        (styleNode as StyleNode<"EFFECT">).styleProperties,
-        styleNode.nodeType
-      )
-    : styleNode.type === "FILL"
-    ? figmaPaintToCssProps((styleNode as StyleNode<"FILL">).styleProperties)
-    : null;
+): Nullable<Partial<CSSStyleDeclaration>> => {
+  if (isSpecificStyleNode(styleNode, "TEXT")) {
+    return figmaTextToCssText(styleNode.styleProperties);
+  }
+  if (isSpecificStyleNode(styleNode, "EFFECT")) {
+    return figmaEffectToCssProps(styleNode.styleProperties, styleNode.nodeType);
+  }
+  if (isSpecificStyleNode(styleNode, "FILL")) {
+    return figmaPaintToCssProps(styleNode.styleProperties);
+  }
+  return null;
 };
