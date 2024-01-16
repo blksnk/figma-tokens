@@ -1365,14 +1365,14 @@ export const tokens = [
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "1.220625rem%",
+        "lineHeight": "1.25rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
         "fontFeatureSettings": "normal"
       },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.220625rem%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
@@ -1388,14 +1388,14 @@ export const tokens = [
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "1.220625rem%",
+        "lineHeight": "1.25rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
         "fontFeatureSettings": "normal"
       },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.220625rem%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
@@ -1411,14 +1411,14 @@ export const tokens = [
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "2.6524999618530276rem%",
+        "lineHeight": "2.625rem",
         "letterSpacing": "-0.0625rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
         "fontFeatureSettings": "normal"
       },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 2.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.6524999618530276rem%;\nletter-spacing: -0.0625rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 2.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.625rem;\nletter-spacing: -0.0625rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
@@ -1457,14 +1457,14 @@ export const tokens = [
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "2.82150016784668rem%",
+        "lineHeight": "2.8125rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
         "fontFeatureSettings": "normal"
       },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 2.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.82150016784668rem%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 2.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.8125rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
@@ -1549,14 +1549,14 @@ export const tokens = [
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "1.545rem%",
+        "lineHeight": "1.5625rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
         "fontFeatureSettings": "normal"
       },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.545rem%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5625rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
@@ -2959,13 +2959,13 @@ export const tokens = [
         "textDecoration": "none",
         "textTransform": "uppercase",
         "lineHeight": "0.875rem",
-        "letterSpacing": "0.3125rem",
+        "letterSpacing": "0.125rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
         "fontFeatureSettings": "normal"
       },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 0.875rem;\nletter-spacing: 0.3125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 0.875rem;\nletter-spacing: 0.125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
@@ -3069,14 +3069,14 @@ export const tokens = [
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "3.5700000000000003rem%",
+        "lineHeight": "3.5625rem",
         "letterSpacing": "0.013125rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
         "fontFeatureSettings": "normal"
       },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 2.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5700000000000003rem%;\nletter-spacing: 0.013125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 2.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5625rem;\nletter-spacing: 0.013125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
