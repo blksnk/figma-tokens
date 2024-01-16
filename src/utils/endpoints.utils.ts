@@ -1,5 +1,8 @@
 import { Logger } from "./log.utils";
-import { EndpointUrlFn } from "../types/global/endpoints.types";
+import {
+  EmptyQueryParams,
+  EndpointUrlFn,
+} from "../types/global/endpoints.types";
 import { NonOptional, Optional, isUndefined } from "@ubloimmo/front-util";
 
 /**
@@ -48,7 +51,10 @@ const formatHeaders = (token: string) => ({
  * @returns {(pathParam: Parameters<typeof URLFn>[0], queryParams: TQueryParams) => Promise<TResponse | null>} - An endpoint function that takes a path parameter and query parameters, and returns a Promise that resolves to the response or null.
  */
 export const endpointFactory =
-  <TQueryParams extends object = {}, TResponse extends object = {}>(
+  <
+    TQueryParams extends object = EmptyQueryParams,
+    TResponse extends object = object
+  >(
     URLFn: EndpointUrlFn,
     token: string,
     logger: Logger = Logger()

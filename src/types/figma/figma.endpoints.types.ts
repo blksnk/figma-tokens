@@ -1,17 +1,29 @@
 import {
-  FigmaAnyNode,
-  FigmaDocumentNode, FigmaRectangleNode,
-  FigmaTextNode
+  FigmaDocumentNode,
+  FigmaRectangleNode,
+  FigmaTextNode,
 } from "./figma.nodes.types";
 import {
   FigmaComponent,
-  FigmaComponentSet, FigmaNodeId, FigmaImageRef,
-  FigmaStyle
+  FigmaComponentSet,
+  FigmaNodeId,
+  FigmaImageRef,
+  FigmaStyle,
 } from "./figma.properties.types";
 import {
   FigmaComponentMetadata,
-  FigmaComponentSetMetadata, FigmaStyleMetadata
+  FigmaComponentSetMetadata,
+  FigmaStyleMetadata,
 } from "./figma.teams.types";
+import {
+  FigmaPublishedVariable,
+  FigmaPublishedVariableCollection,
+  FigmaVariable,
+  FigmaVariableCollection,
+  FigmaVariableCollectionId,
+  FigmaVariableId,
+} from "./figma.variables.types";
+import { FigmaVariableType } from "./figma.enums.types";
 
 export type GetFileEndpointQueryParams = {
   /**
@@ -49,7 +61,7 @@ export type GetFileEndpointQueryParams = {
    * @default false.
    */
   branch_data?: boolean;
-}
+};
 
 export type FigmaFileBranchResponse = {
   key: string;
@@ -57,7 +69,7 @@ export type FigmaFileBranchResponse = {
   thumbnail_url: string;
   last_modified: string;
   link_access: string;
-}
+};
 
 export type GetFileEndpointResponse = {
   name: string;
@@ -67,25 +79,25 @@ export type GetFileEndpointResponse = {
   thumbnailUrl: string;
   version: string;
   document: FigmaDocumentNode;
-  components: Record<string, FigmaComponent>
+  components: Record<string, FigmaComponent>;
   componentSets: Record<string, FigmaComponentSet>;
   schemaVersion: number;
   styles: Record<string, FigmaStyle>;
   mainFileKey: string;
   branches?: FigmaFileBranchResponse[];
-}
+};
 
 export type GetFileNodesEndpointQueryParams = Pick<
   GetFileEndpointQueryParams,
   "ids" | "version" | "depth" | "geometry" | "plugin_data"
->
+>;
 
 export type FigmaFileNodeResponse = {
   document: FigmaTextNode | FigmaRectangleNode;
   components: Record<string, FigmaComponent>;
   schemaVersion: number;
   styles: Record<string, FigmaStyle>;
-}
+};
 
 export type GetFileNodesEndpointResponse = Pick<
   GetFileEndpointResponse,
@@ -93,7 +105,7 @@ export type GetFileNodesEndpointResponse = Pick<
 > & {
   nodes: Record<FigmaNodeId, FigmaFileNodeResponse>;
   err?: string;
-}
+};
 
 export type FigmaImageFormatQueryParam = "jpg" | "png" | "svg" | "pdf";
 
@@ -163,7 +175,7 @@ export type GetImagesEndpointQueryParams = {
    * Omitting this will use the current version of the file.
    */
   version?: string;
-}
+};
 
 export type GetImagesEndpointResponse = {
   err?: string;
@@ -173,7 +185,7 @@ export type GetImagesEndpointResponse = {
    */
   images: Record<FigmaNodeId, string | null>;
   status?: number;
-}
+};
 
 export type GetImageFillsEndpointResponse = {
   /**
@@ -182,8 +194,8 @@ export type GetImageFillsEndpointResponse = {
    * under the imageRef attribute in a Paint.
    * @remarks Image URLs will expire after no more than 14 days.
    */
-  images: Record<FigmaImageRef, string>
-}
+  images: Record<FigmaImageRef, string>;
+};
 
 type GetMetadataEndpointQueryParams = {
   /**
@@ -202,14 +214,15 @@ type GetMetadataEndpointQueryParams = {
    * @remarks Exclusive with after.
    */
   before?: number;
-}
+};
 
 type FigmaPaginationCursor = {
   before: number;
   after: number;
-}
+};
 
-export type GetTeamComponentsEndpointQueryParams = GetMetadataEndpointQueryParams;
+export type GetTeamComponentsEndpointQueryParams =
+  GetMetadataEndpointQueryParams;
 
 export type GetTeamComponentsEndpointResponse = {
   status: number;
@@ -223,9 +236,10 @@ export type GetTeamComponentsEndpointResponse = {
     components: FigmaComponentMetadata[];
   };
   cursor: FigmaPaginationCursor;
-}
+};
 
-export type GetTeamComponentSetsEndpointQueryParams = GetMetadataEndpointQueryParams;
+export type GetTeamComponentSetsEndpointQueryParams =
+  GetMetadataEndpointQueryParams;
 
 export type GetTeamComponentSetsEndpointResponse = {
   status: number;
@@ -237,27 +251,33 @@ export type GetTeamComponentSetsEndpointResponse = {
    */
   meta: {
     component_sets: FigmaComponentSetMetadata[];
-  }
+  };
   cursor: FigmaPaginationCursor;
-}
+};
 
-export type GetFileComponentsEndpointResponse = Omit<GetTeamComponentsEndpointResponse, "cursor">;
+export type GetFileComponentsEndpointResponse = Omit<
+  GetTeamComponentsEndpointResponse,
+  "cursor"
+>;
 
-export type GetFileComponentSetsEndpointResponse = Omit<GetTeamComponentSetsEndpointResponse, "cursor">;
+export type GetFileComponentSetsEndpointResponse = Omit<
+  GetTeamComponentSetsEndpointResponse,
+  "cursor"
+>;
 
 export type GetComponentEndpointResponse = {
   status: number;
   error?: boolean;
   message?: string;
   meta: FigmaComponentMetadata;
-}
+};
 
 export type GetComponentSetEndpointResponse = {
   status: number;
   error?: boolean;
   message?: string;
   meta: FigmaComponentSetMetadata;
-}
+};
 
 export type GetTeamStylesEndpointQueryParams = GetMetadataEndpointQueryParams;
 
@@ -267,15 +287,46 @@ export type GetTeamStylesEndpointResponse = {
   message?: string;
   meta: {
     styles: FigmaStyleMetadata[];
-  }
+  };
   cursor: FigmaPaginationCursor;
-}
+};
 
-export type GetFileStylesEndpointResponse = Omit<GetTeamStylesEndpointResponse, "cursor">;
+export type GetFileStylesEndpointResponse = Omit<
+  GetTeamStylesEndpointResponse,
+  "cursor"
+>;
 
 export type GetStyleEndpointResponse = {
   status: number;
   error?: boolean;
   message?: string;
   meta: FigmaStyleMetadata[];
-}
+};
+
+export type GetFileLocalVariablesEndpointResponse = {
+  status: number;
+  error?: boolean;
+  message?: string;
+  meta: {
+    variables: {
+      [key: FigmaVariableId]: FigmaVariable<FigmaVariableType>;
+    };
+    variableCollections: {
+      [key: FigmaVariableCollectionId]: FigmaVariableCollection;
+    };
+  };
+};
+
+export type GetFilePublishedVariablesEndpointResponse = {
+  status: number;
+  error?: boolean;
+  message?: string;
+  meta: {
+    variables: {
+      [key: FigmaVariableId]: FigmaPublishedVariable<FigmaVariableType>;
+    };
+    variableCollections: {
+      [key: FigmaVariableCollectionId]: FigmaPublishedVariableCollection;
+    };
+  };
+};

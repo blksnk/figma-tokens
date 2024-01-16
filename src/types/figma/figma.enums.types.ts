@@ -726,3 +726,49 @@ const figmaLineTypes = [
  * Refer to {@link figmaLineTypes}
  */
 export type FigmaLineType = (typeof figmaLineTypes)[number];
+
+export type FigmaVariableScopeAll = "ALL_SCOPES";
+
+const figmaFloatVariableScopes = [
+  "TEXT_CONTENT",
+  "WIDTH_HEIGHT",
+  "GAP",
+  "STROKE_FLOAT",
+  "OPACITY",
+  "EFFECT_FLOAT",
+] as const;
+
+/**
+ * Valid scopes for FLOAT variables:
+ */
+export type FigmaFloatVariableScope =
+  | (typeof figmaFloatVariableScopes)[number]
+  | FigmaVariableScopeAll;
+
+const figmaColorVariableScopes = [
+  "ALL_FILLS",
+  "FRAME_FILL",
+  "SHAPE_FILL",
+  "TEXT_FILL",
+  "STROKE_COLOR",
+  "EFFECT_COLOR",
+];
+
+/**
+ * Valid scopes for COLOR variables:
+ */
+export type FigmaColorVariableScope =
+  | (typeof figmaColorVariableScopes)[number]
+  | FigmaVariableScopeAll;
+
+const figmaVariableResolvedTypes = [
+  "BOOLEAN",
+  "FLOAT",
+  "STRING",
+  "COLOR",
+] as const;
+
+/**
+ * The resolved type of a {@link FigmaVariable}.
+ */
+export type FigmaVariableType = (typeof figmaVariableResolvedTypes)[number];

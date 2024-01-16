@@ -13,6 +13,8 @@ import {
   GetImageFillsEndpointResponse,
   GetImagesEndpointQueryParams,
   GetImagesEndpointResponse,
+  GetFileLocalVariablesEndpointResponse,
+  GetFilePublishedVariablesEndpointResponse,
   GetStyleEndpointResponse,
   GetTeamComponentsEndpointQueryParams,
   GetTeamComponentsEndpointResponse,
@@ -30,6 +32,7 @@ import {
 } from "../types/figma/figma.properties.types";
 import { Nullable, Optional } from "../types/global/global.types";
 import { Logger, LoggerConfig } from "../utils/log.utils";
+import { EmptyQueryParams } from "../types/global/endpoints.types";
 
 /**
  * Represents a client for interacting with the Figma API.
@@ -49,6 +52,8 @@ export class FigmaApiClient {
   lastFileComponents: Nullable<GetFileComponentsEndpointResponse>;
   lastFileComponentSets: Nullable<GetFileComponentSetsEndpointResponse>;
   lastFileStyles: Nullable<GetFileStylesEndpointResponse>;
+  lastFileLocalVariables: Nullable<GetFileLocalVariablesEndpointResponse>;
+  lastFilePublishedVariables: Nullable<GetFilePublishedVariablesEndpointResponse>;
   lastImages: Nullable<GetImagesEndpointResponse>;
   lastImageFills: Nullable<GetImageFillsEndpointResponse>;
   lastTeamComponents: Nullable<GetTeamComponentsEndpointResponse>;
@@ -78,6 +83,8 @@ export class FigmaApiClient {
     this.lastComponentMetadata = null;
     this.lastComponentSetMetadata = null;
     this.lastStyleMetadata = null;
+    this.lastFileLocalVariables = null;
+    this.lastFilePublishedVariables = null;
     this.logger = Logger(loggerConfig);
   }
 
@@ -142,7 +149,7 @@ export class FigmaApiClient {
     // replace fileKey for consecutive endpoint calls
     this.fileKey = fileKey;
     this.lastFileComponents = await endpointFactory<
-      {},
+      EmptyQueryParams,
       GetFileComponentsEndpointResponse
     >(
       endpointURLs.fileComponents,
@@ -163,7 +170,7 @@ export class FigmaApiClient {
     // replace fileKey for consecutive endpoint calls
     this.fileKey = fileKey;
     this.lastFileComponentSets = await endpointFactory<
-      {},
+      EmptyQueryParams,
       GetFileComponentSetsEndpointResponse
     >(
       endpointURLs.fileComponentSets,
@@ -184,7 +191,7 @@ export class FigmaApiClient {
     // replace fileKey for consecutive endpoint calls
     this.fileKey = fileKey;
     this.lastFileStyles = await endpointFactory<
-      {},
+      EmptyQueryParams,
       GetFileStylesEndpointResponse
     >(
       endpointURLs.fileStyles,
@@ -192,6 +199,48 @@ export class FigmaApiClient {
       this.logger
     )(fileKey);
     return this.lastFileStyles;
+  }
+
+  /**
+   * Retrieves the local variables associated with a file.
+   *
+   * @param {string} fileKey - The key of the file to retrieve the local variables for. Defaults to the value of `this.fileKey`.
+   * @return {Promise<GetFileLocalVariablesEndpointResponse>} A promise that resolves to the local variables of the file.
+   */
+  async getFileLocalVariables(fileKey = this.fileKey) {
+    fileKey = validateKey(fileKey);
+    // replace fileKey for consecutive endpoint calls
+    this.fileKey = fileKey;
+    this.lastFileLocalVariables = await endpointFactory<
+      EmptyQueryParams,
+      GetFileLocalVariablesEndpointResponse
+    >(
+      endpointURLs.fileLocalVariables,
+      this.token,
+      this.logger
+    )(fileKey);
+    return this.lastFileLocalVariables;
+  }
+
+  /**
+   * Retrieves the published variables for a file.
+   *
+   * @param {string} fileKey - The key of the file to retrieve the published variables for. If not provided, the default file key will be used.
+   * @return {Promise<GetFilePublishedVariablesEndpointResponse>} - A promise that resolves with the published variables for the file.
+   */
+  async getFilePublishedVariables(fileKey = this.fileKey) {
+    fileKey = validateKey(fileKey);
+    // replace fileKey for consecutive endpoint calls
+    this.fileKey = fileKey;
+    this.lastFilePublishedVariables = await endpointFactory<
+      EmptyQueryParams,
+      GetFilePublishedVariablesEndpointResponse
+    >(
+      endpointURLs.filePublishedVariables,
+      this.token,
+      this.logger
+    )(fileKey);
+    return this.lastFilePublishedVariables;
   }
 
   /**
@@ -242,7 +291,7 @@ export class FigmaApiClient {
     // replace fileKey for consecutive endpoint calls
     this.fileKey = fileKey;
     this.lastImageFills = await endpointFactory<
-      {},
+      EmptyQueryParams,
       GetImageFillsEndpointResponse
     >(
       endpointURLs.imageFills,
@@ -334,7 +383,7 @@ export class FigmaApiClient {
     componentKey = validateKey(componentKey);
     this.componentKey = componentKey;
     this.lastComponentMetadata = await endpointFactory<
-      {},
+      EmptyQueryParams,
       GetComponentEndpointResponse
     >(
       endpointURLs.component,
@@ -354,7 +403,7 @@ export class FigmaApiClient {
     componentSetKey = validateKey(componentSetKey);
     this.componentSetKey = componentSetKey;
     this.lastComponentSetMetadata = await endpointFactory<
-      {},
+      EmptyQueryParams,
       GetComponentSetEndpointResponse
     >(
       endpointURLs.componentSet,
@@ -374,7 +423,7 @@ export class FigmaApiClient {
     styleKey = validateKey(styleKey);
     this.styleKey = styleKey;
     this.lastStyleMetadata = await endpointFactory<
-      {},
+      EmptyQueryParams,
       GetStyleEndpointResponse
     >(
       endpointURLs.style,
