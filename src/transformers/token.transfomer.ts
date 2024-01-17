@@ -14,12 +14,15 @@ import {
   FigmaPaintType,
   FigmaStyleType,
 } from "../types/figma/figma.enums.types";
-import { Nullable } from "../types/global/global.types";
 import { stringifyCssRules, styleNodeToCssRules } from "./css.transformer";
 import { Logger } from "../utils/log.utils";
-import { transformObject } from "../utils/transform.utils";
 import { camelCase, saneCamel, sanitize } from "../utils/string.utils";
-import { Optional, isString } from "@ubloimmo/front-util";
+import {
+  Optional,
+  isString,
+  Nullable,
+  transformObject,
+} from "@ubloimmo/front-util";
 
 const paintTypeToTokenTypeMap: Record<FigmaPaintType, Nullable<TokenType>> = {
   GRADIENT_ANGULAR: "GRADIENT",
