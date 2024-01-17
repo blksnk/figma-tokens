@@ -1,988 +1,428 @@
-export const TEXT = {
-  "mobile": {
-    "name": "mobile",
-    "type": "TEXT",
+export const TEXT = {} as const;
+
+export const COLOR = {
+  "success": {
+    "name": "success",
+    "type": "COLOR",
     "tokens": {
-      "address": {
-        "name": "address",
-        "type": "TEXT",
-        "tokens": {
-          "default": {
-            "name": "default",
-            "type": "TEXT",
-            "value": "1.125rem",
-            "css": {
-              "style": {
-                "fontFamily": "Avenir",
-                "fontWeight": "500",
-                "fontSize": "1.125rem",
-                "fontStyle": "normal",
-                "textIndent": "unset",
-                "textDecoration": "none",
-                "textTransform": "unset",
-                "lineHeight": "1.25rem",
-                "letterSpacing": "0rem",
-                "textOverflow": "unset",
-                "textAlign": "left",
-                "verticalAlign": "top",
-                "fontFeatureSettings": "normal"
-              },
-              "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-            }
-          },
-          "selected": {
-            "name": "selected",
-            "type": "TEXT",
-            "value": "1.125rem",
-            "css": {
-              "style": {
-                "fontFamily": "Avenir",
-                "fontWeight": "900",
-                "fontSize": "1.125rem",
-                "fontStyle": "normal",
-                "textIndent": "unset",
-                "textDecoration": "none",
-                "textTransform": "unset",
-                "lineHeight": "1.25rem",
-                "letterSpacing": "0rem",
-                "textOverflow": "unset",
-                "textAlign": "left",
-                "verticalAlign": "top",
-                "fontFeatureSettings": "normal"
-              },
-              "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-            }
-          }
-        }
-      },
-      "h1": {
-        "name": "h1",
-        "type": "TEXT",
-        "value": "2.5rem",
+      "dark": {
+        "name": "dark",
+        "type": "COLOR",
+        "value": "rgba(27, 80, 72, 1)",
         "css": {
           "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "2.5rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "2.625rem",
-            "letterSpacing": "-0.0625rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(27, 80, 72, 1)"
           },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 2.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.625rem;\nletter-spacing: -0.0625rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(27, 80, 72, 1);"
         }
       },
-      "small": {
-        "name": "small",
-        "type": "TEXT",
-        "value": "0.75rem",
+      "light": {
+        "name": "light",
+        "type": "COLOR",
+        "value": "rgba(240, 250, 245, 1)",
         "css": {
           "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "0.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "100%",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(240, 250, 245, 1)"
           },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 250, 245, 1);"
         }
       },
-      "display": {
-        "name": "display",
-        "type": "TEXT",
-        "value": "2.75rem",
+      "medium": {
+        "name": "medium",
+        "type": "COLOR",
+        "value": "rgba(147, 224, 193, 1)",
         "css": {
           "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "900",
-            "fontSize": "2.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "2.8125rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(147, 224, 193, 1)"
           },
-          "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 2.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.8125rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(147, 224, 193, 1);"
         }
       },
-      "bodyBold": {
-        "name": "bodyBold",
-        "type": "TEXT",
-        "value": "1rem",
+      "base": {
+        "name": "base",
+        "type": "COLOR",
+        "value": "rgba(54, 198, 141, 1)",
         "css": {
           "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "900",
-            "fontSize": "1rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "100%",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(54, 198, 141, 1)"
           },
-          "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "h2": {
-        "name": "h2",
-        "type": "TEXT",
-        "value": "1.75rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "900",
-            "fontSize": "1.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.9375rem",
-            "letterSpacing": "-0.035rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.9375rem;\nletter-spacing: -0.035rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "overline": {
-        "name": "overline",
-        "type": "TEXT",
-        "value": "0.75rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "0.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "uppercase",
-            "lineHeight": "100%",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "h3": {
-        "name": "h3",
-        "type": "TEXT",
-        "value": "1.5rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "1.5rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.5625rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5625rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "body": {
-        "name": "body",
-        "type": "TEXT",
-        "value": "1rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "400",
-            "fontSize": "1rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "100%",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "h4": {
-        "name": "h4",
-        "type": "TEXT",
-        "value": "1.125rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "900",
-            "fontSize": "1.125rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "100%",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "button": {
-        "name": "button",
-        "type": "TEXT",
-        "value": "1rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "900",
-            "fontSize": "1rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "100%",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "caption": {
-        "name": "caption",
-        "type": "TEXT",
-        "value": "0.875rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "0.875rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "100%",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(54, 198, 141, 1);"
         }
       }
     }
   },
-  "desktop": {
-    "name": "desktop",
-    "type": "TEXT",
+  "error": {
+    "name": "error",
+    "type": "COLOR",
     "tokens": {
-      "smallItalic": {
-        "name": "smallItalic",
-        "type": "TEXT",
-        "value": "0.75rem",
+      "light": {
+        "name": "light",
+        "type": "COLOR",
+        "value": "rgba(254, 236, 235, 1)",
         "css": {
           "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "0.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(254, 236, 235, 1)"
           },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(254, 236, 235, 1);"
         }
       },
-      "extraSmall": {
-        "name": "extraSmall",
-        "type": "TEXT",
-        "value": "0.625rem",
+      "base": {
+        "name": "base",
+        "type": "COLOR",
+        "value": "rgba(219, 61, 53, 1)",
         "css": {
           "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "0.625rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(219, 61, 53, 1)"
           },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 61, 53, 1);"
         }
       },
-      "h1": {
-        "name": "h1",
-        "type": "TEXT",
-        "value": "2.25rem",
+      "medium": {
+        "name": "medium",
+        "type": "COLOR",
+        "value": "rgba(247, 123, 114, 1)",
         "css": {
           "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "2.25rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "3.25rem",
-            "letterSpacing": "0.03125rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(247, 123, 114, 1)"
           },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 2.25rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.25rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(247, 123, 114, 1);"
         }
       },
-      "button": {
-        "name": "button",
-        "type": "TEXT",
-        "value": "0.875rem",
+      "dark": {
+        "name": "dark",
+        "type": "COLOR",
+        "value": "rgba(99, 41, 53, 1)",
         "css": {
           "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "0.875rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.25rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(99, 41, 53, 1)"
           },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "h2": {
-        "name": "h2",
-        "type": "TEXT",
-        "value": "1.5rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "1.5rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "2rem",
-            "letterSpacing": "0.03125rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "subtitle": {
-        "name": "subtitle",
-        "type": "TEXT",
-        "value": "1rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "400",
-            "fontSize": "1rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.5rem",
-            "letterSpacing": "0.03125rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "pressable": {
-        "name": "pressable",
-        "type": "TEXT",
-        "value": "0.875rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "0.875rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "uppercase",
-            "lineHeight": "1rem",
-            "letterSpacing": "0.043750000000000004rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 1rem;\nletter-spacing: 0.043750000000000004rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "h4": {
-        "name": "h4",
-        "type": "TEXT",
-        "value": "1rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "1rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.25rem",
-            "letterSpacing": "0.03125rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "small": {
-        "name": "small",
-        "type": "TEXT",
-        "value": "0.75rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "0.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "smallBold": {
-        "name": "smallBold",
-        "type": "TEXT",
-        "value": "0.75rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "0.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "caption": {
-        "name": "caption",
-        "type": "TEXT",
-        "value": "0.75rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "400",
-            "fontSize": "0.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "0.875rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.875rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "overline": {
-        "name": "overline",
-        "type": "TEXT",
-        "value": "0.75rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "400",
-            "fontSize": "0.75rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "uppercase",
-            "lineHeight": "0.875rem",
-            "letterSpacing": "0.125rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 0.875rem;\nletter-spacing: 0.125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "body": {
-        "name": "body",
-        "type": "TEXT",
-        "value": "0.875rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "400",
-            "fontSize": "0.875rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.25rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "displayTitle": {
-        "name": "displayTitle",
-        "type": "TEXT",
-        "value": "2.625rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "400",
-            "fontSize": "2.625rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "3.5625rem",
-            "letterSpacing": "0.013125rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 2.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5625rem;\nletter-spacing: 0.013125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "bodyBold": {
-        "name": "bodyBold",
-        "type": "TEXT",
-        "value": "0.875rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "0.875rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.25rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "subtitleBold": {
-        "name": "subtitleBold",
-        "type": "TEXT",
-        "value": "1rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "1rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.5rem",
-            "letterSpacing": "0.03125rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "stroked": {
-        "name": "stroked",
-        "type": "TEXT",
-        "value": "0.875rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "400",
-            "fontSize": "0.875rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "strike-through",
-            "textTransform": "unset",
-            "lineHeight": "1.25rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: strike-through;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "h3": {
-        "name": "h3",
-        "type": "TEXT",
-        "value": "1.125rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "800",
-            "fontSize": "1.125rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "none",
-            "textTransform": "unset",
-            "lineHeight": "1.75rem",
-            "letterSpacing": "0.03125rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.75rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-        }
-      },
-      "link": {
-        "name": "link",
-        "type": "TEXT",
-        "value": "0.875rem",
-        "css": {
-          "style": {
-            "fontFamily": "Avenir",
-            "fontWeight": "500",
-            "fontSize": "0.875rem",
-            "fontStyle": "normal",
-            "textIndent": "unset",
-            "textDecoration": "underline",
-            "textTransform": "unset",
-            "lineHeight": "1.25rem",
-            "letterSpacing": "0rem",
-            "textOverflow": "unset",
-            "textAlign": "left",
-            "verticalAlign": "top",
-            "fontFeatureSettings": "normal"
-          },
-          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: underline;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(99, 41, 53, 1);"
         }
       }
     }
-  }
-} as const;
-
-export const COLOR = {
-  "state": {
-    "name": "state",
+  },
+  "warning": {
+    "name": "warning",
     "type": "COLOR",
     "tokens": {
-      "error": {
-        "name": "error",
+      "medium": {
+        "name": "medium",
         "type": "COLOR",
-        "tokens": {
-          "dark": {
-            "name": "dark",
-            "type": "COLOR",
-            "value": "rgba(215, 41, 29, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(215, 41, 29, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(215, 41, 29, 1);"
-            }
+        "value": "rgba(250, 147, 118, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(250, 147, 118, 1)"
           },
-          "light": {
-            "name": "light",
-            "type": "COLOR",
-            "value": "rgba(254, 236, 235, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(254, 236, 235, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(254, 236, 235, 1);"
-            }
-          },
-          "main": {
-            "name": "main",
-            "type": "COLOR",
-            "value": "rgba(244, 67, 54, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(244, 67, 54, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(244, 67, 54, 1);"
-            }
-          }
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(250, 147, 118, 1);"
         }
       },
-      "warning": {
-        "name": "warning",
+      "base": {
+        "name": "base",
         "type": "COLOR",
-        "tokens": {
-          "dark": {
-            "name": "dark",
-            "type": "COLOR",
-            "value": "rgba(219, 118, 0, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(219, 118, 0, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 118, 0, 1);"
-            }
+        "value": "rgba(248, 99, 59, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(248, 99, 59, 1)"
           },
-          "main": {
-            "name": "main",
-            "type": "COLOR",
-            "value": "rgba(255, 152, 0, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(255, 152, 0, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 152, 0, 1);"
-            }
-          },
-          "light": {
-            "name": "light",
-            "type": "COLOR",
-            "value": "rgba(255, 245, 229, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(255, 245, 229, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 245, 229, 1);"
-            }
-          }
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(248, 99, 59, 1);"
         }
       },
-      "success": {
-        "name": "success",
+      "dark": {
+        "name": "dark",
         "type": "COLOR",
-        "tokens": {
-          "main": {
-            "name": "main",
-            "type": "COLOR",
-            "value": "rgba(61, 213, 152, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(61, 213, 152, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(61, 213, 152, 1);"
-            }
+        "value": "rgba(118, 56, 48, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(118, 56, 48, 1)"
           },
-          "dark": {
-            "name": "dark",
-            "type": "COLOR",
-            "value": "rgba(41, 169, 118, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(41, 169, 118, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(41, 169, 118, 1);"
-            }
-          },
-          "light": {
-            "name": "light",
-            "type": "COLOR",
-            "value": "rgba(240, 250, 245, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(240, 250, 245, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 250, 245, 1);"
-            }
-          }
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(118, 56, 48, 1);"
         }
       },
-      "info": {
-        "name": "info",
+      "light": {
+        "name": "light",
         "type": "COLOR",
-        "tokens": {
-          "light": {
-            "name": "light",
-            "type": "COLOR",
-            "value": "rgba(233, 245, 254, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(233, 245, 254, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 245, 254, 1);"
-            }
+        "value": "rgba(255, 243, 236, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(255, 243, 236, 1)"
           },
-          "dark": {
-            "name": "dark",
-            "type": "COLOR",
-            "value": "rgba(16, 116, 194, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(16, 116, 194, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(16, 116, 194, 1);"
-            }
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 243, 236, 1);"
+        }
+      }
+    }
+  },
+  "gray": {
+    "name": "gray",
+    "type": "COLOR",
+    "tokens": {
+      "50": {
+        "name": "50",
+        "type": "COLOR",
+        "value": "rgba(249, 249, 253, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(249, 249, 253, 1)"
           },
-          "main": {
-            "name": "main",
-            "type": "COLOR",
-            "value": "rgba(32, 150, 243, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(32, 150, 243, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(32, 150, 243, 1);"
-            }
-          }
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(249, 249, 253, 1);"
         }
       },
-      "pending": {
-        "name": "pending",
+      "100": {
+        "name": "100",
         "type": "COLOR",
-        "tokens": {
-          "dark": {
-            "name": "dark",
-            "type": "COLOR",
-            "value": "rgba(222, 166, 28, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(222, 166, 28, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(222, 166, 28, 1);"
-            }
+        "value": "rgba(226, 224, 228, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(226, 224, 228, 1)"
           },
-          "main": {
-            "name": "main",
-            "type": "COLOR",
-            "value": "rgba(255, 197, 66, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(255, 197, 66, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 197, 66, 1);"
-            }
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 224, 228, 1);"
+        }
+      },
+      "200": {
+        "name": "200",
+        "type": "COLOR",
+        "value": "rgba(200, 199, 204, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(200, 199, 204, 1)"
           },
-          "light": {
-            "name": "light",
-            "type": "COLOR",
-            "value": "rgba(255, 249, 236, 1)",
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal",
-                "background": "rgba(255, 249, 236, 1)"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 249, 236, 1);"
-            }
-          }
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(200, 199, 204, 1);"
+        }
+      },
+      "300": {
+        "name": "300",
+        "type": "COLOR",
+        "value": "rgba(173, 173, 180, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(173, 173, 180, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(173, 173, 180, 1);"
+        }
+      },
+      "400": {
+        "name": "400",
+        "type": "COLOR",
+        "value": "rgba(146, 148, 156, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(146, 148, 156, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(146, 148, 156, 1);"
+        }
+      },
+      "500": {
+        "name": "500",
+        "type": "COLOR",
+        "value": "rgba(120, 122, 132, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(120, 122, 132, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(120, 122, 132, 1);"
+        }
+      },
+      "600": {
+        "name": "600",
+        "type": "COLOR",
+        "value": "rgba(94, 97, 108, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(94, 97, 108, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(94, 97, 108, 1);"
+        }
+      },
+      "700": {
+        "name": "700",
+        "type": "COLOR",
+        "value": "rgba(68, 71, 84, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(68, 71, 84, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(68, 71, 84, 1);"
+        }
+      },
+      "800": {
+        "name": "800",
+        "type": "COLOR",
+        "value": "rgba(41, 46, 60, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(41, 46, 60, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(41, 46, 60, 1);"
+        }
+      },
+      "900": {
+        "name": "900",
+        "type": "COLOR",
+        "value": "rgba(14, 20, 36, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(14, 20, 36, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(14, 20, 36, 1);"
+        }
+      }
+    }
+  },
+  "pending": {
+    "name": "pending",
+    "type": "COLOR",
+    "tokens": {
+      "dark": {
+        "name": "dark",
+        "type": "COLOR",
+        "value": "rgba(122, 62, 13, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(122, 62, 13, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(122, 62, 13, 1);"
+        }
+      },
+      "base": {
+        "name": "base",
+        "type": "COLOR",
+        "value": "rgba(244, 187, 53, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(244, 187, 53, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(244, 187, 53, 1);"
+        }
+      },
+      "medium": {
+        "name": "medium",
+        "type": "COLOR",
+        "value": "rgba(255, 214, 123, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(255, 214, 123, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 214, 123, 1);"
+        }
+      },
+      "light": {
+        "name": "light",
+        "type": "COLOR",
+        "value": "rgba(255, 249, 236, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(255, 249, 236, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 249, 236, 1);"
+        }
+      }
+    }
+  },
+  "primary": {
+    "name": "primary",
+    "type": "COLOR",
+    "tokens": {
+      "medium": {
+        "name": "medium",
+        "type": "COLOR",
+        "value": "rgba(179, 166, 236, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(179, 166, 236, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(179, 166, 236, 1);"
+        }
+      },
+      "base": {
+        "name": "base",
+        "type": "COLOR",
+        "value": "rgba(90, 55, 216, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(90, 55, 216, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(90, 55, 216, 1);"
+        }
+      },
+      "dark": {
+        "name": "dark",
+        "type": "COLOR",
+        "value": "rgba(30, 28, 76, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(30, 28, 76, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(30, 28, 76, 1);"
+        }
+      },
+      "light": {
+        "name": "light",
+        "type": "COLOR",
+        "value": "rgba(233, 231, 248, 1)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "rgba(233, 231, 248, 1)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 231, 248, 1);"
         }
       }
     }
@@ -2201,1259 +1641,12 @@ export const COLOR = {
         }
       }
     }
-  },
-  "black": {
-    "name": "black",
-    "type": "COLOR",
-    "tokens": {
-      "disabled": {
-        "name": "disabled",
-        "type": "COLOR",
-        "value": "rgba(149, 149, 171, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(149, 149, 171, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(149, 149, 171, 1);"
-        }
-      },
-      "inactive": {
-        "name": "inactive",
-        "type": "COLOR",
-        "value": "rgba(125, 126, 157, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(125, 126, 157, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(125, 126, 157, 1);"
-        }
-      },
-      "medium": {
-        "name": "medium",
-        "type": "COLOR",
-        "value": "rgba(71, 71, 91, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(71, 71, 91, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(71, 71, 91, 1);"
-        }
-      },
-      "black": {
-        "name": "black",
-        "type": "COLOR",
-        "value": "rgba(1, 11, 19, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(1, 11, 19, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(1, 11, 19, 1);"
-        }
-      }
-    }
-  },
-  "background": {
-    "name": "background",
-    "type": "COLOR",
-    "tokens": {
-      "light": {
-        "name": "light",
-        "type": "COLOR",
-        "value": "rgba(250, 250, 251, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(250, 250, 251, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(250, 250, 251, 1);"
-        }
-      },
-      "dark": {
-        "name": "dark",
-        "type": "COLOR",
-        "value": "rgba(246, 246, 247, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(246, 246, 247, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(246, 246, 247, 1);"
-        }
-      }
-    }
-  },
-  "gray": {
-    "name": "gray",
-    "type": "COLOR",
-    "tokens": {
-      "50": {
-        "name": "50",
-        "type": "COLOR",
-        "value": "rgba(243, 243, 246, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(243, 243, 246, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(243, 243, 246, 1);"
-        }
-      },
-      "100": {
-        "name": "100",
-        "type": "COLOR",
-        "value": "rgba(233, 233, 238, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(233, 233, 238, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 233, 238, 1);"
-        }
-      },
-      "200": {
-        "name": "200",
-        "type": "COLOR",
-        "value": "rgba(219, 219, 227, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(219, 219, 227, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 219, 227, 1);"
-        }
-      },
-      "300": {
-        "name": "300",
-        "type": "COLOR",
-        "value": "rgba(203, 203, 214, 1)",
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal",
-            "background": "rgba(203, 203, 214, 1)"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(203, 203, 214, 1);"
-        }
-      }
-    }
-  },
-  "white": {
-    "name": "white",
-    "type": "COLOR",
-    "value": "rgba(255, 255, 255, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 255, 255, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 255, 255, 1);"
-    }
   }
 } as const;
 
 export const GRADIENT = {} as const;
 
 export const ASSET = {
-  "assets": {
-    "name": "assets",
-    "type": "ASSET",
-    "tokens": {
-      "logo": {
-        "name": "logo",
-        "type": "ASSET",
-        "tokens": {
-          "actionLogement": {
-            "name": "actionLogement",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          }
-        }
-      },
-      "demo": {
-        "name": "demo",
-        "type": "ASSET",
-        "tokens": {
-          "livingRoom5": {
-            "name": "livingRoom5",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom8": {
-            "name": "livingRoom8",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom10": {
-            "name": "livingRoom10",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom9": {
-            "name": "livingRoom9",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building6": {
-            "name": "building6",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building4": {
-            "name": "building4",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building5": {
-            "name": "building5",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom6": {
-            "name": "livingRoom6",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom7": {
-            "name": "livingRoom7",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building8": {
-            "name": "building8",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building7": {
-            "name": "building7",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom14": {
-            "name": "livingRoom14",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom11": {
-            "name": "livingRoom11",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom12": {
-            "name": "livingRoom12",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building12": {
-            "name": "building12",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom13": {
-            "name": "livingRoom13",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom15": {
-            "name": "livingRoom15",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building9": {
-            "name": "building9",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building10": {
-            "name": "building10",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom3": {
-            "name": "livingRoom3",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom4": {
-            "name": "livingRoom4",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building11": {
-            "name": "building11",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock11": {
-            "name": "buildingBlock11",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock16": {
-            "name": "buildingBlock16",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock1": {
-            "name": "buildingBlock1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock15": {
-            "name": "buildingBlock15",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock14": {
-            "name": "buildingBlock14",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock12": {
-            "name": "buildingBlock12",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock13": {
-            "name": "buildingBlock13",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock4": {
-            "name": "buildingBlock4",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock6": {
-            "name": "buildingBlock6",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock5": {
-            "name": "buildingBlock5",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock9": {
-            "name": "buildingBlock9",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock8": {
-            "name": "buildingBlock8",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock10": {
-            "name": "buildingBlock10",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock3": {
-            "name": "buildingBlock3",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock2": {
-            "name": "buildingBlock2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "buildingBlock7": {
-            "name": "buildingBlock7",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "parkingLotOutdoor2": {
-            "name": "parkingLotOutdoor2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "parkingLotIndoor": {
-            "name": "parkingLotIndoor",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom1": {
-            "name": "livingRoom1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building1": {
-            "name": "building1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building2": {
-            "name": "building2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "house1": {
-            "name": "house1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "livingRoom2": {
-            "name": "livingRoom2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "antenna": {
-            "name": "antenna",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "parkingLotOutdoor1": {
-            "name": "parkingLotOutdoor1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "storage": {
-            "name": "storage",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "building3": {
-            "name": "building3",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          }
-        }
-      },
-      "placeholders": {
-        "name": "placeholders",
-        "type": "ASSET",
-        "tokens": {
-          "storage": {
-            "name": "storage",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "living3": {
-            "name": "living3",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "objects3": {
-            "name": "objects3",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "undefined3": {
-            "name": "undefined3",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "living6": {
-            "name": "living6",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "living4": {
-            "name": "living4",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "objects1": {
-            "name": "objects1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "objects4": {
-            "name": "objects4",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "living1": {
-            "name": "living1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "undefined1": {
-            "name": "undefined1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "objects6": {
-            "name": "objects6",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "living2": {
-            "name": "living2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "objects5": {
-            "name": "objects5",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "undefined2": {
-            "name": "undefined2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "objects2": {
-            "name": "objects2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "living5": {
-            "name": "living5",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "work": {
-            "name": "work",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          }
-        }
-      }
-    }
-  },
-  "avatar": {
-    "name": "avatar",
-    "type": "ASSET",
-    "tokens": {
-      "women": {
-        "name": "women",
-        "type": "ASSET",
-        "tokens": {
-          "1": {
-            "name": "1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "2": {
-            "name": "2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "3": {
-            "name": "3",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "4": {
-            "name": "4",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "5": {
-            "name": "5",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "6": {
-            "name": "6",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "7": {
-            "name": "7",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "8": {
-            "name": "8",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "9": {
-            "name": "9",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "10": {
-            "name": "10",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          }
-        }
-      },
-      "men": {
-        "name": "men",
-        "type": "ASSET",
-        "tokens": {
-          "1": {
-            "name": "1",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "2": {
-            "name": "2",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "3": {
-            "name": "3",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "4": {
-            "name": "4",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "5": {
-            "name": "5",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "6": {
-            "name": "6",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "7": {
-            "name": "7",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "8": {
-            "name": "8",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "9": {
-            "name": "9",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          },
-          "10": {
-            "name": "10",
-            "type": "ASSET",
-            "value": null,
-            "css": {
-              "style": {
-                "opacity": "1",
-                "mixBlendMode": "normal"
-              },
-              "rules": "opacity: 1;\nmix-blend-mode: normal;"
-            }
-          }
-        }
-      }
-    }
-  },
   "gjcgsci": {
     "name": "gjcgsci",
     "type": "ASSET",
@@ -3903,273 +2096,7 @@ export const ASSET = {
         }
       }
     }
-  },
-  "maps": {
-    "name": "maps",
-    "type": "ASSET",
-    "tokens": {
-      "paris01": {
-        "name": "paris01",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "sartrouville": {
-        "name": "sartrouville",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "paris05": {
-        "name": "paris05",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "paris04": {
-        "name": "paris04",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "paris03": {
-        "name": "paris03",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "boulogne01": {
-        "name": "boulogne01",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "mantesLaJolie": {
-        "name": "mantesLaJolie",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "boulogne03": {
-        "name": "boulogne03",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "boulogne02": {
-        "name": "boulogne02",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "torcy": {
-        "name": "torcy",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "yvelines": {
-        "name": "yvelines",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "paris06": {
-        "name": "paris06",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "parisNord": {
-        "name": "parisNord",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "versailles": {
-        "name": "versailles",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "parisSud": {
-        "name": "parisSud",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "parisEst": {
-        "name": "parisEst",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      },
-      "paris02": {
-        "name": "paris02",
-        "type": "ASSET",
-        "value": null,
-        "css": {
-          "style": {
-            "opacity": "1",
-            "mixBlendMode": "normal"
-          },
-          "rules": "opacity: 1;\nmix-blend-mode: normal;"
-        }
-      }
-    }
   }
 } as const;
 
-export const EFFECT = {
-  "bottomDivider": {
-    "name": "bottomDivider",
-    "type": "EFFECT",
-    "value": "inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500)",
-    "css": {
-      "style": {
-        "boxShadow": "inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500)"
-      },
-      "rules": "box-shadow: inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500);"
-    }
-  },
-  "clickable": {
-    "name": "clickable",
-    "type": "EFFECT",
-    "value": "0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800)"
-      },
-      "rules": "box-shadow: 0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800);"
-    }
-  },
-  "upfront": {
-    "name": "upfront",
-    "type": "EFFECT",
-    "value": "0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800)"
-      },
-      "rules": "box-shadow: 0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800);"
-    }
-  },
-  "flat": {
-    "name": "flat",
-    "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
-      },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
-    }
-  },
-  "input": {
-    "name": "input",
-    "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)"
-      },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000);"
-    }
-  }
-} as const;
+export const EFFECT = {} as const;

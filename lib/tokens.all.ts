@@ -1,5 +1,395 @@
 export const tokens = [
   {
+    "name": "success/dark",
+    "type": "COLOR",
+    "value": "rgba(27, 80, 72, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(27, 80, 72, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(27, 80, 72, 1);"
+    }
+  },
+  {
+    "name": "error/light",
+    "type": "COLOR",
+    "value": "rgba(254, 236, 235, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(254, 236, 235, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(254, 236, 235, 1);"
+    }
+  },
+  {
+    "name": "warning/medium",
+    "type": "COLOR",
+    "value": "rgba(250, 147, 118, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(250, 147, 118, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(250, 147, 118, 1);"
+    }
+  },
+  {
+    "name": "error/base",
+    "type": "COLOR",
+    "value": "rgba(219, 61, 53, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(219, 61, 53, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 61, 53, 1);"
+    }
+  },
+  {
+    "name": "gray/50",
+    "type": "COLOR",
+    "value": "rgba(249, 249, 253, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(249, 249, 253, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(249, 249, 253, 1);"
+    }
+  },
+  {
+    "name": "error/medium",
+    "type": "COLOR",
+    "value": "rgba(247, 123, 114, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(247, 123, 114, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(247, 123, 114, 1);"
+    }
+  },
+  {
+    "name": "error/dark",
+    "type": "COLOR",
+    "value": "rgba(99, 41, 53, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(99, 41, 53, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(99, 41, 53, 1);"
+    }
+  },
+  {
+    "name": "warning/base",
+    "type": "COLOR",
+    "value": "rgba(248, 99, 59, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(248, 99, 59, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(248, 99, 59, 1);"
+    }
+  },
+  {
+    "name": "gray/700",
+    "type": "COLOR",
+    "value": "rgba(68, 71, 84, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(68, 71, 84, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(68, 71, 84, 1);"
+    }
+  },
+  {
+    "name": "pending/dark",
+    "type": "COLOR",
+    "value": "rgba(122, 62, 13, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(122, 62, 13, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(122, 62, 13, 1);"
+    }
+  },
+  {
+    "name": "pending/base",
+    "type": "COLOR",
+    "value": "rgba(244, 187, 53, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(244, 187, 53, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(244, 187, 53, 1);"
+    }
+  },
+  {
+    "name": "success/light",
+    "type": "COLOR",
+    "value": "rgba(240, 250, 245, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(240, 250, 245, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 250, 245, 1);"
+    }
+  },
+  {
+    "name": "pending/medium",
+    "type": "COLOR",
+    "value": "rgba(255, 214, 123, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(255, 214, 123, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 214, 123, 1);"
+    }
+  },
+  {
+    "name": "success/medium",
+    "type": "COLOR",
+    "value": "rgba(147, 224, 193, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(147, 224, 193, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(147, 224, 193, 1);"
+    }
+  },
+  {
+    "name": "success/base",
+    "type": "COLOR",
+    "value": "rgba(54, 198, 141, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(54, 198, 141, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(54, 198, 141, 1);"
+    }
+  },
+  {
+    "name": "gray/300",
+    "type": "COLOR",
+    "value": "rgba(173, 173, 180, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(173, 173, 180, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(173, 173, 180, 1);"
+    }
+  },
+  {
+    "name": "gray/600",
+    "type": "COLOR",
+    "value": "rgba(94, 97, 108, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(94, 97, 108, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(94, 97, 108, 1);"
+    }
+  },
+  {
+    "name": "gray/900",
+    "type": "COLOR",
+    "value": "rgba(14, 20, 36, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(14, 20, 36, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(14, 20, 36, 1);"
+    }
+  },
+  {
+    "name": "primary/medium",
+    "type": "COLOR",
+    "value": "rgba(179, 166, 236, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(179, 166, 236, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(179, 166, 236, 1);"
+    }
+  },
+  {
+    "name": "primary/base",
+    "type": "COLOR",
+    "value": "rgba(90, 55, 216, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(90, 55, 216, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(90, 55, 216, 1);"
+    }
+  },
+  {
+    "name": "warning/dark",
+    "type": "COLOR",
+    "value": "rgba(118, 56, 48, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(118, 56, 48, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(118, 56, 48, 1);"
+    }
+  },
+  {
+    "name": "gray/800",
+    "type": "COLOR",
+    "value": "rgba(41, 46, 60, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(41, 46, 60, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(41, 46, 60, 1);"
+    }
+  },
+  {
+    "name": "primary/dark",
+    "type": "COLOR",
+    "value": "rgba(30, 28, 76, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(30, 28, 76, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(30, 28, 76, 1);"
+    }
+  },
+  {
+    "name": "primary/light",
+    "type": "COLOR",
+    "value": "rgba(233, 231, 248, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(233, 231, 248, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 231, 248, 1);"
+    }
+  },
+  {
+    "name": "gray/200",
+    "type": "COLOR",
+    "value": "rgba(200, 199, 204, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(200, 199, 204, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(200, 199, 204, 1);"
+    }
+  },
+  {
+    "name": "gray/100",
+    "type": "COLOR",
+    "value": "rgba(226, 224, 228, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(226, 224, 228, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 224, 228, 1);"
+    }
+  },
+  {
+    "name": "pending/light",
+    "type": "COLOR",
+    "value": "rgba(255, 249, 236, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(255, 249, 236, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 249, 236, 1);"
+    }
+  },
+  {
+    "name": "gray/400",
+    "type": "COLOR",
+    "value": "rgba(146, 148, 156, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(146, 148, 156, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(146, 148, 156, 1);"
+    }
+  },
+  {
+    "name": "gray/500",
+    "type": "COLOR",
+    "value": "rgba(120, 122, 132, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(120, 122, 132, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(120, 122, 132, 1);"
+    }
+  },
+  {
+    "name": "warning/light",
+    "type": "COLOR",
+    "value": "rgba(255, 243, 236, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(255, 243, 236, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 243, 236, 1);"
+    }
+  },
+  {
     "name": "gjcgsci/background",
     "type": "ASSET",
     "value": null,
@@ -1350,2383 +1740,6 @@ export const tokens = [
         "background": "rgba(234, 230, 248, 1)"
       },
       "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 230, 248, 1);"
-    }
-  },
-  {
-    "name": "mobile/address/default",
-    "type": "TEXT",
-    "value": "1.125rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "1.125rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/address/selected",
-    "type": "TEXT",
-    "value": "1.125rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1.125rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/h1",
-    "type": "TEXT",
-    "value": "2.5rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "2.5rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "2.625rem",
-        "letterSpacing": "-0.0625rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 2.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.625rem;\nletter-spacing: -0.0625rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/small",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/display",
-    "type": "TEXT",
-    "value": "2.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "2.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "2.8125rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 2.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.8125rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/bodyBold",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/h2",
-    "type": "TEXT",
-    "value": "1.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.9375rem",
-        "letterSpacing": "-0.035rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.9375rem;\nletter-spacing: -0.035rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/overline",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "uppercase",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/h3",
-    "type": "TEXT",
-    "value": "1.5rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "1.5rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.5625rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5625rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/body",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/h4",
-    "type": "TEXT",
-    "value": "1.125rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1.125rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/button",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/caption",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "assets/logo/actionLogement",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "bottomDivider",
-    "type": "EFFECT",
-    "value": "inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500)",
-    "css": {
-      "style": {
-        "boxShadow": "inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500)"
-      },
-      "rules": "box-shadow: inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500);"
-    }
-  },
-  {
-    "name": "maps/paris01",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/sartrouville",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris05",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris04",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris03",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/boulogne01",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/mantesLaJolie",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/boulogne03",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/boulogne02",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/torcy",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/yvelines",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris06",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/parisNord",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/versailles",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/parisSud",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/parisEst",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris02",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom8",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom10",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom7",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building8",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building7",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom14",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom11",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom12",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building12",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom13",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom15",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building10",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building11",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock11",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock16",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock15",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock14",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock12",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock13",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock8",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock10",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock7",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "desktop/smallItalic",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/extraSmall",
-    "type": "TEXT",
-    "value": "0.625rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.625rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/storage",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/parkingLotOutdoor2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/parkingLotIndoor",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/undefined3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/undefined1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/house1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/antenna",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/parkingLotOutdoor1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/storage",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/undefined2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/work",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "clickable",
-    "type": "EFFECT",
-    "value": "0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800)"
-      },
-      "rules": "box-shadow: 0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800);"
-    }
-  },
-  {
-    "name": "upfront",
-    "type": "EFFECT",
-    "value": "0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800)"
-      },
-      "rules": "box-shadow: 0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800);"
-    }
-  },
-  {
-    "name": "desktop/h1",
-    "type": "TEXT",
-    "value": "2.25rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "2.25rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "3.25rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 2.25rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.25rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/button",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/h2",
-    "type": "TEXT",
-    "value": "1.5rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "1.5rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "2rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/subtitle",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.5rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/pressable",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "uppercase",
-        "lineHeight": "1rem",
-        "letterSpacing": "0.043750000000000004rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 1rem;\nletter-spacing: 0.043750000000000004rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/h4",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/small",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/smallBold",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/caption",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "0.875rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.875rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/overline",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "uppercase",
-        "lineHeight": "0.875rem",
-        "letterSpacing": "0.125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 0.875rem;\nletter-spacing: 0.125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "state/error/dark",
-    "type": "COLOR",
-    "value": "rgba(215, 41, 29, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(215, 41, 29, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(215, 41, 29, 1);"
-    }
-  },
-  {
-    "name": "desktop/body",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "state/warning/dark",
-    "type": "COLOR",
-    "value": "rgba(219, 118, 0, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(219, 118, 0, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 118, 0, 1);"
-    }
-  },
-  {
-    "name": "state/success/main",
-    "type": "COLOR",
-    "value": "rgba(61, 213, 152, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(61, 213, 152, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(61, 213, 152, 1);"
-    }
-  },
-  {
-    "name": "black/disabled",
-    "type": "COLOR",
-    "value": "rgba(149, 149, 171, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(149, 149, 171, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(149, 149, 171, 1);"
-    }
-  },
-  {
-    "name": "state/success/dark",
-    "type": "COLOR",
-    "value": "rgba(41, 169, 118, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(41, 169, 118, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(41, 169, 118, 1);"
-    }
-  },
-  {
-    "name": "desktop/displayTitle",
-    "type": "TEXT",
-    "value": "2.625rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "2.625rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "3.5625rem",
-        "letterSpacing": "0.013125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 2.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5625rem;\nletter-spacing: 0.013125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "avatar/women/5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "black/inactive",
-    "type": "COLOR",
-    "value": "rgba(125, 126, 157, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(125, 126, 157, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(125, 126, 157, 1);"
-    }
-  },
-  {
-    "name": "state/info/light",
-    "type": "COLOR",
-    "value": "rgba(233, 245, 254, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(233, 245, 254, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 245, 254, 1);"
-    }
-  },
-  {
-    "name": "black/medium",
-    "type": "COLOR",
-    "value": "rgba(71, 71, 91, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(71, 71, 91, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(71, 71, 91, 1);"
-    }
-  },
-  {
-    "name": "state/info/dark",
-    "type": "COLOR",
-    "value": "rgba(16, 116, 194, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(16, 116, 194, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(16, 116, 194, 1);"
-    }
-  },
-  {
-    "name": "background/light",
-    "type": "COLOR",
-    "value": "rgba(250, 250, 251, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(250, 250, 251, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(250, 250, 251, 1);"
-    }
-  },
-  {
-    "name": "state/info/main",
-    "type": "COLOR",
-    "value": "rgba(32, 150, 243, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(32, 150, 243, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(32, 150, 243, 1);"
-    }
-  },
-  {
-    "name": "white",
-    "type": "COLOR",
-    "value": "rgba(255, 255, 255, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 255, 255, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 255, 255, 1);"
-    }
-  },
-  {
-    "name": "flat",
-    "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
-      },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
-    }
-  },
-  {
-    "name": "state/warning/main",
-    "type": "COLOR",
-    "value": "rgba(255, 152, 0, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 152, 0, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 152, 0, 1);"
-    }
-  },
-  {
-    "name": "gray/200",
-    "type": "COLOR",
-    "value": "rgba(219, 219, 227, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(219, 219, 227, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 219, 227, 1);"
-    }
-  },
-  {
-    "name": "black/black",
-    "type": "COLOR",
-    "value": "rgba(1, 11, 19, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(1, 11, 19, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(1, 11, 19, 1);"
-    }
-  },
-  {
-    "name": "gray/300",
-    "type": "COLOR",
-    "value": "rgba(203, 203, 214, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(203, 203, 214, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(203, 203, 214, 1);"
-    }
-  },
-  {
-    "name": "avatar/men/5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "gray/50",
-    "type": "COLOR",
-    "value": "rgba(243, 243, 246, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(243, 243, 246, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(243, 243, 246, 1);"
-    }
-  },
-  {
-    "name": "state/error/light",
-    "type": "COLOR",
-    "value": "rgba(254, 236, 235, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(254, 236, 235, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(254, 236, 235, 1);"
-    }
-  },
-  {
-    "name": "avatar/women/2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/men/3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "desktop/bodyBold",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "state/warning/light",
-    "type": "COLOR",
-    "value": "rgba(255, 245, 229, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 245, 229, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 245, 229, 1);"
-    }
-  },
-  {
-    "name": "gray/100",
-    "type": "COLOR",
-    "value": "rgba(233, 233, 238, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(233, 233, 238, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 233, 238, 1);"
-    }
-  },
-  {
-    "name": "input",
-    "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)"
-      },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000);"
-    }
-  },
-  {
-    "name": "avatar/women/9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "state/error/main",
-    "type": "COLOR",
-    "value": "rgba(244, 67, 54, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(244, 67, 54, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(244, 67, 54, 1);"
-    }
-  },
-  {
-    "name": "state/pending/dark",
-    "type": "COLOR",
-    "value": "rgba(222, 166, 28, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(222, 166, 28, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(222, 166, 28, 1);"
-    }
-  },
-  {
-    "name": "avatar/men/9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "state/pending/main",
-    "type": "COLOR",
-    "value": "rgba(255, 197, 66, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 197, 66, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 197, 66, 1);"
-    }
-  },
-  {
-    "name": "avatar/men/10",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "state/pending/light",
-    "type": "COLOR",
-    "value": "rgba(255, 249, 236, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 249, 236, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 249, 236, 1);"
-    }
-  },
-  {
-    "name": "avatar/women/10",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/women/3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/women/1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "state/success/light",
-    "type": "COLOR",
-    "value": "rgba(240, 250, 245, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(240, 250, 245, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 250, 245, 1);"
-    }
-  },
-  {
-    "name": "background/dark",
-    "type": "COLOR",
-    "value": "rgba(246, 246, 247, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(246, 246, 247, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(246, 246, 247, 1);"
-    }
-  },
-  {
-    "name": "avatar/women/4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "desktop/subtitleBold",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.5rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/stroked",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "strike-through",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: strike-through;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "avatar/women/6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/men/8",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/men/1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "desktop/h3",
-    "type": "TEXT",
-    "value": "1.125rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "1.125rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.75rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.75rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/link",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "underline",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: underline;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "avatar/men/2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/men/4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/men/6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/women/7",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/men/7",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "avatar/women/8",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
     }
   }
 ] as const;
