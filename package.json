@@ -16,14 +16,31 @@
     "url": "https://github.com/UbloImmo/front-tokens"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "bun-types": "latest",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-local-rules": "^1.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "prettier": "^2.8.7"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "scripts": {
     "generate": "bun src/scripts/generate.ts",
-    "update": "bun src/scripts/update.ts"
+    "update": "bun src/scripts/update.ts",
+    "test:types": "tsc --noEmit",
+    "test:types:watch": "tsc --noEmit --watch",
+    "test:lint": "eslint . --cache --cache-location .cache/eslint",
+    "test:unit": "bun test"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@ubloimmo/front-util": "0.0.5"
+  }
 }

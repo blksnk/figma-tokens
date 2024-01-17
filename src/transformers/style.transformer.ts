@@ -1,15 +1,14 @@
 import { FigmaApiClient } from "../api/client";
 import { FigmaStyleMetadata } from "../types/figma/figma.teams.types";
 import { Logger } from "../utils/log.utils";
-import {
-  FigmaFileKey,
-} from "../types/figma/figma.properties.types";
+import { FigmaFileKey } from "../types/figma/figma.properties.types";
 import { FigmaStyleType } from "../types/figma/figma.enums.types";
 import { FigmaTextNode } from "../types/figma/figma.nodes.types";
 import { FigmaFileNodeResponse } from "../types/figma/figma.endpoints.types";
 import { StyleNode } from "../types/global/transformer.types";
 import { styleNodeToToken } from "./token.transfomer";
 import { Token } from "../types/global/export.types";
+import { isNull, NonNullable } from "@ubloimmo/front-util";
 
 /**
  * Retrieves the unique file keys from an array of Figma style metadata.
@@ -29,7 +28,7 @@ const getUniqueFileKeys = (styles: FigmaStyleMetadata[]): FigmaFileKey[] => {
     fileKeys.push(fileKey);
   }
   return fileKeys;
-}
+};
 
 /**
  * Retrieves the style properties of a Figma node based on the specified style type.
@@ -38,13 +37,18 @@ const getUniqueFileKeys = (styles: FigmaStyleMetadata[]): FigmaFileKey[] => {
  * The supported style types are "FILL", "EFFECT", and "TEXT".
  * Depending on the style type, the function returns different style properties from the Figma node.
  *
- * @template TStyleType - The type of style being retrieved, which must be one of the supported style types ("FILL", "EFFECT", "TEXT").
+ * @template TStyleType {FigmaStyleType} - The type of style being retrieved, which must be one of the supported style types ("FILL", "EFFECT", "TEXT").
  * @param {TStyleType} styleType - The style type for which to retrieve the style properties.
  * @param {FigmaFileNodeResponse} node - The Figma node from which to retrieve the style properties.
  * @return {FigmaFill | FigmaEffect | FigmaStyle} - The style properties of the specified style type from the Figma node.
  */
-const getNodeStyleProperties = <TStyleType extends Exclude<FigmaStyleType, "GRID">>(styleType: TStyleType, node: FigmaFileNodeResponse) => {
-  switch(styleType) {
+const getNodeStyleProperties = <
+  TStyleType extends Exclude<FigmaStyleType, "GRID">
+>(
+  styleType: TStyleType,
+  node: FigmaFileNodeResponse
+) => {
+  switch (styleType) {
     case "FILL": {
       return node.document.fills[0];
     }
@@ -52,10 +56,14 @@ const getNodeStyleProperties = <TStyleType extends Exclude<FigmaStyleType, "GRID
       return node.document.effects[0];
     }
     case "TEXT": {
-      return (node.document as FigmaTextNode).style
+      return (node.document as FigmaTextNode).style;
     }
   }
-}
+};
+
+type FigmaStyleMetadataNoGrid = Omit<FigmaStyleMetadata, "style_type"> & {
+  style_type: Exclude<FigmaStyleMetadata["style_type"], "GRID">;
+};
 
 export const getStyleNodes = async (
   figmaApiClient: FigmaApiClient,
@@ -63,46 +71,64 @@ export const getStyleNodes = async (
   logger: Logger = Logger()
 ): Promise<StyleNode[]> => {
   // remove GRID styles
-  styles = styles.filter(({ style_type }) => style_type !== "GRID")
+  const filteredStyleMetadatas: FigmaStyleMetadataNoGrid[] = styles.filter(
+    ({ style_type }) => style_type !== "GRID"
+  ) as FigmaStyleMetadataNoGrid[];
   // get unique file keys
   const uniqueFileKeys = getUniqueFileKeys(styles);
   // separate styles by file key reference
   const filteredStyleSets: [FigmaFileKey, FigmaStyleMetadata[]][] =
-    uniqueFileKeys.map(uniqueFileKey => [uniqueFileKey, styles.filter(({ file_key }) => file_key === uniqueFileKey)]);
+    uniqueFileKeys.map((uniqueFileKey) => [
+      uniqueFileKey,
+      styles.filter(({ file_key }) => file_key === uniqueFileKey),
+    ]);
   // make one api call per unique file key to request all nodes corresponding to style metadata
   const fileNodeResponses = await Promise.all(
-    filteredStyleSets.map(([fileKey, styleSet] ) =>
+    filteredStyleSets.map(([fileKey, styleSet]) =>
       figmaApiClient.getFileNodes(fileKey, {
-        ids: styleSet.map(({ node_id }) => node_id).join(",")
+        ids: styleSet.map(({ node_id }) => node_id).join(","),
       })
     )
-  )
+  );
+  const filteredFileNodeResponses = fileNodeResponses.filter(
+    (response: (typeof fileNodeResponses)[number]) => !isNull(response)
+  ) as NonNullable<(typeof fileNodeResponses)[number]>[];
   // unwrap nodes from files
-  const allNodes: FigmaFileNodeResponse[] = fileNodeResponses.flatMap(({ nodes }) => Object.values(nodes))
+  const allNodes: FigmaFileNodeResponse[] = filteredFileNodeResponses.flatMap(
+    ({ nodes }) => Object.values(nodes)
+  );
   // map style metadata to node style values
-  return styles.map((styleMetadata) => {
-    const correspondingNode = allNodes.find((node) => node.document.id === styleMetadata.node_id) ?? null;
-    if (!correspondingNode) {
-      logger.warn(`Unable to find matching node ${ styleMetadata.node_id } for style ${ styleMetadata.key }`)
-      return null;
-    }
-    return {
-      nodeId: styleMetadata.node_id,
-      type: styleMetadata.style_type,
-      nodeType: correspondingNode.document.type,
-      name: styleMetadata.name,
-      styleKey: styleMetadata.key,
-      description: styleMetadata.description,
-      thumbnailURL: styleMetadata.thumbnail_url,
-      fileKey: styleMetadata.file_key,
-      author: styleMetadata.user,
-      styleType: styleMetadata.style_type,
-      node: correspondingNode,
-      styleProperties: getNodeStyleProperties(styleMetadata.style_type, correspondingNode),
-    }
-  }).filter(item => item !== null) as StyleNode[];
-}
-
+  return filteredStyleMetadatas
+    .map((styleMetadata) => {
+      const correspondingNode =
+        allNodes.find((node) => node.document.id === styleMetadata.node_id) ??
+        null;
+      if (!correspondingNode) {
+        logger.warn(
+          `Unable to find matching node ${styleMetadata.node_id} for style ${styleMetadata.key}`
+        );
+        return null;
+      }
+      return {
+        nodeId: styleMetadata.node_id,
+        type: styleMetadata.style_type,
+        nodeType: correspondingNode.document.type,
+        name: styleMetadata.name,
+        styleKey: styleMetadata.key,
+        description: styleMetadata.description,
+        thumbnailURL: styleMetadata.thumbnail_url,
+        fileKey: styleMetadata.file_key,
+        author: styleMetadata.user,
+        styleType: styleMetadata.style_type,
+        node: correspondingNode,
+        styleProperties: getNodeStyleProperties(
+          styleMetadata.style_type,
+          correspondingNode
+        ),
+      };
+    })
+    .filter((item) => item !== null) as StyleNode[];
+};
 
 /**
  * Calls {@link getStyleNodes} passing in the figmaApiClient, styles, and logger to get style values from their metadata.
@@ -112,11 +138,17 @@ export const getStyleNodes = async (
  * @param styles
  * @param logger
  */
-export const tokenizeStyles = async (figmaApiClient: FigmaApiClient, styles: FigmaStyleMetadata[], logger: Logger = Logger()): Promise<Token[]> => {
-  logger.info(`Populating all ${styles.length} filtered styles based on metadata...`)
+export const tokenizeStyles = async (
+  figmaApiClient: FigmaApiClient,
+  styles: FigmaStyleMetadata[],
+  logger: Logger = Logger()
+): Promise<Token[]> => {
+  logger.info(
+    `Populating all ${styles.length} filtered styles based on metadata...`
+  );
   const styleNodes = await getStyleNodes(figmaApiClient, styles, logger);
   logger.info("Transforming figma styles to tokens...");
-  const tokens = styleNodes.map(styleNode => styleNodeToToken(styleNode))
-  logger.info("Done")
-  return tokens.filter(token => !!token) as Token[];
-}
+  const tokens = styleNodes.map((styleNode) => styleNodeToToken(styleNode));
+  logger.info("Done");
+  return tokens.filter((token) => !!token) as Token[];
+};

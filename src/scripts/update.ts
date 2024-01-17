@@ -1,8 +1,4 @@
-import {
-  LIB_TOKENS,
-  UPDATE_OUTPUT,
-  writeFile
-} from "../utils/export.utils";
+import { LIB_TOKENS, UPDATE_OUTPUT, writeFile } from "../utils/export.utils";
 import { Logger } from "../utils/log.utils";
 import { Token } from "../types/global/export.types";
 import { generate } from "./generate";
@@ -13,16 +9,16 @@ const logger = Logger();
  * Fetches previously generated tokens
  */
 const fetchPreviousTokens = async (): Promise<Token[]> => {
-  logger.info("Fetching previouly generated tokens...")
+  logger.info("Fetching previouly generated tokens...");
   try {
     const { tokens } = await import(`../.${LIB_TOKENS}`);
-    logger.info(`Found ${tokens.length} previously generated tokens.`)
+    logger.info(`Found ${tokens.length} previously generated tokens.`);
     return [...tokens] as Token[];
-  } catch(e) {
-    logger.warn("No previously generated tokens found")
+  } catch (e) {
+    logger.warn("No previously generated tokens found");
     return [];
   }
-}
+};
 
 /**
  * Retrieves the current version from the package.json file.
@@ -32,7 +28,7 @@ const fetchPreviousTokens = async (): Promise<Token[]> => {
 const getCurrentVersion = async () => {
   const { version } = await import("../../package.json");
   return version;
-}
+};
 
 /**
  * Increments the revision number of a given version.
@@ -46,10 +42,12 @@ const getCurrentVersion = async () => {
  * incrementRevision("2.0.0") // returns "2.0.1"
  */
 const incrementRevision = (currentVersion: string) => {
-  let [major, minor, revision] = currentVersion.split('.').map((num) => parseInt(num));
-  revision++
-  return [major, minor, revision].map(String).join('.');
-}
+  let [major, minor, revision] = currentVersion
+    .split(".")
+    .map((num) => parseInt(num));
+  revision++;
+  return [major, minor, revision].map(String).join(".");
+};
 
 /**
  * Compares two arrays of tokens and returns the differences between them.
@@ -63,24 +61,31 @@ const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
   const previousTokenNames = previousTokens.map(({ name }) => name);
   const freshTokenNames = freshTokens.map(({ name }) => name);
 
-  const addedTokens = [...freshTokens].filter((freshToken) => !previousTokenNames.includes(freshToken.name))
-  logger.info(`Generated ${addedTokens.length} new tokens.`)
-  const removedTokens = [...previousTokens].filter((prevToken) => !freshTokenNames.includes(prevToken.name))
-  logger.info(`Deleted ${removedTokens.length} previous tokens.`)
+  const addedTokens = [...freshTokens].filter(
+    (freshToken) => !previousTokenNames.includes(freshToken.name)
+  );
+  logger.info(`Generated ${addedTokens.length} new tokens.`);
+  const removedTokens = [...previousTokens].filter(
+    (prevToken) => !freshTokenNames.includes(prevToken.name)
+  );
+  logger.info(`Deleted ${removedTokens.length} previous tokens.`);
   const updatedTokens = [...freshTokens].filter((freshToken) => {
-    const correspondingToken = previousTokens.find(prevToken => prevToken.name === freshToken.name)
+    const correspondingToken = previousTokens.find(
+      (prevToken) => prevToken.name === freshToken.name
+    );
     if (!correspondingToken) return false;
-    return correspondingToken.value !== freshToken.value;
-  })
-  logger.info(`Updated ${updatedTokens.length} existing tokens.`)
-  const changesCount = addedTokens.length + removedTokens.length + updatedTokens.length
+    return JSON.stringify(correspondingToken) !== JSON.stringify(freshToken);
+  });
+  logger.info(`Updated ${updatedTokens.length} existing tokens.`);
+  const changesCount =
+    addedTokens.length + removedTokens.length + updatedTokens.length;
   return {
     addedTokens,
     removedTokens,
     updatedTokens,
     changesCount,
-  }
-}
+  };
+};
 
 /**
  * Generates a commit message based on the differences between tokens and the version.
@@ -89,7 +94,10 @@ const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
  * @param {string} version - The version of the commit message.
  * @return {string} The generated commit message.
  */
-const generateCommitMessage = (diffs: ReturnType<typeof diffTokens>, version: string) => {
+const generateCommitMessage = (
+  diffs: ReturnType<typeof diffTokens>,
+  version: string
+) => {
   const prefix = `build(${version}):`;
   const titleParts: string[] = [];
   const changelogParts: string[] = [];
@@ -102,21 +110,21 @@ const generateCommitMessage = (diffs: ReturnType<typeof diffTokens>, version: st
    * @return {void} This function does not return a value.
    */
   const addToChangeLog = (label: string, tokens: Token[]) => {
-    if(tokens.length === 0) return;
-    titleParts.push(`${label} ${tokens.length}`)
+    if (tokens.length === 0) return;
+    titleParts.push(`${label} ${tokens.length}`);
     const names = tokens.map(({ name }) => ` - ${name}`).join("\n");
     changelogParts.push(`${label}: ${names}`);
-  }
+  };
 
-  addToChangeLog("Updated", diffs.updatedTokens)
-  addToChangeLog("Added", diffs.addedTokens)
-  addToChangeLog("Removed", diffs.removedTokens)
+  addToChangeLog("Updated", diffs.updatedTokens);
+  addToChangeLog("Added", diffs.addedTokens);
+  addToChangeLog("Removed", diffs.removedTokens);
 
   const title = [prefix, titleParts.join(", ")].join(" ");
   const changelog = changelogParts.join("\n");
 
   return [title, changelog].join("\n\n");
-}
+};
 
 /**
  * Writes the provided output object to a file.
@@ -125,8 +133,8 @@ const generateCommitMessage = (diffs: ReturnType<typeof diffTokens>, version: st
  * @return {Promise<void>} - A promise that resolves once the write operation is complete.
  */
 const writeOutput = async (output: object) => {
-  await writeFile(UPDATE_OUTPUT, JSON.stringify(output))
-}
+  await writeFile(UPDATE_OUTPUT, JSON.stringify(output));
+};
 
 /**
  * Generates a fresh batch of tokens from figma api
@@ -137,14 +145,15 @@ const writeOutput = async (output: object) => {
 export const update = async () => {
   const previousTokens = await fetchPreviousTokens();
   const freshTokens = await generate();
-  const diffs = diffTokens(previousTokens, freshTokens)
-  const currentVersion = await getCurrentVersion()
+  const diffs = diffTokens(previousTokens, freshTokens);
+  const currentVersion = await getCurrentVersion();
 
-  if (!diffs.changesCount) return writeOutput({
-    changes: false,
-    version: currentVersion,
-    message: null,
-  })
+  if (!diffs.changesCount)
+    return writeOutput({
+      changes: false,
+      version: currentVersion,
+      message: null,
+    });
 
   const version = incrementRevision(currentVersion);
   const message = generateCommitMessage(diffs, version);
@@ -153,7 +162,7 @@ export const update = async () => {
     changes: true,
     version,
     message,
-  })
-}
+  });
+};
 
 await update();

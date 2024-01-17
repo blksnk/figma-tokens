@@ -21,8 +21,9 @@ import {
   FigmaTextAutoResize,
   FigmaTextCase,
   FigmaTextDecoration,
-  FigmaTextTruncation, FigmaVectorPathWindingRule,
-  FigmaVerticalLayoutConstraint
+  FigmaTextTruncation,
+  FigmaVectorPathWindingRule,
+  FigmaVerticalLayoutConstraint,
 } from "./figma.enums.types";
 import { Nullable } from "../global/global.types";
 
@@ -55,7 +56,7 @@ export type FigmaVector = {
    * Y coordinate of the vector
    */
   y: number;
-}
+};
 
 /**
  * A width and a height
@@ -69,14 +70,14 @@ export type FigmaSize = {
    * the height of a size
    */
   height: number;
-}
+};
 /**
  * A 2x3 affine transformation matrix
  */
 export type FigmaTransform = [
   [number, number, number],
-  [number, number, number],
-]
+  [number, number, number]
+];
 
 /**
  * Data written by plugins that is visible only to the plugin that wrote it.
@@ -87,7 +88,7 @@ export type FigmaPluginData = unknown;
 export type FigmaVariableAlias = {
   id: FigmaNodeId;
   type: "VARIABLE_ALIAS";
-}
+};
 
 /**
  * Data written by plugins that is visible to all plugins.
@@ -103,7 +104,7 @@ export type FigmaColor = {
   g: number;
   b: number;
   a: number;
-}
+};
 
 /**
  * Sizing constraint for exports. Refer to {@link FigmaExportSetting}
@@ -111,7 +112,7 @@ export type FigmaColor = {
 export type FigmaConstraint = {
   type: FigmaConstraintType;
   value: number;
-}
+};
 
 /**
  * Format and size to export an asset at
@@ -126,12 +127,12 @@ export type FigmaExportSetting = {
    */
   format: FigmaExportFormat;
   constraint: FigmaConstraint;
-}
+};
 
 /**
  * A rectangle that expresses a bounding box in absolute coordinates
  */
-export type FigmaRectangle  = {
+export type FigmaRectangle = {
   /**
    * X coordinate of top left corner of the rectangle
    */
@@ -148,7 +149,7 @@ export type FigmaRectangle  = {
    * Height of the rectangle
    */
   height: number;
-}
+};
 
 export type FigmaArcData = {
   /**
@@ -163,7 +164,7 @@ export type FigmaArcData = {
    * Inner radius value between 0 and 1
    */
   innerRadius: number;
-}
+};
 
 /**
  * A flow starting point used when launching a prototype to enter Presentation view.
@@ -177,7 +178,7 @@ export type FigmaFlowStartingPoint = {
    * Name of flow
    */
   name: string;
-}
+};
 
 /**
  * Layout constraint relative to containing Frame
@@ -191,7 +192,7 @@ export type FigmaLayoutConstraint = {
    * Horizontal constraint as an enum
    */
   horizontal: FigmaHorizontalLayoutConstraint;
-}
+};
 
 /**
  * Guides to align and place objects within a frame
@@ -233,7 +234,7 @@ export type FigmaLayoutGrid = {
    * @remarks Only meaningful for directional grids (COLUMNS or ROWS)
    */
   count: number;
-}
+};
 
 /**
  * A visual effect such as a shadow or blur
@@ -277,12 +278,14 @@ export type FigmaEffect = {
    * @remarks Only applies to drop shadows
    */
   showShadowBehindNode: boolean;
-}
+};
 
 /**
  * A link to either a URL or another frame (node) in the document
  */
-export type FigmaHyperlink<TLinkType extends FigmaHyperlinkType = FigmaHyperlinkType> = {
+export type FigmaHyperlink<
+  TLinkType extends FigmaHyperlinkType = FigmaHyperlinkType
+> = {
   /**
    * Type of hyperlink
    */
@@ -295,7 +298,7 @@ export type FigmaHyperlink<TLinkType extends FigmaHyperlinkType = FigmaHyperlink
    * ID of frame hyperlink points to, if NODE type
    */
   nodeID?: TLinkType extends "NODE" ? string : never;
-}
+};
 
 /**
  * Represents a link to documentation for a component.
@@ -305,7 +308,7 @@ export type FigmaDocumentationLink = {
    * Should be a valid URI (e.g. https://www.figma.com).
    */
   uri: string;
-}
+};
 
 /**
  * Defines the image filters applied to an image paint.
@@ -340,7 +343,7 @@ export type FigmaImageFilters = {
    * @default 0
    */
   shadows: number;
-}
+};
 
 export type FigmaColorStop = {
   /**
@@ -351,12 +354,15 @@ export type FigmaColorStop = {
    * Color attached to corresponding position
    */
   color: FigmaColor;
-}
+};
 
 /**
  * A mapping of field to the VariableAlias of the bound variable.
  */
-type FigmaBoundVariables = Record<string, FigmaVariableAlias | FigmaVariableAlias[]>
+type FigmaBoundVariables = Record<
+  string,
+  FigmaVariableAlias | FigmaVariableAlias[]
+>;
 
 /**
  * A solid color, gradient, or image texture that can be applied as fills or strokes
@@ -365,7 +371,7 @@ export type FigmaPaint<TPaintType extends FigmaPaintType = FigmaPaintType> = {
   /**
    * Type of paint as a string enum
    */
-  type: TPaintType
+  type: TPaintType;
   /**
    * Is the paint enabled?
    * @default true
@@ -387,7 +393,11 @@ export type FigmaPaint<TPaintType extends FigmaPaintType = FigmaPaintType> = {
    * Refer to {@link FigmaBlendMode}
    * @remarks Only applies to gradient paints
    */
-  blendMode: TPaintType extends "GRADIENT_LINEAR" | "GRADIENT_RADIAL" | "GRADIENT_ANGULAR" | "GRADIENT_DIAMOND"
+  blendMode: TPaintType extends
+    | "GRADIENT_LINEAR"
+    | "GRADIENT_RADIAL"
+    | "GRADIENT_ANGULAR"
+    | "GRADIENT_DIAMOND"
     ? FigmaBlendMode
     : never;
   /**
@@ -397,7 +407,11 @@ export type FigmaPaint<TPaintType extends FigmaPaintType = FigmaPaintType> = {
    * the second position is the end of the gradient (value 1), and the third handle position determines the width of the gradient.
    * @remarks Only applies to gradient paints
    */
-  gradientHandlePositions: TPaintType extends "GRADIENT_LINEAR" | "GRADIENT_RADIAL" | "GRADIENT_ANGULAR" | "GRADIENT_DIAMOND"
+  gradientHandlePositions: TPaintType extends
+    | "GRADIENT_LINEAR"
+    | "GRADIENT_RADIAL"
+    | "GRADIENT_ANGULAR"
+    | "GRADIENT_DIAMOND"
     ? FigmaVector[]
     : never;
   /**
@@ -405,7 +419,11 @@ export type FigmaPaint<TPaintType extends FigmaPaintType = FigmaPaintType> = {
    * Colors along the gradient are interpolated smoothly between neighboring gradient stops.
    * @remarks Only applies to gradient paints
    */
-  gradientStops: TPaintType extends "GRADIENT_LINEAR" | "GRADIENT_RADIAL" | "GRADIENT_ANGULAR" | "GRADIENT_DIAMOND"
+  gradientStops: TPaintType extends
+    | "GRADIENT_LINEAR"
+    | "GRADIENT_RADIAL"
+    | "GRADIENT_ANGULAR"
+    | "GRADIENT_DIAMOND"
     ? FigmaColorStop[]
     : never;
   /**
@@ -454,7 +472,7 @@ export type FigmaPaint<TPaintType extends FigmaPaintType = FigmaPaintType> = {
    * A mapping of field to the VariableAlias of the bound variable.
    */
   boundVariables?: FigmaBoundVariables;
-}
+};
 
 /**
  * A relative offset within a frame
@@ -468,7 +486,7 @@ export type FigmaFrameOffset = {
    * 2d vector offset within the frame.
    */
   node_offset: FigmaVector;
-}
+};
 
 /**
  * Paint metadata to override default paints
@@ -482,7 +500,7 @@ export type FigmaPaintOverride = {
    * ID of style node, if any, that this inherits fill data from
    */
   inheritFillStyleId?: FigmaNodeId;
-}
+};
 
 /**
  * Metadata for character formatting
@@ -527,7 +545,7 @@ export type FigmaTypeStyle = {
    * Text casing applied to the node, default is the original casing
    * @default "ORIGINAL"
    */
-  textCase?: FigmaTextCase
+  textCase?: FigmaTextCase;
   /**
    * Text decoration applied to the node, default is none
    * @default "NONE"
@@ -595,7 +613,7 @@ export type FigmaTypeStyle = {
    * The unit of the line height value specified by the user.
    */
   lineHeightUnit: FigmaLineHeightUnit;
-}
+};
 
 /**
  * A description of a main component. Helps you identify which component instances are attached to
@@ -625,7 +643,7 @@ export type FigmaComponent = {
    * Whether this component is a remote component that doesn't live in this file
    */
   remote: boolean;
-}
+};
 
 /**
  * A description of a component set, which is a node containing a set of variants of a component
@@ -652,7 +670,7 @@ export type FigmaComponentSet = {
    * that doesn't live in this file
    */
   remote: boolean;
-}
+};
 
 /**
  * A set of properties that can be applied to nodes and published.
@@ -680,7 +698,7 @@ export type FigmaStyle = {
    * The type of style as string enum
    */
   styleType: FigmaStyleType;
-}
+};
 
 /**
  * ConnectorEndpoint with endpointNodeId and position only
@@ -694,7 +712,7 @@ export type FigmaPositionConnectorEndpoint = {
    * Canvas location as x & y coordinate.
    */
   position: FigmaVector;
-}
+};
 
 /**
  * ConnectorEndpoint with endpointNodeId and magnet only
@@ -708,9 +726,11 @@ export type FigmaMagnetConnectorEndpoint = {
    * The magnet type is a string enum
    */
   magnet: FigjamConnectorMagnet;
-}
+};
 
-export type FigmaConnectorEndpoint = FigmaMagnetConnectorEndpoint | FigmaPositionConnectorEndpoint;
+export type FigmaConnectorEndpoint =
+  | FigmaMagnetConnectorEndpoint
+  | FigmaPositionConnectorEndpoint;
 
 /**
  * Separate declarations for each corner radii or a shape, frame or vector
@@ -720,7 +740,7 @@ export type FigmaMixedCornerRadius = {
   topRightRadius: number;
   bottomLeftRadius: number;
   bottomRightRadius: number;
-}
+};
 
 /**
  * Corner radius of a frame, shape or vector.
@@ -739,7 +759,7 @@ export type FigjamConnectorTextBackground = {
    * An array of fill paints applied to the node
    */
   fills: FigmaPaint[];
-}
+};
 
 /**
  * Instance swap preferred value
@@ -753,12 +773,14 @@ export type FigmaInstanceSwapPreferredValue = {
    * Key of this component or component set
    */
   key: string;
-}
+};
 
 /**
  * Component property definition
  */
-export type FigmaComponentPropertyDefinition<TComponentPropType extends FigmaComponentPropertyType = FigmaComponentPropertyType> = {
+export type FigmaComponentPropertyDefinition<
+  TComponentPropType extends FigmaComponentPropertyType = FigmaComponentPropertyType
+> = {
   /**
    * Type of this component property
    */
@@ -766,7 +788,9 @@ export type FigmaComponentPropertyDefinition<TComponentPropType extends FigmaCom
   /**
    * Initial value of this property for instances
    */
-  defaultValue:  TComponentPropType extends "BOOLEAN" ? boolean | string : string;
+  defaultValue: TComponentPropType extends "BOOLEAN"
+    ? boolean | string
+    : string;
   /**
    * All possible values for this property.
    * @remarks Only exists on VARIANT properties
@@ -779,9 +803,11 @@ export type FigmaComponentPropertyDefinition<TComponentPropType extends FigmaCom
   preferredValues?: TComponentPropType extends "INSTANCE_SWAP"
     ? FigmaInstanceSwapPreferredValue[]
     : never;
-}
+};
 
-export type FigmaComponentProperty<TComponentPropType extends FigmaComponentPropertyType = FigmaComponentPropertyType> = {
+export type FigmaComponentProperty<
+  TComponentPropType extends FigmaComponentPropertyType = FigmaComponentPropertyType
+> = {
   /**
    * Type of this component property
    */
@@ -801,7 +827,7 @@ export type FigmaComponentProperty<TComponentPropType extends FigmaComponentProp
    * A mapping of field to the VariableAlias of the bound variable.
    */
   boundVariables: FigmaBoundVariables;
-}
+};
 
 /**
  * The device used to view a prototype
@@ -823,7 +849,7 @@ export type FigmaPrototypeDevice = {
    * Rotation of device used to view a prototype
    */
   rotation: FigmaPrototypeDeviceRotation;
-}
+};
 
 /**
  * Individual stroke weights
@@ -845,7 +871,7 @@ export type FigmaStrokeWeights = {
    * The left stroke weight
    */
   left: number;
-}
+};
 
 /**
  * Fields directly overridden on an instance.
@@ -860,11 +886,11 @@ export type FigmaOverrides = {
    * An array of properties
    */
   overriddenFields: string[];
-}
+};
 
 export type FigmaDevStatus = Nullable<{
-  type: "READY_FOR_DEV"
-}>
+  type: "READY_FOR_DEV";
+}>;
 
 /**
  * An array of paths representing the object stroke or fill
@@ -872,7 +898,7 @@ export type FigmaDevStatus = Nullable<{
 export type FigmaVectorPath = {
   windingRule: FigmaVectorPathWindingRule;
   data: string;
-}
+};
 
 /**
  * A mapping of a StyleType to style key of styles present on this node.

@@ -1,19 +1,15 @@
 import { extractConfigFileKeys, validateConfig } from "../utils/config.utils";
-import {
-  FIGMA_TEAM_ID,
-  FIGMA_TOKEN,
-  FIGMA_FILE_URLS
-} from "../api/config";
+import { FIGMA_FILE_URLS, FIGMA_TEAM_ID, FIGMA_TOKEN } from "../api/config";
 import { Logger } from "../utils/log.utils";
 import { FigmaApiClient } from "../api/client";
 import {
   FigmaFileKey,
-  FigmaTeamId
+  FigmaTeamId,
 } from "../types/figma/figma.properties.types";
 import { tokenizeStyles } from "../transformers/style.transformer";
 import {
   groupTokens,
-  unwrapTokenValues
+  unwrapTokenValues,
 } from "../transformers/token.transfomer";
 import { Token } from "../types/global/export.types";
 import { generateExportedTS } from "../transformers/export.transformer";
@@ -21,8 +17,8 @@ import { generateExportedTS } from "../transformers/export.transformer";
 const logger = Logger({
   spacing: 1,
   throwOnError: true,
-  mode: "simple"
-})
+  mode: "simple",
+});
 const { info, debug, warn } = logger;
 
 /**
@@ -43,18 +39,21 @@ const fetchAndFormatTeamStyles = async (
     page_size: 10000,
   });
   const teamStyles = teamStylesResponse?.meta.styles;
-  if (!teamStyles ?? teamStyles.length === 0) {
+  if (!teamStyles || teamStyles.length === 0) {
     warn("No styles found for team");
     return [];
   }
   // restrict to design system & client types
   debug("Extracting Ublo team styles...");
-  const filteredStyles = fileKeyFilters && fileKeyFilters.length > 0
-    ? teamStyles.filter(teamStyle => fileKeyFilters.includes(teamStyle.file_key))
-    : teamStyles;
+  const filteredStyles =
+    fileKeyFilters && fileKeyFilters.length > 0
+      ? teamStyles.filter((teamStyle) =>
+          fileKeyFilters.includes(teamStyle.file_key)
+        )
+      : teamStyles;
   info("Fetched team styles");
   return await tokenizeStyles(figmaApiClient, filteredStyles, logger);
-}
+};
 
 /**
  * Generates and exports tokens from the Figma API.
@@ -70,12 +69,16 @@ const generateAndExportTokens = async (
   fileKeyFilters?: FigmaFileKey[]
 ): Promise<Token[]> => {
   info("Starting team styles update...");
-  const teamStyleTokens = await fetchAndFormatTeamStyles(figmaApiClient, teamId, fileKeyFilters);
-  const rootTokenCollection = groupTokens(teamStyleTokens, logger)
-  const tokenValues = unwrapTokenValues(rootTokenCollection)
+  const teamStyleTokens = await fetchAndFormatTeamStyles(
+    figmaApiClient,
+    teamId,
+    fileKeyFilters
+  );
+  const rootTokenCollection = groupTokens(teamStyleTokens, logger);
+  const tokenValues = unwrapTokenValues(rootTokenCollection);
   await generateExportedTS(rootTokenCollection, tokenValues, teamStyleTokens);
   return teamStyleTokens;
-}
+};
 
 /**
  * Async function that initialized the Figma api client, fetches up-to-date Figma files and returns generated tokens.
@@ -83,18 +86,21 @@ const generateAndExportTokens = async (
  */
 export const generate = async (): Promise<Token[]> => {
   debug("Validating config...");
-  const config = validateConfig({
-    FIGMA_TOKEN,
-    FIGMA_FILE_URLS,
-    FIGMA_TEAM_ID,
-  }, logger)
+  const config = validateConfig(
+    {
+      FIGMA_TOKEN,
+      FIGMA_FILE_URLS,
+      FIGMA_TEAM_ID,
+    },
+    logger
+  );
   info("Config validated");
-  debug("Initializing Figma API client...")
+  debug("Initializing Figma API client...");
   const figmaApiClient = new FigmaApiClient(config.FIGMA_TOKEN);
   info("Figma API client initialized");
-  const allTokens = await generateAndExportTokens(
-    figmaApiClient, config.FIGMA_TEAM_ID,
+  return await generateAndExportTokens(
+    figmaApiClient,
+    config.FIGMA_TEAM_ID,
     extractConfigFileKeys(config.FIGMA_FILE_URLS, logger)
-  )
-  return allTokens;
-}
+  );
+};
