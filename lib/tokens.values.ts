@@ -1,4 +1,506 @@
-export const texts = {} as const;
+export const texts = {
+  "text": {
+    "m": {
+      "semiBold": {
+        "name": "semiBold",
+        "type": "TEXT",
+        "value": "1rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "609",
+            "fontSize": "1rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.5rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 609;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "regular": {
+        "name": "regular",
+        "type": "TEXT",
+        "value": "1rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "464",
+            "fontSize": "1rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.5rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 464;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "bold": {
+        "name": "bold",
+        "type": "TEXT",
+        "value": "1rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "714",
+            "fontSize": "1rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.5rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 714;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      }
+    },
+    "s": {
+      "regular": {
+        "name": "regular",
+        "type": "TEXT",
+        "value": "0.875rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "464",
+            "fontSize": "0.875rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.25rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 464;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "semiBold": {
+        "name": "semiBold",
+        "type": "TEXT",
+        "value": "0.875rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "609",
+            "fontSize": "0.875rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.25rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 609;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "bold": {
+        "name": "bold",
+        "type": "TEXT",
+        "value": "0.875rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "714",
+            "fontSize": "0.875rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.25rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 714;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      }
+    },
+    "xs": {
+      "regular": {
+        "name": "regular",
+        "type": "TEXT",
+        "value": "0.75rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "464",
+            "fontSize": "0.75rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 464;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "semiBold": {
+        "name": "semiBold",
+        "type": "TEXT",
+        "value": "0.75rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "609",
+            "fontSize": "0.75rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 609;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "bold": {
+        "name": "bold",
+        "type": "TEXT",
+        "value": "0.75rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "714",
+            "fontSize": "0.75rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1rem",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 714;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      }
+    }
+  },
+  "heading": {
+    "h2": {
+      "semiBold": {
+        "name": "semiBold",
+        "type": "TEXT",
+        "value": "1.9800000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "609",
+            "fontSize": "1.9800000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "2.5rem",
+            "letterSpacing": "-0.04937500134110451rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 609;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "regular": {
+        "name": "regular",
+        "type": "TEXT",
+        "value": "1.9800000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "464",
+            "fontSize": "1.9800000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "2.5rem",
+            "letterSpacing": "-0.04937500134110451rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 464;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "bold": {
+        "name": "bold",
+        "type": "TEXT",
+        "value": "1.9800000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "714",
+            "fontSize": "1.9800000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "2.5rem",
+            "letterSpacing": "-0.04937500134110451rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 714;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      }
+    },
+    "h1": {
+      "bold": {
+        "name": "bold",
+        "type": "TEXT",
+        "value": "3rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "714",
+            "fontSize": "3rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "3.5rem",
+            "letterSpacing": "-0.06687500327825546rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 714;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "regular": {
+        "name": "regular",
+        "type": "TEXT",
+        "value": "3rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "464",
+            "fontSize": "3rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "3.5rem",
+            "letterSpacing": "-0.06687500327825546rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 464;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "semiBold": {
+        "name": "semiBold",
+        "type": "TEXT",
+        "value": "3rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "609",
+            "fontSize": "3rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "3.5rem",
+            "letterSpacing": "-0.06687500327825546rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 609;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      }
+    },
+    "h4": {
+      "regular": {
+        "name": "regular",
+        "type": "TEXT",
+        "value": "1.2300000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "464",
+            "fontSize": "1.2300000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.5rem",
+            "letterSpacing": "-0.020625000819563866rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 464;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "semiBold": {
+        "name": "semiBold",
+        "type": "TEXT",
+        "value": "1.2300000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "609",
+            "fontSize": "1.2300000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.5rem",
+            "letterSpacing": "-0.020625000819563866rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 609;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "bold": {
+        "name": "bold",
+        "type": "TEXT",
+        "value": "1.2300000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "714",
+            "fontSize": "1.2300000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "1.5rem",
+            "letterSpacing": "-0.020625000819563866rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 714;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      }
+    },
+    "h3": {
+      "regular": {
+        "name": "regular",
+        "type": "TEXT",
+        "value": "1.4800000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "464",
+            "fontSize": "1.4800000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "2rem",
+            "letterSpacing": "-0.029374999925494194rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 464;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "semiBold": {
+        "name": "semiBold",
+        "type": "TEXT",
+        "value": "1.4800000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "609",
+            "fontSize": "1.4800000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "2rem",
+            "letterSpacing": "-0.029374999925494194rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 609;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "bold": {
+        "name": "bold",
+        "type": "TEXT",
+        "value": "1.4800000190734863rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "714",
+            "fontSize": "1.4800000190734863rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "2rem",
+            "letterSpacing": "-0.029374999925494194rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 714;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      }
+    }
+  }
+} as const;
 
 export const colors = {
   "success": {
