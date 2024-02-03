@@ -2369,4 +2369,18 @@ export const assets = {
   }
 } as const;
 
-export const effects = {} as const;
+export const effects = {
+  "shadow": {
+    "button": {
+      "name": "button",
+      "type": "EFFECT",
+      "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)",
+      "css": {
+        "style": {
+          "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)"
+        },
+        "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000);"
+      }
+    }
+  }
+} as const;

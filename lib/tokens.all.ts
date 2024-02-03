@@ -1,5 +1,16 @@
 export const tokens = [
   {
+    "name": "shadow/button",
+    "type": "EFFECT",
+    "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)",
+    "css": {
+      "style": {
+        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)"
+      },
+      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000);"
+    }
+  },
+  {
     "name": "text/m/semiBold",
     "type": "TEXT",
     "value": "1rem",
