@@ -169,7 +169,7 @@ export type GetImagesEndpointQueryParams = {
    * Use this to export text nodes without cropping.
    * @default false
    */
-  use_absolute_bounds: boolean;
+  use_absolute_bounds?: boolean;
   /**
    * A specific version ID to use.
    * Omitting this will use the current version of the file.

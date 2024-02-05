@@ -1,5 +1,10 @@
 import { extractConfigFileKeys, validateConfig } from "../utils/config.utils";
-import { FIGMA_FILE_URLS, FIGMA_TEAM_ID, FIGMA_TOKEN } from "../api/config";
+import {
+  FIGMA_FILE_URLS,
+  FIGMA_TEAM_ID,
+  FIGMA_TOKEN,
+  FIGMA_ICONS_FILE_URL,
+} from "../api/config";
 import { Logger } from "../utils/log.utils";
 import { FigmaApiClient } from "../api/client";
 import {
@@ -11,15 +16,16 @@ import {
   groupTokens,
   unwrapTokenValues,
 } from "../transformers/token.transfomer";
-import { Token } from "../types/global/export.types";
+import { Icon, Token } from "../types/global/export.types";
 import { generateExportedTS } from "../transformers/export.transformer";
+import { fetchIconSvgs } from "../transformers/icon.transformer";
 
 const logger = Logger({
   spacing: 1,
   throwOnError: true,
   mode: "simple",
 });
-const { info, debug, warn } = logger;
+const { info, debug, warn, log } = logger;
 
 /**
  * Fetches and formats team styles into tokens.
@@ -38,7 +44,7 @@ const fetchAndFormatTeamStyles = async (
   const teamStylesResponse = await figmaApiClient.getTeamStyles(teamId, {
     page_size: 10000,
   });
-  const teamStyles = teamStylesResponse?.meta.styles;
+  const teamStyles = teamStylesResponse?.meta?.styles;
   if (!teamStyles || teamStyles.length === 0) {
     warn("No styles found for team");
     return [];
@@ -67,30 +73,98 @@ const generateAndExportTokens = async (
   figmaApiClient: FigmaApiClient,
   teamId: FigmaTeamId,
   fileKeyFilters?: FigmaFileKey[]
-): Promise<Token[]> => {
+) => {
   info("Starting team styles update...");
-  const teamStyleTokens = await fetchAndFormatTeamStyles(
+  const tokens = await fetchAndFormatTeamStyles(
     figmaApiClient,
     teamId,
     fileKeyFilters
   );
-  const rootTokenCollection = groupTokens(teamStyleTokens, logger);
+  const rootTokenCollection = groupTokens(tokens, logger);
   const tokenValues = unwrapTokenValues(rootTokenCollection);
-  await generateExportedTS(rootTokenCollection, tokenValues, teamStyleTokens);
-  return teamStyleTokens;
+  return {
+    tokens,
+    rootTokenCollection,
+    tokenValues,
+  };
 };
 
 /**
- * Async function that initialized the Figma api client, fetches up-to-date Figma files and returns generated tokens.
- * @returns {Promise<Token[]>} - Array containing all generated tokens according to env config
+ * Fetches icons metadata from Figma API and filters them based on the icon file key.
+ *
+ * @param {FigmaApiClient} figmaApiClient - the Figma API client
+ * @param {FigmaTeamId} teamId - the ID of the Figma team
+ * @param {FigmaFileKey} iconFileKey - the key of the Figma file containing icons
+ * @return {Promise<Component[]>} an array of components representing the icons metadata
  */
-export const generate = async (): Promise<Token[]> => {
+const fetchIconsMetadata = async (
+  figmaApiClient: FigmaApiClient,
+  teamId: FigmaTeamId,
+  iconFileKey: FigmaFileKey
+) => {
+  info("Fetching all components in the exported team styles...");
+  const componentsResponse = await figmaApiClient.getTeamComponents(teamId, {
+    page_size: 10000,
+  });
+
+  if (!componentsResponse) return [];
+  if (componentsResponse.error) {
+    warn(componentsResponse.error);
+    return [];
+  }
+  if (componentsResponse.meta.components.length === 0) {
+    return [];
+  }
+  info(
+    `Filtering ${componentsResponse.meta.components.length} components based on the icon file key...`
+  );
+  const filteredComponents = componentsResponse.meta.components.filter(
+    (item) => item.file_key === iconFileKey
+  );
+  log(filteredComponents);
+  return filteredComponents;
+};
+
+/**
+ * Generate and export icons from Figma.
+ *
+ * @param {FigmaApiClient} figmaApiClient - The Figma API client
+ * @param {FigmaTeamId} teamId - The team ID in Figma
+ * @param {FigmaFileKey[]} iconFileKey - The key of the Figma file containing the icons
+ * @return {Promise<Icon[]>} A promise that resolves to an array of icons
+ */
+const generateAndExportIcons = async (
+  figmaApiClient: FigmaApiClient,
+  teamId: FigmaTeamId,
+  [iconFileKey]: FigmaFileKey[]
+): Promise<Icon[]> => {
+  info("Starting icons update...");
+  const iconComponentsMetadata = await fetchIconsMetadata(
+    figmaApiClient,
+    teamId,
+    iconFileKey
+  );
+  const iconsSvg = await fetchIconSvgs(
+    figmaApiClient,
+    iconComponentsMetadata,
+    iconFileKey,
+    logger
+  );
+  return iconsSvg;
+};
+
+/**
+ * Async function that initialized the Figma api client, fetches up-to-date Figma files and returns generated tokens and icons.
+ * @returns {Promise<{tokens: Token[], icons: Icon[]}>} - Array containing all generated tokens according to env config
+ */
+export const generate = async () => {
   debug("Validating config...");
   const config = validateConfig(
     {
       FIGMA_TOKEN,
       FIGMA_FILE_URLS,
       FIGMA_TEAM_ID,
+      FIGMA_ICONS_FILE_URL,
     },
     logger
   );
@@ -98,9 +172,27 @@ export const generate = async (): Promise<Token[]> => {
   debug("Initializing Figma API client...");
   const figmaApiClient = new FigmaApiClient(config.FIGMA_TOKEN);
   info("Figma API client initialized");
-  return await generateAndExportTokens(
+  const icons = await generateAndExportIcons(
     figmaApiClient,
     config.FIGMA_TEAM_ID,
-    extractConfigFileKeys(config.FIGMA_FILE_URLS, logger)
+    extractConfigFileKeys(config.FIGMA_ICONS_FILE_URL)
   );
+  const { tokens, tokenValues, rootTokenCollection } =
+    await generateAndExportTokens(
+      figmaApiClient,
+      config.FIGMA_TEAM_ID,
+      extractConfigFileKeys(config.FIGMA_FILE_URLS, logger)
+    );
+  await generateExportedTS(
+    rootTokenCollection,
+    tokenValues,
+    tokens,
+    icons,
+    logger
+  );
+
+  return {
+    tokens,
+    icons,
+  };
 };

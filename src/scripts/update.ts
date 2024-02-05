@@ -1,12 +1,14 @@
 import { LIB_TOKENS, UPDATE_OUTPUT, writeFile } from "../utils/export.utils";
 import { Logger } from "../utils/log.utils";
-import { Token } from "../types/global/export.types";
+import { Icon, Token } from "../types/global/export.types";
 import { generate } from "./generate";
 
 const logger = Logger();
 
 /**
- * Fetches previously generated tokens
+ * Fetches the previously generated tokens.
+ *
+ * @return {Promise<Token[]>} Promise that resolves to an array of Token objects.
  */
 const fetchPreviousTokens = async (): Promise<Token[]> => {
   logger.info("Fetching previouly generated tokens...");
@@ -16,6 +18,23 @@ const fetchPreviousTokens = async (): Promise<Token[]> => {
     return [...tokens] as Token[];
   } catch (e) {
     logger.warn("No previously generated tokens found");
+    return [];
+  }
+};
+
+/**
+ * Fetches the previously generated icons.
+ *
+ * @return {Promise<Icon[]>} Array of previously generated icons
+ */
+const fetchPreviousIcons = async (): Promise<Icon[]> => {
+  logger.info("Fetching previouly generated icons...");
+  try {
+    const { icons } = await import(`../.${LIB_TOKENS}`);
+    logger.info(`Found ${icons.length} previously generated icons.`);
+    return [...icons] as Icon[];
+  } catch (e) {
+    logger.warn("No previously generated icons found");
     return [];
   }
 };
@@ -42,11 +61,10 @@ const getCurrentVersion = async () => {
  * incrementRevision("2.0.0") // returns "2.0.1"
  */
 const incrementRevision = (currentVersion: string) => {
-  let [major, minor, revision] = currentVersion
+  const [major, minor, revision] = currentVersion
     .split(".")
     .map((num) => parseInt(num));
-  revision++;
-  return [major, minor, revision].map(String).join(".");
+  return [major, minor, revision + 1].map(String).join(".");
 };
 
 /**
@@ -77,25 +95,57 @@ const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
     return JSON.stringify(correspondingToken) !== JSON.stringify(freshToken);
   });
   logger.info(`Updated ${updatedTokens.length} existing tokens.`);
-  const changesCount =
+  const tokenChanges =
     addedTokens.length + removedTokens.length + updatedTokens.length;
   return {
     addedTokens,
     removedTokens,
     updatedTokens,
-    changesCount,
+    tokenChanges,
+  };
+};
+
+const diffIcons = (previousIcons: Icon[], freshIcons: Icon[]) => {
+  logger.info("Comparing new icons to old icons");
+  const previousIconIds = previousIcons.map(({ nodeId }) => nodeId);
+  const freshIconIds = freshIcons.map(({ nodeId }) => nodeId);
+
+  const addedIcons = [...freshIcons].filter(
+    (freshIcon) => !previousIconIds.includes(freshIcon.nodeId)
+  );
+  logger.info(`Generated ${addedIcons.length} new icons.`);
+  const removedIcons = [...previousIcons].filter(
+    (prevIcon) => !freshIconIds.includes(prevIcon.nodeId)
+  );
+  logger.info(`Deleted ${removedIcons.length} previous icons.`);
+  const updatedIcons = [...freshIcons].filter((freshIcon) => {
+    const correspondingIcon = previousIcons.find(
+      (prevIcon) => prevIcon.nodeId === prevIcon.nodeId
+    );
+    if (!correspondingIcon) return false;
+    return JSON.stringify(correspondingIcon) !== JSON.stringify(freshIcon);
+  });
+  logger.info(`Updated ${updatedIcons.length} existing icons.`);
+  const iconChanges =
+    addedIcons.length + removedIcons.length + updatedIcons.length;
+  return {
+    addedIcons,
+    removedIcons,
+    updatedIcons,
+    iconChanges,
   };
 };
 
 /**
  * Generates a commit message based on the differences between tokens and the version.
  *
- * @param {ReturnType<typeof diffTokens>} diffs - The differences between tokens.
+ * @param {ReturnType<typeof diffTokens>} tokenDiffs - The differences between tokens.
  * @param {string} version - The version of the commit message.
  * @return {string} The generated commit message.
  */
 const generateCommitMessage = (
-  diffs: ReturnType<typeof diffTokens>,
+  tokenDiffs: ReturnType<typeof diffTokens>,
+  iconDiffs: ReturnType<typeof diffIcons>,
   version: string
 ) => {
   const prefix = `build(${version}):`;
@@ -106,19 +156,29 @@ const generateCommitMessage = (
    * Adds a label and the number of tokens to the change log.
    *
    * @param {string} label - The label to add to the change log.
-   * @param {Token[]} tokens - The tokens to add to the change log.
+   * @param {Token[]} items - The tokens to add to the change log.
    * @return {void} This function does not return a value.
    */
-  const addToChangeLog = (label: string, tokens: Token[]) => {
-    if (tokens.length === 0) return;
-    titleParts.push(`${label} ${tokens.length}`);
-    const names = tokens.map(({ name }) => ` - ${name}`).join("\n");
-    changelogParts.push(`${label}: ${names}`);
+  const addToChangeLog = (label: string, items: Token[] | Icon[]) => {
+    if (items.length === 0) return;
+    titleParts.push(`${label} ${items.length}`);
+    const names = items.map(({ name }) => ` - ${name}`).join("\n");
+    changelogParts.push(`${label} ${items.length}:\n${names}`);
   };
 
-  addToChangeLog("Updated", diffs.updatedTokens);
-  addToChangeLog("Added", diffs.addedTokens);
-  addToChangeLog("Removed", diffs.removedTokens);
+  if (tokenDiffs.tokenChanges) {
+    changelogParts.push("Tokens\n\n");
+    addToChangeLog("Updated", tokenDiffs.updatedTokens);
+    addToChangeLog("Added", tokenDiffs.addedTokens);
+    addToChangeLog("Removed", tokenDiffs.removedTokens);
+  }
+
+  if (iconDiffs.iconChanges) {
+    changelogParts.push("\nIcons\n\n");
+    addToChangeLog("Updated", iconDiffs.updatedIcons);
+    addToChangeLog("Added", iconDiffs.addedIcons);
+    addToChangeLog("Removed", iconDiffs.removedIcons);
+  }
 
   const title = [prefix, titleParts.join(", ")].join(" ");
   const changelog = changelogParts.join("\n");
@@ -144,11 +204,13 @@ const writeOutput = async (output: object) => {
  */
 export const update = async () => {
   const previousTokens = await fetchPreviousTokens();
-  const freshTokens = await generate();
-  const diffs = diffTokens(previousTokens, freshTokens);
+  const previousIcons = await fetchPreviousIcons();
+  const { tokens: freshTokens, icons: freshIcons } = await generate();
+  const tokenDiffs = diffTokens(previousTokens, freshTokens);
+  const iconDiffs = diffIcons(previousIcons, freshIcons);
   const currentVersion = await getCurrentVersion();
 
-  if (!diffs.changesCount)
+  if (!tokenDiffs.tokenChanges && !iconDiffs.iconChanges)
     return writeOutput({
       changes: false,
       version: currentVersion,
@@ -156,7 +218,7 @@ export const update = async () => {
     });
 
   const version = incrementRevision(currentVersion);
-  const message = generateCommitMessage(diffs, version);
+  const message = generateCommitMessage(tokenDiffs, iconDiffs, version);
 
   return writeOutput({
     changes: true,

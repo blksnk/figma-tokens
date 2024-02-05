@@ -2,12 +2,14 @@
 
 import {
   FileDescription,
+  Icon,
   RootTokenCollection,
   Token,
   TokenValues,
 } from "../types/global/export.types";
 import {
   LIB_COLLECTION,
+  LIB_ICONS,
   LIB_INDEX,
   LIB_TOKENS,
   LIB_VALUES,
@@ -117,6 +119,13 @@ export const generateLibAllTokens = (allTokens: Token[]): FileDescription => {
   };
 };
 
+export const generateLibIcons = (icons: Icon[]): FileDescription => {
+  return {
+    path: LIB_ICONS,
+    content: tsReadonlyConst("icons", icons),
+  };
+};
+
 /**
  * Writes multiple files based on the provided file descriptions.
  *
@@ -149,7 +158,7 @@ export const writeMultipleFiles = async (
 /**
  * Generates the exported TypeScript files.
  * This function constructs the file data by generating the necessary TypeScript
- * for the root collection, token values, and all tokens.
+ * for the root collection, token values, all tokens and icons.
  *
  * It then generates an index file that exports all the generated TypeScript files.
  * Finally, it uses the `writeMultipleFiles` function to write the multiple TypeScript files to `/lib`.
@@ -157,6 +166,7 @@ export const writeMultipleFiles = async (
  * @param {RootTokenCollection} rootCollection - The root token collection.
  * @param {TokenValues} tokenValues - The token values.
  * @param {Token[]} allTokens - The list of all tokens.
+ * @param {Icon[]} icons - The list of icons.
  * @param {Logger} [logger=Logger()] - The logger instance.
  * @returns {Promise<void>} A promise that resolves when the TypeScript files are generated.
  */
@@ -164,6 +174,7 @@ export const generateExportedTS = async (
   rootCollection: RootTokenCollection,
   tokenValues: TokenValues,
   allTokens: Token[],
+  icons: Icon[],
   logger = Logger()
 ) => {
   logger.info("Constructing file data...");
@@ -171,6 +182,7 @@ export const generateExportedTS = async (
     generateLibAllTokens(allTokens),
     generateLibRootTokenCollection(rootCollection),
     generateLibTokenValues(tokenValues),
+    generateLibIcons(icons),
   ];
   libFiles = [...libFiles, generateLibIndex(libFiles)];
 

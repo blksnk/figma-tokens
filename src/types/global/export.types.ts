@@ -1,4 +1,5 @@
 import { FigmaPaintType, FigmaStyleType } from "../figma/figma.enums.types";
+import { FigmaNodeId } from "../figma/figma.properties.types";
 import { Nullable } from "./global.types";
 
 /**
@@ -103,3 +104,13 @@ export type FileDescription = {
    */
   content: string;
 };
+
+export type Icon = {
+  componentName: string;
+  name: string;
+  nodeId: FigmaNodeId;
+  svg: string;
+  unknown?: boolean;
+};
+
+export type IconCollection = Record<string, Icon>;
