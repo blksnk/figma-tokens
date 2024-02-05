@@ -30,7 +30,7 @@ import {
   FigmaStyleKey,
   FigmaTeamId,
 } from "../types/figma/figma.properties.types";
-import { Nullable, Optional } from "../types/global/global.types";
+import { Nullable, Optional, Replace } from "../types/global/global.types";
 import { Logger, LoggerConfig } from "../utils/log.utils";
 import { EmptyQueryParams } from "../types/global/endpoints.types";
 
@@ -252,9 +252,11 @@ export class FigmaApiClient {
    */
   async getImages(
     fileKey = this.fileKey,
-    queryParams?: Omit<GetImagesEndpointQueryParams, "ids"> & {
-      ids: FigmaNodeId | FigmaNodeId[];
-    }
+    queryParams?: Replace<
+      GetImagesEndpointQueryParams,
+      "ids",
+      FigmaNodeId | FigmaNodeId[]
+    >
   ) {
     fileKey = validateKey(fileKey);
     // replace fileKey for consecutive endpoint calls
