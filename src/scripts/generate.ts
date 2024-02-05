@@ -144,13 +144,12 @@ const generateAndExportIcons = async (
     teamId,
     iconFileKey
   );
-  const iconsSvg = await fetchIconSvgs(
+  return await fetchIconSvgs(
     figmaApiClient,
     iconComponentsMetadata,
     iconFileKey,
     logger
   );
-  return iconsSvg;
 };
 
 /**
