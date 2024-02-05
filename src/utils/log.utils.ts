@@ -65,6 +65,7 @@ export function Logger(initialConfig?: LoggerConfig): Logger {
     severity: LoggerSeverity,
     name?: string
   ) => {
+    // eslint-disable-next-line no-console
     const logFn = console[severity];
     if (!logFn) return;
     const prefix = name
