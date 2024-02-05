@@ -19,24 +19,24 @@ export const figmaEffectToCssProps = (
   }
   const radius = pxToRem(effect.radius);
   const blurStr = `blur(${radius})`;
-  switch (effect.type) {
-    case "BACKGROUND_BLUR":
-      return {
-        backdropFilter: blurStr,
-      };
-    case "LAYER_BLUR":
-      return {
-        filter: blurStr,
-      };
-    default: {
-      const inset = effect.type === "INNER_SHADOW" ? "inset " : "";
-      const offset = `${pxToRem(effect.offset.x)} ${pxToRem(effect.offset.y)}`;
-      const spread = pxToRem(effect.spread ?? 0);
-      const color = figmaColorToCssRgba(effect.color);
-      const shadowStr = `${inset}${offset} ${radius} ${spread} ${color}`;
-      return {
-        [nodeType === "TEXT" ? "textShadow" : "boxShadow"]: shadowStr,
-      };
-    }
+
+  if (effect.type === "BACKGROUND_BLUR") {
+    return {
+      backdropFilter: blurStr,
+    };
   }
+  if (effect.type === "LAYER_BLUR") {
+    return {
+      filter: blurStr,
+    };
+  }
+
+  const inset = effect.type === "INNER_SHADOW" ? "inset " : "";
+  const offset = `${pxToRem(effect.offset.x)} ${pxToRem(effect.offset.y)}`;
+  const spread = pxToRem(effect.spread ?? 0);
+  const color = figmaColorToCssRgba(effect.color);
+  const shadowStr = `${inset}${offset} ${radius} ${spread} ${color}`;
+  return {
+    [nodeType === "TEXT" ? "textShadow" : "boxShadow"]: shadowStr,
+  };
 };
