@@ -114,3 +114,10 @@ export type Icon = {
 };
 
 export type IconCollection = Record<string, Icon>;
+
+export type Diff<TData extends Record<string, unknown>> = {
+  changes: number;
+  updated: TData[];
+  removed: TData[];
+  added: TData[];
+};
