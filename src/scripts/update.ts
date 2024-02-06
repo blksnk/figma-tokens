@@ -1,12 +1,15 @@
 import { LIB_TOKENS, UPDATE_OUTPUT, writeFile } from "../utils/export.utils";
 import { Logger } from "../utils/log.utils";
-import { Token } from "../types/global/export.types";
+import { Diff, Icon, Token } from "../types/global/export.types";
 import { generate } from "./generate";
+import { objectEntries } from "@ubloimmo/front-util";
 
 const logger = Logger();
 
 /**
- * Fetches previously generated tokens
+ * Fetches the previously generated tokens.
+ *
+ * @return {Promise<Token[]>} Promise that resolves to an array of Token objects.
  */
 const fetchPreviousTokens = async (): Promise<Token[]> => {
   logger.info("Fetching previouly generated tokens...");
@@ -16,6 +19,23 @@ const fetchPreviousTokens = async (): Promise<Token[]> => {
     return [...tokens] as Token[];
   } catch (e) {
     logger.warn("No previously generated tokens found");
+    return [];
+  }
+};
+
+/**
+ * Fetches the previously generated icons.
+ *
+ * @return {Promise<Icon[]>} Array of previously generated icons
+ */
+const fetchPreviousIcons = async (): Promise<Icon[]> => {
+  logger.info("Fetching previouly generated icons...");
+  try {
+    const { icons } = await import(`../.${LIB_TOKENS}`);
+    logger.info(`Found ${icons.length} previously generated icons.`);
+    return [...icons] as Icon[];
+  } catch (e) {
+    logger.warn("No previously generated icons found");
     return [];
   }
 };
@@ -42,60 +62,69 @@ const getCurrentVersion = async () => {
  * incrementRevision("2.0.0") // returns "2.0.1"
  */
 const incrementRevision = (currentVersion: string) => {
-  let [major, minor, revision] = currentVersion
+  const [major, minor, revision] = currentVersion
     .split(".")
     .map((num) => parseInt(num));
-  revision++;
-  return [major, minor, revision].map(String).join(".");
+  return [major, minor, revision + 1].map(String).join(".");
 };
 
 /**
- * Compares two arrays of tokens and returns the differences between them.
+ * Compares two arrays of objects and returns the added, removed, and updated items along with the total number of changes.
  *
- * @param {Token[]} previousTokens - The array of previous tokens.
- * @param {Token[]} freshTokens - The array of fresh tokens.
- * @return {Object} - An object containing the added tokens, removed tokens, updated tokens, and the total count of changes.
+ * @param {TData[]} previousData - array of previous data objects
+ * @param {TData[]} freshData - array of fresh data objects
+ * @param {keyof TData} compareKey - key to compare the data objects
+ * @param {string} label - label for the data objects
+ * @return {{ changes: number, added: TData[], removed: TData[], updated: TData[] }} object with changes, added, removed, and updated items
  */
-const diffTokens = (previousTokens: Token[], freshTokens: Token[]) => {
-  logger.info("Comparing new tokens to old tokens");
-  const previousTokenNames = previousTokens.map(({ name }) => name);
-  const freshTokenNames = freshTokens.map(({ name }) => name);
+const compareDiff = <TData extends Record<string, unknown>>(
+  previousData: TData[],
+  freshData: TData[],
+  compareKey: keyof TData,
+  label: string
+): Diff<TData> => {
+  logger.info(`Comparing new ${label}s to old ${label}s`);
+  const previousDataValues = previousData.map((data) => data[compareKey]);
+  const freshDataValues = freshData.map((data) => data[compareKey]);
 
-  const addedTokens = [...freshTokens].filter(
-    (freshToken) => !previousTokenNames.includes(freshToken.name)
+  const added = [...freshData].filter(
+    (freshToken) => !previousDataValues.includes(freshToken[compareKey])
   );
-  logger.info(`Generated ${addedTokens.length} new tokens.`);
-  const removedTokens = [...previousTokens].filter(
-    (prevToken) => !freshTokenNames.includes(prevToken.name)
+  logger.info(`Generated ${added.length} new ${label}s.`);
+  const removed = [...previousData].filter(
+    (prevToken) => !freshDataValues.includes(prevToken[compareKey])
   );
-  logger.info(`Deleted ${removedTokens.length} previous tokens.`);
-  const updatedTokens = [...freshTokens].filter((freshToken) => {
-    const correspondingToken = previousTokens.find(
+  logger.info(`Deleted ${removed.length} previous ${label}s.`);
+  const updated = [...freshData].filter((freshToken) => {
+    const correspondingToken = previousData.find(
       (prevToken) => prevToken.name === freshToken.name
     );
     if (!correspondingToken) return false;
     return JSON.stringify(correspondingToken) !== JSON.stringify(freshToken);
   });
-  logger.info(`Updated ${updatedTokens.length} existing tokens.`);
-  const changesCount =
-    addedTokens.length + removedTokens.length + updatedTokens.length;
+  logger.info(`Updated ${updated.length} existing ${label}s.`);
+
+  const changes = added.length + removed.length + updated.length;
+
   return {
-    addedTokens,
-    removedTokens,
-    updatedTokens,
-    changesCount,
+    changes,
+    added,
+    removed,
+    updated,
   };
 };
 
 /**
- * Generates a commit message based on the differences between tokens and the version.
+ * Generates a commit message based on the differences between tokens and icons as well as the version.
  *
- * @param {ReturnType<typeof diffTokens>} diffs - The differences between tokens.
+ * @param {Diff<Token>} tokenDiffs - The differences between tokens.
+ * @param {Diff<Icon>} iconDiffs - The differences between icons.
  * @param {string} version - The version of the commit message.
  * @return {string} The generated commit message.
  */
 const generateCommitMessage = (
-  diffs: ReturnType<typeof diffTokens>,
+  tokenDiffs: Diff<Token>,
+  iconDiffs: Diff<Icon>,
   version: string
 ) => {
   const prefix = `build(${version}):`;
@@ -103,22 +132,29 @@ const generateCommitMessage = (
   const changelogParts: string[] = [];
 
   /**
-   * Adds a label and the number of tokens to the change log.
+   * A function that adds differences to the changelog.
    *
-   * @param {string} label - The label to add to the change log.
-   * @param {Token[]} tokens - The tokens to add to the change log.
-   * @return {void} This function does not return a value.
+   * @param {Diff<TData>} diff - the differences to be added
+   * @return {void} no return value
    */
-  const addToChangeLog = (label: string, tokens: Token[]) => {
-    if (tokens.length === 0) return;
-    titleParts.push(`${label} ${tokens.length}`);
-    const names = tokens.map(({ name }) => ` - ${name}`).join("\n");
-    changelogParts.push(`${label}: ${names}`);
+  const addDiffToChangeLog = <TData extends Record<string, unknown>>({
+    updated,
+    added,
+    removed,
+    changes,
+  }: Diff<TData>) => {
+    if (!changes) return;
+    objectEntries({ updated, added, removed }).forEach(([label, items]) => {
+      if (items.length > 0) {
+        titleParts.push(`${label} ${items.length}`);
+        const names = items.map(({ name }) => ` - ${name}`).join("\n");
+        changelogParts.push(`${label} ${items.length}:\n${names}`);
+      }
+    });
   };
 
-  addToChangeLog("Updated", diffs.updatedTokens);
-  addToChangeLog("Added", diffs.addedTokens);
-  addToChangeLog("Removed", diffs.removedTokens);
+  addDiffToChangeLog(tokenDiffs);
+  addDiffToChangeLog(iconDiffs);
 
   const title = [prefix, titleParts.join(", ")].join(" ");
   const changelog = changelogParts.join("\n");
@@ -144,11 +180,13 @@ const writeOutput = async (output: object) => {
  */
 export const update = async () => {
   const previousTokens = await fetchPreviousTokens();
-  const freshTokens = await generate();
-  const diffs = diffTokens(previousTokens, freshTokens);
+  const previousIcons = await fetchPreviousIcons();
+  const { tokens: freshTokens, icons: freshIcons } = await generate();
+  const tokenDiffs = compareDiff(previousTokens, freshTokens, "name", "token");
+  const iconDiffs = compareDiff(previousIcons, freshIcons, "nodeId", "icon");
   const currentVersion = await getCurrentVersion();
 
-  if (!diffs.changesCount)
+  if (!tokenDiffs.changes && !iconDiffs.changes)
     return writeOutput({
       changes: false,
       version: currentVersion,
@@ -156,7 +194,7 @@ export const update = async () => {
     });
 
   const version = incrementRevision(currentVersion);
-  const message = generateCommitMessage(diffs, version);
+  const message = generateCommitMessage(tokenDiffs, iconDiffs, version);
 
   return writeOutput({
     changes: true,

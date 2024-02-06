@@ -41,6 +41,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@ubloimmo/front-util": "0.0.6^"
+    "@ubloimmo/front-util": "0.0.8"
   }
 }

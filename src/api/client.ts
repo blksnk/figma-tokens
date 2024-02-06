@@ -30,7 +30,7 @@ import {
   FigmaStyleKey,
   FigmaTeamId,
 } from "../types/figma/figma.properties.types";
-import { Nullable, Optional } from "../types/global/global.types";
+import { Nullable, Optional, Replace } from "../types/global/global.types";
 import { Logger, LoggerConfig } from "../utils/log.utils";
 import { EmptyQueryParams } from "../types/global/endpoints.types";
 
@@ -247,21 +247,22 @@ export class FigmaApiClient {
    * Retrieves images for a Figma file.
    *
    * @param {Optional<FigmaFileKey>} fileKey - The key of the Figma file. Defaults to the file key associated with the class instance.
-   * @param {Omit<GetImagesEndpointQueryParams, "ids" & {ids: FigmaNodeId | FigmaNodeId[]}>} queryParams - Optional query parameters for the endpoint.
+   * @param {Omit<GetImagesEndpointQueryParams, "ids"> & {ids: FigmaNodeId | FigmaNodeId[]}} queryParams - Optional query parameters for the endpoint.
    * @return {Promise<GetImagesEndpointResponse>} The response containing the images.
    */
   async getImages(
     fileKey = this.fileKey,
-    queryParams?: Omit<
+    queryParams?: Replace<
       GetImagesEndpointQueryParams,
-      "ids" & { ids: FigmaNodeId | FigmaNodeId[] }
+      "ids",
+      FigmaNodeId | FigmaNodeId[]
     >
   ) {
     fileKey = validateKey(fileKey);
     // replace fileKey for consecutive endpoint calls
     this.fileKey = fileKey;
     // format image ids query param
-    queryParams = queryParams
+    const params: Optional<GetImagesEndpointQueryParams> = queryParams
       ? {
           ...queryParams,
           ids: Array.isArray(queryParams.ids)
@@ -276,7 +277,7 @@ export class FigmaApiClient {
       endpointURLs.images,
       this.token,
       this.logger
-    )(fileKey, queryParams);
+    )(fileKey, params);
     return this.lastImages;
   }
 

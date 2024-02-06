@@ -6,8 +6,8 @@ import { extractQueryParams } from "./endpoints.utils";
  * @return {string} fileKey
  */
 export const extractFileKeyFromUrl = (fileURL: string): string => {
-   return fileURL.split("/").reverse()[1];
-}
+  return fileURL.split("/").reverse()[1];
+};
 
 /**
  * Extracts the node ID from a file URL.
@@ -16,5 +16,5 @@ export const extractFileKeyFromUrl = (fileURL: string): string => {
  * @return {string | null} The extracted node ID, or null if not found.
  */
 export const extractNodeIdFromFileUrl = (fileURL: string): string | null => {
-   return extractQueryParams(fileURL)["node-id"] ?? null;
-}
+  return extractQueryParams(fileURL)["node-id"] ?? null;
+};
