@@ -535,6 +535,173 @@ export const TEXT = {
         }
       }
     }
+  },
+  "@figma": {
+    "name": "@figma",
+    "type": "TEXT",
+    "tokens": {
+      "stickyNote": {
+        "name": "stickyNote",
+        "type": "TEXT",
+        "value": "1.5625rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "400",
+            "fontSize": "1.5625rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "100%",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 400;\nfont-size: 1.5625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "changes": {
+        "name": "changes",
+        "type": "TEXT",
+        "value": "3.75rem",
+        "css": {
+          "style": {
+            "fontFamily": "Avenir",
+            "fontWeight": "500",
+            "fontSize": "3.75rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "100%",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 3.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "coverDescription": {
+        "name": "coverDescription",
+        "type": "TEXT",
+        "value": "5.356250286102295rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "400",
+            "fontSize": "5.356250286102295rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "100%",
+            "letterSpacing": "0rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 400;\nfont-size: 5.356250286102295rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "coverTitle": {
+        "name": "coverTitle",
+        "type": "TEXT",
+        "value": "8.703906059265137rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "700",
+            "fontSize": "8.703906059265137rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "100%",
+            "letterSpacing": "-0.3481562423706055rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 700;\nfont-size: 8.703906059265137rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: -0.3481562423706055rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "collection": {
+        "name": "collection",
+        "type": "TEXT",
+        "value": "37.5rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "700",
+            "fontSize": "37.5rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "100%",
+            "letterSpacing": "-0.875rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 700;\nfont-size: 37.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: -0.875rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "section": {
+        "name": "section",
+        "type": "TEXT",
+        "value": "75rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "700",
+            "fontSize": "75rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "100%",
+            "letterSpacing": "-0.875rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 700;\nfont-size: 75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: -0.875rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      },
+      "flow": {
+        "name": "flow",
+        "type": "TEXT",
+        "value": "12.5rem",
+        "css": {
+          "style": {
+            "fontFamily": "Open Sans",
+            "fontWeight": "700",
+            "fontSize": "12.5rem",
+            "fontStyle": "normal",
+            "textIndent": "unset",
+            "textDecoration": "none",
+            "textTransform": "unset",
+            "lineHeight": "100%",
+            "letterSpacing": "-0.875rem",
+            "textOverflow": "unset",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "fontFeatureSettings": "normal"
+          },
+          "rules": "font-family: Open Sans;\nfont-weight: 700;\nfont-size: 12.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: -0.875rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+        }
+      }
+    }
   }
 } as const;
 
@@ -2642,6 +2809,90 @@ export const EFFECT = {
     "name": "shadow",
     "type": "EFFECT",
     "tokens": {
+      "card": {
+        "name": "card",
+        "type": "EFFECT",
+        "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
+        "css": {
+          "style": {
+            "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
+          },
+          "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
+        }
+      },
+      "input": {
+        "name": "input",
+        "type": "EFFECT",
+        "tokens": {
+          "default": {
+            "name": "default",
+            "type": "EFFECT",
+            "tokens": {
+              "focus": {
+                "name": "focus",
+                "type": "EFFECT",
+                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1)",
+                "css": {
+                  "style": {
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1)"
+                  },
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1);"
+                }
+              },
+              "default": {
+                "name": "default",
+                "type": "EFFECT",
+                "value": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1)",
+                "css": {
+                  "style": {
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1)"
+                  },
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1);"
+                }
+              }
+            }
+          },
+          "error": {
+            "name": "error",
+            "type": "EFFECT",
+            "tokens": {
+              "focus": {
+                "name": "focus",
+                "type": "EFFECT",
+                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1)",
+                "css": {
+                  "style": {
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1)"
+                  },
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1);"
+                }
+              },
+              "default": {
+                "name": "default",
+                "type": "EFFECT",
+                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1)",
+                "css": {
+                  "style": {
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1)"
+                  },
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1);"
+                }
+              }
+            }
+          },
+          "disabled": {
+            "name": "disabled",
+            "type": "EFFECT",
+            "value": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)",
+            "css": {
+              "style": {
+                "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)"
+              },
+              "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1);"
+            }
+          }
+        }
+      },
       "button": {
         "name": "button",
         "type": "EFFECT",
@@ -2651,6 +2902,23 @@ export const EFFECT = {
             "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)"
           },
           "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000);"
+        }
+      }
+    }
+  },
+  "border": {
+    "name": "border",
+    "type": "EFFECT",
+    "tokens": {
+      "bottom": {
+        "name": "bottom",
+        "type": "EFFECT",
+        "value": "inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500)",
+        "css": {
+          "style": {
+            "boxShadow": "inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500)"
+          },
+          "rules": "box-shadow: inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500);"
         }
       }
     }
