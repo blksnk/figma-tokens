@@ -17,6 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
+
       - name: Setup jq
         uses: dcarbone/install-jq-action@v2.1.0
 
@@ -95,12 +101,7 @@ jobs:
       - name: Revision bump
         id: revision_bump
         if: steps.token_update.outputs.changes == 'true'
-        run: |
-          tmp=$(mktemp);
-          version=${{steps.token_update.outputs.version}}
-          echo "Bump version: $version"
-          jq --arg v "$version" '.version = $v' package.json > "$tmp";
-          mv "$tmp" package.json;
+        run: npm version patch
 
       - name: Git commit and push
         id: git_push
