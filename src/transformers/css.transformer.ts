@@ -67,7 +67,10 @@ export const styleNodeToCssRules = <TStyleType extends FigmaStyleType>(
     return figmaTextToCssText(styleNode.styleProperties);
   }
   if (isSpecificStyleNode(styleNode, "EFFECT")) {
-    return figmaEffectToCssProps(styleNode.styleProperties, styleNode.nodeType);
+    return figmaEffectToCssProps(
+      styleNode?.node?.document?.effects ?? [styleNode.styleProperties],
+      styleNode.nodeType
+    );
   }
   if (isSpecificStyleNode(styleNode, "FILL")) {
     return figmaPaintToCssProps(styleNode.styleProperties);
