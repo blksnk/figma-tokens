@@ -7,7 +7,7 @@ import {
 import { isString, type Nullable } from "@ubloimmo/front-util";
 
 /**
- * Converts a Figma effect to a CSS value stirng.
+ * Converts a Figma effect to a CSS value string.
  *
  * @param {FigmaEffect} effect - The Figma effect to convert.
  * @param {FigmaNodeType} nodeType - The type of Figma node.
@@ -60,15 +60,20 @@ export const figmaEffectToCssProps = (
   const effectType = effects[0]?.type;
   // check for empty array;
   if (!effectType) return {};
-  const effectValue = effects
-    // remove mismatched effects
-    .filter(
-      ({ type }) =>
-        normalizeEffectType(type) === normalizeEffectType(effectType)
-    )
+  // remove mismatched effects
+  const validEffects = effects.filter(
+    ({ type }) => normalizeEffectType(type) === normalizeEffectType(effectType)
+  );
+  // convert effects to string
+  const effectValues = validEffects
     .map(figmaEffectToCssString)
-    .filter(isString)
-    .join(", ");
+    // remove nulls
+    .filter(isString);
+
+  if (effectValues.length === 0) return {};
+
+  // construct effect css string
+  const effectStr = effectValues.join(", ");
 
   const effectKey =
     effectType === "BACKGROUND_BLUR"
@@ -80,6 +85,6 @@ export const figmaEffectToCssProps = (
       : "boxShadow";
 
   return {
-    [effectKey]: effectValue,
+    [effectKey]: effectStr,
   };
 };
