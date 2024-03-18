@@ -13,78 +13,78 @@ export const tokens = [
   {
     "name": "shadow/card/elevation/medium",
     "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
+    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200)",
     "css": {
       "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
+        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200)"
       },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
+      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200);"
     }
   },
   {
     "name": "shadow/card/elevation/high",
     "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
+    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600)",
     "css": {
       "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
+        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600)"
       },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
+      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600);"
     }
   },
   {
     "name": "shadow/card/elevation/low",
     "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
+    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800)",
     "css": {
       "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
+        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800)"
       },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
+      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800);"
     }
   },
   {
     "name": "shadow/input/default/focus",
     "type": "EFFECT",
-    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1)",
+    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)",
     "css": {
       "style": {
-        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1)"
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)"
       },
-      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1);"
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1);"
     }
   },
   {
     "name": "shadow/input/error/focus",
     "type": "EFFECT",
-    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1)",
+    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)",
     "css": {
       "style": {
-        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1)"
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)"
       },
-      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1);"
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1);"
     }
   },
   {
     "name": "shadow/input/error/default",
     "type": "EFFECT",
-    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1)",
+    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)",
     "css": {
       "style": {
-        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1)"
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)"
       },
-      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1);"
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1);"
     }
   },
   {
     "name": "shadow/input/disabled",
     "type": "EFFECT",
-    "value": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)",
+    "value": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)",
     "css": {
       "style": {
-        "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)"
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)"
       },
-      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1);"
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1);"
     }
   },
   {
@@ -101,12 +101,12 @@ export const tokens = [
   {
     "name": "shadow/input/default/default",
     "type": "EFFECT",
-    "value": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1)",
+    "value": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)",
     "css": {
       "style": {
-        "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1)"
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)"
       },
-      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1);"
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1);"
     }
   },
   {
@@ -273,12 +273,12 @@ export const tokens = [
   {
     "name": "shadow/button",
     "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)",
+    "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800)",
     "css": {
       "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)"
+        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800)"
       },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000);"
+      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800);"
     }
   },
   {

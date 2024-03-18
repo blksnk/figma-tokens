@@ -2831,23 +2831,23 @@ export const EFFECT = {
               "focus": {
                 "name": "focus",
                 "type": "EFFECT",
-                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1)",
+                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)",
                 "css": {
                   "style": {
-                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1)"
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)"
                   },
-                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1);"
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1);"
                 }
               },
               "default": {
                 "name": "default",
                 "type": "EFFECT",
-                "value": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1)",
+                "value": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)",
                 "css": {
                   "style": {
-                    "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1)"
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)"
                   },
-                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1);"
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1);"
                 }
               }
             }
@@ -2859,23 +2859,23 @@ export const EFFECT = {
               "focus": {
                 "name": "focus",
                 "type": "EFFECT",
-                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1)",
+                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)",
                 "css": {
                   "style": {
-                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1)"
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)"
                   },
-                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1);"
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1);"
                 }
               },
               "default": {
                 "name": "default",
                 "type": "EFFECT",
-                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1)",
+                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)",
                 "css": {
                   "style": {
-                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1)"
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)"
                   },
-                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1);"
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1);"
                 }
               }
             }
@@ -2883,12 +2883,12 @@ export const EFFECT = {
           "disabled": {
             "name": "disabled",
             "type": "EFFECT",
-            "value": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)",
+            "value": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)",
             "css": {
               "style": {
-                "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)"
+                "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)"
               },
-              "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1);"
+              "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1);"
             }
           }
         }
@@ -2896,12 +2896,12 @@ export const EFFECT = {
       "button": {
         "name": "button",
         "type": "EFFECT",
-        "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)",
+        "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800)",
         "css": {
           "style": {
-            "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)"
+            "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800)"
           },
-          "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000);"
+          "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800);"
         }
       }
     }
