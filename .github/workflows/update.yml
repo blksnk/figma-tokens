@@ -98,6 +98,16 @@ jobs:
           FIGMA_FILE_URLS: ${{secrets.FIGMA_FILE_URLS}}
           FIGMA_ICONS_FILE_URL: ${{secrets.FIGMA_ICONS_FILE_URL}}
 
+      - name: Git setup
+        id: git_setup
+        env:
+          CI_COMMIT_AUTHOR: CI
+          CI_COMMIT_EMAIL: ci@users.noreply.github.com
+          CI_COMMIT_MESSAGE: ${{steps.token_update.outputs.message}}
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
+
       - name: Revision bump
         id: revision_bump
         if: steps.token_update.outputs.changes == 'true'
@@ -107,12 +117,8 @@ jobs:
         id: git_push
         if: steps.token_update.outputs.changes == 'true'
         env:
-          CI_COMMIT_AUTHOR: CI
-          CI_COMMIT_EMAIL: ci@users.noreply.github.com
           CI_COMMIT_MESSAGE: ${{steps.token_update.outputs.message}}
         run: |
-          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-          git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
           git add .
           git commit -m ${{env.CI_COMMIT_MESSAGE}}
           git push
