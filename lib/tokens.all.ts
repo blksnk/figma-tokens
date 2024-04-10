@@ -17,32 +17,32 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
     "name": "desktop/xs/regular",
     "type": "TEXT",
-    "value": "0.65625rem",
+    "value": "0.675000011920929rem",
     "css": {
       "style": {
         "fontFamily": "Gilroy",
         "fontWeight": "400",
-        "fontSize": "0.65625rem",
+        "fontSize": "0.675000011920929rem",
         "fontStyle": "normal",
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "0.75rem",
+        "lineHeight": "0.762499988079071rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.65625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.75rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.675000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.762499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -63,9 +63,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -86,9 +86,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -109,9 +109,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -132,32 +132,32 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
     "name": "desktop/s/regular",
     "type": "TEXT",
-    "value": "0.78125rem",
+    "value": "0.800000011920929rem",
     "css": {
       "style": {
         "fontFamily": "Gilroy",
         "fontWeight": "400",
-        "fontSize": "0.78125rem",
+        "fontSize": "0.800000011920929rem",
         "fontStyle": "normal",
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "0.875rem",
+        "lineHeight": "0.887499988079071rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.78125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.875rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.800000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.887499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -178,55 +178,55 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
     "name": "desktop/xs/medium",
     "type": "TEXT",
-    "value": "0.65625rem",
+    "value": "0.675000011920929rem",
     "css": {
       "style": {
         "fontFamily": "Gilroy",
         "fontWeight": "500",
-        "fontSize": "0.65625rem",
+        "fontSize": "0.675000011920929rem",
         "fontStyle": "normal",
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "0.75rem",
+        "lineHeight": "0.762499988079071rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.65625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.75rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.675000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.762499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
     "name": "desktop/s/medium",
     "type": "TEXT",
-    "value": "0.78125rem",
+    "value": "0.800000011920929rem",
     "css": {
       "style": {
         "fontFamily": "Gilroy",
         "fontWeight": "500",
-        "fontSize": "0.78125rem",
+        "fontSize": "0.800000011920929rem",
         "fontStyle": "normal",
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "0.875rem",
+        "lineHeight": "0.887499988079071rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.78125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.875rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.800000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.887499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -247,9 +247,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -270,9 +270,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -293,9 +293,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -316,9 +316,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -339,55 +339,55 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
     "name": "desktop/s/bold",
     "type": "TEXT",
-    "value": "0.78125rem",
+    "value": "0.796875rem",
     "css": {
       "style": {
         "fontFamily": "Gilroy",
         "fontWeight": "700",
-        "fontSize": "0.78125rem",
+        "fontSize": "0.796875rem",
         "fontStyle": "normal",
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "0.875rem",
+        "lineHeight": "0.887499988079071rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.78125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.875rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.796875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.887499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
     "name": "desktop/xs/bold",
     "type": "TEXT",
-    "value": "0.65625rem",
+    "value": "0.675000011920929rem",
     "css": {
       "style": {
         "fontFamily": "Gilroy",
         "fontWeight": "700",
-        "fontSize": "0.65625rem",
+        "fontSize": "0.675000011920929rem",
         "fontStyle": "normal",
         "textIndent": "unset",
         "textDecoration": "none",
         "textTransform": "unset",
-        "lineHeight": "0.75rem",
+        "lineHeight": "0.762499988079071rem",
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.65625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.75rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.675000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.762499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -408,9 +408,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -431,9 +431,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -454,9 +454,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -477,9 +477,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -782,9 +782,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -805,9 +805,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -828,9 +828,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -851,9 +851,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -874,9 +874,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -897,9 +897,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -920,9 +920,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -943,9 +943,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -966,9 +966,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -989,9 +989,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1012,9 +1012,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1035,9 +1035,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1058,9 +1058,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1081,9 +1081,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1104,9 +1104,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1127,9 +1127,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1150,9 +1150,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1173,9 +1173,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1196,9 +1196,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1219,9 +1219,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
@@ -1242,9 +1242,9 @@ export const tokens = [
         "textOverflow": "unset",
         "textAlign": "left",
         "verticalAlign": "top",
-        "fontFeatureSettings": "normal"
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
