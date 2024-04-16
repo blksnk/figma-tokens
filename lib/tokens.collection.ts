@@ -2874,7 +2874,40 @@ export const COLOR = {
   }
 } as const;
 
-export const GRADIENT = {} as const;
+export const GRADIENT = {
+  "primary": {
+    "name": "primary",
+    "type": "GRADIENT",
+    "tokens": {
+      "bgGradientLeftToRight": {
+        "name": "bgGradientLeftToRight",
+        "type": "GRADIENT",
+        "value": "linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%);"
+        }
+      },
+      "bgGradientRightToLeft": {
+        "name": "bgGradientRightToLeft",
+        "type": "GRADIENT",
+        "value": "linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)",
+        "css": {
+          "style": {
+            "opacity": "1",
+            "mixBlendMode": "normal",
+            "background": "linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)"
+          },
+          "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%);"
+        }
+      }
+    }
+  }
+} as const;
 
 export const ASSET = {
   "gjcgsci": {
@@ -3337,12 +3370,57 @@ export const EFFECT = {
       "card": {
         "name": "card",
         "type": "EFFECT",
-        "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
-        "css": {
-          "style": {
-            "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
+        "tokens": {
+          "elevation": {
+            "name": "elevation",
+            "type": "EFFECT",
+            "tokens": {
+              "medium": {
+                "name": "medium",
+                "type": "EFFECT",
+                "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200)",
+                "css": {
+                  "style": {
+                    "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200)"
+                  },
+                  "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200);"
+                }
+              },
+              "high": {
+                "name": "high",
+                "type": "EFFECT",
+                "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600)",
+                "css": {
+                  "style": {
+                    "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600)"
+                  },
+                  "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600);"
+                }
+              },
+              "low": {
+                "name": "low",
+                "type": "EFFECT",
+                "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800)",
+                "css": {
+                  "style": {
+                    "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800)"
+                  },
+                  "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800);"
+                }
+              }
+            }
           },
-          "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
+          "default": {
+            "name": "default",
+            "type": "EFFECT",
+            "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
+            "css": {
+              "style": {
+                "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
+              },
+              "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
+            }
+          }
         }
       },
       "input": {
