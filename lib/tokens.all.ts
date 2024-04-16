@@ -1,5 +1,31 @@
 export const tokens = [
   {
+    "name": "primary/bgGradientLeftToRight",
+    "type": "GRADIENT",
+    "value": "linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%);"
+    }
+  },
+  {
+    "name": "primary/bgGradientRightToLeft",
+    "type": "GRADIENT",
+    "value": "linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%);"
+    }
+  },
+  {
     "name": "desktop/h3/medium",
     "type": "TEXT",
     "value": "1.3550000190734863rem",
@@ -483,7 +509,7 @@ export const tokens = [
     }
   },
   {
-    "name": "shadow/card",
+    "name": "shadow/card/default",
     "type": "EFFECT",
     "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
     "css": {
