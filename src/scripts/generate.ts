@@ -25,7 +25,7 @@ const logger = Logger({
   throwOnError: true,
   mode: "simple",
 });
-const { info, debug, warn, log } = logger;
+const { info, warn } = logger;
 
 /**
  * Fetches and formats team styles into tokens.
@@ -40,7 +40,7 @@ const fetchAndFormatTeamStyles = async (
   teamId: FigmaTeamId,
   fileKeyFilters?: FigmaFileKey[]
 ): Promise<Token[]> => {
-  debug("Fetching team styles...");
+  info("Fetching team styles...");
   const teamStylesResponse = await figmaApiClient.getTeamStyles(teamId, {
     page_size: 10000,
   });
@@ -50,7 +50,7 @@ const fetchAndFormatTeamStyles = async (
     return [];
   }
   // restrict to design system & client types
-  debug("Extracting Ublo team styles...");
+  info("Extracting Ublo team styles...");
   const filteredStyles =
     fileKeyFilters && fileKeyFilters.length > 0
       ? teamStyles.filter((teamStyle) =>
@@ -121,7 +121,6 @@ const fetchIconsMetadata = async (
   const filteredComponents = componentsResponse.meta.components.filter(
     (item) => item.file_key === iconFileKey
   );
-  log(filteredComponents);
   return filteredComponents;
 };
 
@@ -157,7 +156,7 @@ const generateAndExportIcons = async (
  * @returns {Promise<{tokens: Token[], icons: Icon[]}>} - Array containing all generated tokens according to env config
  */
 export const generate = async () => {
-  debug("Validating config...");
+  info("Validating config...");
   const config = validateConfig(
     {
       FIGMA_TOKEN,
@@ -168,7 +167,7 @@ export const generate = async () => {
     logger
   );
   info("Config validated");
-  debug("Initializing Figma API client...");
+  info("Initializing Figma API client...");
   const figmaApiClient = new FigmaApiClient(config.FIGMA_TOKEN);
   info("Figma API client initialized");
   const icons = await generateAndExportIcons(
