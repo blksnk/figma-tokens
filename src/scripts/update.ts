@@ -1,4 +1,9 @@
-import { LIB_TOKENS, UPDATE_OUTPUT, writeFile } from "../utils/export.utils";
+import {
+  LIB_ICONS,
+  LIB_TOKENS,
+  UPDATE_OUTPUT,
+  writeFile,
+} from "../utils/export.utils";
 import { Logger } from "../utils/log.utils";
 import { Diff, Icon, Token } from "../types/global/export.types";
 import { generate } from "./generate";
@@ -6,36 +11,52 @@ import { objectEntries } from "@ubloimmo/front-util";
 
 const logger = Logger();
 
-/**
- * Fetches the previously generated tokens.
- *
- * @return {Promise<Token[]>} Promise that resolves to an array of Token objects.
- */
-const fetchPreviousTokens = async (): Promise<Token[]> => {
-  logger.info("Fetching previouly generated tokens...");
-  try {
-    const { tokens } = await import(`../.${LIB_TOKENS}`);
-    logger.info(`Found ${tokens.length} previously generated tokens.`);
-    return [...tokens] as Token[];
-  } catch (e) {
-    logger.warn("No previously generated tokens found");
-    return [];
-  }
-};
+type KeyOfType<TData extends Record<string, unknown>, TKeyType> = {
+  [TKey in keyof TData & string]: TData[TKey] extends TKeyType ? TKey : never;
+}[keyof TData & string];
 
 /**
- * Fetches the previously generated icons.
+ * Formats a list of objects into a string with a specific key, with each item.
  *
- * @return {Promise<Icon[]>} Array of previously generated icons
+ * @param {TData[]} list - The list of objects to format.
+ * @param {KeyOfType<TData, string | number>} logKey - The key of the objects to use for formatting.
+ * @return {string} - The formatted string with each item on a new line and indented.
  */
-const fetchPreviousIcons = async (): Promise<Icon[]> => {
-  logger.info("Fetching previouly generated icons...");
+const formatListLog = <TData extends Record<string, unknown>>(
+  list: TData[],
+  logKey: KeyOfType<TData, string | number>
+) => list.map((item) => `          - ${item[logKey]}`).join("\n");
+
+/**
+ * Fetches previous exports from a file and logs the results.
+ *
+ * @template {Record<string, unknown>} TData - The type of the data to fetch.
+ *
+ * @param {string} filePath - The path to the file containing the exports.
+ * @param {string} exportName - The name of the export to fetch.
+ * @param {KeyOfType<TData, string | number>} logKey - The key to use for logging the exports.
+ * @param {string} [label=exportName] - The label to use for logging.
+ * @return {Promise<TData[]>} - A promise that resolves to an array of previous exports.
+ */
+const fetchPreviousExports = async <TData extends Record<string, unknown>>(
+  filePath: string,
+  exportName: string,
+  logKey: KeyOfType<TData, string | number>,
+  label: string = exportName
+): Promise<TData[]> => {
+  logger.info(`Fetching previouly generated ${label}...`);
   try {
-    const { icons } = await import(`../.${LIB_TOKENS}`);
-    logger.info(`Found ${icons.length} previously generated icons.`);
-    return [...icons] as Icon[];
+    const { [exportName]: exports } = await import(`../.${filePath}`);
+    const data: TData[] = exports as TData[];
+    logger.info(
+      `Found ${data.length} previously generated ${label}.\n${formatListLog(
+        data,
+        logKey
+      )}`
+    );
+    return [...data];
   } catch (e) {
-    logger.warn("No previously generated icons found");
+    logger.warn(`No previously generated ${label} found`);
     return [];
   }
 };
@@ -67,15 +88,6 @@ const incrementRevision = (currentVersion: string) => {
     .map((num) => parseInt(num));
   return [major, minor, revision + 1].map(String).join(".");
 };
-
-type KeyOfType<TData extends Record<string, unknown>, TKeyType> = {
-  [TKey in keyof TData & string]: TData[TKey] extends TKeyType ? TKey : never;
-}[keyof TData & string];
-
-const formatListLog = <TData extends Record<string, unknown>>(
-  list: TData[],
-  logKey: KeyOfType<TData, string | number>
-) => list.map((item) => `          - "${item[logKey]}"`).join(",\n");
 
 /**
  * Compares two arrays of objects and returns the added, removed, and updated items along with the total number of changes.
@@ -201,8 +213,17 @@ const writeOutput = async (output: object) => {
  * @returns commit message for version bump
  */
 export const update = async () => {
-  const previousTokens = await fetchPreviousTokens();
-  const previousIcons = await fetchPreviousIcons();
+  const previousTokens = await fetchPreviousExports<Token>(
+    LIB_TOKENS,
+    "tokens",
+    "name"
+  );
+  const previousIcons = await fetchPreviousExports<Icon>(
+    LIB_ICONS,
+    "icons",
+    "name",
+    "custom icons"
+  );
   const { tokens: freshTokens, icons: freshIcons } = await generate();
   const tokenDiffs = compareDiff(
     previousTokens,
@@ -215,7 +236,7 @@ export const update = async () => {
     previousIcons,
     freshIcons,
     "icon",
-    "nodeId",
+    "name",
     "name"
   );
   const currentVersion = await getCurrentVersion();
