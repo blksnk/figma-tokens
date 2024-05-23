@@ -123,6 +123,11 @@ jobs:
         if: steps.token_update.outputs.changes == 'true'
         run: npm version patch
 
+      - name: Revision push
+        id: revision_push
+        if: steps.token_update.outputs.changes == 'true'
+        run: git push
+
   publish_package:
     name: "NPM package publish"
     needs: update_tokens
