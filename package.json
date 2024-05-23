@@ -1,7 +1,7 @@
 {
   "name": "@ubloimmo/front-tokens",
   "description": "Figma team styles converted to code-ready css tokens",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "private": false,
   "module": "lib/index.ts",
   "main": "lib/index.ts",
