@@ -1163,6 +1163,1086 @@ export const texts = {
 } as const;
 
 export const colors = {
+  "violet": {
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(95, 13, 124, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(95, 13, 124, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(95, 13, 124, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(35, 20, 60, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(35, 20, 60, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(35, 20, 60, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(241, 232, 245, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(241, 232, 245, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(241, 232, 245, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(195, 159, 212, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(195, 159, 212, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(195, 159, 212, 1);"
+      }
+    }
+  },
+  "murrey": {
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(41, 15, 45, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(41, 15, 45, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(41, 15, 45, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(247, 230, 239, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(247, 230, 239, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(247, 230, 239, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(205, 153, 183, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(205, 153, 183, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(205, 153, 183, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(122, 0, 71, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(122, 0, 71, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(122, 0, 71, 1);"
+      }
+    }
+  },
+  "duke": {
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(0, 0, 163, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(0, 0, 163, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 0, 163, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(225, 225, 251, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(225, 225, 251, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 225, 251, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(11, 15, 68, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(11, 15, 68, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(11, 15, 68, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(150, 150, 252, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(150, 150, 252, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(150, 150, 252, 1);"
+      }
+    }
+  },
+  "wisteria": {
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(234, 233, 250, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(234, 233, 250, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 233, 250, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(67, 25, 176, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(67, 25, 176, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(67, 25, 176, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(29, 24, 75, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(29, 24, 75, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(29, 24, 75, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(184, 165, 241, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(184, 165, 241, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(184, 165, 241, 1);"
+      }
+    }
+  },
+  "wine": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(214, 164, 167, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(214, 164, 167, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(214, 164, 167, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(250, 239, 240, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(250, 239, 240, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(250, 239, 240, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(94, 28, 32, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(94, 28, 32, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(94, 28, 32, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(34, 22, 35, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(34, 22, 35, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(34, 22, 35, 1);"
+      }
+    }
+  },
+  "tiffany": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(143, 212, 203, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(143, 212, 203, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(143, 212, 203, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(12, 35, 46, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(12, 35, 46, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(12, 35, 46, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(6, 67, 67, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(6, 67, 67, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 67, 67, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(227, 243, 242, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(227, 243, 242, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(227, 243, 242, 1);"
+      }
+    }
+  },
+  "phtalo": {
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(230, 231, 253, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(230, 231, 253, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(230, 231, 253, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(12, 16, 59, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(12, 16, 59, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(12, 16, 59, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(10, 14, 120, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(10, 14, 120, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(10, 14, 120, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(154, 157, 236, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(154, 157, 236, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(154, 157, 236, 1);"
+      }
+    }
+  },
+  "taupe": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(198, 170, 173, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(198, 170, 173, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(198, 170, 173, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(34, 28, 41, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(34, 28, 41, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(34, 28, 41, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(93, 50, 55, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(93, 50, 55, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(93, 50, 55, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(240, 234, 235, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(240, 234, 235, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 234, 235, 1);"
+      }
+    }
+  },
+  "sienna": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(216, 137, 111, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(216, 137, 111, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(216, 137, 111, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(252, 240, 238, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(252, 240, 238, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(252, 240, 238, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(112, 37, 10, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(112, 37, 10, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(112, 37, 10, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(39, 24, 30, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(39, 24, 30, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(39, 24, 30, 1);"
+      }
+    }
+  },
+  "mantis": {
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(12, 33, 29, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(12, 33, 29, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(12, 33, 29, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(6, 70, 8, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(6, 70, 8, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 70, 8, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(116, 189, 121, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(116, 189, 121, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(116, 189, 121, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(226, 242, 228, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(226, 242, 228, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 242, 228, 1);"
+      }
+    }
+  },
+  "lake": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(122, 187, 207, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(122, 187, 207, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(122, 187, 207, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(226, 241, 244, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(226, 241, 244, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 241, 244, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(12, 30, 51, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(12, 30, 51, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(12, 30, 51, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(3, 69, 92, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(3, 69, 92, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(3, 69, 92, 1);"
+      }
+    }
+  },
+  "alloy": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(210, 143, 96, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(210, 143, 96, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(210, 143, 96, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(249, 239, 231, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(249, 239, 231, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(249, 239, 231, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(100, 49, 15, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(100, 49, 15, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(100, 49, 15, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(36, 27, 31, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(36, 27, 31, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(36, 27, 31, 1);"
+      }
+    }
+  },
+  "maya": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(129, 190, 232, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(129, 190, 232, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(129, 190, 232, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(0, 62, 121, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(0, 62, 121, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 62, 121, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(11, 29, 58, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(11, 29, 58, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(11, 29, 58, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(227, 239, 249, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(227, 239, 249, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(227, 239, 249, 1);"
+      }
+    }
+  },
+  "kobicha": {
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(247, 237, 223, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(247, 237, 223, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(247, 237, 223, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(86, 55, 15, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(86, 55, 15, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(86, 55, 15, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(216, 176, 117, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(216, 176, 117, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(216, 176, 117, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(37, 32, 30, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(37, 32, 30, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(37, 32, 30, 1);"
+      }
+    }
+  },
+  "silver": {
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(234, 233, 234, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(234, 233, 234, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 233, 234, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(59, 56, 54, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(59, 56, 54, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(59, 56, 54, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(26, 29, 41, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(26, 29, 41, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(26, 29, 41, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(175, 174, 175, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(175, 174, 175, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(175, 174, 175, 1);"
+      }
+    }
+  },
+  "yale": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(159, 182, 210, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(159, 182, 210, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(159, 182, 210, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(232, 237, 247, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(232, 237, 247, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(232, 237, 247, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(15, 28, 54, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(15, 28, 54, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(15, 28, 54, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(20, 55, 108, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(20, 55, 108, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(20, 55, 108, 1);"
+      }
+    }
+  },
+  "olive": {
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(241, 241, 197, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(241, 241, 197, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(241, 241, 197, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(57, 62, 20, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(57, 62, 20, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(57, 62, 20, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(166, 175, 86, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(166, 175, 86, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(166, 175, 86, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(30, 36, 30, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(30, 36, 30, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(30, 36, 30, 1);"
+      }
+    }
+  },
+  "moss": {
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(23, 32, 29, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(23, 32, 29, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(23, 32, 29, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(178, 209, 114, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(178, 209, 114, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(178, 209, 114, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(232, 242, 210, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(232, 242, 210, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(232, 242, 210, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(48, 67, 7, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(48, 67, 7, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(48, 67, 7, 1);"
+      }
+    }
+  },
+  "egyptian": {
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(229, 237, 252, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(229, 237, 252, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 237, 252, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(0, 55, 143, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(0, 55, 143, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 55, 143, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(11, 29, 63, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(11, 29, 63, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(11, 29, 63, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(140, 190, 248, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(140, 190, 248, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(140, 190, 248, 1);"
+      }
+    }
+  },
+  "charcoal": {
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(168, 178, 191, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(168, 178, 191, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(168, 178, 191, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(18, 27, 45, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(18, 27, 45, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(18, 27, 45, 1);"
+      }
+    },
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(39, 54, 73, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(39, 54, 73, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(39, 54, 73, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(234, 237, 241, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(234, 237, 241, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 237, 241, 1);"
+      }
+    }
+  },
   "success": {
     "dark": {
       "name": "dark",
@@ -1528,14 +2608,14 @@ export const colors = {
     "base": {
       "name": "base",
       "type": "COLOR",
-      "value": "rgba(90, 55, 216, 1)",
+      "value": "rgba(63, 34, 170, 1)",
       "css": {
         "style": {
           "opacity": "1",
           "mixBlendMode": "normal",
-          "background": "rgba(90, 55, 216, 1)"
+          "background": "rgba(63, 34, 170, 1)"
         },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(90, 55, 216, 1);"
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(63, 34, 170, 1);"
       }
     },
     "dark": {
@@ -1562,1113 +2642,6 @@ export const colors = {
           "background": "rgba(233, 231, 248, 1)"
         },
         "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 231, 248, 1);"
-      }
-    }
-  },
-  "gjcgsci": {
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(240, 234, 235, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(240, 234, 235, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 234, 235, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(107, 57, 63, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(107, 57, 63, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(107, 57, 63, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(148, 86, 95, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(148, 86, 95, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(148, 86, 95, 1);"
-      }
-    }
-  },
-  "gaia": {
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(140, 18, 62, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(140, 18, 62, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(140, 18, 62, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(255, 241, 241, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(255, 241, 241, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 241, 241, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(203, 21, 94, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(203, 21, 94, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(203, 21, 94, 1);"
-      }
-    }
-  },
-  "commune": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(13, 71, 109, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(13, 71, 109, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(13, 71, 109, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(226, 232, 237, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(226, 232, 237, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 232, 237, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(7, 39, 61, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(7, 39, 61, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(7, 39, 61, 1);"
-      }
-    }
-  },
-  "sciReglisse": {
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(19, 46, 89, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(19, 46, 89, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(19, 46, 89, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(227, 231, 237, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(227, 231, 237, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(227, 231, 237, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(22, 61, 107, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(22, 61, 107, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(22, 61, 107, 1);"
-      }
-    }
-  },
-  "whoo": {
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(43, 43, 43, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(43, 43, 43, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(43, 43, 43, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(235, 235, 235, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(235, 235, 235, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(235, 235, 235, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(53, 53, 53, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(53, 53, 53, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(53, 53, 53, 1);"
-      }
-    }
-  },
-  "parmentier": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(23, 105, 186, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(23, 105, 186, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(23, 105, 186, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(227, 235, 244, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(227, 235, 244, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(227, 235, 244, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(20, 70, 145, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(20, 70, 145, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(20, 70, 145, 1);"
-      }
-    }
-  },
-  "lacoloc": {
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(225, 233, 235, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(225, 233, 235, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 233, 235, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 60, 71, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 60, 71, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 60, 71, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 81, 93, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 81, 93, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 81, 93, 1);"
-      }
-    }
-  },
-  "ltf": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(90, 129, 14, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(90, 129, 14, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(90, 129, 14, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(59, 90, 14, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(59, 90, 14, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(59, 90, 14, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(234, 238, 227, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(234, 238, 227, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 238, 227, 1);"
-      }
-    }
-  },
-  "lakaz": {
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(54, 77, 182, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(54, 77, 182, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(54, 77, 182, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(80, 118, 253, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(80, 118, 253, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(80, 118, 253, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(233, 237, 251, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(233, 237, 251, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 237, 251, 1);"
-      }
-    }
-  },
-  "strasimmo": {
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 28, 184, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 28, 184, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 28, 184, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(225, 229, 251, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(225, 229, 251, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 229, 251, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 37, 255, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 37, 255, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 37, 255, 1);"
-      }
-    }
-  },
-  "myMaison": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(9, 117, 14, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(9, 117, 14, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(9, 117, 14, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(11, 84, 14, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(11, 84, 14, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(11, 84, 14, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(226, 242, 228, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(226, 242, 228, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 242, 228, 1);"
-      }
-    }
-  },
-  "coprovisor": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(94, 22, 235, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(94, 22, 235, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(94, 22, 235, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(234, 227, 249, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(234, 227, 249, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 227, 249, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(62, 19, 176, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(62, 19, 176, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(62, 19, 176, 1);"
-      }
-    }
-  },
-  "blueEstate": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 73, 101, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 73, 101, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 73, 101, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 52, 78, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 52, 78, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 52, 78, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(225, 232, 236, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(225, 232, 236, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 232, 236, 1);"
-      }
-    }
-  },
-  "oneNest": {
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(229, 237, 233, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(229, 237, 233, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 237, 233, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(32, 87, 48, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(32, 87, 48, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(32, 87, 48, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(45, 125, 71, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(45, 125, 71, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(45, 125, 71, 1);"
-      }
-    }
-  },
-  "brownfields": {
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(88, 95, 28, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(88, 95, 28, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(88, 95, 28, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(241, 241, 197, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(241, 241, 197, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(241, 241, 197, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(141, 153, 49, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(141, 153, 49, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(141, 153, 49, 1);"
-      }
-    }
-  },
-  "novarea": {
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(229, 237, 252, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(229, 237, 252, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 237, 252, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 87, 226, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 87, 226, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 87, 226, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 58, 167, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 58, 167, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 58, 167, 1);"
-      }
-    }
-  },
-  "lliResidences": {
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(242, 234, 242, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(242, 234, 242, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(242, 234, 242, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(112, 34, 131, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(112, 34, 131, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(112, 34, 131, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(80, 26, 97, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(80, 26, 97, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(80, 26, 97, 1);"
-      }
-    }
-  },
-  "lsPatrimonium": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(84, 30, 145, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(84, 30, 145, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(84, 30, 145, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(233, 228, 240, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(233, 228, 240, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 228, 240, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(58, 24, 116, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(58, 24, 116, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(58, 24, 116, 1);"
-      }
-    }
-  },
-  "citesCaritas": {
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(229, 239, 246, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(229, 239, 246, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 239, 246, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 56, 116, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 56, 116, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 56, 116, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 81, 145, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 81, 145, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 81, 145, 1);"
-      }
-    }
-  },
-  "proximita": {
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 74, 151, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 74, 151, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 74, 151, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 114, 198, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 114, 198, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 114, 198, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(225, 236, 246, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(225, 236, 246, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 236, 246, 1);"
-      }
-    }
-  },
-  "semiTarbes": {
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(140, 18, 62, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(140, 18, 62, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(140, 18, 62, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(203, 21, 94, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(203, 21, 94, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(203, 21, 94, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(245, 227, 235, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(245, 227, 235, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(245, 227, 235, 1);"
-      }
-    }
-  },
-  "livretP": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(39, 102, 165, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(39, 102, 165, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(39, 102, 165, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(229, 235, 242, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(229, 235, 242, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 235, 242, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(19, 50, 81, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(19, 50, 81, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(19, 50, 81, 1);"
-      }
-    }
-  },
-  "tkImmo": {
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(225, 237, 244, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(225, 237, 244, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 237, 244, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 116, 184, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 116, 184, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 116, 184, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 80, 143, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 80, 143, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 80, 143, 1);"
-      }
-    }
-  },
-  "r2M": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 0, 255, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 0, 255, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 0, 255, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 6, 184, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 6, 184, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 6, 184, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(225, 225, 251, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(225, 225, 251, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 225, 251, 1);"
-      }
-    }
-  },
-  "bricks": {
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(222, 228, 233, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(222, 228, 233, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(222, 228, 233, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(18, 51, 76, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(18, 51, 76, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(18, 51, 76, 1);"
-      }
-    },
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(21, 67, 93, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(21, 67, 93, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(21, 67, 93, 1);"
-      }
-    }
-  },
-  "remaxImmco": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(0, 61, 165, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(0, 61, 165, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 61, 165, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(225, 231, 242, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(225, 231, 242, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 231, 242, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(6, 43, 130, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(6, 43, 130, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 43, 130, 1);"
-      }
-    }
-  },
-  "ublo": {
-    "main": {
-      "name": "main",
-      "type": "COLOR",
-      "value": "rgba(90, 55, 216, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(90, 55, 216, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(90, 55, 216, 1);"
-      }
-    },
-    "dark": {
-      "name": "dark",
-      "type": "COLOR",
-      "value": "rgba(60, 39, 163, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(60, 39, 163, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(60, 39, 163, 1);"
-      }
-    },
-    "light": {
-      "name": "light",
-      "type": "COLOR",
-      "value": "rgba(234, 230, 248, 1)",
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal",
-          "background": "rgba(234, 230, 248, 1)"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 230, 248, 1);"
       }
     }
   }
@@ -2705,358 +2678,7 @@ export const gradients = {
   }
 } as const;
 
-export const assets = {
-  "gjcgsci": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "gaia": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "parmentier": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "sciReglisse": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "brownfields": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "ltf": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "citesCaritas": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "lakaz": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "novarea": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "livretP": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "strasimmo": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "coprovisor": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "semiTarbes": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "r2M": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "myMaison": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "lsPatrimonium": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "bricks": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "blueEstate": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "proximita": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "oneNest": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "remaxImmco": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "lacoloc": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "lliResidences": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "tkImmo": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  },
-  "ublo": {
-    "background": {
-      "name": "background",
-      "type": "ASSET",
-      "value": null,
-      "css": {
-        "style": {
-          "opacity": "1",
-          "mixBlendMode": "normal"
-        },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;"
-      }
-    }
-  }
-} as const;
+export const assets = {} as const;
 
 export const effects = {
   "shadow": {
@@ -3065,34 +2687,34 @@ export const effects = {
         "medium": {
           "name": "medium",
           "type": "EFFECT",
-          "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200)",
+          "value": "0rem 0.5rem 1.75rem 0.25rem rgba(179, 166, 236, 0.1200)",
           "css": {
             "style": {
-              "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200)"
+              "boxShadow": "0rem 0.5rem 1.75rem 0.25rem rgba(179, 166, 236, 0.1200)"
             },
-            "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.5rem 1.75rem 0.25rem rgba(109, 95, 254, 0.1200);"
+            "rules": "box-shadow: 0rem 0.5rem 1.75rem 0.25rem rgba(179, 166, 236, 0.1200);"
           }
         },
         "high": {
           "name": "high",
           "type": "EFFECT",
-          "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600)",
+          "value": "0rem 0.75rem 2rem 0.5rem rgba(179, 166, 236, 0.1600)",
           "css": {
             "style": {
-              "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600)"
+              "boxShadow": "0rem 0.75rem 2rem 0.5rem rgba(179, 166, 236, 0.1600)"
             },
-            "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.75rem 2rem 0.5rem rgba(109, 95, 254, 0.1600);"
+            "rules": "box-shadow: 0rem 0.75rem 2rem 0.5rem rgba(179, 166, 236, 0.1600);"
           }
         },
         "low": {
           "name": "low",
           "type": "EFFECT",
-          "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800)",
+          "value": "0rem 0.25rem 1.5rem 0.125rem rgba(179, 166, 236, 0.0800)",
           "css": {
             "style": {
-              "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800)"
+              "boxShadow": "0rem 0.25rem 1.5rem 0.125rem rgba(179, 166, 236, 0.0800)"
             },
-            "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300), 0rem 0.25rem 1.5rem 0.125rem rgba(109, 95, 254, 0.0800);"
+            "rules": "box-shadow: 0rem 0.25rem 1.5rem 0.125rem rgba(179, 166, 236, 0.0800);"
           }
         }
       },
