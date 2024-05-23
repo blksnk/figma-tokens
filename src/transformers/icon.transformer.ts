@@ -85,7 +85,6 @@ export const fetchIconSvgs = async (
   );
   const iconsCount = iconComponentsMeta.length;
   logger.info(`Found ${iconsCount} published icon components.`);
-  logger.log(iconComponentsMeta);
 
   const icons: Icon[] = [];
 
