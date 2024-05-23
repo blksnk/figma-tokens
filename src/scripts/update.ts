@@ -120,7 +120,7 @@ const compareDiff = <TData extends Record<string, unknown>>(
     return JSON.stringify(correspondingToken) !== JSON.stringify(freshToken);
   });
   logger.info(
-    `Updated ${updated.length} existing ${label}s.\n ${formatListLog(
+    `Updated ${updated.length} existing ${label}s.\n${formatListLog(
       updated,
       logKey
     )}`
