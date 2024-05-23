@@ -108,16 +108,15 @@ jobs:
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
 
-
-          - name: Git commit and push
-          id: git_push
-          if: steps.token_update.outputs.changes == 'true'
-          env:
-            CI_COMMIT_MESSAGE: ${{steps.token_update.outputs.message}}
-            run: |
-            git add .
-            git commit -m ${{env.CI_COMMIT_MESSAGE}}"
-            git push
+      - name: Git commit and push
+        id: git_push
+        if: steps.token_update.outputs.changes == 'true'
+        env:
+          CI_COMMIT_MESSAGE: ${{steps.token_update.outputs.message}}
+        run: |
+          git add .
+          git commit -m ${{env.CI_COMMIT_MESSAGE}}
+          git push
 
       - name: Revision bump
         id: revision_bump
