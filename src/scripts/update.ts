@@ -107,17 +107,17 @@ const compareDiff = <TData extends Record<string, unknown>>(
   logKey: KeyOfType<TData, string | number>
 ): Diff<TData> => {
   logger.info(`Comparing new ${label}s to old ${label}s`);
-  const previousDataValues = previousData.map((data) => data[compareKey]);
-  const freshDataValues = freshData.map((data) => data[compareKey]);
+  const previousDataValues = previousData.map((data) => data[logKey]);
+  const freshDataValues = freshData.map((data) => data[logKey]);
 
   const added = [...freshData].filter(
-    (freshToken) => !previousDataValues.includes(freshToken[compareKey])
+    (freshItem) => !previousDataValues.includes(freshItem[logKey])
   );
   logger.info(
     `Generated ${added.length} new ${label}s.\n${formatListLog(added, logKey)}`
   );
   const removed = [...previousData].filter(
-    (prevToken) => !freshDataValues.includes(prevToken[compareKey])
+    (prevItem) => !freshDataValues.includes(prevItem[logKey])
   );
   logger.info(
     `Removed ${removed.length} previous ${label}s.\n${formatListLog(
