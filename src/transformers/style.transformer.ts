@@ -150,5 +150,7 @@ export const tokenizeStyles = async (
   logger.info("Transforming figma styles to tokens...");
   const tokens = styleNodes.map((styleNode) => styleNodeToToken(styleNode));
   logger.info("Done");
-  return tokens.filter((token) => !!token) as Token[];
+  return (tokens.filter((token) => !!token) as Token[]).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
 };
