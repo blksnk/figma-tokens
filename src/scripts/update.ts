@@ -94,9 +94,10 @@ const incrementRevision = (currentVersion: string) => {
  *
  * @param {TData[]} previousData - array of previous data objects
  * @param {TData[]} freshData - array of fresh data objects
- * @param {keyof TData} compareKey - key to compare the data objects
  * @param {string} label - label for the data objects
- * @return {{ changes: number, added: TData[], removed: TData[], updated: TData[] }} object with changes, added, removed, and updated items
+ * @param {keyof TData} compareKey - key to compare the data objects
+ * @param {KeyOfType<TData, string | number>} logKey - key to use for logging
+ * @return {Diff<TData>} object with changes, added, removed, and updated items
  */
 const compareDiff = <TData extends Record<string, unknown>>(
   previousData: TData[],
