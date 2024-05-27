@@ -127,7 +127,7 @@ const compareDiff = <TData extends Record<string, unknown>>(
   );
   const updated = [...freshData].filter((freshToken) => {
     const correspondingToken = previousData.find(
-      (prevToken) => prevToken.name === freshToken.name
+      (prevToken) => prevToken[logKey] === freshToken[logKey]
     );
     if (!correspondingToken) return false;
     return JSON.stringify(correspondingToken) !== JSON.stringify(freshToken);
@@ -230,7 +230,7 @@ export const update = async () => {
     previousTokens,
     freshTokens,
     "token",
-    "name",
+    "value",
     "name"
   );
   const iconDiffs = compareDiff(
