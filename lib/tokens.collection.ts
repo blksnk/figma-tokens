@@ -2939,12 +2939,12 @@ export const EFFECT = {
               "focus": {
                 "name": "focus",
                 "type": "EFFECT",
-                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)",
+                "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(63, 34, 170, 1), 0rem 0rem 0.0625rem 0rem rgba(63, 34, 170, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)",
                 "css": {
                   "style": {
-                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)"
+                    "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(63, 34, 170, 1), 0rem 0rem 0.0625rem 0rem rgba(63, 34, 170, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)"
                   },
-                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(90, 55, 216, 1), 0rem 0rem 0.0625rem 0rem rgba(90, 55, 216, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1);"
+                  "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(63, 34, 170, 1), 0rem 0rem 0.0625rem 0rem rgba(63, 34, 170, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1);"
                 }
               }
             }
