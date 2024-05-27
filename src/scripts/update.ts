@@ -113,13 +113,13 @@ const compareDiff = <TData extends Record<string, unknown>>(
   const added = [...freshData].filter(
     (freshItem) => !previousDataValues.includes(freshItem[logKey])
   );
-  logger.info(
+  logger.warn(
     `Generated ${added.length} new ${label}s.\n${formatListLog(added, logKey)}`
   );
   const removed = [...previousData].filter(
     (prevItem) => !freshDataValues.includes(prevItem[logKey])
   );
-  logger.info(
+  logger.warn(
     `Removed ${removed.length} previous ${label}s.\n${formatListLog(
       removed,
       logKey
@@ -132,7 +132,7 @@ const compareDiff = <TData extends Record<string, unknown>>(
     if (!correspondingToken) return false;
     return JSON.stringify(correspondingToken) !== JSON.stringify(freshToken);
   });
-  logger.info(
+  logger.warn(
     `Updated ${updated.length} existing ${label}s.\n${formatListLog(
       updated,
       logKey
