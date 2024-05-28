@@ -2109,12 +2109,12 @@ export const tokens = [
   {
     "name": "shadow/button",
     "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800)",
+    "value": "0rem 0rem 0.0625rem 0rem rgba(41, 46, 60, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(41, 46, 60, 0.0800)",
     "css": {
       "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800)"
+        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(41, 46, 60, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(41, 46, 60, 0.0800)"
       },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(50, 50, 71, 0.0800);"
+      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(41, 46, 60, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(41, 46, 60, 0.0800);"
     }
   },
   {
