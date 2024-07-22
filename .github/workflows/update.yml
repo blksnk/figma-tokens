@@ -1,0 +1,178 @@
+name: Token update
+run-name: Updating figma tokens
+on:
+  deployment: null
+  schedule:
+    - cron: "30 5 * * 6"
+  workflow_dispatch: null
+
+jobs:
+  update_tokens:
+    name: "Figma token update"
+    runs-on: ubuntu-latest
+    outputs:
+      changes: ${{steps.token_update.outputs.changes}}
+      version: ${{steps.token_update.outputs.version}}
+      message: ${{steps.token_update.outputs.message}}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Setup jq
+        uses: dcarbone/install-jq-action@v2.1.0
+
+      - name: Check jq
+        run: |
+          which jq
+          jq --version
+
+      - name: Setup Bun
+        id: bun_setup
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Check bun
+        run: |
+          which bun
+          bun --version
+
+      - name: Install dependencies
+        id: bun_install
+        run: bun install
+
+      - name: Setup environment
+        id: env_setup
+        env:
+          FIGMA_TOKEN: ${{secrets.FIGMA_TOKEN}}
+          FIGMA_TEAM_ID: ${{secrets.FIGMA_TEAM_ID}}
+          FIGMA_FILE_URLS: ${{secrets.FIGMA_FILE_URLS}}
+          FIGMA_ICONS_FILE_URL: ${{secrets.FIGMA_ICONS_FILE_URL}}
+        run: |
+          touch .env
+          echo "FIGMA_TOKEN=${{env.FIGMA_TOKEN}}" >> .env
+          echo "FIGMA_TEAM_ID=${{env.FIGMA_TEAM_ID}}" >> .env
+          echo "FIGMA_FILE_URLS=${{env.FIGMA_FILE_URLS}}" >> .env
+          echo "FIGMA_ICONS_FILE_URL"="${{env.FIGMA_ICONS_FILE_URL}}" >> .env
+
+      - name: Token update
+        id: token_update
+        run: |
+          # create temp
+          mkdir temp
+          touch temp/output.json
+
+          # create lib dir if it doesn't exist
+          mkdir -p lib
+
+          # update figma tokens
+          bun run update
+
+          # evaluate script output
+          changes=$(echo $(<./temp/output.json) | jq ".changes")
+
+          if [[ "$changes" == "false" ]]
+          then
+            # no commit or publish needed
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            # new changes have been generated
+            # pull message and version from script output
+            message=$(echo $(<./temp/output.json) | jq ".message")
+            version=$(echo $(<./temp/output.json) | jq ".version")
+            # expose output to further steps
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "message=$message" >> $GITHUB_OUTPUT
+            echo "version=$version" >> $GITHUB_OUTPUT
+          fi
+
+          cat $GITHUB_OUTPUT
+        env:
+          FIGMA_TOKEN: ${{secrets.FIGMA_TOKEN}}
+          FIGMA_TEAM_ID: ${{secrets.FIGMA_TEAM_ID}}
+          FIGMA_FILE_URLS: ${{secrets.FIGMA_FILE_URLS}}
+          FIGMA_ICONS_FILE_URL: ${{secrets.FIGMA_ICONS_FILE_URL}}
+
+      - name: Git setup
+        id: git_setup
+        env:
+          CI_COMMIT_AUTHOR: CI
+          CI_COMMIT_EMAIL: ci@users.noreply.github.com
+          CI_COMMIT_MESSAGE: ${{steps.token_update.outputs.message}}
+        run: |
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
+
+      - name: Git commit and push
+        id: git_push
+        if: steps.token_update.outputs.changes == 'true'
+        env:
+          CI_COMMIT_MESSAGE: ${{steps.token_update.outputs.message}}
+        run: |
+          git add .
+          git commit -m ${{env.CI_COMMIT_MESSAGE}}
+          git push
+
+      - name: Revision bump
+        id: revision_bump
+        if: steps.token_update.outputs.changes == 'true'
+        run: npm version patch
+
+      - name: Revision push
+        id: revision_push
+        if: steps.token_update.outputs.changes == 'true'
+        run: git push
+
+  publish_package:
+    name: "NPM package publish"
+    needs: update_tokens
+    if: needs.update_tokens.outputs.changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+          registry-url: "https://registry.npmjs.org"
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  create_release:
+    name: "Create release"
+    needs: update_tokens
+    if: needs.update_tokens.outputs.changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install zip
+        uses: montudor/action-zip@v1.0.0
+
+      - name: Bundle lib files
+        id: release_bundle
+        run: |
+          release_file="release-${{ needs.update_tokens.outputs.version }}.zip"
+          echo "release_file=$release_file" >> $GITHUB_OUTPUT
+          zip -qq -r "$release_file" lib
+
+      - name: Create release
+        id: release_create
+        uses: softprops/action-gh-release@v0.1.15
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ needs.update_tokens.outputs.version }}
+          name: Release v${{ needs.update_tokens.outputs.version }}
+          body: |
+            Changes in this release:
+            ${{ needs.update_tokens.outputs.message }}
+          draft: false
+          prerelease: false
+          files: |
+            ${{ steps.release_bundle.outputs.release_file }}

@@ -26,13 +26,14 @@ import {
   FigmaTypeStyle,
   FigmaVariableAlias,
   FigmaVector,
-  FigmaVectorPath
+  FigmaVectorPath,
 } from "./figma.properties.types";
 import {
   FigjamConnectorStrokeCap,
   FigmaAxisSizingMode,
   FigmaBlendMode,
-  FigmaBooleanOperation, FigjamConnectorLineType,
+  FigmaBooleanOperation,
+  FigjamConnectorLineType,
   FigmaCounterAxisAlignContent,
   FigmaCounterAxisAlignItems,
   FigmaEasingType,
@@ -40,15 +41,17 @@ import {
   FigmaLayoutMode,
   FigmaLayoutPositioning,
   FigmaLayoutSizing,
-  FigmaLayoutWrap, FigmaLineType,
+  FigmaLayoutWrap,
+  FigmaLineType,
   FigmaMaskType,
   FigmaNodeType,
   FigmaOverflowDirection,
-  FigmaPrimaryAxisAlignItems, FigmaShapeType,
+  FigmaPrimaryAxisAlignItems,
+  FigmaShapeType,
   FigmaStrokeAlign,
   FigmaStrokeCap,
   FigmaStrokeJoin,
-  FigmaStyleType
+  FigmaStyleType,
 } from "./figma.enums.types";
 import { Nullable } from "../global/global.types";
 
@@ -56,52 +59,53 @@ import { Nullable } from "../global/global.types";
  * The following are properties that exist on every node.
  * These give us some basic information about identifying and viewing the node.
  */
-export type FigmaGlobalNode<TFigmaType extends FigmaNodeType = FigmaNodeType> = {
-  /**
-   * A string uniquely identifying this node within the document.
-   */
-  id: FigmaNodeId;
-  /**
-   * The name given to the node by the user in the tool.
-   */
-  name: string;
-  /**
-   * Whether the node is visible on the canvas.
-   */
-  visible: boolean;
-  /**
-   * The type of the node, refer to {@link FigmaNodeType}.
-   */
-  type: TFigmaType;
-  /**
-   * The rotation of the node, if not 0.
-   */
-  rotation: number;
-  /**
-   * Data written by plugins that is visible only to the plugin that wrote it.
-   * Requires the `pluginData` to include the ID of the plugin.
-   */
-  pluginData: FigmaPluginData;
-  /**
-   * Data written by plugins that is visible to all plugins.
-   * Requires the `pluginData` parameter to include the string "shared".
-   */
-  sharedPluginData: FigmaSharedPluginData;
-  /**
-   * A mapping of a layer's property to component property name
-   * of component properties attached to this node.
-   * The component property name can be used to look up more information
-   * on the corresponding component's or component set's componentPropertyDefinitions.
-   */
-  componentPropertyReferences: Map<string, string>;
-  /**
-   * A mapping of field to the variables applied to this field.
-   * Most fields will only map to a single {@link FigmaVariableAlias}.
-   * However, for fills, strokes, size, and component properties,
-   * it is possible to have multiple variables bound to the field.
-   */
-  boundVariables: Map<string, FigmaVariableAlias | FigmaVariableAlias[]>;
-}
+export type FigmaGlobalNode<TFigmaType extends FigmaNodeType = FigmaNodeType> =
+  {
+    /**
+     * A string uniquely identifying this node within the document.
+     */
+    id: FigmaNodeId;
+    /**
+     * The name given to the node by the user in the tool.
+     */
+    name: string;
+    /**
+     * Whether the node is visible on the canvas.
+     */
+    visible: boolean;
+    /**
+     * The type of the node, refer to {@link FigmaNodeType}.
+     */
+    type: TFigmaType;
+    /**
+     * The rotation of the node, if not 0.
+     */
+    rotation: number;
+    /**
+     * Data written by plugins that is visible only to the plugin that wrote it.
+     * Requires the `pluginData` to include the ID of the plugin.
+     */
+    pluginData: FigmaPluginData;
+    /**
+     * Data written by plugins that is visible to all plugins.
+     * Requires the `pluginData` parameter to include the string "shared".
+     */
+    sharedPluginData: FigmaSharedPluginData;
+    /**
+     * A mapping of a layer's property to component property name
+     * of component properties attached to this node.
+     * The component property name can be used to look up more information
+     * on the corresponding component's or component set's componentPropertyDefinitions.
+     */
+    componentPropertyReferences: Map<string, string>;
+    /**
+     * A mapping of field to the variables applied to this field.
+     * Most fields will only map to a single {@link FigmaVariableAlias}.
+     * However, for fills, strokes, size, and component properties,
+     * it is possible to have multiple variables bound to the field.
+     */
+    boundVariables: Map<string, FigmaVariableAlias | FigmaVariableAlias[]>;
+  };
 
 export interface FigmaDocumentNode extends FigmaGlobalNode<"DOCUMENT"> {
   /**
@@ -140,7 +144,8 @@ export interface FigmaCanvasNode extends FigmaGlobalNode<"CANVAS"> {
   exportSettings: FigmaExportSetting[];
 }
 
-export interface FigmaFrameNode<TNodeType extends FigmaNodeType = "FRAME"> extends FigmaGlobalNode<TNodeType> {
+export interface FigmaFrameNode<TNodeType extends FigmaNodeType = "FRAME">
+  extends FigmaGlobalNode<TNodeType> {
   /**
    * An array of nodes that are direct children of this node
    */
@@ -435,7 +440,7 @@ export interface FigmaFrameNode<TNodeType extends FigmaNodeType = "FRAME"> exten
    * An array of effects attached to this node
    * @default []
    */
-  effects: FigmaEffect[]
+  effects: FigmaEffect[];
   /**
    * Does this node mask sibling nodes in front of it?
    * @default false
@@ -456,7 +461,7 @@ export interface FigmaFrameNode<TNodeType extends FigmaNodeType = "FRAME"> exten
    * A mapping of a StyleType to style key of styles present on this node.
    * The style key can be used to look up more information about the style in the top-level styles field.
    */
-  styles: FigmaNodeStyles
+  styles: FigmaNodeStyles;
 }
 
 export type FigmaGroupNode = Omit<FigmaFrameNode, "layoutGrids">;
@@ -505,7 +510,8 @@ export interface FigmaSectionNode extends FigmaGlobalNode<"SECTION"> {
   absoluteRenderBounds: FigmaRectangle;
 }
 
-export interface FigmaVectorNode<TNodeType extends FigmaNodeType = "VECTOR"> extends FigmaGlobalNode<TNodeType> {
+export interface FigmaVectorNode<TNodeType extends FigmaNodeType = "VECTOR">
+  extends FigmaGlobalNode<TNodeType> {
   /**
    * If true, layer is locked and cannot be edited
    * @default false
@@ -572,7 +578,7 @@ export interface FigmaVectorNode<TNodeType extends FigmaNodeType = "VECTOR"> ext
    * An array of effects attached to this node.
    * @default []
    */
-  effects: FigmaEffect[]
+  effects: FigmaEffect[];
   /**
    * Width and height of element.
    * This is different from the width and height of the bounding box
@@ -601,13 +607,13 @@ export interface FigmaVectorNode<TNodeType extends FigmaNodeType = "VECTOR"> ext
    * An array of paths representing the object fill;
    * @remarks Only present if geometry=paths is passed
    */
-  fillGeometry?: FigmaVectorPath[]
+  fillGeometry?: FigmaVectorPath[];
   /**
    * Map from ID to PaintOverride for looking up fill overrides.
    * To see which regions are overridden, you must use the geometry=paths option.
    * @remarks Each path returned may have an overrideId which maps to this table.
    */
-  fillOverrideTable: Record<number, FigmaPaintOverride>
+  fillOverrideTable: Record<number, FigmaPaintOverride>;
   /**
    * An array of stroke paints applied to the node
    * @default []
@@ -650,7 +656,7 @@ export interface FigmaVectorNode<TNodeType extends FigmaNodeType = "VECTOR"> ext
    * An array of paths representing the object stroke
    * @remarks Only specified if parameter geometry=paths is used.
    */
-  strokeGeometry?: FigmaVectorPath[]
+  strokeGeometry?: FigmaVectorPath[];
   /**
    * Position of stroke relative to vector outline
    */
@@ -659,10 +665,11 @@ export interface FigmaVectorNode<TNodeType extends FigmaNodeType = "VECTOR"> ext
    * A mapping of a StyleType to style key of styles present on this node.
    * The style key can be used to look up more information about the style in the top-level styles field.
    */
-  styles: FigmaNodeStyles
+  styles: FigmaNodeStyles;
 }
 
-export interface FigmaBooleanOperationNode extends FigmaVectorNode<"BOOLEAN_OPERATION"> {
+export interface FigmaBooleanOperationNode
+  extends FigmaVectorNode<"BOOLEAN_OPERATION"> {
   /**
    * An array of nodes that are being boolean operated on
    */
@@ -670,14 +677,14 @@ export interface FigmaBooleanOperationNode extends FigmaVectorNode<"BOOLEAN_OPER
   /**
    * Indicates the type of boolean operation applied to one or more nodes
    */
-  booleanOperation: FigmaBooleanOperation
+  booleanOperation: FigmaBooleanOperation;
 }
 
 export type FigmaStarNode = FigmaVectorNode<"STAR">;
 
 export type FigmaLineNode = FigmaVectorNode<"LINE">;
 
-export interface  FigmaEllipseNode extends FigmaVectorNode<"ELLIPSE"> {
+export interface FigmaEllipseNode extends FigmaVectorNode<"ELLIPSE"> {
   /**
    * Start and end angles of the ellipse measured clockwise from the x axis, plus the inner radius for donuts
    */
@@ -771,7 +778,7 @@ export interface FigjamTableNode extends FigmaGlobalNode<"TABLE"> {
    * An array of effects attached to this node
    * @default []
    */
-  effects: FigmaEffect[]
+  effects: FigmaEffect[];
   /**
    * An array of export settings representing images to export from the node
    * @default []
@@ -806,7 +813,8 @@ export interface FigjamTableNode extends FigmaGlobalNode<"TABLE"> {
   strokeWeight: number;
 }
 
-export interface FigmaTextNode extends Omit<FigmaVectorNode<"TEXT">, "fillOverrideTable"> {
+export interface FigmaTextNode
+  extends Omit<FigmaVectorNode<"TEXT">, "fillOverrideTable"> {
   /**
    * Text contained within a text box
    */
@@ -875,7 +883,10 @@ export interface FigmaComponentNode extends FigmaFrameNode<"COMPONENT"> {
    * A mapping of name to ComponentPropertyDefinition for every component property on this component.
    * Each property has a type, defaultValue, and other optional values
    */
-  componentPropertyDefinitions: Record<string, FigmaComponentPropertyDefinition>;
+  componentPropertyDefinitions: Record<
+    string,
+    FigmaComponentPropertyDefinition
+  >;
 }
 
 export interface FigmaComponentSetNode extends FigmaFrameNode<"COMPONENT_SET"> {
@@ -883,7 +894,10 @@ export interface FigmaComponentSetNode extends FigmaFrameNode<"COMPONENT_SET"> {
    * A mapping of name to ComponentPropertyDefinition for every component property on this component.
    * Each property has a type, defaultValue, and other optional values
    */
-  componentPropertyDefinitions: Record<string, FigmaComponentPropertyDefinition>;
+  componentPropertyDefinitions: Record<
+    string,
+    FigmaComponentPropertyDefinition
+  >;
 }
 
 /**
@@ -981,7 +995,8 @@ export interface FigjamStickyNode extends FigmaGlobalNode<"STICKY"> {
   relativeTransform?: FigmaTransform;
 }
 
-export interface FigjamShapeWithTextNode extends FigmaGlobalNode<"SHAPE_WITH_TEXT"> {
+export interface FigjamShapeWithTextNode
+  extends FigmaGlobalNode<"SHAPE_WITH_TEXT"> {
   /**
    * Bounding box of the node in absolute space coordinates
    */
@@ -1025,7 +1040,7 @@ export interface FigjamShapeWithTextNode extends FigmaGlobalNode<"SHAPE_WITH_TEX
    * An array of effects attached to this node
    * @default []
    */
-  effects: FigmaEffect[]
+  effects: FigmaEffect[];
   /**
    * An array of export settings representing images to export from the node
    * @default []
@@ -1169,7 +1184,7 @@ export interface FigjamConnectorNode extends FigmaGlobalNode<"CONNECTOR"> {
    * An array of effects attached to this node
    * @default []
    */
-  effects: FigmaEffect[]
+  effects: FigmaEffect[];
   /**
    * An array of export settings representing images to export from the node
    * @default []
@@ -1267,4 +1282,3 @@ export type FigmaAnyNode =
   | FigjamShapeWithTextNode
   | FigjamConnectorNode
   | FigjamWashiTapeNode;
-

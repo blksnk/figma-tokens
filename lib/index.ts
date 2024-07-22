@@ -1,5 +1,7 @@
-export * from "./tokens.all.ts";
+export * from "./tokens.all";
 
-export * from "./tokens.collection.ts";
+export * from "./tokens.collection";
 
-export * from "./tokens.values.ts";
+export * from "./tokens.values";
+
+export * from "./icons";

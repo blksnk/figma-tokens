@@ -1,12 +1,19 @@
+import { GenericFn } from "@ubloimmo/front-util";
+
 const UPPERCASE = /[\p{Lu}]/u;
 const LOWERCASE = /[\p{Ll}]/u;
 const LEADING_CAPITAL = /^[\p{Lu}](?![\p{Lu}])/gu;
 const IDENTIFIER = /([\p{Alpha}\p{N}_]|$)/u;
 const SEPARATORS = /[_.\- ]+/;
+const NUMBER_IN_PARENTHESIS = /\(([0-9]+)\)/g;
+const KEBAB_CASE_REPLACE = /[A-Z]+(?![a-z])|[A-Z]/g;
 
-const LEADING_SEPARATORS = new RegExp('^' + SEPARATORS.source);
-const SEPARATORS_AND_IDENTIFIER = new RegExp(SEPARATORS.source + IDENTIFIER.source, 'gu');
-const NUMBERS_AND_IDENTIFIER = new RegExp('\\d+' + IDENTIFIER.source, 'gu');
+const LEADING_SEPARATORS = new RegExp("^" + SEPARATORS.source);
+const SEPARATORS_AND_IDENTIFIER = new RegExp(
+  SEPARATORS.source + IDENTIFIER.source,
+  "gu"
+);
+const NUMBERS_AND_IDENTIFIER = new RegExp("\\d+" + IDENTIFIER.source, "gu");
 
 export type Options = {
   /**
@@ -70,11 +77,7 @@ export type Options = {
    Setting `locale: false` ignores the platform locale and uses the [Unicode Default Case Conversion](https://unicode-org.github.io/icu/userguide/transforms/casemappings.html#simple-single-character-case-mapping) algorithm:
 
    @example
-   ```
-   import camelCase from 'camelcase';
-
-   // On a platform with `tr-TR`.`
-
+   ```typescript
    camelCase('lorem-ipsum');
    //=> 'loremİpsum'
 
@@ -85,7 +88,12 @@ export type Options = {
   readonly locale?: false | string | readonly string[];
 };
 
-const preserveCamelCase = (string, toLowerCase, toUpperCase, preserveConsecutiveUppercase) => {
+const preserveCamelCase = (
+  string: string,
+  toLowerCase: GenericFn<[string], string>,
+  toUpperCase: GenericFn<[string], string>,
+  preserveConsecutiveUppercase?: boolean
+) => {
   let isLastCharLower = false;
   let isLastCharUpper = false;
   let isLastLastCharUpper = false;
@@ -93,42 +101,77 @@ const preserveCamelCase = (string, toLowerCase, toUpperCase, preserveConsecutive
 
   for (let index = 0; index < string.length; index++) {
     const character = string[index];
-    isLastLastCharPreserved = index > 2 ? string[index - 3] === '-' : true;
+    isLastLastCharPreserved = index > 2 ? string[index - 3] === "-" : true;
 
     if (isLastCharLower && UPPERCASE.test(character)) {
-      string = string.slice(0, index) + '-' + string.slice(index);
+      string = string.slice(0, index) + "-" + string.slice(index);
       isLastCharLower = false;
       isLastLastCharUpper = isLastCharUpper;
       isLastCharUpper = true;
       index++;
-    } else if (isLastCharUpper && isLastLastCharUpper && LOWERCASE.test(character) && (!isLastLastCharPreserved || preserveConsecutiveUppercase)) {
-      string = string.slice(0, index - 1) + '-' + string.slice(index - 1);
+    } else if (
+      isLastCharUpper &&
+      isLastLastCharUpper &&
+      LOWERCASE.test(character) &&
+      (!isLastLastCharPreserved || preserveConsecutiveUppercase)
+    ) {
+      string = string.slice(0, index - 1) + "-" + string.slice(index - 1);
       isLastLastCharUpper = isLastCharUpper;
       isLastCharUpper = false;
       isLastCharLower = true;
     } else {
-      isLastCharLower = toLowerCase(character) === character && toUpperCase(character) !== character;
+      isLastCharLower =
+        toLowerCase(character) === character &&
+        toUpperCase(character) !== character;
       isLastLastCharUpper = isLastCharUpper;
-      isLastCharUpper = toUpperCase(character) === character && toLowerCase(character) !== character;
+      isLastCharUpper =
+        toUpperCase(character) === character &&
+        toLowerCase(character) !== character;
     }
   }
 
   return string;
 };
 
-const preserveConsecutiveUppercase = (input, toLowerCase) => {
+/**
+ * Replaces consecutive uppercase letters at the beginning of a string with their lowercase counterparts.
+ *
+ * @param {string} input - The input string.
+ * @param {function} toLowerCase - A function that converts a string to lowercase.
+ * @return {string} - The modified input string with consecutive uppercase letters replaced by their lowercase counterparts.
+ */
+const preserveConsecutiveUppercase = (
+  input: string,
+  toLowerCase: GenericFn<[string], string>
+) => {
   LEADING_CAPITAL.lastIndex = 0;
 
-  return input.replaceAll(LEADING_CAPITAL, match => toLowerCase(match));
+  return input.replaceAll(LEADING_CAPITAL, (match) => toLowerCase(match));
 };
 
-const postProcess = (input, toUpperCase) => {
+/**
+ * Processes the input by replacing separators and identifiers with specified transformations.
+ *
+ * @param {string} input - The input string to be processed.
+ * @param {function} toUpperCase - The transformation function to be applied to identifiers.
+ * @return {string} - The processed string.
+ */
+const postProcess = (
+  input: string,
+  toUpperCase: GenericFn<[string], string>
+) => {
   SEPARATORS_AND_IDENTIFIER.lastIndex = 0;
   NUMBERS_AND_IDENTIFIER.lastIndex = 0;
 
   return input
-    .replaceAll(NUMBERS_AND_IDENTIFIER, (match, pattern, offset) => ['_', '-'].includes(input.charAt(offset + match.length)) ? match : toUpperCase(match))
-    .replaceAll(SEPARATORS_AND_IDENTIFIER, (_, identifier) => toUpperCase(identifier));
+    .replaceAll(NUMBERS_AND_IDENTIFIER, (match, pattern, offset) =>
+      ["_", "-"].includes(input.charAt(offset + match.length))
+        ? match
+        : toUpperCase(match)
+    )
+    .replaceAll(SEPARATORS_AND_IDENTIFIER, (_, identifier) =>
+      toUpperCase(identifier)
+    );
 };
 
 /**
@@ -170,9 +213,12 @@ const postProcess = (input, toUpperCase) => {
  //=> 'fooBar'
  ```
  */
-export function camelCase(input: string | readonly string[], options?: Options) {
-  if (!(typeof input === 'string' || Array.isArray(input))) {
-    throw new TypeError('Expected the input to be `string | string[]`');
+export function camelCase(
+  input: string | readonly string[],
+  options?: Options
+) {
+  if (!(typeof input === "string" || Array.isArray(input))) {
+    throw new TypeError("Expected the input to be `string | string[]`");
   }
 
   options = {
@@ -182,9 +228,10 @@ export function camelCase(input: string | readonly string[], options?: Options) 
   };
 
   if (Array.isArray(input)) {
-    input = input.map(x => x.trim())
-      .filter(x => x.length)
-      .join('-');
+    input = input
+      .map((x) => x.trim())
+      .filter((x) => x.length)
+      .join("-");
   } else {
     input = input.trim();
   }
@@ -192,20 +239,27 @@ export function camelCase(input: string | readonly string[], options?: Options) 
   input = input as string;
 
   if (input.length === 0) {
-    return '';
+    return "";
   }
 
-  const toLowerCase = options.locale === false
-    ? string => string.toLowerCase()
-    : string => string.toLocaleLowerCase(options.locale);
+  const baseLocale = options.locale;
+  const locale = baseLocale
+    ? Array.isArray(baseLocale)
+      ? [...baseLocale]
+      : baseLocale
+    : undefined;
 
-  const toUpperCase = options.locale === false
-    ? string => string.toUpperCase()
-    : string => string.toLocaleUpperCase(options.locale);
+  const toLowerCase = !locale
+    ? (string: string) => string.toLowerCase()
+    : (string: string) => string.toLocaleLowerCase(locale as string | string[]);
+
+  const toUpperCase = !locale
+    ? (string: string) => string.toUpperCase()
+    : (string: string) => string.toLocaleUpperCase(locale as string | string[]);
 
   if (input.length === 1) {
     if (SEPARATORS.test(input)) {
-      return '';
+      return "";
     }
 
     return options.pascalCase ? toUpperCase(input) : toLowerCase(input);
@@ -214,19 +268,32 @@ export function camelCase(input: string | readonly string[], options?: Options) 
   const hasUpperCase = input !== toLowerCase(input);
 
   if (hasUpperCase) {
-    input = preserveCamelCase(input, toLowerCase, toUpperCase, options.preserveConsecutiveUppercase);
+    input = preserveCamelCase(
+      input,
+      toLowerCase,
+      toUpperCase,
+      options.preserveConsecutiveUppercase
+    );
   }
 
-  input = input.replace(LEADING_SEPARATORS, '');
-  input = options.preserveConsecutiveUppercase ? preserveConsecutiveUppercase(input, toLowerCase) : toLowerCase(input);
+  input = String(input).replace(LEADING_SEPARATORS, "");
+  input = options.preserveConsecutiveUppercase
+    ? preserveConsecutiveUppercase(input, toLowerCase)
+    : toLowerCase(input);
 
   if (options.pascalCase) {
-    input = toUpperCase(input.charAt(0)) + input.slice(1);
+    input = toUpperCase(String(input).charAt(0)) + input.slice(1);
   }
 
   return postProcess(input, toUpperCase);
 }
 
+/**
+ * Replaces specific characters in a string with their corresponding replacements.
+ *
+ * @param {string} str - The input string to be sanitized.
+ * @return {string} The sanitized string.
+ */
 export const sanitize = (str: string): string =>
   str
     .replaceAll("é", "e")
@@ -237,6 +304,25 @@ export const sanitize = (str: string): string =>
     .replaceAll("Ê", "E")
     .replaceAll("à", "a")
     .replaceAll("ç", "c")
+    .replaceAll(NUMBER_IN_PARENTHESIS, "");
 
+/**
+ * Converts a given string to a camel case format after sanitizing it.
+ *
+ * @param {string} str - The string to be converted to camel case after sanitization.
+ * @return {string} The resulting string in camel case format.
+ */
+export const saneCamel = (str: string) => sanitize(camelCase(str));
 
-export const saneCamel = (str: string) => camelCase(sanitize(str));
+/**
+ * Replaces uppercase letters with hyphens and lowercase letters,
+ * excluding the first letter if it is uppercase.
+ *
+ * @param {string} str - The input string.
+ * @return {string} The kebabized string.
+ */
+export const kebabize = (str: string) =>
+  str.replace(
+    KEBAB_CASE_REPLACE,
+    (match, ofs) => (ofs ? "-" : "") + match.toLowerCase()
+  );

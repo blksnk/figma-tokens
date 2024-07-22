@@ -1,1295 +1,824 @@
 export const tokens = [
   {
-    "name": "gjcgsci/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "@figma/changes",
+    "type": "TEXT",
+    "value": "3.75rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "gjcgsci/light",
-    "type": "COLOR",
-    "value": "rgba(240, 234, 235, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(240, 234, 235, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 234, 235, 1);"
-    }
-  },
-  {
-    "name": "gjcgsci/dark",
-    "type": "COLOR",
-    "value": "rgba(107, 57, 63, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(107, 57, 63, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(107, 57, 63, 1);"
-    }
-  },
-  {
-    "name": "gjcgsci/main",
-    "type": "COLOR",
-    "value": "rgba(148, 86, 95, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(148, 86, 95, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(148, 86, 95, 1);"
-    }
-  },
-  {
-    "name": "gaia/dark",
-    "type": "COLOR",
-    "value": "rgba(140, 18, 62, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(140, 18, 62, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(140, 18, 62, 1);"
-    }
-  },
-  {
-    "name": "commune/main",
-    "type": "COLOR",
-    "value": "rgba(13, 71, 109, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(13, 71, 109, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(13, 71, 109, 1);"
-    }
-  },
-  {
-    "name": "gaia/light",
-    "type": "COLOR",
-    "value": "rgba(255, 241, 241, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 241, 241, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 241, 241, 1);"
-    }
-  },
-  {
-    "name": "gaia/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "gaia/main",
-    "type": "COLOR",
-    "value": "rgba(203, 21, 94, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(203, 21, 94, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(203, 21, 94, 1);"
-    }
-  },
-  {
-    "name": "sciReglisse/dark",
-    "type": "COLOR",
-    "value": "rgba(19, 46, 89, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(19, 46, 89, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(19, 46, 89, 1);"
-    }
-  },
-  {
-    "name": "whoo/dark",
-    "type": "COLOR",
-    "value": "rgba(43, 43, 43, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(43, 43, 43, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(43, 43, 43, 1);"
-    }
-  },
-  {
-    "name": "parmentier/main",
-    "type": "COLOR",
-    "value": "rgba(23, 105, 186, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(23, 105, 186, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(23, 105, 186, 1);"
-    }
-  },
-  {
-    "name": "parmentier/light",
-    "type": "COLOR",
-    "value": "rgba(227, 235, 244, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(227, 235, 244, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(227, 235, 244, 1);"
-    }
-  },
-  {
-    "name": "sciReglisse/light",
-    "type": "COLOR",
-    "value": "rgba(227, 231, 237, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(227, 231, 237, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(227, 231, 237, 1);"
-    }
-  },
-  {
-    "name": "commune/light",
-    "type": "COLOR",
-    "value": "rgba(226, 232, 237, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(226, 232, 237, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 232, 237, 1);"
-    }
-  },
-  {
-    "name": "parmentier/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "sciReglisse/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "sciReglisse/main",
-    "type": "COLOR",
-    "value": "rgba(22, 61, 107, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(22, 61, 107, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(22, 61, 107, 1);"
-    }
-  },
-  {
-    "name": "whoo/light",
-    "type": "COLOR",
-    "value": "rgba(235, 235, 235, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(235, 235, 235, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(235, 235, 235, 1);"
-    }
-  },
-  {
-    "name": "whoo/main",
-    "type": "COLOR",
-    "value": "rgba(53, 53, 53, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(53, 53, 53, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(53, 53, 53, 1);"
-    }
-  },
-  {
-    "name": "parmentier/dark",
-    "type": "COLOR",
-    "value": "rgba(20, 70, 145, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(20, 70, 145, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(20, 70, 145, 1);"
-    }
-  },
-  {
-    "name": "commune/dark",
-    "type": "COLOR",
-    "value": "rgba(7, 39, 61, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(7, 39, 61, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(7, 39, 61, 1);"
-    }
-  },
-  {
-    "name": "brownfields/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "lacoloc/light",
-    "type": "COLOR",
-    "value": "rgba(225, 233, 235, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(225, 233, 235, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 233, 235, 1);"
-    }
-  },
-  {
-    "name": "ltf/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "ltf/main",
-    "type": "COLOR",
-    "value": "rgba(90, 129, 14, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(90, 129, 14, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(90, 129, 14, 1);"
-    }
-  },
-  {
-    "name": "lakaz/dark",
-    "type": "COLOR",
-    "value": "rgba(54, 77, 182, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(54, 77, 182, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(54, 77, 182, 1);"
-    }
-  },
-  {
-    "name": "strasimmo/dark",
-    "type": "COLOR",
-    "value": "rgba(6, 28, 184, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(6, 28, 184, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 28, 184, 1);"
-    }
-  },
-  {
-    "name": "myMaison/main",
-    "type": "COLOR",
-    "value": "rgba(9, 117, 14, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(9, 117, 14, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(9, 117, 14, 1);"
-    }
-  },
-  {
-    "name": "coprovisor/main",
-    "type": "COLOR",
-    "value": "rgba(94, 22, 235, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(94, 22, 235, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(94, 22, 235, 1);"
-    }
-  },
-  {
-    "name": "blueEstate/main",
-    "type": "COLOR",
-    "value": "rgba(0, 73, 101, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(0, 73, 101, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 73, 101, 1);"
-    }
-  },
-  {
-    "name": "citesCaritas/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "coprovisor/light",
-    "type": "COLOR",
-    "value": "rgba(234, 227, 249, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(234, 227, 249, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 227, 249, 1);"
-    }
-  },
-  {
-    "name": "lakaz/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "oneNest/light",
-    "type": "COLOR",
-    "value": "rgba(229, 237, 233, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(229, 237, 233, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 237, 233, 1);"
-    }
-  },
-  {
-    "name": "brownfields/dark",
-    "type": "COLOR",
-    "value": "rgba(88, 95, 28, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(88, 95, 28, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(88, 95, 28, 1);"
-    }
-  },
-  {
-    "name": "novarea/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "novarea/light",
-    "type": "COLOR",
-    "value": "rgba(229, 237, 252, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(229, 237, 252, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 237, 252, 1);"
-    }
-  },
-  {
-    "name": "brownfields/light",
-    "type": "COLOR",
-    "value": "rgba(241, 241, 197, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(241, 241, 197, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(241, 241, 197, 1);"
-    }
-  },
-  {
-    "name": "coprovisor/dark",
-    "type": "COLOR",
-    "value": "rgba(62, 19, 176, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(62, 19, 176, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(62, 19, 176, 1);"
-    }
-  },
-  {
-    "name": "novarea/main",
-    "type": "COLOR",
-    "value": "rgba(0, 87, 226, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(0, 87, 226, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 87, 226, 1);"
-    }
-  },
-  {
-    "name": "myMaison/dark",
-    "type": "COLOR",
-    "value": "rgba(11, 84, 14, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(11, 84, 14, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(11, 84, 14, 1);"
-    }
-  },
-  {
-    "name": "lliResidences/light",
-    "type": "COLOR",
-    "value": "rgba(242, 234, 242, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(242, 234, 242, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(242, 234, 242, 1);"
-    }
-  },
-  {
-    "name": "livretP/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "lliResidences/main",
-    "type": "COLOR",
-    "value": "rgba(112, 34, 131, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(112, 34, 131, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(112, 34, 131, 1);"
-    }
-  },
-  {
-    "name": "lsPatrimonium/main",
-    "type": "COLOR",
-    "value": "rgba(84, 30, 145, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(84, 30, 145, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(84, 30, 145, 1);"
-    }
-  },
-  {
-    "name": "citesCaritas/light",
-    "type": "COLOR",
-    "value": "rgba(229, 239, 246, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(229, 239, 246, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 239, 246, 1);"
-    }
-  },
-  {
-    "name": "oneNest/dark",
-    "type": "COLOR",
-    "value": "rgba(32, 87, 48, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(32, 87, 48, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(32, 87, 48, 1);"
-    }
-  },
-  {
-    "name": "lakaz/main",
-    "type": "COLOR",
-    "value": "rgba(80, 118, 253, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(80, 118, 253, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(80, 118, 253, 1);"
-    }
-  },
-  {
-    "name": "strasimmo/light",
-    "type": "COLOR",
-    "value": "rgba(225, 229, 251, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(225, 229, 251, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 229, 251, 1);"
-    }
-  },
-  {
-    "name": "oneNest/main",
-    "type": "COLOR",
-    "value": "rgba(45, 125, 71, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(45, 125, 71, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(45, 125, 71, 1);"
-    }
-  },
-  {
-    "name": "lakaz/light",
-    "type": "COLOR",
-    "value": "rgba(233, 237, 251, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(233, 237, 251, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 237, 251, 1);"
-    }
-  },
-  {
-    "name": "strasimmo/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "ltf/dark",
-    "type": "COLOR",
-    "value": "rgba(59, 90, 14, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(59, 90, 14, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(59, 90, 14, 1);"
-    }
-  },
-  {
-    "name": "coprovisor/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "blueEstate/dark",
-    "type": "COLOR",
-    "value": "rgba(6, 52, 78, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(6, 52, 78, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 52, 78, 1);"
-    }
-  },
-  {
-    "name": "proximita/dark",
-    "type": "COLOR",
-    "value": "rgba(6, 74, 151, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(6, 74, 151, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 74, 151, 1);"
-    }
-  },
-  {
-    "name": "semiTarbes/dark",
-    "type": "COLOR",
-    "value": "rgba(140, 18, 62, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(140, 18, 62, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "3.75rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "100%",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "normal"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(140, 18, 62, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 3.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
-    "name": "livretP/main",
-    "type": "COLOR",
-    "value": "rgba(39, 102, 165, 1)",
+    "name": "@figma/collection",
+    "type": "TEXT",
+    "value": "37.5rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(39, 102, 165, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "37.5rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "37.5rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "normal"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(39, 102, 165, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 37.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 37.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
-    "name": "semiTarbes/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "@figma/coverDescription",
+    "type": "TEXT",
+    "value": "5.356250286102295rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "5.356250286102295rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "100%",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "normal"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 5.356250286102295rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
-    "name": "blueEstate/light",
-    "type": "COLOR",
-    "value": "rgba(225, 232, 236, 1)",
+    "name": "@figma/coverTitle",
+    "type": "TEXT",
+    "value": "8.703906059265137rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(225, 232, 236, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "8.703906059265137rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "100%",
+        "letterSpacing": "-0.3481562423706055rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "normal"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 232, 236, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 8.703906059265137rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: -0.3481562423706055rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
-    "name": "r2M/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "@figma/flow",
+    "type": "TEXT",
+    "value": "12.5rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "12.5rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "12.5rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "normal"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 12.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 12.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
-    "name": "citesCaritas/dark",
-    "type": "COLOR",
-    "value": "rgba(6, 56, 116, 1)",
+    "name": "@figma/section",
+    "type": "TEXT",
+    "value": "75rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(6, 56, 116, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "75rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "75rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "normal"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 56, 116, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 75rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
-    "name": "lsPatrimonium/light",
-    "type": "COLOR",
-    "value": "rgba(233, 228, 240, 1)",
+    "name": "@figma/stickyNote",
+    "type": "TEXT",
+    "value": "1.5625rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(233, 228, 240, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "1.5625rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "100%",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "normal"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 228, 240, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.5625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
     }
   },
   {
-    "name": "tkImmo/light",
+    "name": "alloy/base",
     "type": "COLOR",
-    "value": "rgba(225, 237, 244, 1)",
+    "value": "rgba(100, 49, 15, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(225, 237, 244, 1)"
+        "background": "rgba(100, 49, 15, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 237, 244, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(100, 49, 15, 1);"
     }
   },
   {
-    "name": "r2M/main",
+    "name": "alloy/dark",
     "type": "COLOR",
-    "value": "rgba(0, 0, 255, 1)",
+    "value": "rgba(36, 27, 31, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(0, 0, 255, 1)"
+        "background": "rgba(36, 27, 31, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 0, 255, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(36, 27, 31, 1);"
     }
   },
   {
-    "name": "r2M/dark",
+    "name": "alloy/light",
     "type": "COLOR",
-    "value": "rgba(6, 6, 184, 1)",
+    "value": "rgba(249, 239, 231, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(6, 6, 184, 1)"
+        "background": "rgba(249, 239, 231, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 6, 184, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(249, 239, 231, 1);"
     }
   },
   {
-    "name": "myMaison/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "lsPatrimonium/dark",
+    "name": "alloy/medium",
     "type": "COLOR",
-    "value": "rgba(58, 24, 116, 1)",
+    "value": "rgba(210, 143, 96, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(58, 24, 116, 1)"
+        "background": "rgba(210, 143, 96, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(58, 24, 116, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(210, 143, 96, 1);"
     }
   },
   {
-    "name": "brownfields/main",
-    "type": "COLOR",
-    "value": "rgba(141, 153, 49, 1)",
+    "name": "border/bottom",
+    "type": "EFFECT",
+    "value": "inset 0rem -0.03125rem 0rem 0rem rgba(30, 28, 76, 0.1500)",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(141, 153, 49, 1)"
+        "boxShadow": "inset 0rem -0.03125rem 0rem 0rem rgba(30, 28, 76, 0.1500)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(141, 153, 49, 1);"
+      "rules": "box-shadow: inset 0rem -0.03125rem 0rem 0rem rgba(30, 28, 76, 0.1500);"
     }
   },
   {
-    "name": "livretP/light",
-    "type": "COLOR",
-    "value": "rgba(229, 235, 242, 1)",
+    "name": "border/left",
+    "type": "EFFECT",
+    "value": "inset 0.03125rem 0rem 0rem 0rem rgba(30, 28, 76, 0.1500)",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(229, 235, 242, 1)"
+        "boxShadow": "inset 0.03125rem 0rem 0rem 0rem rgba(30, 28, 76, 0.1500)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 235, 242, 1);"
+      "rules": "box-shadow: inset 0.03125rem 0rem 0rem 0rem rgba(30, 28, 76, 0.1500);"
     }
   },
   {
-    "name": "tkImmo/main",
-    "type": "COLOR",
-    "value": "rgba(0, 116, 184, 1)",
+    "name": "border/right",
+    "type": "EFFECT",
+    "value": "inset -0.03125rem 0rem 0rem 0rem rgba(30, 28, 76, 0.1500)",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(0, 116, 184, 1)"
+        "boxShadow": "inset -0.03125rem 0rem 0rem 0rem rgba(30, 28, 76, 0.1500)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 116, 184, 1);"
+      "rules": "box-shadow: inset -0.03125rem 0rem 0rem 0rem rgba(30, 28, 76, 0.1500);"
     }
   },
   {
-    "name": "tkImmo/dark",
-    "type": "COLOR",
-    "value": "rgba(6, 80, 143, 1)",
+    "name": "border/top",
+    "type": "EFFECT",
+    "value": "inset 0rem 0.03125rem 0rem 0rem rgba(30, 28, 76, 0.1500)",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(6, 80, 143, 1)"
+        "boxShadow": "inset 0rem 0.03125rem 0rem 0rem rgba(30, 28, 76, 0.1500)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 80, 143, 1);"
+      "rules": "box-shadow: inset 0rem 0.03125rem 0rem 0rem rgba(30, 28, 76, 0.1500);"
     }
   },
   {
-    "name": "proximita/main",
+    "name": "charcoal/base",
     "type": "COLOR",
-    "value": "rgba(0, 114, 198, 1)",
+    "value": "rgba(39, 54, 73, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(0, 114, 198, 1)"
+        "background": "rgba(39, 54, 73, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 114, 198, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(39, 54, 73, 1);"
     }
   },
   {
-    "name": "lacoloc/dark",
+    "name": "charcoal/dark",
     "type": "COLOR",
-    "value": "rgba(6, 60, 71, 1)",
+    "value": "rgba(18, 27, 45, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(6, 60, 71, 1)"
+        "background": "rgba(18, 27, 45, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 60, 71, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(18, 27, 45, 1);"
     }
   },
   {
-    "name": "proximita/light",
+    "name": "charcoal/light",
     "type": "COLOR",
-    "value": "rgba(225, 236, 246, 1)",
+    "value": "rgba(234, 237, 241, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(225, 236, 246, 1)"
+        "background": "rgba(234, 237, 241, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 236, 246, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 237, 241, 1);"
     }
   },
   {
-    "name": "citesCaritas/main",
+    "name": "charcoal/medium",
     "type": "COLOR",
-    "value": "rgba(0, 81, 145, 1)",
+    "value": "rgba(168, 178, 191, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(0, 81, 145, 1)"
+        "background": "rgba(168, 178, 191, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 81, 145, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(168, 178, 191, 1);"
     }
   },
   {
-    "name": "lsPatrimonium/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "desktop/h1/bold",
+    "type": "TEXT",
+    "value": "2.875rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "2.875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "3.375rem",
+        "letterSpacing": "-0.06687500327825546rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "bricks/light",
-    "type": "COLOR",
-    "value": "rgba(222, 228, 233, 1)",
+    "name": "desktop/h1/medium",
+    "type": "TEXT",
+    "value": "2.875rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(222, 228, 233, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "2.875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "3.375rem",
+        "letterSpacing": "-0.06687500327825546rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(222, 228, 233, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "novarea/dark",
-    "type": "COLOR",
-    "value": "rgba(6, 58, 167, 1)",
+    "name": "desktop/h1/regular",
+    "type": "TEXT",
+    "value": "2.875rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(6, 58, 167, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "2.875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "3.375rem",
+        "letterSpacing": "-0.06687500327825546rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 58, 167, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 2.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.375rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "remaxImmco/main",
-    "type": "COLOR",
-    "value": "rgba(0, 61, 165, 1)",
+    "name": "desktop/h2/bold",
+    "type": "TEXT",
+    "value": "1.8550000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(0, 61, 165, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "1.8550000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.04937500134110451rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 61, 165, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "lliResidences/dark",
-    "type": "COLOR",
-    "value": "rgba(80, 26, 97, 1)",
+    "name": "desktop/h2/medium",
+    "type": "TEXT",
+    "value": "1.8550000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(80, 26, 97, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "1.8550000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.04937500134110451rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(80, 26, 97, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "bricks/dark",
-    "type": "COLOR",
-    "value": "rgba(18, 51, 76, 1)",
+    "name": "desktop/h2/regular",
+    "type": "TEXT",
+    "value": "1.8550000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(18, 51, 76, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "1.8550000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2.375rem",
+        "letterSpacing": "-0.04937500134110451rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(18, 51, 76, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.8550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.375rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "bricks/main",
-    "type": "COLOR",
-    "value": "rgba(21, 67, 93, 1)",
+    "name": "desktop/h3/bold",
+    "type": "TEXT",
+    "value": "1.3550000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(21, 67, 93, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "1.3550000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.875rem",
+        "letterSpacing": "-0.029374999925494194rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(21, 67, 93, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "bricks/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "desktop/h3/medium",
+    "type": "TEXT",
+    "value": "1.3550000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "1.3550000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.875rem",
+        "letterSpacing": "-0.029374999925494194rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "semiTarbes/main",
-    "type": "COLOR",
-    "value": "rgba(203, 21, 94, 1)",
+    "name": "desktop/h3/regular",
+    "type": "TEXT",
+    "value": "1.3550000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(203, 21, 94, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "1.3550000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.875rem",
+        "letterSpacing": "-0.029374999925494194rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(203, 21, 94, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.3550000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.875rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "blueEstate/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "desktop/h4/bold",
+    "type": "TEXT",
+    "value": "1.1050000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "1.1050000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "-0.020625000819563866rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "proximita/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "desktop/h4/medium",
+    "type": "TEXT",
+    "value": "1.1050000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "1.1050000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "-0.020625000819563866rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "oneNest/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "desktop/h4/regular",
+    "type": "TEXT",
+    "value": "1.1050000190734863rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "1.1050000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.375rem",
+        "letterSpacing": "-0.020625000819563866rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.1050000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.375rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "livretP/dark",
-    "type": "COLOR",
-    "value": "rgba(19, 50, 81, 1)",
+    "name": "desktop/m/bold",
+    "type": "TEXT",
+    "value": "0.875rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(19, 50, 81, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "0.875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(19, 50, 81, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "remaxImmco/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "desktop/m/medium",
+    "type": "TEXT",
+    "value": "0.875rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "0.875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "remaxImmco/light",
-    "type": "COLOR",
-    "value": "rgba(225, 231, 242, 1)",
+    "name": "desktop/m/regular",
+    "type": "TEXT",
+    "value": "0.875rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(225, 231, 242, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "0.875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(225, 231, 242, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "strasimmo/main",
-    "type": "COLOR",
-    "value": "rgba(0, 37, 255, 1)",
+    "name": "desktop/s/bold",
+    "type": "TEXT",
+    "value": "0.796875rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(0, 37, 255, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "0.796875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "0.887499988079071rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 37, 255, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.796875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.887499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "ltf/light",
-    "type": "COLOR",
-    "value": "rgba(234, 238, 227, 1)",
+    "name": "desktop/s/medium",
+    "type": "TEXT",
+    "value": "0.800000011920929rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(234, 238, 227, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "0.800000011920929rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "0.887499988079071rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 238, 227, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.800000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.887499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "lacoloc/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "desktop/s/regular",
+    "type": "TEXT",
+    "value": "0.800000011920929rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "0.800000011920929rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "0.887499988079071rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.800000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.887499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "lliResidences/background",
-    "type": "ASSET",
-    "value": null,
+    "name": "desktop/xs/bold",
+    "type": "TEXT",
+    "value": "0.675000011920929rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "0.675000011920929rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "0.762499988079071rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.675000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.762499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "remaxImmco/dark",
-    "type": "COLOR",
-    "value": "rgba(6, 43, 130, 1)",
+    "name": "desktop/xs/medium",
+    "type": "TEXT",
+    "value": "0.675000011920929rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(6, 43, 130, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "0.675000011920929rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "0.762499988079071rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 43, 130, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.675000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.762499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "semiTarbes/light",
-    "type": "COLOR",
-    "value": "rgba(245, 227, 235, 1)",
+    "name": "desktop/xs/regular",
+    "type": "TEXT",
+    "value": "0.675000011920929rem",
     "css": {
       "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(245, 227, 235, 1)"
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "0.675000011920929rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "0.762499988079071rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(245, 227, 235, 1);"
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.675000011920929rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.762499988079071rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "lacoloc/main",
+    "name": "duke/base",
     "type": "COLOR",
-    "value": "rgba(0, 81, 93, 1)",
+    "value": "rgba(0, 0, 163, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(0, 81, 93, 1)"
+        "background": "rgba(0, 0, 163, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 81, 93, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 0, 163, 1);"
     }
   },
   {
-    "name": "myMaison/light",
+    "name": "duke/dark",
     "type": "COLOR",
-    "value": "rgba(226, 242, 228, 1)",
+    "value": "rgba(11, 15, 68, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(226, 242, 228, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 242, 228, 1);"
-    }
-  },
-  {
-    "name": "tkImmo/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
+        "background": "rgba(11, 15, 68, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(11, 15, 68, 1);"
     }
   },
   {
-    "name": "r2M/light",
+    "name": "duke/light",
     "type": "COLOR",
     "value": "rgba(225, 225, 251, 1)",
     "css": {
@@ -1302,1976 +831,98 @@ export const tokens = [
     }
   },
   {
-    "name": "ublo/main",
+    "name": "duke/medium",
     "type": "COLOR",
-    "value": "rgba(90, 55, 216, 1)",
+    "value": "rgba(150, 150, 252, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(90, 55, 216, 1)"
+        "background": "rgba(150, 150, 252, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(90, 55, 216, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(150, 150, 252, 1);"
     }
   },
   {
-    "name": "ublo/dark",
+    "name": "egyptian/base",
     "type": "COLOR",
-    "value": "rgba(60, 39, 163, 1)",
+    "value": "rgba(0, 55, 143, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(60, 39, 163, 1)"
+        "background": "rgba(0, 55, 143, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(60, 39, 163, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 55, 143, 1);"
     }
   },
   {
-    "name": "ublo/background",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "ublo/light",
+    "name": "egyptian/dark",
     "type": "COLOR",
-    "value": "rgba(234, 230, 248, 1)",
+    "value": "rgba(11, 29, 63, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(234, 230, 248, 1)"
+        "background": "rgba(11, 29, 63, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 230, 248, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(11, 29, 63, 1);"
     }
   },
   {
-    "name": "mobile/address/default",
-    "type": "TEXT",
-    "value": "1.125rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "1.125rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.220625rem%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.220625rem%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/address/selected",
-    "type": "TEXT",
-    "value": "1.125rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1.125rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.220625rem%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.220625rem%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/h1",
-    "type": "TEXT",
-    "value": "2.5rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "2.5rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "2.6524999618530276rem%",
-        "letterSpacing": "-0.0625rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 2.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.6524999618530276rem%;\nletter-spacing: -0.0625rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/small",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/display",
-    "type": "TEXT",
-    "value": "2.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "2.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "2.82150016784668rem%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 2.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.82150016784668rem%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/bodyBold",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/h2",
-    "type": "TEXT",
-    "value": "1.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.9375rem",
-        "letterSpacing": "-0.035rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.9375rem;\nletter-spacing: -0.035rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/overline",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "uppercase",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/h3",
-    "type": "TEXT",
-    "value": "1.5rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "1.5rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.545rem%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.545rem%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/body",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/h4",
-    "type": "TEXT",
-    "value": "1.125rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1.125rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/button",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "900",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 900;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "mobile/caption",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "100%",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "assets/logo/actionLogement",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "bottomDivider",
-    "type": "EFFECT",
-    "value": "inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500)",
-    "css": {
-      "style": {
-        "boxShadow": "inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500)"
-      },
-      "rules": "box-shadow: inset 0rem -0.03125rem 0rem 0rem rgba(12, 26, 75, 0.1500);"
-    }
-  },
-  {
-    "name": "maps/paris01",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/sartrouville",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris05",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris04",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris03",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/boulogne01",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/mantesLaJolie",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/boulogne03",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/boulogne02",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/torcy",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/yvelines",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris06",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/parisNord",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/versailles",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/parisSud",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/parisEst",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "maps/paris02",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom8",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom10",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom7",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building8",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building7",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom14",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom11",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom12",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building12",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom13",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom15",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building10",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building11",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock11",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock16",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock15",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock14",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock12",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock13",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock8",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock10",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/buildingBlock7",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "desktop/smallItalic (12)",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/extraSmall (10)",
-    "type": "TEXT",
-    "value": "0.625rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.625rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/storage",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/parkingLotOutdoor2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/parkingLotIndoor",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/undefined3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects4",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/undefined1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects6",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/house1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/livingRoom2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/antenna",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/parkingLotOutdoor1",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/storage",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/demo/building3",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/undefined2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/objects2",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/living5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "assets/placeholders/work",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "clickable",
-    "type": "EFFECT",
-    "value": "0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800)"
-      },
-      "rules": "box-shadow: 0rem 0.75rem 1.875rem 0rem rgba(37, 34, 117, 0.0800);"
-    }
-  },
-  {
-    "name": "upfront",
-    "type": "EFFECT",
-    "value": "0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800)"
-      },
-      "rules": "box-shadow: 0rem 1.875rem 2.5rem 0rem rgba(109, 95, 254, 0.0800);"
-    }
-  },
-  {
-    "name": "desktop/h1 (36)",
-    "type": "TEXT",
-    "value": "2.25rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "2.25rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "3.25rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 2.25rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.25rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/button (14)",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/h2 (24)",
-    "type": "TEXT",
-    "value": "1.5rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "1.5rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "2rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/subtitle (16)",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.5rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/pressable (14)",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "uppercase",
-        "lineHeight": "1rem",
-        "letterSpacing": "0.043750000000000004rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 1rem;\nletter-spacing: 0.043750000000000004rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/h4 (16)",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/small (12)",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/smallBold (12)",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/caption (12)",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "0.875rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 0.875rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/overline (12)",
-    "type": "TEXT",
-    "value": "0.75rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "0.75rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "uppercase",
-        "lineHeight": "0.875rem",
-        "letterSpacing": "0.3125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: uppercase;\nline-height: 0.875rem;\nletter-spacing: 0.3125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "state/error/dark",
+    "name": "egyptian/light",
     "type": "COLOR",
-    "value": "rgba(215, 41, 29, 1)",
+    "value": "rgba(229, 237, 252, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(215, 41, 29, 1)"
+        "background": "rgba(229, 237, 252, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(215, 41, 29, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(229, 237, 252, 1);"
     }
   },
   {
-    "name": "desktop/body (14)",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "state/warning/dark",
+    "name": "egyptian/medium",
     "type": "COLOR",
-    "value": "rgba(219, 118, 0, 1)",
+    "value": "rgba(140, 190, 248, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(219, 118, 0, 1)"
+        "background": "rgba(140, 190, 248, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 118, 0, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(140, 190, 248, 1);"
     }
   },
   {
-    "name": "state/success/main",
+    "name": "error/base",
     "type": "COLOR",
-    "value": "rgba(61, 213, 152, 1)",
+    "value": "rgba(219, 61, 53, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(61, 213, 152, 1)"
+        "background": "rgba(219, 61, 53, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(61, 213, 152, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 61, 53, 1);"
     }
   },
   {
-    "name": "black/disabled",
+    "name": "error/dark",
     "type": "COLOR",
-    "value": "rgba(149, 149, 171, 1)",
+    "value": "rgba(99, 41, 53, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(149, 149, 171, 1)"
+        "background": "rgba(99, 41, 53, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(149, 149, 171, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(99, 41, 53, 1);"
     }
   },
   {
-    "name": "state/success/dark",
-    "type": "COLOR",
-    "value": "rgba(41, 169, 118, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(41, 169, 118, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(41, 169, 118, 1);"
-    }
-  },
-  {
-    "name": "desktop/displayTitle (42)",
-    "type": "TEXT",
-    "value": "2.625rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "2.625rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "3.5700000000000003rem%",
-        "letterSpacing": "0.013125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 2.625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5700000000000003rem%;\nletter-spacing: 0.013125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "avatar/women/5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "black/inactive",
-    "type": "COLOR",
-    "value": "rgba(125, 126, 157, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(125, 126, 157, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(125, 126, 157, 1);"
-    }
-  },
-  {
-    "name": "state/info/light",
-    "type": "COLOR",
-    "value": "rgba(233, 245, 254, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(233, 245, 254, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 245, 254, 1);"
-    }
-  },
-  {
-    "name": "black/medium",
-    "type": "COLOR",
-    "value": "rgba(71, 71, 91, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(71, 71, 91, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(71, 71, 91, 1);"
-    }
-  },
-  {
-    "name": "state/info/dark",
-    "type": "COLOR",
-    "value": "rgba(16, 116, 194, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(16, 116, 194, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(16, 116, 194, 1);"
-    }
-  },
-  {
-    "name": "background/light",
-    "type": "COLOR",
-    "value": "rgba(250, 250, 251, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(250, 250, 251, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(250, 250, 251, 1);"
-    }
-  },
-  {
-    "name": "state/info/main",
-    "type": "COLOR",
-    "value": "rgba(32, 150, 243, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(32, 150, 243, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(32, 150, 243, 1);"
-    }
-  },
-  {
-    "name": "white",
-    "type": "COLOR",
-    "value": "rgba(255, 255, 255, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 255, 255, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 255, 255, 1);"
-    }
-  },
-  {
-    "name": "flat",
-    "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300)"
-      },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(12, 26, 75, 0.3300);"
-    }
-  },
-  {
-    "name": "state/warning/main",
-    "type": "COLOR",
-    "value": "rgba(255, 152, 0, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(255, 152, 0, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 152, 0, 1);"
-    }
-  },
-  {
-    "name": "gray/200",
-    "type": "COLOR",
-    "value": "rgba(219, 219, 227, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(219, 219, 227, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(219, 219, 227, 1);"
-    }
-  },
-  {
-    "name": "black/black",
-    "type": "COLOR",
-    "value": "rgba(1, 11, 19, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(1, 11, 19, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(1, 11, 19, 1);"
-    }
-  },
-  {
-    "name": "gray/300",
-    "type": "COLOR",
-    "value": "rgba(203, 203, 214, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(203, 203, 214, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(203, 203, 214, 1);"
-    }
-  },
-  {
-    "name": "avatar/men/5",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "gray/50",
-    "type": "COLOR",
-    "value": "rgba(243, 243, 246, 1)",
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal",
-        "background": "rgba(243, 243, 246, 1)"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(243, 243, 246, 1);"
-    }
-  },
-  {
-    "name": "state/error/light",
+    "name": "error/light",
     "type": "COLOR",
     "value": "rgba(254, 236, 235, 1)",
     "css": {
@@ -3284,37 +935,709 @@ export const tokens = [
     }
   },
   {
-    "name": "avatar/women/2",
-    "type": "ASSET",
-    "value": null,
+    "name": "error/medium",
+    "type": "COLOR",
+    "value": "rgba(247, 123, 114, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(247, 123, 114, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(247, 123, 114, 1);"
     }
   },
   {
-    "name": "avatar/men/3",
-    "type": "ASSET",
-    "value": null,
+    "name": "gray/100",
+    "type": "COLOR",
+    "value": "rgba(226, 224, 228, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(226, 224, 228, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 224, 228, 1);"
     }
   },
   {
-    "name": "desktop/bodyBold (14)",
+    "name": "gray/200",
+    "type": "COLOR",
+    "value": "rgba(200, 199, 204, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(200, 199, 204, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(200, 199, 204, 1);"
+    }
+  },
+  {
+    "name": "gray/300",
+    "type": "COLOR",
+    "value": "rgba(173, 173, 180, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(173, 173, 180, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(173, 173, 180, 1);"
+    }
+  },
+  {
+    "name": "gray/400",
+    "type": "COLOR",
+    "value": "rgba(146, 148, 156, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(146, 148, 156, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(146, 148, 156, 1);"
+    }
+  },
+  {
+    "name": "gray/50",
+    "type": "COLOR",
+    "value": "rgba(249, 249, 253, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(249, 249, 253, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(249, 249, 253, 1);"
+    }
+  },
+  {
+    "name": "gray/500",
+    "type": "COLOR",
+    "value": "rgba(120, 122, 132, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(120, 122, 132, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(120, 122, 132, 1);"
+    }
+  },
+  {
+    "name": "gray/600",
+    "type": "COLOR",
+    "value": "rgba(94, 97, 108, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(94, 97, 108, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(94, 97, 108, 1);"
+    }
+  },
+  {
+    "name": "gray/700",
+    "type": "COLOR",
+    "value": "rgba(68, 71, 84, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(68, 71, 84, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(68, 71, 84, 1);"
+    }
+  },
+  {
+    "name": "gray/800",
+    "type": "COLOR",
+    "value": "rgba(41, 46, 60, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(41, 46, 60, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(41, 46, 60, 1);"
+    }
+  },
+  {
+    "name": "gray/900",
+    "type": "COLOR",
+    "value": "rgba(14, 20, 36, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(14, 20, 36, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(14, 20, 36, 1);"
+    }
+  },
+  {
+    "name": "kobicha/base",
+    "type": "COLOR",
+    "value": "rgba(86, 55, 15, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(86, 55, 15, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(86, 55, 15, 1);"
+    }
+  },
+  {
+    "name": "kobicha/dark",
+    "type": "COLOR",
+    "value": "rgba(37, 32, 30, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(37, 32, 30, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(37, 32, 30, 1);"
+    }
+  },
+  {
+    "name": "kobicha/light",
+    "type": "COLOR",
+    "value": "rgba(247, 237, 223, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(247, 237, 223, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(247, 237, 223, 1);"
+    }
+  },
+  {
+    "name": "kobicha/medium",
+    "type": "COLOR",
+    "value": "rgba(216, 176, 117, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(216, 176, 117, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(216, 176, 117, 1);"
+    }
+  },
+  {
+    "name": "lake/base",
+    "type": "COLOR",
+    "value": "rgba(3, 69, 92, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(3, 69, 92, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(3, 69, 92, 1);"
+    }
+  },
+  {
+    "name": "lake/dark",
+    "type": "COLOR",
+    "value": "rgba(12, 30, 51, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(12, 30, 51, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(12, 30, 51, 1);"
+    }
+  },
+  {
+    "name": "lake/light",
+    "type": "COLOR",
+    "value": "rgba(226, 241, 244, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(226, 241, 244, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 241, 244, 1);"
+    }
+  },
+  {
+    "name": "lake/medium",
+    "type": "COLOR",
+    "value": "rgba(122, 187, 207, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(122, 187, 207, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(122, 187, 207, 1);"
+    }
+  },
+  {
+    "name": "mantis/base",
+    "type": "COLOR",
+    "value": "rgba(6, 70, 8, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(6, 70, 8, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 70, 8, 1);"
+    }
+  },
+  {
+    "name": "mantis/dark",
+    "type": "COLOR",
+    "value": "rgba(12, 33, 29, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(12, 33, 29, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(12, 33, 29, 1);"
+    }
+  },
+  {
+    "name": "mantis/light",
+    "type": "COLOR",
+    "value": "rgba(226, 242, 228, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(226, 242, 228, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(226, 242, 228, 1);"
+    }
+  },
+  {
+    "name": "mantis/medium",
+    "type": "COLOR",
+    "value": "rgba(116, 189, 121, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(116, 189, 121, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(116, 189, 121, 1);"
+    }
+  },
+  {
+    "name": "maya/base",
+    "type": "COLOR",
+    "value": "rgba(0, 62, 121, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(0, 62, 121, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(0, 62, 121, 1);"
+    }
+  },
+  {
+    "name": "maya/dark",
+    "type": "COLOR",
+    "value": "rgba(11, 29, 58, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(11, 29, 58, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(11, 29, 58, 1);"
+    }
+  },
+  {
+    "name": "maya/light",
+    "type": "COLOR",
+    "value": "rgba(227, 239, 249, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(227, 239, 249, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(227, 239, 249, 1);"
+    }
+  },
+  {
+    "name": "maya/medium",
+    "type": "COLOR",
+    "value": "rgba(129, 190, 232, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(129, 190, 232, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(129, 190, 232, 1);"
+    }
+  },
+  {
+    "name": "mobile/h1/bold",
+    "type": "TEXT",
+    "value": "3rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "3rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "3.5rem",
+        "letterSpacing": "-0.06687500327825546rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h1/medium",
+    "type": "TEXT",
+    "value": "3rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "3rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "3.5rem",
+        "letterSpacing": "-0.06687500327825546rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h1/regular",
+    "type": "TEXT",
+    "value": "3rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "3rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "3.5rem",
+        "letterSpacing": "-0.06687500327825546rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 3rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 3.5rem;\nletter-spacing: -0.06687500327825546rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h2/bold",
+    "type": "TEXT",
+    "value": "1.9800000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "1.9800000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2.5rem",
+        "letterSpacing": "-0.04937500134110451rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h2/medium",
+    "type": "TEXT",
+    "value": "1.9800000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "1.9800000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2.5rem",
+        "letterSpacing": "-0.04937500134110451rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h2/regular",
+    "type": "TEXT",
+    "value": "1.9800000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "1.9800000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2.5rem",
+        "letterSpacing": "-0.04937500134110451rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.9800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2.5rem;\nletter-spacing: -0.04937500134110451rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h3/bold",
+    "type": "TEXT",
+    "value": "1.4800000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "1.4800000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.029374999925494194rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h3/medium",
+    "type": "TEXT",
+    "value": "1.4800000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "1.4800000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.029374999925494194rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h3/regular",
+    "type": "TEXT",
+    "value": "1.4800000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "1.4800000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "2rem",
+        "letterSpacing": "-0.029374999925494194rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.4800000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 2rem;\nletter-spacing: -0.029374999925494194rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h4/bold",
+    "type": "TEXT",
+    "value": "1.2300000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "1.2300000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.020625000819563866rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h4/medium",
+    "type": "TEXT",
+    "value": "1.2300000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "1.2300000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.020625000819563866rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/h4/regular",
+    "type": "TEXT",
+    "value": "1.2300000190734863rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "1.2300000190734863rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "-0.020625000819563866rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.2300000190734863rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: -0.020625000819563866rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/m/bold",
+    "type": "TEXT",
+    "value": "1rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "1rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/m/medium",
+    "type": "TEXT",
+    "value": "1rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "1rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/m/regular",
+    "type": "TEXT",
+    "value": "1rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "1rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.5rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/s/bold",
     "type": "TEXT",
     "value": "0.875rem",
     "css": {
       "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
         "fontSize": "0.875rem",
         "fontStyle": "normal",
         "textIndent": "unset",
@@ -3324,126 +1647,311 @@ export const tokens = [
         "letterSpacing": "0rem",
         "textOverflow": "unset",
         "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
       },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
     }
   },
   {
-    "name": "state/warning/light",
+    "name": "mobile/s/medium",
+    "type": "TEXT",
+    "value": "0.875rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "0.875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.25rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/s/regular",
+    "type": "TEXT",
+    "value": "0.875rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "0.875rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1.25rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/xs/bold",
+    "type": "TEXT",
+    "value": "0.75rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "700",
+        "fontSize": "0.75rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/xs/medium",
+    "type": "TEXT",
+    "value": "0.75rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "500",
+        "fontSize": "0.75rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "mobile/xs/regular",
+    "type": "TEXT",
+    "value": "0.75rem",
+    "css": {
+      "style": {
+        "fontFamily": "Gilroy",
+        "fontWeight": "400",
+        "fontSize": "0.75rem",
+        "fontStyle": "normal",
+        "textIndent": "unset",
+        "textDecoration": "none",
+        "textTransform": "unset",
+        "lineHeight": "1rem",
+        "letterSpacing": "0rem",
+        "textOverflow": "unset",
+        "textAlign": "left",
+        "verticalAlign": "top",
+        "fontFeatureSettings": "\"LIGA\" 0"
+      },
+      "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 0.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: \"LIGA\" 0;"
+    }
+  },
+  {
+    "name": "moss/base",
     "type": "COLOR",
-    "value": "rgba(255, 245, 229, 1)",
+    "value": "rgba(48, 67, 7, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(255, 245, 229, 1)"
+        "background": "rgba(48, 67, 7, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 245, 229, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(48, 67, 7, 1);"
     }
   },
   {
-    "name": "gray/100",
+    "name": "moss/dark",
     "type": "COLOR",
-    "value": "rgba(233, 233, 238, 1)",
+    "value": "rgba(23, 32, 29, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(233, 233, 238, 1)"
+        "background": "rgba(23, 32, 29, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 233, 238, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(23, 32, 29, 1);"
     }
   },
   {
-    "name": "input",
-    "type": "EFFECT",
-    "value": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)",
-    "css": {
-      "style": {
-        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000)"
-      },
-      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(50, 50, 71, 0.2000);"
-    }
-  },
-  {
-    "name": "avatar/women/9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "state/error/main",
+    "name": "moss/light",
     "type": "COLOR",
-    "value": "rgba(244, 67, 54, 1)",
+    "value": "rgba(232, 242, 210, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(244, 67, 54, 1)"
+        "background": "rgba(232, 242, 210, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(244, 67, 54, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(232, 242, 210, 1);"
     }
   },
   {
-    "name": "state/pending/dark",
+    "name": "moss/medium",
     "type": "COLOR",
-    "value": "rgba(222, 166, 28, 1)",
+    "value": "rgba(178, 209, 114, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(222, 166, 28, 1)"
+        "background": "rgba(178, 209, 114, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(222, 166, 28, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(178, 209, 114, 1);"
     }
   },
   {
-    "name": "avatar/men/9",
-    "type": "ASSET",
-    "value": null,
-    "css": {
-      "style": {
-        "opacity": "1",
-        "mixBlendMode": "normal"
-      },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
-    }
-  },
-  {
-    "name": "state/pending/main",
+    "name": "murrey/base",
     "type": "COLOR",
-    "value": "rgba(255, 197, 66, 1)",
+    "value": "rgba(122, 0, 71, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(255, 197, 66, 1)"
+        "background": "rgba(122, 0, 71, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 197, 66, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(122, 0, 71, 1);"
     }
   },
   {
-    "name": "avatar/men/10",
-    "type": "ASSET",
-    "value": null,
+    "name": "murrey/dark",
+    "type": "COLOR",
+    "value": "rgba(41, 15, 45, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(41, 15, 45, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(41, 15, 45, 1);"
     }
   },
   {
-    "name": "state/pending/light",
+    "name": "murrey/light",
+    "type": "COLOR",
+    "value": "rgba(247, 230, 239, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(247, 230, 239, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(247, 230, 239, 1);"
+    }
+  },
+  {
+    "name": "murrey/medium",
+    "type": "COLOR",
+    "value": "rgba(205, 153, 183, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(205, 153, 183, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(205, 153, 183, 1);"
+    }
+  },
+  {
+    "name": "olive/base",
+    "type": "COLOR",
+    "value": "rgba(57, 62, 20, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(57, 62, 20, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(57, 62, 20, 1);"
+    }
+  },
+  {
+    "name": "olive/dark",
+    "type": "COLOR",
+    "value": "rgba(30, 36, 30, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(30, 36, 30, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(30, 36, 30, 1);"
+    }
+  },
+  {
+    "name": "olive/light",
+    "type": "COLOR",
+    "value": "rgba(241, 241, 197, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(241, 241, 197, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(241, 241, 197, 1);"
+    }
+  },
+  {
+    "name": "olive/medium",
+    "type": "COLOR",
+    "value": "rgba(166, 175, 86, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(166, 175, 86, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(166, 175, 86, 1);"
+    }
+  },
+  {
+    "name": "pending/base",
+    "type": "COLOR",
+    "value": "rgba(244, 187, 53, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(244, 187, 53, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(244, 187, 53, 1);"
+    }
+  },
+  {
+    "name": "pending/dark",
+    "type": "COLOR",
+    "value": "rgba(122, 62, 13, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(122, 62, 13, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(122, 62, 13, 1);"
+    }
+  },
+  {
+    "name": "pending/light",
     "type": "COLOR",
     "value": "rgba(255, 249, 236, 1)",
     "css": {
@@ -3456,43 +1964,390 @@ export const tokens = [
     }
   },
   {
-    "name": "avatar/women/10",
-    "type": "ASSET",
-    "value": null,
+    "name": "pending/medium",
+    "type": "COLOR",
+    "value": "rgba(255, 214, 123, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(255, 214, 123, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 214, 123, 1);"
     }
   },
   {
-    "name": "avatar/women/3",
-    "type": "ASSET",
-    "value": null,
+    "name": "phtalo/base",
+    "type": "COLOR",
+    "value": "rgba(10, 14, 120, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(10, 14, 120, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(10, 14, 120, 1);"
     }
   },
   {
-    "name": "avatar/women/1",
-    "type": "ASSET",
-    "value": null,
+    "name": "phtalo/dark",
+    "type": "COLOR",
+    "value": "rgba(12, 16, 59, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(12, 16, 59, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(12, 16, 59, 1);"
     }
   },
   {
-    "name": "state/success/light",
+    "name": "phtalo/light",
+    "type": "COLOR",
+    "value": "rgba(230, 231, 253, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(230, 231, 253, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(230, 231, 253, 1);"
+    }
+  },
+  {
+    "name": "phtalo/medium",
+    "type": "COLOR",
+    "value": "rgba(154, 157, 236, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(154, 157, 236, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(154, 157, 236, 1);"
+    }
+  },
+  {
+    "name": "primary/base",
+    "type": "COLOR",
+    "value": "rgba(63, 34, 170, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(63, 34, 170, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(63, 34, 170, 1);"
+    }
+  },
+  {
+    "name": "primary/bgGradientLeftToRight",
+    "type": "GRADIENT",
+    "value": "linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: linear-gradient(114.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%);"
+    }
+  },
+  {
+    "name": "primary/bgGradientRightToLeft",
+    "type": "GRADIENT",
+    "value": "linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: linear-gradient(204.78deg, rgba(233, 231, 248, 1) 0.00%, rgba(249, 249, 253, 1) 100.00%);"
+    }
+  },
+  {
+    "name": "primary/dark",
+    "type": "COLOR",
+    "value": "rgba(30, 28, 76, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(30, 28, 76, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(30, 28, 76, 1);"
+    }
+  },
+  {
+    "name": "primary/light",
+    "type": "COLOR",
+    "value": "rgba(233, 231, 248, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(233, 231, 248, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(233, 231, 248, 1);"
+    }
+  },
+  {
+    "name": "primary/medium",
+    "type": "COLOR",
+    "value": "rgba(179, 166, 236, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(179, 166, 236, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(179, 166, 236, 1);"
+    }
+  },
+  {
+    "name": "shadow/button",
+    "type": "EFFECT",
+    "value": "0rem 0rem 0.0625rem 0rem rgba(41, 46, 60, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(41, 46, 60, 0.0800)",
+    "css": {
+      "style": {
+        "boxShadow": "0rem 0rem 0.0625rem 0rem rgba(41, 46, 60, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(41, 46, 60, 0.0800)"
+      },
+      "rules": "box-shadow: 0rem 0rem 0.0625rem 0rem rgba(41, 46, 60, 0.2000), 0rem 0.0625rem 0.1875rem 0rem rgba(41, 46, 60, 0.0800);"
+    }
+  },
+  {
+    "name": "shadow/card/default",
+    "type": "EFFECT",
+    "value": "inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1)"
+      },
+      "rules": "box-shadow: inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1);"
+    }
+  },
+  {
+    "name": "shadow/card/elevation/high",
+    "type": "EFFECT",
+    "value": "0rem 0.75rem 2rem 0.5rem rgba(179, 166, 236, 0.1600), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "0rem 0.75rem 2rem 0.5rem rgba(179, 166, 236, 0.1600), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1)"
+      },
+      "rules": "box-shadow: 0rem 0.75rem 2rem 0.5rem rgba(179, 166, 236, 0.1600), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1);"
+    }
+  },
+  {
+    "name": "shadow/card/elevation/low",
+    "type": "EFFECT",
+    "value": "0rem 0.25rem 1.5rem 0.125rem rgba(179, 166, 236, 0.0800), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "0rem 0.25rem 1.5rem 0.125rem rgba(179, 166, 236, 0.0800), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1)"
+      },
+      "rules": "box-shadow: 0rem 0.25rem 1.5rem 0.125rem rgba(179, 166, 236, 0.0800), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1);"
+    }
+  },
+  {
+    "name": "shadow/card/elevation/medium",
+    "type": "EFFECT",
+    "value": "0rem 0.5rem 1.75rem 0.25rem rgba(179, 166, 236, 0.1200), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "0rem 0.5rem 1.75rem 0.25rem rgba(179, 166, 236, 0.1200), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1)"
+      },
+      "rules": "box-shadow: 0rem 0.5rem 1.75rem 0.25rem rgba(179, 166, 236, 0.1200), inset 0rem 0rem 0rem 0.0625rem rgba(233, 231, 248, 1);"
+    }
+  },
+  {
+    "name": "shadow/input/default/default",
+    "type": "EFFECT",
+    "value": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)"
+      },
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.0625rem 0rem rgba(233, 231, 248, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1);"
+    }
+  },
+  {
+    "name": "shadow/input/default/focus",
+    "type": "EFFECT",
+    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(63, 34, 170, 1), 0rem 0rem 0.0625rem 0rem rgba(63, 34, 170, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(63, 34, 170, 1), 0rem 0rem 0.0625rem 0rem rgba(63, 34, 170, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1)"
+      },
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(63, 34, 170, 1), 0rem 0rem 0.0625rem 0rem rgba(63, 34, 170, 1), 0rem 0rem 0.25rem 0rem rgba(233, 231, 248, 1);"
+    }
+  },
+  {
+    "name": "shadow/input/disabled",
+    "type": "EFFECT",
+    "value": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1)"
+      },
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1), 0rem 0rem 0.0625rem 0rem rgba(226, 224, 228, 1);"
+    }
+  },
+  {
+    "name": "shadow/input/error/default",
+    "type": "EFFECT",
+    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)"
+      },
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(247, 123, 114, 1), 0rem 0rem 0.0625rem 0rem rgba(247, 123, 114, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1);"
+    }
+  },
+  {
+    "name": "shadow/input/error/focus",
+    "type": "EFFECT",
+    "value": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)",
+    "css": {
+      "style": {
+        "boxShadow": "inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1)"
+      },
+      "rules": "box-shadow: inset 0rem 0rem 0.0625rem 0.0625rem rgba(219, 61, 53, 1), 0rem 0rem 0.0625rem 0rem rgba(219, 61, 53, 1), 0rem 0rem 0.25rem 0rem rgba(254, 236, 235, 1);"
+    }
+  },
+  {
+    "name": "sienna/base",
+    "type": "COLOR",
+    "value": "rgba(112, 37, 10, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(112, 37, 10, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(112, 37, 10, 1);"
+    }
+  },
+  {
+    "name": "sienna/dark",
+    "type": "COLOR",
+    "value": "rgba(39, 24, 30, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(39, 24, 30, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(39, 24, 30, 1);"
+    }
+  },
+  {
+    "name": "sienna/light",
+    "type": "COLOR",
+    "value": "rgba(252, 240, 238, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(252, 240, 238, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(252, 240, 238, 1);"
+    }
+  },
+  {
+    "name": "sienna/medium",
+    "type": "COLOR",
+    "value": "rgba(216, 137, 111, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(216, 137, 111, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(216, 137, 111, 1);"
+    }
+  },
+  {
+    "name": "silver/base",
+    "type": "COLOR",
+    "value": "rgba(59, 56, 54, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(59, 56, 54, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(59, 56, 54, 1);"
+    }
+  },
+  {
+    "name": "silver/dark",
+    "type": "COLOR",
+    "value": "rgba(26, 29, 41, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(26, 29, 41, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(26, 29, 41, 1);"
+    }
+  },
+  {
+    "name": "silver/light",
+    "type": "COLOR",
+    "value": "rgba(234, 233, 234, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(234, 233, 234, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 233, 234, 1);"
+    }
+  },
+  {
+    "name": "silver/medium",
+    "type": "COLOR",
+    "value": "rgba(175, 174, 175, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(175, 174, 175, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(175, 174, 175, 1);"
+    }
+  },
+  {
+    "name": "success/base",
+    "type": "COLOR",
+    "value": "rgba(54, 198, 141, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(54, 198, 141, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(54, 198, 141, 1);"
+    }
+  },
+  {
+    "name": "success/dark",
+    "type": "COLOR",
+    "value": "rgba(27, 80, 72, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(27, 80, 72, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(27, 80, 72, 1);"
+    }
+  },
+  {
+    "name": "success/light",
     "type": "COLOR",
     "value": "rgba(240, 250, 245, 1)",
     "css": {
@@ -3505,228 +2360,380 @@ export const tokens = [
     }
   },
   {
-    "name": "background/dark",
+    "name": "success/medium",
     "type": "COLOR",
-    "value": "rgba(246, 246, 247, 1)",
+    "value": "rgba(147, 224, 193, 1)",
     "css": {
       "style": {
         "opacity": "1",
         "mixBlendMode": "normal",
-        "background": "rgba(246, 246, 247, 1)"
+        "background": "rgba(147, 224, 193, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(246, 246, 247, 1);"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(147, 224, 193, 1);"
     }
   },
   {
-    "name": "avatar/women/4",
-    "type": "ASSET",
-    "value": null,
+    "name": "taupe/base",
+    "type": "COLOR",
+    "value": "rgba(93, 50, 55, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(93, 50, 55, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(93, 50, 55, 1);"
     }
   },
   {
-    "name": "desktop/subtitleBold (16)",
-    "type": "TEXT",
-    "value": "1rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "1rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.5rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.5rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/stroked (14)",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "400",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "strike-through",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 400;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: strike-through;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "avatar/women/6",
-    "type": "ASSET",
-    "value": null,
+    "name": "taupe/dark",
+    "type": "COLOR",
+    "value": "rgba(34, 28, 41, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(34, 28, 41, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(34, 28, 41, 1);"
     }
   },
   {
-    "name": "avatar/men/8",
-    "type": "ASSET",
-    "value": null,
+    "name": "taupe/light",
+    "type": "COLOR",
+    "value": "rgba(240, 234, 235, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(240, 234, 235, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(240, 234, 235, 1);"
     }
   },
   {
-    "name": "avatar/men/1",
-    "type": "ASSET",
-    "value": null,
+    "name": "taupe/medium",
+    "type": "COLOR",
+    "value": "rgba(198, 170, 173, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(198, 170, 173, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(198, 170, 173, 1);"
     }
   },
   {
-    "name": "desktop/h3 (18)",
-    "type": "TEXT",
-    "value": "1.125rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "800",
-        "fontSize": "1.125rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "none",
-        "textTransform": "unset",
-        "lineHeight": "1.75rem",
-        "letterSpacing": "0.03125rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 800;\nfont-size: 1.125rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 1.75rem;\nletter-spacing: 0.03125rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "desktop/link (14)",
-    "type": "TEXT",
-    "value": "0.875rem",
-    "css": {
-      "style": {
-        "fontFamily": "Avenir",
-        "fontWeight": "500",
-        "fontSize": "0.875rem",
-        "fontStyle": "normal",
-        "textIndent": "unset",
-        "textDecoration": "underline",
-        "textTransform": "unset",
-        "lineHeight": "1.25rem",
-        "letterSpacing": "0rem",
-        "textOverflow": "unset",
-        "textAlign": "left",
-        "verticalAlign": "left",
-        "fontFeatureSettings": "normal"
-      },
-      "rules": "font-family: Avenir;\nfont-weight: 500;\nfont-size: 0.875rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: underline;\ntext-transform: unset;\nline-height: 1.25rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: left;\nfont-feature-settings: normal;"
-    }
-  },
-  {
-    "name": "avatar/men/2",
-    "type": "ASSET",
-    "value": null,
+    "name": "tiffany/base",
+    "type": "COLOR",
+    "value": "rgba(6, 67, 67, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(6, 67, 67, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(6, 67, 67, 1);"
     }
   },
   {
-    "name": "avatar/men/4",
-    "type": "ASSET",
-    "value": null,
+    "name": "tiffany/dark",
+    "type": "COLOR",
+    "value": "rgba(12, 35, 46, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(12, 35, 46, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(12, 35, 46, 1);"
     }
   },
   {
-    "name": "avatar/men/6",
-    "type": "ASSET",
-    "value": null,
+    "name": "tiffany/light",
+    "type": "COLOR",
+    "value": "rgba(227, 243, 242, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(227, 243, 242, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(227, 243, 242, 1);"
     }
   },
   {
-    "name": "avatar/women/7",
-    "type": "ASSET",
-    "value": null,
+    "name": "tiffany/medium",
+    "type": "COLOR",
+    "value": "rgba(143, 212, 203, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(143, 212, 203, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(143, 212, 203, 1);"
     }
   },
   {
-    "name": "avatar/men/7",
-    "type": "ASSET",
-    "value": null,
+    "name": "violet/base",
+    "type": "COLOR",
+    "value": "rgba(95, 13, 124, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(95, 13, 124, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(95, 13, 124, 1);"
     }
   },
   {
-    "name": "avatar/women/8",
-    "type": "ASSET",
-    "value": null,
+    "name": "violet/dark",
+    "type": "COLOR",
+    "value": "rgba(35, 20, 60, 1)",
     "css": {
       "style": {
         "opacity": "1",
-        "mixBlendMode": "normal"
+        "mixBlendMode": "normal",
+        "background": "rgba(35, 20, 60, 1)"
       },
-      "rules": "opacity: 1;\nmix-blend-mode: normal;"
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(35, 20, 60, 1);"
+    }
+  },
+  {
+    "name": "violet/light",
+    "type": "COLOR",
+    "value": "rgba(241, 232, 245, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(241, 232, 245, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(241, 232, 245, 1);"
+    }
+  },
+  {
+    "name": "violet/medium",
+    "type": "COLOR",
+    "value": "rgba(195, 159, 212, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(195, 159, 212, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(195, 159, 212, 1);"
+    }
+  },
+  {
+    "name": "warning/base",
+    "type": "COLOR",
+    "value": "rgba(248, 99, 59, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(248, 99, 59, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(248, 99, 59, 1);"
+    }
+  },
+  {
+    "name": "warning/dark",
+    "type": "COLOR",
+    "value": "rgba(118, 56, 48, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(118, 56, 48, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(118, 56, 48, 1);"
+    }
+  },
+  {
+    "name": "warning/light",
+    "type": "COLOR",
+    "value": "rgba(255, 243, 236, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(255, 243, 236, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(255, 243, 236, 1);"
+    }
+  },
+  {
+    "name": "warning/medium",
+    "type": "COLOR",
+    "value": "rgba(250, 147, 118, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(250, 147, 118, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(250, 147, 118, 1);"
+    }
+  },
+  {
+    "name": "wine/base",
+    "type": "COLOR",
+    "value": "rgba(94, 28, 32, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(94, 28, 32, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(94, 28, 32, 1);"
+    }
+  },
+  {
+    "name": "wine/dark",
+    "type": "COLOR",
+    "value": "rgba(34, 22, 35, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(34, 22, 35, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(34, 22, 35, 1);"
+    }
+  },
+  {
+    "name": "wine/light",
+    "type": "COLOR",
+    "value": "rgba(250, 239, 240, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(250, 239, 240, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(250, 239, 240, 1);"
+    }
+  },
+  {
+    "name": "wine/medium",
+    "type": "COLOR",
+    "value": "rgba(214, 164, 167, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(214, 164, 167, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(214, 164, 167, 1);"
+    }
+  },
+  {
+    "name": "wisteria/base",
+    "type": "COLOR",
+    "value": "rgba(67, 25, 176, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(67, 25, 176, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(67, 25, 176, 1);"
+    }
+  },
+  {
+    "name": "wisteria/dark",
+    "type": "COLOR",
+    "value": "rgba(29, 24, 75, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(29, 24, 75, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(29, 24, 75, 1);"
+    }
+  },
+  {
+    "name": "wisteria/light",
+    "type": "COLOR",
+    "value": "rgba(234, 233, 250, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(234, 233, 250, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(234, 233, 250, 1);"
+    }
+  },
+  {
+    "name": "wisteria/medium",
+    "type": "COLOR",
+    "value": "rgba(184, 165, 241, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(184, 165, 241, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(184, 165, 241, 1);"
+    }
+  },
+  {
+    "name": "yale/base",
+    "type": "COLOR",
+    "value": "rgba(20, 55, 108, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(20, 55, 108, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(20, 55, 108, 1);"
+    }
+  },
+  {
+    "name": "yale/dark",
+    "type": "COLOR",
+    "value": "rgba(15, 28, 54, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(15, 28, 54, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(15, 28, 54, 1);"
+    }
+  },
+  {
+    "name": "yale/light",
+    "type": "COLOR",
+    "value": "rgba(232, 237, 247, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(232, 237, 247, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(232, 237, 247, 1);"
+    }
+  },
+  {
+    "name": "yale/medium",
+    "type": "COLOR",
+    "value": "rgba(159, 182, 210, 1)",
+    "css": {
+      "style": {
+        "opacity": "1",
+        "mixBlendMode": "normal",
+        "background": "rgba(159, 182, 210, 1)"
+      },
+      "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(159, 182, 210, 1);"
     }
   }
 ] as const;

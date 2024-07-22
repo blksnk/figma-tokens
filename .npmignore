@@ -1,0 +1,8 @@
+src/
+temp/
+.env
+.env.example
+.gitignore
+bun.lockb
+tsconfig.json
+.github

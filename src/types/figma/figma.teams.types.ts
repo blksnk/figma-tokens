@@ -1,17 +1,20 @@
 // https://www.figma.com/developers/api#library-items
 
 import {
-  FigmaComponentKey, FigmaFileKey,
-  FigmaNodeId, FigmaPageId,
-  FigmaProjectId, FigmaStyleKey,
-  FigmaUserId
+  FigmaComponentKey,
+  FigmaFileKey,
+  FigmaNodeId,
+  FigmaPageId,
+  FigmaProjectId,
+  FigmaStyleKey,
+  FigmaUserId,
 } from "./figma.properties.types";
 import { FigmaStyleType } from "./figma.enums.types";
 
 export type FigmaProject = {
   id: FigmaProjectId;
   name: string;
-}
+};
 
 export type FigmaTeamUser = {
   /**
@@ -31,7 +34,7 @@ export type FigmaTeamUser = {
    * @remarks This will only be present on the /v1/me endpoint
    */
   email?: string;
-}
+};
 
 /**
  * Data on the frame a component resides in
@@ -57,10 +60,9 @@ export type FigmaFrameInfo = {
    * Name of the frame's residing page
    */
   pageName: string;
-}
+};
 
-export type FigmaPageInfo = {
-}
+export type FigmaPageInfo = Record<string, never>;
 
 /**
  * An arrangement of published UI elements that can be instantiated across figma files
@@ -106,13 +108,13 @@ export type FigmaComponentMetadata = {
    * Data on component's containing frame, if component resides within a frame
    * @default {}
    */
-  containing_frame: FigmaFrameInfo | {};
+  containing_frame: FigmaFrameInfo | Record<string, never>;
   /**
    * Data on component's containing page, if component resides in a multi-page file
    * @default {}
    */
   containing_page: FigmaPageInfo;
-}
+};
 
 export type FigmaComponentSetMetadata = FigmaComponentMetadata;
 
@@ -161,4 +163,4 @@ export type FigmaStyleMetadata = {
    * A user specified order number by which the style can be sorted
    */
   sort_position: `${number}`;
-}
+};
