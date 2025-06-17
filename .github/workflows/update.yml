@@ -15,7 +15,18 @@ jobs:
       version: ${{steps.token_update.outputs.version}}
       message: ${{steps.token_update.outputs.message}}
     steps:
-      - uses: actions/checkout@v4
+      - name: "Fetch bumper app token"
+        id: bumper_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.BUMPER_APP_ID }}
+          private-key: ${{ secrets.BUMPER_SECRET }}
+
+      - name: "Checkout repo"
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ steps.bumper_token.outputs.token }}
 
       - name: Setup node
         uses: actions/setup-node@v3
@@ -108,15 +119,15 @@ jobs:
           git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
           git config --global user.email "${{ env.CI_COMMIT_EMAIL }}"
 
-      - name: Git commit and push
+      - name: Commit updates
         id: git_push
         if: steps.token_update.outputs.changes == 'true'
         env:
           CI_COMMIT_MESSAGE: ${{steps.token_update.outputs.message}}
+          GITHUB_TOKEN: ${{ steps.bumper_token.outputs.token }}
         run: |
           git add .
           git commit -m ${{env.CI_COMMIT_MESSAGE}}
-          git push
 
       - name: Revision bump
         id: revision_bump
@@ -127,19 +138,20 @@ jobs:
         id: revision_push
         if: steps.token_update.outputs.changes == 'true'
         run: git push
-
-  publish_package:
-    name: "NPM package publish"
-    needs: update_tokens
-    if: needs.update_tokens.outputs.changes == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+        env:
+          GITHUB_TOKEN: ${{ steps.bumper_token.outputs.token }}
+          
+      - name: "Re-pull repo"
+        if: steps.token_update.outputs.changes == 'true'
+        uses: actions/checkout@v4
         with:
-          node-version: "20.x"
-          registry-url: "https://registry.npmjs.org"
-      - run: npm publish --access public
+          ref: main
+          token: ${{ steps.bumper_token.outputs.token }}
+
+      - name: NPM publish
+        id: npm_publish
+        if: steps.token_update.outputs.changes == 'true'
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 

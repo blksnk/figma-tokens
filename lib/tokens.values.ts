@@ -996,169 +996,6 @@ export const texts = {
         }
       }
     }
-  },
-  "@figma": {
-    "changes": {
-      "name": "changes",
-      "type": "TEXT",
-      "value": "3.75rem",
-      "css": {
-        "style": {
-          "fontFamily": "Gilroy",
-          "fontWeight": "500",
-          "fontSize": "3.75rem",
-          "fontStyle": "normal",
-          "textIndent": "unset",
-          "textDecoration": "none",
-          "textTransform": "unset",
-          "lineHeight": "100%",
-          "letterSpacing": "0rem",
-          "textOverflow": "unset",
-          "textAlign": "left",
-          "verticalAlign": "top",
-          "fontFeatureSettings": "normal"
-        },
-        "rules": "font-family: Gilroy;\nfont-weight: 500;\nfont-size: 3.75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-      }
-    },
-    "collection": {
-      "name": "collection",
-      "type": "TEXT",
-      "value": "37.5rem",
-      "css": {
-        "style": {
-          "fontFamily": "Gilroy",
-          "fontWeight": "700",
-          "fontSize": "37.5rem",
-          "fontStyle": "normal",
-          "textIndent": "unset",
-          "textDecoration": "none",
-          "textTransform": "unset",
-          "lineHeight": "37.5rem",
-          "letterSpacing": "0rem",
-          "textOverflow": "unset",
-          "textAlign": "left",
-          "verticalAlign": "top",
-          "fontFeatureSettings": "normal"
-        },
-        "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 37.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 37.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-      }
-    },
-    "coverDescription": {
-      "name": "coverDescription",
-      "type": "TEXT",
-      "value": "5.356250286102295rem",
-      "css": {
-        "style": {
-          "fontFamily": "Gilroy",
-          "fontWeight": "400",
-          "fontSize": "5.356250286102295rem",
-          "fontStyle": "normal",
-          "textIndent": "unset",
-          "textDecoration": "none",
-          "textTransform": "unset",
-          "lineHeight": "100%",
-          "letterSpacing": "0rem",
-          "textOverflow": "unset",
-          "textAlign": "left",
-          "verticalAlign": "top",
-          "fontFeatureSettings": "normal"
-        },
-        "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 5.356250286102295rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-      }
-    },
-    "coverTitle": {
-      "name": "coverTitle",
-      "type": "TEXT",
-      "value": "8.703906059265137rem",
-      "css": {
-        "style": {
-          "fontFamily": "Gilroy",
-          "fontWeight": "700",
-          "fontSize": "8.703906059265137rem",
-          "fontStyle": "normal",
-          "textIndent": "unset",
-          "textDecoration": "none",
-          "textTransform": "unset",
-          "lineHeight": "100%",
-          "letterSpacing": "-0.3481562423706055rem",
-          "textOverflow": "unset",
-          "textAlign": "left",
-          "verticalAlign": "top",
-          "fontFeatureSettings": "normal"
-        },
-        "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 8.703906059265137rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: -0.3481562423706055rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-      }
-    },
-    "flow": {
-      "name": "flow",
-      "type": "TEXT",
-      "value": "12.5rem",
-      "css": {
-        "style": {
-          "fontFamily": "Gilroy",
-          "fontWeight": "700",
-          "fontSize": "12.5rem",
-          "fontStyle": "normal",
-          "textIndent": "unset",
-          "textDecoration": "none",
-          "textTransform": "unset",
-          "lineHeight": "12.5rem",
-          "letterSpacing": "0rem",
-          "textOverflow": "unset",
-          "textAlign": "left",
-          "verticalAlign": "top",
-          "fontFeatureSettings": "normal"
-        },
-        "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 12.5rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 12.5rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-      }
-    },
-    "section": {
-      "name": "section",
-      "type": "TEXT",
-      "value": "75rem",
-      "css": {
-        "style": {
-          "fontFamily": "Gilroy",
-          "fontWeight": "700",
-          "fontSize": "75rem",
-          "fontStyle": "normal",
-          "textIndent": "unset",
-          "textDecoration": "none",
-          "textTransform": "unset",
-          "lineHeight": "75rem",
-          "letterSpacing": "0rem",
-          "textOverflow": "unset",
-          "textAlign": "left",
-          "verticalAlign": "top",
-          "fontFeatureSettings": "normal"
-        },
-        "rules": "font-family: Gilroy;\nfont-weight: 700;\nfont-size: 75rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 75rem;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-      }
-    },
-    "stickyNote": {
-      "name": "stickyNote",
-      "type": "TEXT",
-      "value": "1.5625rem",
-      "css": {
-        "style": {
-          "fontFamily": "Gilroy",
-          "fontWeight": "400",
-          "fontSize": "1.5625rem",
-          "fontStyle": "normal",
-          "textIndent": "unset",
-          "textDecoration": "none",
-          "textTransform": "unset",
-          "lineHeight": "100%",
-          "letterSpacing": "0rem",
-          "textOverflow": "unset",
-          "textAlign": "left",
-          "verticalAlign": "top",
-          "fontFeatureSettings": "normal"
-        },
-        "rules": "font-family: Gilroy;\nfont-weight: 400;\nfont-size: 1.5625rem;\nfont-style: normal;\ntext-indent: unset;\ntext-decoration: none;\ntext-transform: unset;\nline-height: 100%;\nletter-spacing: 0rem;\ntext-overflow: unset;\ntext-align: left;\nvertical-align: top;\nfont-feature-settings: normal;"
-      }
-    }
   }
 } as const;
 
@@ -2105,6 +1942,60 @@ export const colors = {
       }
     }
   },
+  "sauge": {
+    "base": {
+      "name": "base",
+      "type": "COLOR",
+      "value": "rgba(45, 77, 55, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(45, 77, 55, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(45, 77, 55, 1);"
+      }
+    },
+    "dark": {
+      "name": "dark",
+      "type": "COLOR",
+      "value": "rgba(30, 36, 30, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(30, 36, 30, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(30, 36, 30, 1);"
+      }
+    },
+    "light": {
+      "name": "light",
+      "type": "COLOR",
+      "value": "rgba(232, 243, 235, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(232, 243, 235, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(232, 243, 235, 1);"
+      }
+    },
+    "medium": {
+      "name": "medium",
+      "type": "COLOR",
+      "value": "rgba(140, 186, 147, 1)",
+      "css": {
+        "style": {
+          "opacity": "1",
+          "mixBlendMode": "normal",
+          "background": "rgba(140, 186, 147, 1)"
+        },
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(140, 186, 147, 1);"
+      }
+    }
+  },
   "sienna": {
     "base": {
       "name": "base",
@@ -2541,14 +2432,14 @@ export const colors = {
     "base": {
       "name": "base",
       "type": "COLOR",
-      "value": "rgba(67, 25, 176, 1)",
+      "value": "rgba(63, 34, 170, 1)",
       "css": {
         "style": {
           "opacity": "1",
           "mixBlendMode": "normal",
-          "background": "rgba(67, 25, 176, 1)"
+          "background": "rgba(63, 34, 170, 1)"
         },
-        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(67, 25, 176, 1);"
+        "rules": "opacity: 1;\nmix-blend-mode: normal;\nbackground: rgba(63, 34, 170, 1);"
       }
     },
     "dark": {

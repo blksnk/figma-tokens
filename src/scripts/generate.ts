@@ -23,6 +23,7 @@ import { fetchIconSvgs } from "../transformers/icon.transformer";
 const logger = Logger({
   spacing: 1,
   throwOnError: true,
+  hideDebug: true,
   mode: "simple",
 });
 const { info, warn } = logger;

@@ -24,6 +24,8 @@ import {
   transformObject,
 } from "@ubloimmo/front-util";
 
+const reservedTokenName = "@figma";
+
 const paintTypeToTokenTypeMap: Record<FigmaPaintType, Nullable<TokenType>> = {
   GRADIENT_ANGULAR: "GRADIENT",
   GRADIENT_RADIAL: "GRADIENT",
@@ -111,6 +113,17 @@ export const styleNodeToToken = <TStyleType extends FigmaStyleType>(
     );
     return null;
   }
+
+  const name = sanitize(styleNode.name)
+    .split("/")
+    .map((part) => camelCase(part))
+    .join("/");
+
+  if (name.includes(reservedTokenName)) {
+    logger.info(`Token name "${name}" is reserved. Skipping.`);
+    return null;
+  }
+
   const tokenCssRules = styleNodeToCssRules(styleNode);
   const tokenCss = tokenCssRules
     ? {
@@ -120,11 +133,6 @@ export const styleNodeToToken = <TStyleType extends FigmaStyleType>(
     : undefined;
 
   const value = tokenCssRules ? tokenValue(type, tokenCssRules) : null;
-
-  const name = sanitize(styleNode.name)
-    .split("/")
-    .map((part) => camelCase(part))
-    .join("/");
 
   return {
     name,
